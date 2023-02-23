@@ -1,0 +1,29 @@
+public class Hello {
+	public static void name(String[] args) {
+		System.out.println("Hello C/C++");
+		System.out.println("Hello C/C++");
+		System.out.println("Hello C/C++");
+		System.out.println("Hello C/C++");
+		System.out.println("Hello C/C++");
+		System.out.println("Hello C/C++");
+		System.out.println("Hello C/C++");
+		.."Hello C/C++");
+		System.out.println("Hello C/C++");
+		System.out.println("Hello C/C++");
+		System.out.println("Hello C/C++");
+
+		System.out.println("Hello Java");
+		System.out.println("Hello vi");
+		System.out.println("Hello vi")
+		System.out.println("Hello happy");
+		System.out.println("Hello vi");
+		System.out.println("Hello pytion");
+		
+
+		System.out.println("Hello C/C++");
+		
+
+	}
+
+
+}
