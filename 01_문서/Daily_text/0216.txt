@@ -1,0 +1,478 @@
+0216
+
+페도라 리눅스 
+리눅스 개요
+우분투/ 페도라 
+
+리눅스 : 개인용 pc를 목적으로 설계된게 아니라
+서버 OS를 구현하기 위한 타겟으로 설계된 소프트웨어
+
+개인용 개발pc에 리눅스를 설치하는 것은 거의 드물다.. 
+
+리눅스의 기초 
+
+	리눅스의 시작과 발전과정
+	GNU 프로젝트
+	리눅스와 유닉스
+	리눅스 배포판
+	리눅스의 특징과 구조
+
+리눅스의 실습 환경 구축
+
+	가상 머신의 이해와 설치
+	페도라 리눅스 다운로드 
+	페도라 리눅스 설치
+
+리눅스 사용의 기초 
+
+	리눅스 윈도 사용
+	리눅스 명령 사용
+
+
+At Ubuntu 
+ctrl + alt + T 
+: terminal open
+
+python@big2:~$ uname -a
+Linux big2 5.19.0-31-generic #32-Ubuntu SMP PREEMPT_DYNAMIC Fri Jan 20 15:20:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+python@big2:~$ 
+
+명령어 $ uname(명령어)  - a (all meaning , option)
+
+python@big2:~$ uname
+Linux
+python@big2:~$ uname -a
+Linux big2 5.19.0-31-generic #32-Ubuntu SMP PREEMPT_DYNAMIC Fri Jan 20 15:20:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+python@big2:~$ 
+
+
+-open man page on ubuntu 
+	open terminal 
+	$ man pwd
+
+- what is man page ?
+A man page (short for manual page) is 
+a form of software documentation usually
+ found on a Unix or Unix-like operating system.
+
+- check kernal version 
+	www.kernal.org 
+
+리눅스의 기초 
+
+리누스 베네딕트 토르발스 
+Linus Benedict Torvals 개발 
+커널. 
+1991년  
+
+GNU project start
+ 
+GNU : GNU is Not Unix 의 약자..
+ 	GNU는 유닉스와 호환되는 자유 소프트웨어를 개발하는 프로젝트 
+	무료 소프트웨어를 개발하는 프로젝트 (오픈소스)
+	그렇지만 유닉스는 아니다라는 것.
+
+GNU에서 제시하는 라이센스 GPL (General Public License)
+ 	GPL : 오픈소스를 무료사용, 자유롭게 사용 가능 
+	       소스를 제작한 것을 상업적으로 사용하지 못하고
+	       오픈해야 한다는 조건으로 사용
+	
+	
+	- MIT license : 오픈소스 사용 , 소스 제작을 상업적으로 
+			사용할 수 있고 오픈하지 않아도 됨.
+
+- 리눅스와 유닉스 
+리눅스는 유닉스 계열의 운영체제
+리눅스 = 리눅스 + 유닉스
+
+
+C 50yrs / C++ 10yrs / java 25yrs / python 25yrs
+
+리눅스 배포판 
+	리눅스 커널 + 응용프로그램으로 구성
+	리눅스 배포판 : 레드헷 계열 , 데비안 계열, 슬랙웨어 계열
+	데비안 (우분투) / 레드헷 (페도라,CentOS) / 슬랙웨어(자바)
+
+리눅스의 특징
+	리눅스는 공개 소프트웨어. 무료사용.
+	유닉스와 완벽한 호환성 유지.
+	서버용 운영체제로 많이 사용.
+	편리한 GUI환경 제공. 
+	
+
+
+< 리눅스의 구조 >
+
+커널: 리눅스의 핵심
+	프로세스 / 메모리/ 파일시스템/ 장치관리
+	컴퓨터의 모든 자원 초기화 및 제어기능 
+	(커넬 : 제어 -> 하드웨어 / CPU RAM HDD
+
+** 셸  : 명령 프롬프트 compmgmt.msc or 터미널 Teminal [사용자 인터페이스]
+	명령해석
+	프로그래밍기능
+	리눅스 기본 셸 : 배시 셸 (리눅스 셸)
+( 개발자로서 잘다루고 이해해야함. )
+
+응용 프로그램 (OFFICIAL NAME : Application / APP) 
+	각종 프로그래밍 개발도구
+	문서 편집 도구
+	네트워크 관련 도구 등
+
+	
+	하드웨어 < 리눅스 커널 < 셸 < 응용프로그램(APP)
+
+
+- 페도라 리눅스 설치 
+	윈도우키는 = super key in Fedora 
+	ctrl + alt  화면 이동 
+	shift + space = 한영키 변환
+
+
+Fedora terminal 
+	$ ls -l   // $ dir  // $ vdir  : 현재 폴더에 있는 파일을 디렉토리하는 것. 
+	$ ls -F // 	' / 폴더 파일 경로 ' ' @ 바로가기 '  ' * 실행가능 파일 '
+	$ man ls    : man page open
+	$ man cd : man page open 
+	$ history
+	$ cd / : 리눅스 / 유닉스에서 최상위 폴더로 이동 
+
+[python@fedora ~]$ 
+	
+	$ pwd  : 현재 디렉토리 // pwd : print working directory 
+	$ cd : change directory : 현재 디렉토리를 디렉토리로 변경한다.
+	$ which clear ( find the program or something you look for : "which")
+	$ passwd : password change 
+	$ sudo passwd root 
+	$ su root 
+	ctrl d : exit
+	$ which passwd
+
+**** 리눅스에서는 드라이버가 나누어져 있지 않고 최상위 폴더인 root 가 존재함 
+	*************  linux or unix : has root ( / ,(slash)) 
+
+root / file system 
+최상위 폴더 리눅스, 유닉스 = / (root)
+	   윈도우 C: D: .. E: ...... 
+
+(windows 에만 있는 개념 ..  cmd   typing =  d: // will go to D: drive
+	윈도우에서 드라이브간 이동은 드라이브를 입력하면 됨. 
+	백슬래시를 기준으로 폴더간의 구분이 가능. (현재 일반 슬래시도 사용가능.) 
+	ex) windows = use backslash /  \C:\x\y\z\a\xxx.txt ) 
+(windows 에 git 을 설치하면 리눅스 명령어인 ls 사용가능 // windows 의 help는 linux의 man page )
+	cmd : dir/S 
+	windows : cls (clear)
+	windows : which clear ( find the program or something you look for : "which")
+	
+
+*  what is sudo ? : super user do
+
+----------------------------------------------------------
+windows = service / linux = daemon
+what is sshd : sshd is a server process of the OpenSSH. 
+	It receives the incoming connections with the help of SSH protocol 
+	and operates as a server for this protocol.
+	ssd 와 hdd의 특징을 합친 저장장치 = back ground service.
+----------------------------------------------------------
+
+- sshd 활성화 
+	$ sudo systemctl status sshd
+	$ sudo systemctl enable sshd
+	$ sudo systemctl start sshd
+	$ sudo systemctl status sshd
+
+----------------------------------------------------------
+
+[python@fedora bin]$ sudo systemctl status sshd
+[sudo] python 암호: 
+○ sshd.service - OpenSSH server daemon
+     Loaded: loaded (/usr/lib/systemd/system/sshd.service; disabled; preset: disabled)
+     Active: inactive (dead)
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+[python@fedora bin]$ sudo systemctl enable sshd
+Created symlink /etc/systemd/system/multi-user.target.wants/sshd.service → /usr/lib/systemd/system/sshd.service.
+[python@fedora bin]$ sudo systemctl status sshd
+○ sshd.service - OpenSSH server daemon
+     Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; preset: disabled)
+     Active: inactive (dead)
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+[python@fedora bin]$ sudo systemctl status sshd
+● sshd.service - OpenSSH server daemon
+     Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; preset: disabled)
+     Active: active (running) since Thu 2023-02-16 16:01:45 KST; 14s ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 3813 (sshd)
+      Tasks: 1 (limit: 11846)
+     Memory: 2.2M
+        CPU: 13ms
+     CGroup: /system.slice/sshd.service
+             └─3813 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+ 2월 16 16:01:45 fedora systemd[1]: Starting sshd.service - OpenSSH server daemon...
+ 2월 16 16:01:45 fedora sshd[3813]: Server listening on 0.0.0.0 port 22.
+ 2월 16 16:01:45 fedora sshd[3813]: Server listening on :: port 22.
+ 2월 16 16:01:45 fedora systemd[1]: Started sshd.service - OpenSSH server daemon.
+[python@fedora bin]$ 
+
+
+--------------------------------------
+
+원격접속하기  windows - linux 
+
+--------------------------------------
+*** at linux 
+
+check ip info //
+
+ip info :  $ ifconfig
+---------------------------------------
+[python@fedora ~]$ ifconfig
+ens160: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.124.131  netmask 255.255.255.0  broadcast 192.168.124.255
+        inet6 fe80::7332:3acd:97ad:2bf4  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:6d:a0:e8  txqueuelen 1000  (Ethernet)
+        RX packets 79  bytes 9822 (9.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 103  bytes 10468 (10.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 23  bytes 2858 (2.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 23  bytes 2858 (2.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+------------------------------------------셸에서 복사한 것을 붙여 넣을때 우측 마우스 클릭. 
+
+windows 에서 linux로 접속 
+
+::::
+
+C:\Users\python>ssh 192.168.124.131
+The authenticity of host '192.168.124.131 (192.168.124.131)' can't be established.
+ECDSA key fingerprint is SHA256:hmYX25W9kwaePJNFSaRFbQKd7OO8Z6NP375RjQOEdZY.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.124.131' (ECDSA) to the list of known hosts.
+python@192.168.124.131's password:
+Last login: Thu Feb 16 16:05:11 2023
+[python@fedora ~]$ pwd
+/home/python
+[python@fedora ~]$ cd /
+[python@fedora /]$ ls
+afs  bin  boot  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[python@fedora /]$ ls -F
+afs/  boot/  etc/   lib@    lost+found/  mnt/  proc/  run/   srv/  tmp/  var/
+bin@  dev/   home/  lib64@  media/       opt/  root/  sbin@  sys/  usr/
+[python@fedora /]$
+로그아웃
+Connection to 192.168.124.131 closed.
+
+C:\Users\python>
+
+/////::: 로그아웃 방법  'ctrl + d'
+/////::: terminal 에서 복사 enter / 붙여넣기 오른쪽 마우스::;;;
+
+-------------------------------------------
+//// windows에서 linux 로그인 
+
+C:\Users\python>ssh 192.168.124.131
+python@192.168.124.131's password:
+Last login: Thu Feb 16 16:16:04 2023 from 192.168.124.1
+[python@fedora ~]$ cd /
+[python@fedora /]$ cd /usr/bin **(절대경로)
+[python@fedora bin]$ ls -lF 
+
+-------------------------------------------
+server chech // 서버가 살아있는지 확인하는 명령어 
+	$ ping (server ip)
+	
+- how to stop to ping :
+	ctrl + C 
+-------------------------------------------
+C:\Users\python> ping 192.168.124.131
+
+Pinging 192.168.124.131 with 32 bytes of data:
+Reply from 192.168.124.131: bytes=32 time<1ms TTL=64
+Reply from 192.168.124.131: bytes=32 time<1ms TTL=64
+Reply from 192.168.124.131: bytes=32 time<1ms TTL=64
+Reply from 192.168.124.131: bytes=32 time<1ms TTL=64
+
+Ping statistics for 192.168.124.131:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+-------------------------------
+C:\Users\python> ping (ip number 192.168.124.131) -t
+
+지속해서 서버를 확인 할 수 있다. // 연결이 잘되는지 계속해서 연결상태를 보고받음.  
+---------------------if the server alive, you can get Reply..
+
+
+
+
+-------------------------------------------------------
+윈도우에서 get your ip ----- $ ipconfig
+리눅스에서 get your ip ----- $ ifconfig
+-------------------------------------------------------
+
+C:\Users\python>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter 이더넷:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::6b68:61a9:4c00:5296%8
+   IPv4 Address. . . . . . . . . . . : 192.168.30.190
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.30.1
+
+Ethernet adapter VMware Network Adapter VMnet1:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::1ce4:c6b:90de:6423%3
+   IPv4 Address. . . . . . . . . . . : 192.168.72.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter VMware Network Adapter VMnet8:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::435e:d876:3e6f:e483%7
+   IPv4 Address. . . . . . . . . . . : 192.168.124.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+--------------------------------------------------------
+
+< 디렉터리와 파일 사용하기 >
+
+리눅스 파일의 종류와 특징 
+	- 파일의 종류
+	- 디렉터리 계층 구조
+ 	- 절대 결로명과 상대 경로명
+	- 파일과 디렉터리 이름의 규칙
+
+디렉터리 사용 명령 
+	- 현재 디렉터리 확인 (pwd) 
+	- 디렉터리 이동 (cd)
+	- 디렉터리 내용 보기 (ls, dir, vdir) 
+	- 디렉터리 생성. 삭제 (mkdir, rmdir)
+
+파일 사용 명령 
+	- 파일 내용 보기 (cat, more, less, tail)
+	- 파일 복사 ' 이동 ' 삭제 (cp, mv, rm)
+	- 하드 링크 ' 심벌릭 링크 생성 (ln)
+	- 빈 파일 생성 (touch)
+	- 파일 내용 검색 (grep)
+	- 파일 검색 (find, which, whereis)
+
+---------------------------------------------
+리눅스 파일의 종류와 특징
+
+파일의 종류 
+	- 파일 : 관련 있는 정보들의 집합 
+	- 리눅스는 파일을 효과적으로 관리하기 위해 디렉터리를 사용
+	- 파일 시스템 : 디렉터리와 파일로 구성된 전체 집합
+	- 리눅스에서 파일은 사용 목적에 따라 일반 파일, 디렉터리, 심벌릭 링크, 장치 파일로 구분
+
+일반 파일 (Regular File)
+	- 데이터를 저장하는 데 주로 사용 
+	- 각종 텍스트 파일, 실행 파일, 이미지 파일 등 리눅스에서 사용하는 대부분의 파일은 일반 파일에 해당
+	- 실행 파일이나 이미지 파일의 경우 바이너리 형태로 데이터가 저장되어 바이너리 파일이라고 함
+
+디렉터리 (Directory) 
+	- 리눅스에서는 디렉터리도 파일로 취급 
+	- 디렉터리 파일에는 해당 디렉터리에 저장된 파일이나 하위 디렉터리에 대한 정보가 저장
+
+심벌릭 링크 : 바로가기 경로를 저장한 파일
+	- 원본 파일을 대신하여 다른 이름으로 파일명을 지정한 것 (윈도의 바로 가기와 비슷함)
+
+//// 디렉터리와 심벌릭 링크는 metadata 이다.
+
+장치파일 
+	- 리눅스에서는 하드디스크나 키보드 같은 각종 장치도 파일로 취급
+	- 리눅스 시스텝에 부착된 장치를 관리하기 위한 특수파일
+
+
+----------------------------------------------------------
+Linux file type
+
+디렉터리 d / 
+
+숨김파일 - / . 
+장치파일 c or b /// c - char / b - block 
+
+	- ex )))
+*****
+파일의 종류를 확인하는 file 명령 
+	$ file .bashrc
+----------------------------------
+[python@fedora ~]$ file .bashrc
+.bashrc: ASCII text
+----------------------------------
+
+[python@fedora bin]$ cd
+[python@fedora ~]$ cd ll
+-bash: cd: ll: 그런 파일이나 디렉터리가 없습니다
+[python@fedora ~]$ ll
+합계 0
+drwxr-xr-x. 1 python python 0  2월 16일  12:38 공개
+drwxr-xr-x. 1 python python 0  2월 16일  12:38 다운로드
+drwxr-xr-x. 1 python python 0  2월 16일  12:38 문서
+drwxr-xr-x. 1 python python 0  2월 16일  12:38 바탕화면
+drwxr-xr-x. 1 python python 0  2월 16일  12:38 비디오
+drwxr-xr-x. 1 python python 0  2월 16일  12:38 사진
+drwxr-xr-x. 1 python python 0  2월 16일  12:38 서식
+drwxr-xr-x. 1 python python 0  2월 16일  12:38 음악
+[python@fedora ~]$ file zram0
+zram0: cannot open `zram0' (No such file or directory)
+[python@fedora ~]$ cd /
+[python@fedora /]$ ls
+afs  bin  boot  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[python@fedora /]$ cd dev
+[python@fedora dev]$ file zram0
+zram0: block special (252/0)
+[python@fedora dev]$ file vhci
+vhci: character special (10/137)
+
+
+파일 명령어 ///
+-------------------
+리눅스 파일 , 디렉토리 권한 확인하기 
+
+ex) drwxr-xr-x. 1 python python 0  2월 16일  12:38 사진
+
+d rwx r-x r-x
+
+r (read) 읽기  w (write) 쓰기  x (execute) 실행 권한
+
+ rwx (owner,소유자) rwx (group, 그룹) rwx (other, 다른 사용자)
+
+chmod u+- 
+chmod g+-
+chmod o+-
+
+
+---------------
+
+cmd 종료 명령어 : Alt + F4
+
+
+
+
+
+
+	
+
+
+
+

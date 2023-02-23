@@ -1,0 +1,183 @@
+02.15 수 
+
+개발 pc 환경 구성 
+이론 정리 
+
+C: = > OS + Software 
+
+컴퓨터 기초 지식. 
+SSD - C:
+HDD - D:
+
+작업관리자 통해서 성능탭 확인
+기본앱 = 웹브라우저 등 
+	프로그램 기본 설정 등.
+
+파일탐색기- 파일확장자를 통해서 파일의 속성을 
+	   확인하고 미리보기를 활용해서 
+	   파일의 이미지를 미리 확인한다. 
+
+
+반디집, 반디캠 다운로드
+	반디캠 default 로 다운로드함. (opt에 설치하지 않음)
+	반디캠 캡쳐 및 동영상
+
+V3Lite 다운로드 default로 다운로드함. (opt에 설치하지 않음)
+
+휴지통 - 속성 - 삭제 확인 대화 상자 표시 체크 적용
+
+화면분할기능 활용법
+windows key + Tab = 새 데스크탑 
+화면 이동 
+ctrl + window key + 방향키 = 
+----------------------------------------
+
+컴퓨터 기초 지식
+- 전원 차단 시, 기억 내용이 지워지는 것을 휘발성메모리 (Volatile Memory), 
+지워지지 않는 것을 비휘발성 메모리 (Non-Volatile Memory) 라고 한다.
+RAM : 휘발성 메모리 - 전원이 들어와 있는 동안에만 정보가 기억되고 
+		전원이 나가면 정보가 지워지는 제품 (임시저장공간)
+		시스템의 주기억 장치로 사용. 
+ROM(SSD,HDD) : 비휘발성 메모리 - 컴퓨터의 지시사항을 영구히 저장하는 비휘발성 메모리
+
+-----------------------------------------
+
+program start and run - ROM 에서 RAM으로 복사 실행됨.
+CPU와 RAM, ROM 
+CPU - 두뇌 역할 [ 중앙 처리 장치 ]
+RAM - 단기저장, 기억장치
+ROM - 장기저장, 
+ "폰 노이만 구조" - 폰 노이만 구조는 중앙처리장치(CPU), 
+		메모리, 프로그램 이 세 가지 구성요소로 이루어져 있다. 
+		폰노이만 구조의 디지털 컴퓨터에서는 
+		"저장된 프로그램"(stored-program)의 개념이 도입되었다.
+
+지금 현대의 pc는 전부 폰노이만 구조이다...
+PC에서 --- **CPU와 RAM은 필수. **
+
+------------------------------------------
+
+컴퓨터의 저장 단위, 용량
+
+1byte = 8bit
+.
+.
+..
+
+컴퓨터에서 메모리의 저장공간을 설명할 때 사용하는 단위. 
+1 byte = 1024 byte가 될때 1KB (1킬로바이트)로 나타냄.
+	: 2의 10승으로 1,024KB.
+
+1KB = 1024byte : 2의 10승
+1 MB = 1024 KB : 2의 20승
+1GB = 1024MB : 2의 30승
+1TB = 1024GB : 2의 40승
+
+*****************************************
+
+개발pc환경구성 HDD(1T) 파티션 조정.
+	파티셔닝 작업.  
+	
+	if you want 200GB partitioning,
+	you can calculate 200*1024 ='204800' 
+
+	컴퓨터관리 - 디스크관리 - 볼륨 축소 / 볼륨 확장
+
+	- 축소된 디스크 이외의 나누어진 디스크를 포멧하고 
+	파일시스템을 생성해서 활성화를 구성한다. 
+
+	- 파일을 구성하고 사용할수있도록 포멧해야함.  (= 볼륨)
+	새 단순볼륨 만들기. 드라이브 문자 할당. 
+	윈도우에서는 기본적으로 NTFS파일 시스템을 사용.
+	할당 단위 크기 대부분 기본값. 
+	볼륨 레이블 - 'ExtraData' 로 작성. (optional)
+
+
+-------------------------------------------
+
+VMware 
+	Delete from disk / completely delete
+	- Change VMware name -
+	Virtual Machine Settings - Options - Virtual machine name
+
+가상머신 VM . 
+	개념 정리
+	Host OS와 Guest OS의 구분.
+	Host OS의 자원을 가져다가 
+	가상공간인 VM에서 Guest OS를 작동시킴.
+	host와 guestOS는 독립적인 PC이다. 
+
+*** VMware 정상종료하는 습관을 가지도록.. 
+--------------------------------------------
+
+
+
+ Linux 이론정리 
+
+운영체제 OS Operating System : 컴퓨터 자원을 효율적으로 관리하기 위한 시스템,
+			     공통된 소프트웨어 플랫폼, 컴퓨터 응용 프로그램 관리자 등 다양함.
+  
+
+
+	사용자 응용프로그램 유틸리티 운영체제 하드웨어 
+
+	하드웨어       운영체제/ 사용자      소프트웨어
+
+
+
+운영체제 종류 
+	windows macOS Linux UNIX
+
+	실무적으로 많이 
+	사용하는 운영체제  --> UNIX - LINUX - WINDOWS
+
+	what is linux ? 	리눅스는 1991년 9월 17일 리누스 토르발스가 
+			처음 출시한 운영 체제 커널인 리눅스 커널에 기반을
+			 둔 오픈 소스 유닉스 계열 운영 체제 계열이다.
+
+	what is Linux kernel ?  커널은 Linux 운영 체제(OS)의 주요 구성 요소
+			컴퓨터 하드웨어와 프로세스를 잇는 핵심 인터페이스.
+			그리고 두 가지 관리 리소스 사이에서 최대한 효과적으로 통신함.
+
+
+2-3. <Ubuntu VM>
+
+ 	설치후 재부팅 혹시 failed 이 나온다면 - >>> restart guest
+	ubuntu 한영키 조작  : Shfit + Space
+	
+	------------------
+
+	Termenal  : ctrl + alt + T
+	명령어 기반으로 작업. 
+	
+	------------------
+	$ sudo apt update // 업데이트 버전확인
+
+	password 입력 ( 보안상 패스워드 기록이 보이지 않음.)
+	ENTER
+
+	if there's no recently update you can update with
+
+	$ sudo apt upgrade // 업그레이드 설치 
+
+	$ reboot // 다시 시작 
+
+	$ shutdown -h now // 시스템 종료 
+
+	$ history // can check the history of what you typing   
+
+	-----------------------------
+	[ install compiz at Ubuntu ]
+
+	$ sudo apt install compizconfig-settings-manager
+
+	$ sudo apt install compiz-plugins compiz-plugins-extra 
+
+
+	- 바로가기 .vmx 파일 : 바탕화면에 바로가기 만들고 이름 변경 "big2"
+
+
+
+
+
+

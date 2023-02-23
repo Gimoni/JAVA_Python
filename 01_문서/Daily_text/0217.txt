@@ -1,0 +1,365 @@
+02-17
+
+1024 = 1GB
+5120 = 5GB
+
+windows - backgraund
+fedora - daemon
+
+----------------------------------------
+
+fedora ip check at terminal 
+	 $ ifconfig (get the ip)
+
+windows connect with fedora ip
+	 $ shh (ip number)
+---------the same id with windows and fedora you can just 
+use shh (ip number  -------
+BUT the original way is....
+*************************
+ 	$ ssh (id)@(ip number)
+*************************
+
+현재 원격연결 상태확인
+	$ sudo systemctl status sshd 
+	$ sudo systemctl enable sshd
+	$ sudo systemctl stop sshd
+	$ sudo systemctl start sshd
+
+*************************
+
+Ubuntu 
+
+open terminal 
+	ctrl + alt + t 
+
+chech the ip 
+	$ ifconfig
+
+//// but if there's no config they show up the line which is.. 
+ sudo apt install net-tools
+--------config가 없으면 슈퍼유저 명령어를 사용해서 설치한다.
+apt라는 접속어가 연결해서 다운 설치를 완료한다. 
+
+at Ubuntu
+ 	$ sudo apt install net-tools  
+
+at cmd 
+C:\Users\python> ssh 192.168.124.129
+ssh: connect to host 192.168.124.129 port 22: Connection refused
+
+위의 커넥션 거절의 의미는 우분투에 ssh 서버를 설치해야한다
+
+at Ubuntu
+	$ sudo apt install openssh-server
+
+at Ubuntu 
+	$ sudo systmectl status ssh
+	$ sudo systmectl enable ssh
+	$ sudo systmectl start ssh
+	$ sudo systmectl status ssh 
+
+at cmd 
+ - $ ssh (ubuntu ip / connect to ubuntu 원격)
+ - $ sudo reboot
+
+// $ ping (ip ) /// check ip working tho 
+	$ ping (ip) -t // keep checking 
+------------------ ctrl + C // for stop the ping
+
+---------------------------------------------------
+
+리눅스 디렉터리 계층 구조 
+	- 트리 구조 : 리눅스에서 파일을 효율적으로 
+	관리하기 위해 디렉터리를 계층적으로 구성
+	- 모든 디렉터리의 출발점은 루트(root, 뿌리) 디렉터리이며, 
+	빗금(/, 슬래시)으로 표시
+	
+* super user's name is also root but that is differen with / (root, directory ) in Linux 
+
+- / (root) : 리눅스 최상위 디렉터리
+
+what is home directory ? : each user's personal infomation home / 
+
+	$ uname -a : check the ubuntu/fedora kernal version 
+
+	[폴더] 
+	나자신을 나타내는 것 ---> . 
+	부모를 나타내는 것 ----> ..
+
+	$ ls -l 
+	$ ls -a
+	$ ls -al
+	$ ls -F
+	$ ls -alF
+
+	$ ll (alias)
+	
+	python@big2:~$ alias
+	alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+	alias egrep='egrep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias grep='grep --color=auto'
+	alias l='ls -CF'
+	alias la='ls -A'
+	alias ll='ls -alF'
+	alias ls='ls --color=auto'
+	
+	
+-----------------------------------------------------
+
+상대경로
+
+절대경로 
+
+	$ cd . 
+	$ cd ..
+	$ cd ../../
+	$ tree
+	$ tree -d (showed folder, not files)
+	
+	tree에도 경로를 줄 수 있다.
+	ex ) $ tree -d /boot
+------------------------------
+
+	$ cd %userprofile%
+
+C:\>cd %userprofile%
+
+C:\Users\python>
+
+	$ help tree
+	$ tree 
+	$ tree /f
+	$ tree /a
+
+-----------------------------
+
+working directory list up  
+	$ ls
+
+pin location list up 
+	$ ls /(directory location that u want to list up)
+	ex) 	$ ls /etc 
+
+-----------------------------
+
+change password
+	$ sudo passwd root
+root login 
+	$ su - root
+
+루트 로그인을 하면 $ 가 아니라 # 로 표시. 
+루트 로그아웃 ctrl + D
+
+
+-----------------------------
+
+- 작업 디렉터리 
+	현재 사용 중인 디렉터리를 작업 디렉터리 (working directory) 또는 현재 디렉터리 (current directory)라고 함
+	현제 디렉터리 : '.' 기호로 표시
+	현재 디렉터리 위치 : pwd 명령으로 확인
+
+- 홈 디렉터리
+	각 사용자에게 할당된 디렉터리로 처음 사용자 계정을 만들 때 지정.
+	사용자는 자신의 홈 디렉터리 아래에 파일이나 서브 디렉터리를 생성하며 작업가능
+	홈 디렉터리는  '~' 기호로 표시 : ~user1
+
+절대 경로명과 상대 경로명 
+	경로명 : 파일 시스템에서 디렉터리 계층 구조에 있는 
+		특정 파일이나 디렉터리의 위치 표시 (구문자 : /) 
+
+	절대경로명 : 항상 루트 (/) 디렉터리를 기준으로 시작 
+	
+	상대경로명 : 현재 디렉터리를 기준으로 시작
+
+파일과 디렉터리 이름의 규칙
+	파일과 디렉터리 이름에는 /를 사용할 수 없음
+	.. 알파벳, 숫자, 붙임표(-), 밑줄(_), 점(.) 만사용
+	.. 공백문자 ,@#$%^&*!~ 등 특수문자 사용 안됨
+	.. 영문자의 대소문자를 구별하며 다른 글자로 취급
+	.. 이름이 .(마침표)로 시작하면 숨김 파일로 간주
+
+-------------------------------------------------
+make directory  디렉터리 생성하기 
+	$ mkdir (new directory name.file extansion)
+	ex) $mkdir hello.txt
+
+	$chmod u-r name
+	$ chmod u(user)-(mode) (file name) 
+	: changed mode _ user's mode in the file 
+-------------------------------------------------
+
+[python@fedora ~]$ cd name
+[python@fedora name]$ touch xxx.txt
+[python@fedora name]$ ll
+합계 0
+-rw-r--r--. 1 python python 0  2월 17일  14:59 xxx.txt
+[python@fedora name]$ ./xxx.txt
+-bash: ./xxx.txt: 허가 거부
+[python@fedora name]$ ll
+합계 0
+-rw-r--r--. 1 python python 0  2월 17일  14:59 xxx.txt
+[python@fedora name]$ echo "Hello"
+Hello
+[python@fedora name]$ echo "hehe"
+hehe
+[python@fedora name]$ echo "Hello" >> xxx.txt
+[python@fedora name]$ ll
+합계 4
+-rw-r--r--. 1 python python 6  2월 17일  15:01 xxx.txt
+
+$ ls : 현재 디렉터리의 내용 확인
+$ ls -a : 숨김파일 확인하기 ///  -a옵션
+$ ls -F : 파일의 종류 표시하기 /// - F옵션
+
+$ ls -l : 상세한 정보
+
+
+
+
+drwxrwxr-x 2 python python 4096  2월 17 13:09 name
+d 파일종류
+rwxr-xr-x 파일접근권한, 파일소유자, 그룹
+
+$ mkdir [file name]
+$ chmod u(user) -+ (rwx) [file name]
+$ chmod g(group) -+ (rwx) [file name]
+$ chmod o(other) -+ (rwx) [file name]
+
+
+-----------------------------------------------
+
+하드링크 개수 관련
+하드링크 필드 값 number / 
+하드링크는 서로 같은 파일이 만들어진것. 
+같은 파일의 개수가 필드에 표시됨
+파일 안의 내용이 같이 변경이 됨.
+
+하드링크
+	$ ln -s xxx.txt yyy  // create symbolic link 
+	$ echo "Hello World" >> xxx.txt
+	$ echo "Java Python" >> yyy
+	$ cat xxx.txt
+		Hello World
+		Java Python 
+	$ cat yyy
+		Hello World
+		Java Python 
+
+	$ ln xxx.txt 
+
+------------------------------------------------
+소프트링크
+
+$ ll -i (inode info check)
+ 
+what is inode ?
+What is meant by inode?
+By definition, an inode is an index node. 
+It serves as a unique identifier for 
+a specific piece of metadata on a given filesystem. 
+Each piece of metadata describes what we think of as a file. 
+That's right, inodes operate on each filesystem, independent of the others
+
+
+
+ 	$ rm 삭제명령어 
+	$ rm [file name]
+	// remove file
+
+
+< 하드링크와 소프트링크의 차이 >
+소프트 링크는 원본이 삭제될 경우 링크를 사용할 수 없지만, 
+하드 링크는 원본이 삭제되어도 원본과 동일한 내용의 파일을 
+가지고 있으므로, 자원을 공유하면서도 데이터를 안전하게 
+관리하고자 할 때 주로 사용된다.
+
+------------------------------------------
+
+ 	$ ls 와 비슷한 명령어 : $ dir / $ vdir
+
+[ make directory ] 
+	$ mkdir
+	$ mkdir -p
+
+
+[ remove directory]
+	$ rm [file name]	/ remove files or directories
+	$ rmdir [file name]    / remove empty directories
+	$ rm -rf [file name]   /  remove directories and their contents recursively
+			      ignore nonexistent files and arguments, never prompt
+
+	$ rm -r [file name]
+--------------------------------------------
+
+	* : zero or more 전체선택자
+
+	$ ls [특정파일]*(전체)
+	ex) $ ls fs*
+	
+	$ file fstab //
+	$ cat fstab //
+
+	$ grep 
+	$ grep root passwd
+	$ grep bash passwd
+	$ grep nologin passwd
+	$ grep python passwd
+
+	$ cat passwd // 전부 출력
+	$ more passwd // 페이지단위 출력
+	$ less passwd // 줄 단위 출력
+
+
+프로그램한 모든 소스파일은 텍스트파일이다
+바이너리파일 음성 비디오 등등.. 
+binery file / text file 
+
+
+터미널에서 자동완성기능 press Tap button
+
+	$ head [file name] // showed front of file
+	$ head -n [file name]
+	$ head -n 5 [file name]
+
+	$ tail [file name]
+	$ tail -n [file name]
+	$ tail -n 5 [file name]
+	$ tail -f [file name] // counting file change or not. 파일 변경 감시
+		
+[copy]
+	$cp /etc/services . 
+
+[move]
+
+	$ mv  :: rename or move file
+
+
+
+
+빈파일만들기, 수정시간 변경하기 : touch
+
+	touch xxx.txt
+	touch -t 02171824 xxx.txt
+	$ ls --full-time -l
+	touch -t 205010151250.30 xxx.txt
+	$ ls --full-time -l
+
+파일내용 검색 grep 
+
+---------------------------------------------------
+
+		[ Programming ]
+	OS + Network + Security .. etc.. 
+	basic computer knowladge needed.
+
+
+
+
+
+
+
+
+
+

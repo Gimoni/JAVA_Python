@@ -1,0 +1,169 @@
+02/14 
+
+
+[ LINUX ] 
+
+LINUX = OS (OPERATING SYSTEM) 무료 오픈소스 운영체제
+	Linux is a free, open source operating system 
+
+
+강의자료 
+WikiDoce 온라인 도서 활용
+ 
+ wikidoce 공개책  "빅데이터" 책검색
+-"빅데이터 IoT 개발자환경 구축" - seo
+https://wikidocs.net/133084
+
+
+1. < 개발PC 환경 구성 >
+
+[ PC 사양 확인 ]
+윈도우 설정
+윈도우 설정 - 시스템
+정보 탭을 클릭하여 운영체제, CPU, RAM에 대한 정보를 확인
+
+ - PC 사양 확인
+	cpu 
+	ram 16gb (개발 환경에서 16gb 이상을 권장. 32gb 추천.. )
+
+
+Step 2 - HDD(1T) 파티션 조정 // 보류;
+컴퓨터관리 열기(compmgmt.msc)
+검색 > compmgmt.msc
+
+디스크 관리 
+디스크 기본 -> HDD    		(C:)
+디스크 동적 -> SSD ProjectData 	(D:)
+
+
+ssd 와 hdd의 차이 
+
+hdd 물리적 장치 기본 드라이버 
+ssd 비교적 안전하고 빠른 동적 / 외장 드라이브 (빠름)
+
+개발 환경구성 정리
+16gb 이상의 RAM, CPU, MEMORY
+1. CPU i5 이상
+2. MEMORY 16GB 이상 (전원이 들어왔을때만 사용되는 메모리 : 휘발성 메모리 But pc동작시 100배이상 빠름 )
+3. HDD : SSD / HDD (25gb/ 1T) (전원이 없더라도 사용되는 메모리 : 저장되는 용량 , SSD 512gb 이상 추천,,)
+
+필요에 따라 디스크의 구역을 나누는 것  - 파티션, 파티셔닝. 
+
+
+
+Step 3 - 개발 유저 생성
+제어판 열기
+
+제어판 - 사용자 계정 - 사용자 계정 변경         하나의 컴퓨터에 사용자 계정을 따로 만들어        보안 또는 다수 인원의 사용의 원활함을 위해서.
+새 계정 생성 - 계정 유형 변경 : 관리자계정으로 설정 / 암호설정        Administer setting needed.  - Admin 최고관리자로 설정.
+Step 4 - 폴더구조 생성
+C: 드라이브에 opt 폴더 생성
+개발과 관련된 모든 소프트웨어는 opt에 설치해 관리
+
+C: = OS + 소프트웨어가 설치되는 곳.  : opt - 개발 툴을 저장. 
+D = 만들어내는 파일들을 저장하는 곳. 
+
+D: 드라이브에 프로젝트 관련 폴더 생성
+개발과 관련된 모든 문서, 소스코드는 D: 관련 폴더에 저장하고 관리한다.
+
+1-2. <Git 설치>
+- . Git 설치
+Step 1
+Git 다운로드 : www.git-scm.com
+설치파일 [Git-2.39.1-64-bit.exe] Double Click!
+Next Click!
+
+- Git = version control system 
+	소프트웨어의 버전을 관리하는 툴 
+	오픈소스 계열에서
+	( CSV -> SVC -> git ) 순으로 사용되어옴.
+
+git 설치하기 . 
+
+GNU = general public license
+
+\ =  백슬래시 이스케이프 문자.. 
+
+C: 드라이브 문자
+D: 드라이브 문자 
+
+
+
+2. < Virtual Machine >
+
+Virtual Machine 
+1. 정의
+가상 머신(영어: virtual machine, VM)은 컴퓨팅 환경을 소프트웨어로 구현한 것, 
+즉 컴퓨터 시스템을 에뮬레이션(가상현실화)하는 소프트웨어다. 
+가상머신상에서 운영 체제나 응용 프로그램을 설치 및 실행할 수 있다.
+
+	가상화 소프트웨어는 에뮬레이션(가상현실화)하는 소프트웨어.
+	에뮬레이션 = 현실과 거의 동일하게 동작하게 만들어 내는 것. 
+	시뮬레이션 = 앞으로 일어거나 일어날 일을 미리 예측해 보는 것. 
+	virtual machine,,,,
+
+	- Virtual Machine = 가상화를 만들어주는 소프트웨어.  
+	VMware 를 사용해서 VM을 만듬. (windows or linux or mac)
+	가상pc를 만들어준다. for what ? there's so many reason to use it .. 
+
+
+
+
+2. 종류
+
+QEMU
+버추얼박스
+VMware
+그 외 다수
+
+
+3. VMware
+컴퓨터에 설치된 운영체제(호스트OS)안에 가상의 컴퓨터를 만들고, 
+그 안에 또 다른 운영체제(게스트OS)를 설치/운영할 수 있도록 
+제작된 프로그램
+
+
+	- PC에 이미 설치되어 있는Windows를 
+	호스트 운영체제(Host Operating System, 호스트 OS)라고 부르고, 
+	- 가상머신에 설치할 그 외의 운영체제를 
+	게스트 운영체제(Guest Operating System, 게스트OS)라고 부름
+
+	Host pc 또는 Host os라고 부름 
+	- Host os : 물리 머신위에 직접동작하는 os 
+	- Guest os : additional os pc에 추가적으로 설치할 운영체제
+
+VMware downloadProjectData (D:) - 02_Software - 01_vmware {VMware-player-full-16.2.5-20904516 }
+2-1. <VMware 설치>
+	- VMware player install to opt at (C:)
+
+-----------------------------------------------------
+
+2-2. <Windows VM>
+	- Windows 10 pro 가상머신을 생성한다.
+	- Create a New Virtual Machine - Click!
+  
+	------------------- 
+	- 1 단계 pc를 먼저 만들고 2 단계로 vm 
+
+	hard disk size 100 
+
+	- edit virtual machine settings 
+
+	memory for this virtual machine 10240
+	Step 10
+	Memory : 10GB (10240 MB)
+
+	Processors  4
+
+ 	- following the deme in web site. 
+	-  tip : cursors from host os to VMware ( ctrl + alt ) 
+
+---------------------------------------
+공유서버
+
+\\fs1
+
+id : java
+pw : 1234 
+
+---------------------------------------

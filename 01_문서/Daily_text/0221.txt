@@ -1,0 +1,362 @@
+02-21
+
+
+Programming language
+프로그램 언어의 역할 
+사람과 컴퓨터의 대화 도움 
+사람의 언어와 기계어 사이에서 다리 역할 -> 컴파일
+고급 언어와 저급 언어로 구분
+
+사람이 프로그램 언어로 소스 파일을 작성(코드작성)
+
+소스파일로 작성한 언어의 코드 전체를 다른 언어로 
+바꾸어주는 컴파일을 실행한다 이것을 자동으로 
+수행해주는 소프트웨어인 컴파일러를 통해서 컴파일을 한다
+
+컴파일한 기계어파일로 컴퓨터에서 읽고 작동, 출력된다
+
+coding - compiling - printing ?
+
+- 프로그램언어
+	기계(컴퓨터)에게 명령이나 연산을 시킬 목적으로 
+	설계되어 기계와 의사소통을 할 수 있게 해주는 언어.
+
+즉, 사람의 자연어를 기계어로 바꾸어주는 
+컴파일을 통해 컴퓨터에 정보가 전달된다. 
+- 컴파일러는 양방향이 아닌 일방향. 
+사람의 언어인 소스파일을 컴파일러가 컴파일을 통해
+컴퓨터의 언어인 기계어로 변환시켜 전달한다 
+
+what do you mean by programming language?
+- A programming language is an artificial language that 
+can be used to control the behaviour of a machine, 
+particularly a computer. Programming languages, 
+like human languages, are defined through the use of 
+syntactic and semantic rules, to determine structure 
+and meaning respectively.
+
+
+프로그램의 문법에 따라 규칙에 맞추어 자연어를 
+소스파일 형태로 작성한다.
+
+컴파일러가 작성된 소스파일을 컴파일해서
+기계(컴퓨터)에 기계어로 전달하여 작동을 수행시킨다.
+
+고급엄어 = : 프로그램언어 = java c c++ ... js... etc.. 
+	사람이 이해하기 쉽게 작성된 프로그래밍 언어
+저급언어 = 기계어와 어셈블리어를 의미함 
+	기계 중심의 언어, 
+	어셈블리어 : 기계어와 일대일 대응이 되는 컴퓨터 프로그래밍의 저급언어 
+
+
+고급언어 : 컴파일 언어 / 인터프리터 언어 ***
+
+	컴파일 언어와 인터프리터 언어의 같은 특징 
+	: 기계어로 출력함
+
+	컴파일 언어와 인터프리터 언어의 차이점 
+	- 기계어로 변환하는 방식에 따른 차이가 있다. 
+	
+	컴파일 언어 :  소스코드 전체를 cpu가 읽을 수 있는 기계어로 변환 후 
+		      실행하도록 cpu에 전달한다
+		      (=번역)	명령어를 컴파일러를 거쳐서 
+				컴파일해서 기계어로 입력하고 동작을 실행시킨다
+
+	인터프리터 언어 : 바로 번역 및 실행 하도록 cpu에 전달한다
+		      (=통역)	명령어를 입력과 동시에 
+				해서 실행시킨다
+
+- How compiler works 
+	: Source code - (preprocessing) - Compiler - (preprocessing) - Machine code - (preprocessing) - Output
+
+- How interpreter works
+	: Source code - (preprocesing) - Compiler - (preprocessing) - Output
+
+
+
+*** JAVA 는 고급언어이면서 컴파일 언어이다.
+
+자바 소개 
+안드로이드 및 데스크톱 앱/ 웹사이트를 개발하는 핵심언어
+1995년 썬마이크로시스템즈에서 처음 발표
+2010년 오라클에서 썬을 인수, 자바 개발 도구 (JDK) 배포해 기술 지원
+JDK =  The Java Devalopment Kit 
+
+
+자바 특징
+- 윈도우 , 맥os, 리눅스 등 모든 운영체제에서 실행가능
+- 먼저 객체(부품)을 만들고, 객체들을 서로 연결해서 
+  더 큰 프로그램을 완성시키는 객체 지향
+- 메모리 (RAM)를 자동 정리해 메모리 관리에 용이
+- 무료로 다운로드해서 사용할 수 있는 
+  오픈 소스 라이브러리(Open Source Library)가 풍부
+
+자바 = 범용 언어 :  다양한 곳에 어떤 용도든 
+		다양하게 사용할 수 있는 언어
+(but 펌웨어분야는 java에서 제외된다. ) 
+
+JAVA 
+- 간결한 프로그래밍 문법을 제공한다
+- 이식성이 매우 좋다
+- 완전한 객체지향 언어이다
+- 멀티스레드 프로그래밍을 지원한다
+- 다양한 응용 프로그램을 작성할 수 있다.
+- 많은 오픈 소스 라이브러리가 있다.
+
+Java의 가상머신 = JVM 
+
++ 객체지향 언어 : 프로그램을 다수의 객체로 만들고, 
+	이들끼리 서로 상호작용하도록 만드는 프로그래밍 언어
+
+
+JDK 설치 자바개발도구
+Java는 jdk를 반드시 설치해야함.
+
+JDK - open jdk / oracle jdk 두 가지가 있음
+
+open jdk - GPL
+oracle jdk - NGPL
+-------------------------------------------------
+Host에서 jdk 설치
+
+
+03_Src \ java \ chap01 \ 
+
+vim Hello.java
+
+public class Hello {
+
+
+
+
+}
+
+cat Hello.java
+
+$javac Hello.java
+(컴파일 하기 java class 생성) = 바이너리 파일 생성. 
+
+$ where file
+
+$ file Hello.class
+$ file Hello.java
+파일의 유형을 확인할 때 사용  file. 
+
+자바 수행시 명령문 
+
+$ java Hello
+(파일명만 작성 / 확장자를 넣지 않음) 
+
+
+
+
+*** Interface names should be capitalized like class names.
+
+
+- public static void main(String[] args) { 
+
+}  ********** create main method ********
+
+JAVA 
+
+public class Hello {
+	public static main(String[] args) {
+
+
+	}
+}
+
+
+
+- bite code file = class file (compile file)
+
+
+
+-------------------------------------
+
+JAVA -    WORA(Write Once Run Anywhere) 
+	한번 작성하고 어디서든 작동한다
+
+
+바이트코드 파일 
+- 소스파일(.java)을 작성한 후 바이트코드파일(.class)로 컴파일
+
+자바 가상 머신 
+- java 명령어로 자바 가상 머신 (jvm)을 구동시켜 바이트코드 파일(.class)을
+기계어로 번역 및 실행
+- 자바 가상 머신은 운영체제별로 다르게 설치됨
+
+
+jdk
+
+
+ - jre(java runtime Environment)
+ - jvm (java virtual machine)
+
+
+
+------------------------------------------------
+
+자바 설치 in fedora
+호스트 명령크롬프트
+at host cmd
+
+파일 위치 찾아가기 가기
+$ d:
+$ D:\02_Software\02_java
+
+scp로 페도라 리눅스에 파일 복사
+$ D:\02_Software\02_java>scp jdk-17_linux-x64_bin.tar.gz python@192.168.124.131:
+
+페도라 리눅스에 원격접속
+$ssh python@ip number
+
+opt 폴더의 그룹관리자 변경하기. 
+$ sudo chown python:python opt
+
+opt로 이동 (홈에 있는 파일을 opt로 복사하기 위함)
+$ cd opt
+
+홈에 있는 파일을 opt로 복사하기
+$ cp ~/jdk-17_linux-x64_bin.tar.gz . 
+
+압축풀기
+$ tar xzvf jdk-17_linux-x64_bin.tar.gz 
+
+심벌릭 링크로 만들기 (링크 네임 java)
+$ ln -s jdk-17.0.6/ java
+
+환경변수 설정
+$ cd      (home으로 이동)
+$ ll -a
+$ vi .bash_profile
+
+export JAVA_HOME=/opt/java
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+로그아웃
+$ exit
+로그인 
+$ shh 192.168.124.131
+
+실행확인
+$ javac -version
+
+
+윈도우에서 
+자바 파일 페도라리눅스에 복사하기 
+at host cmd
+$ scp Hello.class python@192.168.124.131:~
+
+
+페도라리눅스에서 
+자파 파일 만들고 윈도우로 복사하기
+
+페도라 홈에 test파일 만들기
+mkdir test
+
+$ vim Rectangle.java
+bash: vim: 명령을 찾을 수 없습니다...
+'vim-enhanced' 명령을 제공하는 'vim' 꾸러미를 
+설치하시겠습니까? [N/y] y
+
+페도라리눅스에 vim 설치하기
+$ sudo dnf install vim
+
+자바소스코드파일 만들기
+$ vim Rectangle.java
+
+소스코드 작성
+public class Rectangle {
+
+        public static void main(String[] args){
+
+                System.out.println("##########");
+                System.out.println("#        #");
+                System.out.println("#        #");
+                System.out.println("#        #");
+                System.out.println("#        #");
+                System.out.println("##########");
+
+        }
+
+}
+
+페도라리눅스에서 작성한 소스코드 컴파일
+$ javac Rectangle.java
+
+컴파일 확인하기 
+$ ㅣㅣ 
+
+소스코드 출력하기 
+$ cat Rectangle.java
+
+자바 출력해보기 
+$ java Rectangle
+
+
+windows 에서 리눅스에서 작성한 소스코드 복사
+
+$ scp python@192.168.124.131:~/test/Rectangle.class .
+
+출력해보기
+$ java Rectangle
+
+
+
+
+
+
+=======================
+
+# 빅데이터
+in fedora 
+fedora 한글키 설정 
+
+[python@fedora init.d] $ ll -a
+
+[python@fedora init.d]$ touch xxx
+touch: 'xxx'에 touch 명령 실행 불가: 허가 거부
+[python@fedora init.d]$ sudo touch xxx
+[sudo] python 암호:
+[python@fedora init.d]$ sudo rm xxx
+[python@fedora init.d]$ ll
+
+
+이동하기 /etc/rc.d/
+스크립트파일 만들기
+[python@fedora rc.d]$ sudo vi /etc/rc.d/rc.local
+
+스크립트 파일 만들기 (한영키 키코드설정)
+작성코드
+#!/usr/bin/bash
+
+setkeycode 72 122
+setkeycode 7 123
+
+[python@fedora init.d]$ cat rc.local
+#!/usr/bin/bash
+
+setkeycodes 72 122
+setkeycodes 71 123
+
+수행권한 부여하기 (-rw-r--r--. 1 root root    53  2월 21일  17:01 rc.local)
+[python@fedora init.d]$ sudo chmod u+x rc.local
+
+스크립트 작성하기
+$ sudo vi /lib/systemd/system/rc-local.service
+
+[Install]
+WantedBy=multi-user.target
+
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable rc-local
+$ sudo systemctl start rc-local
+$ sudo systemctl status rc-local
+
+$ reboot
+ 
+
+
+

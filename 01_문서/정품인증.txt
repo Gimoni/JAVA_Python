@@ -1,0 +1,18 @@
+Host / Guest=VM
+
+Windows 정품인증
+
+윈도우 업데이트 / 정품인증
+
+windows 보안 - 바이러스 및 위협방지 
+- 바이러스 및 위협 방지 설정 - 설정관리 
+- 실시간 보호 _ 끔
+
+ProjectData - 02_Software - 
+-01_vmware - KMSAuto Net 압축풀기 (pw : issue)
+
+KMSAuto Net - 관리자 권한으로 열기 
+- Activation - Activate Windows - yes
+
+설정 - 업데이트 및 보안 - 정품인증 확인
+활성화 정품인증 확인. 

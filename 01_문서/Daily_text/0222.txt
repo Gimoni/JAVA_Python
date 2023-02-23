@@ -1,0 +1,312 @@
+02-22
+
+
+JAVA 
+
+클래스 명 시작은 항상 대문자 
+
+
+JAVA = 컴파일 언어
+
+
+컴파일 언어는 실행 전 반드시 컴파일해야 함
+	컴파일 과정이 항시 필요함
+
+- JVM 에서 구동됨. (jvm 명령어 : $ javac / $ java) 
+	.java ) 소스파일과 파일 명이 같은 
+	.class ) 바이트코드 파일이 생성되어야함
+
+Hello.java 소스파일을 jvm 명령어인 $ javac 를 사용해서 
+컴파일한다 - Hello.class 바이트 코드 파일이 생성되면 
+$ java 명령어를 사용해서 jvm이 컴파일된 Hello.class 바이트코드를 
+읽고 출력해낸다 
+
+IDE 통합개발환경 (Integrated Develoment Environment)
+: 공통된 개발자 툴을 하나의 그래픽 사용자 인터페이스(GUI) 로 결합하는 
+애플리케이션을 구축하기 위한 소프트웨어
+
+- eclipse
+- android studio
+- visual studio
+- etc.....
+
+
+Java Eclipse download
+https://www.eclipse.org/downloads/
+
+eclipse.exe 실행 
+Workspace 설정 - D:\03_Src\java
+
+terminal 설정 - local terminal
+
+
+--------------------------
+at ubuntu 
+우분투 마운트 작업 vi사용 
+open terminal (ctrl+alt+t)
+
+$ sudo fdisk -l   
+ 	: manipulate disk partition table
+
+$ df : 현재 마운트된 정보 표시
+	: report file system disk space usage
+
+파일시스템 생성 포맷하기
+$ sudo mkfs -t ext4 /dev/sdb  : make file system
+			파일시스템 생성(포맷)
+
+$ cd / : root로 이동
+$ㅣㅣ
+
+프로젝트 폴더만들기
+$ sudo mkdir project
+$ lld
+ 
+마운트 하기
+$ sudo mount /dev/sdb /project
+확인
+$df
+
+마운트 풀기
+$ sudo umount /project
+확인
+$ df
+
+프로젝트 폴더에 하위 폴더 생성
+$ cd project
+ll
+mkdir 01_문서
+mkdir 02_Software
+mkdir 03_Src
+df
+설정파일을 통해서 자동마운트 설정
+$ cd /etc
+$ ll fstab
+$ ll fs*
+$ file fstab
+$ cat fstab
+(fstab : 마운트 정보 기록)
+
+vi로 에디팅하기
+$ sudo vi fstab /
+
+ $ cd /etc
+ $  ll fstab
+ $ ll fs*
+ $ file fstab
+ $ cat fstab
+
+
+??????
+ $ sudo vi /etc/fstab
+
+### /project #
+###############
+# /project    #
+###############
+/dev/sdb                 /project               ext4    errors=remount-ro 0  
+
+
+ $ cat fstab
+ $ reboot
+ $ df
+
+###
+g edit 설치
+
+$ sudo apt update
+$ sudo apt install -y gedit
+
+----------------
+ubuntu에서 
+eclipse 설치하기
+
+ubuntu 파일시스템 project 하위 폴더 software에 
+host에서 eclipse file 붙여 넣기 드래그 가능 
+(eclipse-jee-2022-12-R-linux-gtk-x86_64.tar.gz)
+
+at terminal
+to opt folder
+우분투 터미널에서 vi를 사용해서
+이클립스 설치파일을 opt로 복사 이동시킴 
+ $ cp  eclipse-jee-2022-12-R-linux-gtk-x86_64.tar.gz /opt
+
+확인
+$ cd /opt 
+
+압축풀기
+$ tar xzvf eclipse-jee-2022-12-R-linux-gtk-x86_64.tar.gz
+
+
+
+이클립스 파일로 
+ $ cd eclipse/
+
+이클립스 실행 
+ $ ./eclipse 
+
+바탕화면에 이클립스 바로가기 링크 만들기
+
+이클립스 파일을 드래그로 터미널에서 바탕화면쪽으로 
+이동시키되 마우스드래그를 멈추기전 alt 버튼과 
+우측 마우스버튼을 클릭하여 [여기에 링크만들기] .
+
+
+
+
+-------------------------------------
+
+at  fedor 
+페도라 리눅스 마운트 설정하기
+
+$ sudo fdisk -l 
+	: 파티션 테이블 관리자 / 디스크영역확인 
+
+
+포맷...
+
+$ sudo mkfs -t ext4 /dev/nvme0n2
+
+[python@fedora /]$ sudo mkdir project
+
+[python@fedora /]$ ll | grep project
+:wq
+( | : 파이프 명령어)
+
+$ reboot 
+
+$df  
+(마운트 설정확인 )
+마운트설정이 리부팅시 풀린다 
+그래서 마운트를 고정하기
+
+
+vi 에디팅으로 마운트 설정 고정시키기 
+
+[python@fedora ~]$ sudo vi /etc/fstab
+
+-----------------------------------------------
+#
+# /etc/fstab
+# Created by anaconda on Thu Feb 16 07:19:32 2023
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=6e9fb933-2673-4968-afc7-c1dca86c89ec /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=9be8925e-9865-425f-8885-ecafd188b1a9 /boot                   ext4    defaults        1 2
+UUID=6e9fb933-2673-4968-afc7-c1dca86c89ec /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+
+################
+## /project   ##
+################
+
+/dev/nvme0n2             /project                   ext4    defaults        1 2
+-----------------------------------------------------
+
+두가지 단어를 검색할 때 grep 과 -e 옵션을 사용해서 검색한다
+
+[python@fedora /]$ ll | grep -e opt -e project
+drwxr-xr-x.   1 python python   82  2월 21일  15:24 opt
+drwxr-xr-x.   3 python python 4096  2월 22일  15:05 project
+
+
+
+-------------------------
+
+host 윈도우에서 페도라로 다운로드 파일 복사 
+
+Open Windows PowerShell 
+
+at the folder / shift + right key / open power shell in here(S)
+여기에 파워셸 열기
+
+ D:\02_Software\02_java> dir
+파일 복사 해서 페도라의 project폴더로 복사 시킴
+ D:\02_Software\02_java>> scp *.gz python@192.168.124.131:/project
+
+페도라에서 파일복사 확인하기 
+[python@fedora /]$ cd project
+[python@fedora project]$ ll
+
+[python@fedora project]$ mkdir 01_문서
+[python@fedora project]$ mkdir 02_Software
+[python@fedora project]$ mkdir 03_Src
+
+ $ ll
+
+[python@fedora project]$ mv *.gz 02_Software/
+
+ $ cd
+ $ ll
+  
+  712  cd 02_Software/
+  713  ll
+  714  cp eclipse-jee-2022-12-R-linux-gtk-x86_64.tar.gz  /opt
+  715  ll
+  716  cd /opt
+  717  ll
+  718  pwd
+  719  ll
+  720  tar tzvf eclipse-jee-2022-12-R-linux-gtk-x86_64.tar.gz 
+  721  tar xzvf eclipse-jee-2022-12-R-linux-gtk-x86_64.tar.gz 
+  722  ll
+  723  cd eclipse
+  724  ll
+  725  ./eclipse
+
+desktop 파일 생성
+ 
+ $ cd /usr/share/applications
+
+ $ sudo dnf install gedit  / g edit 설치
+
+ $ sudo gedit eclipse.desktop
+
+[Desktop Entry]
+Name=eclipse
+Type=Application
+Exec=/opt/eclipse/eclipse
+Icon=/opt/eclipse/icon.xpm
+
+ 저장 닫기 
+
+페도라에서 이클립스아이콘 확인하기
+
+
+<open the eclipse>
+
+
+project > 03_Src > java [LUANCH]
+
+
+open the eclipse
+ 	- open perspective / Java / open
+
+file - new - java project 
+	- project name : chap01
+	- unchecked Module
+
+	[finish]
+
+chap01 > src > new > java class >
+	- name: Hello
+	- checked public static void main(String[] args)
+
+	[finish]
+
+//// when you use eclipse , eclipse do the compailing for you
+so you dont need to compile everytime just save the file that's it.
+
+
+
+
+
+
+
+
+

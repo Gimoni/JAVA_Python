@@ -1,0 +1,378 @@
+02-20
+
+Host / Guest=VM
+
+Windows 정품인증
+
+윈도우 업데이트 / 정품인증
+
+windows 보안 - 바이러스 및 위협방지 
+- 바이러스 및 위협 방지 설정 - 설정관리 
+- 실시간 보호 _ 끔
+
+ProjectData - 02_Software - 
+-01_vmware - KMSAuto Net 압축풀기 (pw : issue)
+
+KMSAuto Net - 관리자 권한으로 열기 
+- Activation - Activate Windows - yes
+
+설정 - 업데이트 및 보안 - 정품인증 확인
+활성화 정품인증 확인. 
+
+--------------------------------------
+
+실무에서는 업데이트를 안전하게 해야함.. 
+
+
+
+JAVA 
+eclipse설치. 
+
+확장자 exe - windows 용
+
+1. Jdk 설치 windows에서
+Java SE 다운로드 오라클
+
+2. 프로그램 설치 위치 설정 opt
+ 	C:\opt\Java\jdk-17\
+
+
+----------------------------------------
+
+Binary file  / text file 구분
+	
+리눅스
+3장 문서 편집하기
+
+원격접속으로 해서 에디팅을 해야함. 
+
+리눅스 편집기의 종류 
+- GUI 환경인 그놈에서 제공하는 gedit
+- 유닉스에서부터 사용했던 행 편집기(라인 편집기)와 화면 편집기
+
+리눅스 편집기 종류.. 
+행 단위 편집기 ed, ex, sed
+화면 단위 편집기 vi, emacs
+GUI 편집기 gedit
+
+GUI (Graphical user interface) / TUI (Text user interface)
+
+vi 리눅스에서 일반적으로 사용할 수 있는 화면 편집기
+windows에는 vi가 없다 git 설치를 하면 vi 사용가능
+
+cmd - git - vim 
+( vi = vim )
+
+tund on the editer vim 	cmd - git - vim
+turd off the editer vim   	:q + enter
+make the file and text 	:mkr
+save			:w
+save and quit 		:wq
+--------------------------------------
+at cmd ///
+
+C:\Users\python>where vim
+C:\opt\Git\usr\bin\vim.exe
+--------------------------------------
+
+d: - 뒤로가기
+
+del - delet file at windows cmd
+erase -  	''
+
+at cmd 
+	vim a.txt  - making a.txt
+
+명령모드에서 i - 편집모드 insert
+편집모드에서 명령모드로 나올때 esc 
+
+o - 칸추가 insert mode on
+
+
+type a.txt - 화면에 출력 (windows)
+cat a.txt - 화면에 출력 (linux)
+
+리눅스 모드형과 비모드형 편집기
+입력 모드와 명령 모드 구분
+vi 작동법 반드시 숙지하도록 한다 간단한것들은...
+
+모드형 (vi)
+비모드형 (메모장)
+
+vi의 동작모드 
+
+vi시작 명령모드 <---------------> 입력모드
+
+명령모드에서 H J K L = 방향키 역할 *****
+
+줄복사 yy
+줄삭제 dd
+줄붙여넣기 다음줄에 p
+
+dw - 단어삭제
+cw - 단어변경
+i - 커서 앞에 입력한다 (현재 커서 자리에 입력한다.)
+a - 커서뒤에 입력한다 (현재 커서 다음 자리에 입력한다.)
+
+
+-------------------------------
+
+원격연결, 
+ubuntu / fedora 
+
+at host cmd
+
+$ d:
+
+$ D:\02_Software\02_java>scp jdk-17_linux-x64_bin.tar.gz python@192.168.124.131:
+
+
+$ssh python@ip number
+
+pwd
+
+gcc --version
+
+g++ --version
+
+sudo install gcc ? >>???
+
+
+ubuntu apt / fedora yum
+
+sudo apt install vim
+
+
+-------------------------------
+
+vim hello.c
+
+
+#include <stdio.h>
+
+int main() {
+
+
+        printf("Hello C!\n");
+
+
+        return 0;
+
+
+}
+
+gcc -o hello hello.c
+./hello
+cat hello.c
+
+
+
+
+--------------------------------------------
+
+
+$vim triangle.cpp
+
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char **argv) {
+
+        for (int i=0; i<5; i++) {
+                for (int j=0; j<5; j++) {
+                        if (i>=j)
+                                printf("*");
+
+
+                }
+                printf("\n");
+        }
+
+
+        return 0;
+}
+
+$ g++ -o triange triangel.cpp
+$ ./triangle
+
+수정하기 
+
+$vim triangle.cpp
+
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char **argv) {
+
+        for (int i=0; i<5; i++) {
+                for (int j=0; j<5; j++) {
+                        if (i<=j)
+                                printf("*");
+
+
+                }
+                printf("\n");
+        }
+
+
+        return 0;
+}
+
+$ g++ -o triange triangel.cpp
+$ ./trianglecat 
+
+
+
+----------------------------------
+.bashrc 파일의 코드 줄수를 확인
+$ cat .bashrc | wc -l 
+ 
+.bashrc 문서작성으로 이동	
+$ vi .bashrc
+
+문서의 끝으로 이동
+shift+g // 
+
+입력하기 
+(((-insert-)))
+
+########
+##JAVA##
+########
+
+export JAVA_HOME=/opt/java
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+------------------------------------
+저장하고 나가기
+:wq
+
+.bashrc문서의 꼬리부분
+$tail .bashrc
+
+------------------------------------
+
+
+
+===========명령어로 우분투 파일 복사해서
+불러오기 
+원격 카피 scp
+지우기 rm 
+
+host cmd
+
+D:\02_Software\02_java>scp jdk-17_linux-x64_bin.tar.gz python@192.168.124.129;
+
+
+---------------------------------------------
+host cmd
+
+$ scp jdk-17_linux-x64_bin.tar.gz python@192.168.124.129:
+
+***** $ scp jdk file 사용자@ip address:
+
+------------------------
+
+ubuntu terminal
+
+opt 경로  
+
+$ sudo chown python.python opt
+
+$ ll
+$ cd opt
+$ cp ~/jdk-17_linux-x64_bin.tar.gz
+$ ll
+$ ln -s jdk-17.0.6/ java
+$ ll
+$ exit
+
+ssh python@192.168.124.129
+(login)
+
+$ java -version
+$ javac -version
+$ whereis java
+$ whereis javac
+$ which java
+$ which javac
+------------------------
+
+자바 설치 in Ubuntu
+
+호스트 명령크롬프트
+at host cmd
+
+파일 위치 찾아가기 가기
+$ d:
+$ D:\02_Software\02_java
+
+scp로 우분투 리눅스에 파일 복사
+$ D:\02_Software\02_java>scp jdk-17_linux-x64_bin.tar.gz python@192.168.124.131:
+
+우분투 리눅스에 원격접속
+$ssh python@ip number
+
+opt 폴더의 그룹관리자 변경하기. 
+$ sudo chown python.python opt
+
+opt로 이동 (홈에 있는 파일을 opt로 복사하기 위함)
+$ cd opt
+
+홈에 있는 파일을 opt로 복사하기
+$ cp ~/jdk-17_linux-x64_bin.tar.gz . 
+
+압축풀기
+$ tar xzvf jdk-17_linux-x64_bin.tar.gz 
+
+심벌릭 링크로 만들기 (링크 네임 java)
+$ ln -s jdk-17.0.6/ java
+
+환경변수 설정
+$ cd
+홈으로 이동 
+$ vi .bash_profile
+
+.bashrc 파일의 코드 줄수를 확인
+$ cat .bashrc | wc -l 
+ 
+.bashrc 문서작성으로 이동	
+$ vi .bashrc
+
+문서의 끝으로 이동
+shift+g // 
+
+입력하기 
+(((-insert-)))
+
+########
+##JAVA##
+########
+
+export JAVA_HOME=/opt/java
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
