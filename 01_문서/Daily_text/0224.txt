@@ -5,9 +5,237 @@ JAVA
  변수와 타입
 
 
-
-
 컴파일언어 
 : C , C++ , JAVA .... (대부분 타입언어 - 변수에 타입의 존재 유무에 따라 타입언어로 분류)
 인터프리터 언어
 : Python, JavaScript, ... (비타입언어 - 변수에 타입이 없음.) 
+
+정적타입 언어와 동적타입언어의 차이점을 확인. 
+
+컴퓨터가 동작하는 방식 : 폰 노이만 방식
+
+Von Neumann OS operating system 
+: 폰노이만 구조에서 가장 중요한 특징은
+ '모든 프로그램은 메모리에 올라와야 실행할 수 있다'는 것이다. 
+저장장치에 있는 프로그램이 있다고 해서 실행되는 것이 아니라, 
+메모리에 올라와야 실행할 수 있는 것이다.
+
+프로그래밍 ?
+연산의 과정을 기술하는 것. 
+
+변수 (Variable)
+ : 데이터를 저장하기 위해 프로그램에 의해 이름을 할당받은 메모리공간을 의미
+	즉, 변수란 데이터를 저장할 수 있는 메모리 공간을 의미 .
+	- 자바의 변수는 다양한 타입 (정수형, 실수형 등)의 값을 저장할 수 없다.
+
+변수를 만들 때 반드시 타입을 명시해야함 / 
+	- 메모리의 크기를 결정
+	- 메모리 공간에 어떤 종류의 형태를 저장할지 결정
+
+
+변수 선언
+	- 변수를 사용하려면 변수 선언이 필요. 변수 선언은 어떤 타입의 데이터를 
+	저장할 것인지 그리고 변수 이름이 무엇인지를 결정하는 것
+	- 변수에 최초로 값이 대입될 때 메모리에 할당 되고, 해당 메모리에 값이 저장
+
+	변수선언문 : 
+
+
+변수타입은 1. 값의 유형을 결정 / 2. 메모리 크기를 결정한다.
+
+	정수타입 (byte, short, char, int, long) 
+	문자타입('',char), 실수타입(float, double) , 논리타입 (boolean {true/false}), 
+	문자열타입(String)
+
+변수가 식의 오른쪽은 변수를 대입하는 것 / 변수 = 값
+변수가 식의 왼쪽은 변수를 쓰는 것.  / 값 = 변수?
+
+
+eclipse help - eclipse market -"cdk" downloaded c/c++ - setting / 
+	- menu : filter and costomazion - untick 'java output folder'
+
+ctrl + alt + t = terminal open
+crtl + n : new class make.. 
+
+
+So, what is Variable? -  "The name of memory!" 변수는 메모리의 이름 ! 
+
+
+정수에서 음수(-) 는 2의 보수의 방법으로 변환되어 저장됨
+정수 는 2의 8승인 256개의 byte ( 양수 2의 7승(128개) . 음수 2의7승(128개) ) 
+1bite로 저장되는 정수는 128 ~ -127까지
+
+보수의 의미 
+7의 10의 보수 3
+7의 9의 보수 2
+
+보수관계 
+1진수 1의 보수 / 0의 1의 보수 = 1 , 0의 2의 보수 = 1 0
+
+
+값의 크기 중에서 가장 작은 단위는 비트 (bit)
+비트의 크기는 2. 
+1비트로 표현할 수 있는 수는 0과 1이기 때문. 
+비트의 수가 늘어나면 그값의 크기는 2의 배수로 커짐. 
+
+( nibble  니블은 4비트, 즉 1/2바이트를 말한다 니블은 때로 쿼드비트 , 
+	즉, 네 비트로 만들 수 있는 16개의 조합 중의 하나를 의미하기도한다. )
+
+1byte로 표현 할 수 있는 정보의 개수는 256개의 서로 다른 정보를 표현 할 수 있다.
+저장 메모리 안에는 0과 1뿐 : )
+ 
+ * 정수 타입
+	 *  1. byte		1byte
+	 *  2. short		2byte
+	 *  3. char		2byte
+	 *  4. int 			4byte
+	 *  5. long		8byte
+
+* 정수는 2진수로 변환되서 저장된당 
+
+f5 -refresh at default package 
+
+
+- 리터럴 : 소스 코드 내에서 직접 입력된 값.
+
+문자 타입
+문자 리터럴과 char 타입
+문자 리터럴 : 하나의 문자를 작은 따옴표 (')로 감싼 것
+문자 리터럴을 유니코드로 저장할 수 있도록 char 타입 제공
+
+char 타입도 정수 타입에 속함
+	char c = 65; 	// 10진수 65와 매핑되는 문자 'A'
+	char c =0x0041; 	// 16진수 0x0041과 매핑되는 문자 : 'A'
+
+실수 타입
+float과 double 타입
+실수 타입에는 float과 double이 있음
+- IEEE 754 : floating-point 부동소수점 
+
+논리 타입
+boolean 타입 변수에 대입되는 논리 타입
+참과 거짓을 의미하는 true와 false로 구성되면 
+boolean 타입 변수에 대입할 수 있음
+
+문자열과 String 타입
+문자열 : 큰따옴표("")로 감싼 문자들
+문자열을 변수에 저장하려면 String 타입을 사용
+이스케이프 문자 : 문자열 내부에 역슬래쉬(\)가 붙은 문자
+\*
+\'
+\\
+\u16진수
+\t
+\n
+\r
+
+#### VT100 
+VT100 및 VT220 제어 문자 키워드
+
+검색에서 regedit  
+레지스트리 편집기
+ > HKEY_CURRENT_USER > Console > 새로 만들기 VirtualTerminalLevel > 데이터 변경 : 1 
+
+		System.out.print("\033[2J");
+		
+		System.out.print("\033[30;25H");	
+		System.out.print("\033[32m");		// fg green
+		System.out.print("\033[47m");		// bg white
+		System.out.print("java");
+		
+		System.out.print("\033[35;8H");	
+		System.out.print("\033[30m");		// fg black
+		System.out.print("\033[43m");		// bg yellow
+		System.out.print("HTML");	
+		
+		System.out.print("\033[15;15H");	
+		System.out.print("\033[37m");		// fg white
+		System.out.print("\033[44m");		// bg blue
+		System.out.print("Python");	
+		
+		System.out.print("\033[24;35H");	
+		System.out.print("\033[33m");		// fg yellow
+		System.out.print("\033[42m");		// bg green
+		System.out.print("CSS");	
+		
+		System.out.print("\033[0m");
+
+/*
+1. Clear Screen
+
+    \033[2J
+
+2. Cursor Move
+
+    \033[{line};{col}H
+
+
+3. Foreground Color
+    \033[{bcolor}m
+
+    30  Black
+    31  Red
+    32  Green
+    33  Yellow
+    34  Blue
+    35  Magenta
+    36  Cyan
+    37  White
+
+4. Background Color
+
+    \033[{bcolor}m
+
+    40  Black
+    41  Red
+    42  Green
+    43  Yellow
+    44  Blue
+    45  Magenta
+    46  Cyan
+    47  White
+
+5. Reset Color
+
+    \033[0m
+
+6. Cursor Hide
+
+    \033[?25l
+
+7. Cursor Show
+
+    \033[?25h  
+
+*/
+
+public class VT100Example {
+
+    public static void main(String[] args) throws IOException {
+        System.out.print("\033[2J");        // 1. Clear Screen
+        System.out.print("\033[10;10H");    // 2. Cursor Move
+        System.out.print("\033[31m");       // 3. Foreground Color
+        System.out.print("\033[44m");       // 4. Background Color
+        System.out.print("Hello VT100!");
+        System.out.print("\033[0m");        // 5. Reset Color
+        System.in.read();
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
