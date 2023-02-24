@@ -1,0 +1,21 @@
+
+public class OverflowExample {
+
+	public static void main(String[] args) {
+		byte b = 126;
+		
+		b++;
+		
+		System.out.println(b); // 127
+		
+		b++;
+		
+		System.out.println(b); // -128 ?
+		
+		b++;
+		
+		System.out.println(b);
+
+	}
+
+}

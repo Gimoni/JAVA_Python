@@ -1,0 +1,13 @@
+
+public class TypeExample {
+
+	public static void main(String[] args) {
+			int apple ;
+			
+			apple = 150;		// 대입(assignment), 쓰다(write)
+			
+
+	}
+
+}
+	

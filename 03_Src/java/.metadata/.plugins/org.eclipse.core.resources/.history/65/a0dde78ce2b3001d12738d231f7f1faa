@@ -1,0 +1,10 @@
+package chap02;
+
+public class TypeExample {
+
+	public static void main(String[] args) {
+		x = 10;
+
+	}
+
+}

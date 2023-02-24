@@ -1,0 +1,13 @@
+
+public class CharExample {
+	
+	public static void main(String[] args) {
+		char ch = 'A';
+		
+		System.out.println(ch);
+		
+		char ch2 = 0b0100_0001;
+		System.out.println(ch2);
+	}
+
+}
