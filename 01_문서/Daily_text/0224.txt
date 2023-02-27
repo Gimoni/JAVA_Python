@@ -134,7 +134,8 @@ VT100 및 VT220 제어 문자 키워드
 
 검색에서 regedit  
 레지스트리 편집기
- > HKEY_CURRENT_USER > Console > 새로 만들기 VirtualTerminalLevel > 데이터 변경 : 1 
+ > HKEY_CURRENT_USER > Console > 새로 만들기 > DWORD >
+>  VirtualTerminalLevel > 데이터 변경 : 1 
 
 		System.out.print("\033[2J");
 		

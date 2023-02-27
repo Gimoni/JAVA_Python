@@ -1,0 +1,235 @@
+02-27
+JAVA 
+
+복습하기 
+
+WORA = write once run anywhere.
+
+oop = Object Orientaed Programming.
+
+객체 지향 프로그래밍 이란, 
+많은 객체(Objcet)들이 모여서 상호 협력하면서 
+데이터를 처리하는 방식의 프로그래밍 설계 방법을 일컫는다. 
+
+좀더 쉽게 말하면, 프로그램을 묶음 단위로 잘게 쪼개서, 
+추후에 가져다 쓰기 편하게 만들어 놓은 프로그래밍 방식이라고 보면 된다.
+
+메모리 RAM를 자동정리해 메모리 관리에 용이
+
+lots of Open Source Library
+
+-----------------------------------
+
+자바 개발 도구. JDK 
+
+바이트 코드 파일  = 소스파일 작성한 후 바이트 코드 파일로 컴파일
+
+자바 가상 머신 = java 명령어로 자바 가상 머신 (JVM)을 구동시켜
+	바이트 코드 파일을 기계어로 변역 및 실행
+	자바 가상 머신은 운영체제별로 다르게 설치됨.
+
+
+소스파일 생성
+ - temp 디렉토리를 다음 구조로 ㅐㅇ성
+ - Hello.java 소스 파일을 생성하고 코드 작성.
+ - javac-d 및 java -cp 명령어로 컴파일 
+
+
+what is package? 
+defalut package . 
+
+컴파일 옵션 
+-d option ///
+
+javac -d . Triangle.java
+
+rm -rf com 
+
+tree /f 
+
+자바에서의 
+클래스 선언 
+ 클래스명 = 소스파일명  : 클래스명과 소스파일명이 같아야함
+ 메소드 선언 public static void main(String [] args )
+                                          main : 메소드명 
+	java lunch에 의해 실행을 시키고자하는 바이크코드파일은 
+	반드시 main method가 있어야 한다. 
+
+자바의 주석은 3가지 종류
+	행주석 / 범위 주석 /도큐먼트 주석
+
+실행문 
+ - 실행문은 변수 선언 , 변수값 저장, 메소드 호출에 해당하는 코드
+ - 실행문 끝에는 반드시 세미콜론(;)을 붙여 실행문의 끝 표시
+
+변수
+ - 변수란 하나의 값을 저장할 수 있는 메모리 번지에 붙여진 이름 
+ - 자바의 변수는 다양한 타입 (정수형 , 실수형 등 ) 의 값을 저장할 수 없다.
+
+변수 선언 
+ - 변수를 사용하려면 변수 선언이 필요. 변수 선언은 어떤 타입의 데이터를 
+저장할 것인지 그리고 변수 이름이 무엇인지를 결정하는 것
+ - 변수에 최초로 값이 대입될 때 메모리에 할당 되고, 해당 메모리에 값이 저장됨
+
+메모리에 이름을 지정한것 변수 = 심볼
+
+변수를 선언할 때 - 변수 타입과 이름을 선언해서 정한다.
+
+변수의 타입 : 정수 타입 , 실수 타입, 문자 타입, 논리 타입, 문자열 타입
+
+변수의 식별자 (Identifier) 
+
+자바 식별자 규칙
+- 첫 문자가 문자나 '_', '$'의 특수문자로 시작되어야 한다. 
+  숫자로 시작할 수 없다.
+- 첫 문자가 아니라면, 문자나 '_', '$'의 특수문자 그리고 
+  숫자로 구성될 수 있다.
+- 자바의 예약어는 식별자로 사용할 수 없다.
+- 자바의 식별자는 대소문자를 구분한다.
+- 식별자 길이는 제한이 없고 공백은 포함할 수 없다.
+
+일반적 관례
+- 클래스 이름은 대문자의 명사로 시작
+- 메서드 이름은 소문자의 동사
+- 변수는 소문자의 명사
+- 상수는 대문자의 명사
+
+올바른 예
+- 클래스 이름: ClassName
+- 메서드 이름: getValue, get_Value
+- 변수 이름: $value, variable_Value
+- 상수이름: CONSTANT_VALUE
+
+잘못된 예
+- userName: 공백포함
+- 3dimension: 숫자로 시작
+- this: 자바 예약어 사용
+- #value: #포함
+
+명칭 정하는 관례
+- 구문적으로 꼭 지켜야 할 사항은 아니지만 관례적으로 
+  적용해 주어야 하는 클래스, 메서드, 변수명 규칙이 존재
+- 클래스 일름은 워드 단위로 첫 글자를 대문자로 정의
+- 메서드 이름이나 변수명은 일반적으로 첫 글자를 소문자로 정의
+- 변수 이름은 명사를, 메서드 이름은 동사를 사용
+- 변수가 final형이면서 기본형이면 명칭을 대문자로,, final형이면서 
+  참조형이면 명칭을 소문자로 정의
+
+적절하게 정의된 명칭의 예
+- 클래스명: Example_8_1, Sample, Account, AccountManager, VisitServlet
+- 메서드명: printString, saveMoney, doExpr, calcurate, input
+- 변수명: number, name, TAX, total, sum, st_num, st_addr
+
+자바의 예약어
+- 기능이 이미 정해져 있는 키워드를 의미
+
+abstract	assert	boolean	break	byte	case	catch
+char	class	const	continue	default	do	double
+else	extends	false	final	finally	float	for
+goto	if	implements	import	instanceof	int	interface
+long	native	new	null	package	private	protected
+public	return	short	static	super	switch	synchronized
+this	throw	throws	transient	true	try	void
+volatile	while
+
+
+정수  = byte short char int long 
+실수  = float f = 3.14f; , double = 3.14;
+문자  = ( '  ' );
+논리 = boolean A = true ;/ boolean B = false;
+문자열  =  String var1 =  ("  " );
+
+문자열을 변수에 저장하려면 String 타입을 사용
+
+이스케이프 문자 \ : String 문자열안에서
+특수문자, \, 16진수 유니코드 , tap, 줄 바꿈, 
+escape language = \ 역슬래쉬 
+\"  " 문자포함
+\'  ' 문자포함
+\\  \문자포함
+\u16진수 16진수 유니코드에 해당하는 문자 포함
+\t 출력 시 탭만큼 띄움
+\u 출력시 줄바꿈 (라인피드)
+\r 출력시 캐리지 리턴 
+
+ASCII code table 
+
+
+콘솔 출력 명령어  println print printf
+
+VT100 ---> 검색 : regedit (레지스트리 편집기) current user add VirtualTerminalLevel 데이터 1 
+
+VT100   > 
+
+print "\033[0m : return to original color 초기값 색으로 변환
+
+clear screen
+	\033[2J
+
+cursor move
+	\033[{line};{col}H
+
+foreground color
+	\033[{bcolor};m
+
+background color
+	\033[{bcolor}m
+
+reset color 
+	\033[0m
+
+cursor hide
+	\033[?25l
+
+cursor show 
+	\033[?25h
+
+
+자동 타입변환  (= 수의 범위라고 생각하기 )
+byte < short, char < int < long < float < double
+- 데이터 타입을 다른 타입으로 변환하는 것
+- 값의 허용 범위가 작은 타입이 허용 범위가 큰 타입으로 대입될 때 발생
+- 정수 타입이 실수 타입으로 대입되면 무조건 자동 타입 변환이 됨
+- 예외 : 	char 타입보다 허용 범위가 
+	작은 byte타입은 char 타입으로 자동 변환 될 수 있음
+
+
+강제 타입변환 (= 강제 형변환)
+- 큰 허용 범위 타입을 작은 허용 범위 타입으로 쪼개어서 저장하는 것 
+- 캐스팅 연산자로 괄호() 를 사용하며, 괄호 안에 들어가는 타입은 쪼개는 단위
+
+	작은 허용 범위 타입 = (작은 허용 범위 타입) 큰 허용 범위 타입
+	- 예 : int -> byte 강제 타입 변환
+	int intValue = 10;
+	byte byteValue = (byte) intValue; 	// 강제 타입 변환
+
+연산식에서 int 타입의 자동변환
+- 정수 타입 변수가 산술 연산식에서 피연산자로 사용되면 int 타입보다 
+  작은 byte, short 타입변수는 int 타입으로 자동 변환되어 연산 수행
+
+- byte 변수가 피연산자로 사용되면 변수값은 int값으로 연산되며, 
+  결과값 역시 byte 변수가 아닌 int 변수에 저장해야 함.
+
+문자열을 기본 타입으로 변환
+String 타입 변환하기 
+- 기본 타입의 값을 문자열로 변경할 때는 String.valueOf()메소드 이용
+
+	수치 타입 /  문자열 /  논리타입 
+(PC에 입력하여 저장하거나 화면에 출력되는 정보들은 전부 문자열로 저장)
+
+what is od?
+: Octal dump - dumps a file to the standard output in 
+	a format specified by command-line options.
+od -t x1 test.txt 
+
+
+
+
+
+
+
+
+
+
+
+ 
