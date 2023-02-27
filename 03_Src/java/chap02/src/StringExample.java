@@ -9,12 +9,19 @@ public class StringExample {
 	 * 
 	 * 2. Reference Type (참조타입) - N개
 	 * 		- String 
+	 * 		// 표기 대문자로 시작함.
 	 * 
 	 * 
 	 */
 	public static void main(String[] args) {
+		int String = 100; // 변수의 키워드가 아닌 상황. 식별자로 사용 가능 
+//		int float = 200; // error /  변수의 키워드는 식별자로는 사용이 불가능 
 		String str1 = "Hello world";
 		String str2 = "대한민국";
+		
+		char ch = 'A';
+//		char ch2 = ''; // error 빈 문자열이 될 수 없다. 
+		String str10 = ""; // null string , empty string 빈 문자열이 가능. 
 		
 		System.out.println(str1);
 		System.out.println(str2);

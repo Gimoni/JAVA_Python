@@ -4,12 +4,12 @@ public class LanguageExample {
 	public static void main(String[] args) {
 		System.out.print("\033[2J");
 		
-		System.out.print("\033[30;25H");	
+		System.out.print("\033[28;25H");	
 		System.out.print("\033[32m");		// fg green
 		System.out.print("\033[47m");		// bg white
 		System.out.print("java");
 		
-		System.out.print("\033[35;8H");	
+		System.out.print("\033[40;8H");	
 		System.out.print("\033[30m");		// fg black
 		System.out.print("\033[43m");		// bg yellow
 		System.out.print("HTML");	

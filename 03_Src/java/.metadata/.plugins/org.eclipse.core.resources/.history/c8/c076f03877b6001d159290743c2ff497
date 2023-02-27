@@ -1,0 +1,13 @@
+
+public class NumberStringExample {
+
+	public static void main(String[] args) {
+
+		int num = 100;				// 0110 0100      숫자 이진수 100이 num에 저장됨. 
+		
+		
+		System.out.println(num);	
+		
+	}
+
+}

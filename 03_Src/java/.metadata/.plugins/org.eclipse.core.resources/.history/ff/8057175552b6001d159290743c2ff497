@@ -1,0 +1,9 @@
+
+public class LongFloatExample {
+
+	public static void main(String[] args) {
+		System.out.println(Long.MAX_VALUE); // 최대19자리 
+		System.out.println(Float.MAX_VALUE);
+	}
+
+}

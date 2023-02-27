@@ -1,0 +1,11 @@
+
+public class LongFloatExample {
+
+	public static void main(String[] args) {
+		System.out.println(Long.MAX_VALUE); 
+		// 최대19자리 = 9223372036854775807
+		System.out.println(Float.MAX_VALUE); 
+		// 3.4028235E38 =3.4 * 38승 까지 표현가능
+	}
+
+}
