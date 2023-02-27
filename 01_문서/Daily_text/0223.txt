@@ -1,1 +1,63 @@
 02-23
+이클립스 다운로드 및 설치 후 .
+
+이클립스 프로젝트 생성
+Java Project 먼저 생성하고 JRE는 'JavaSE-17' 선택
+윈도우인 경우 [Preferences]에서  Text file encoding 을 'UTF-8' 선택
+
+encoding <-----> decoding
+
+인코딩 : 문자를 코드로 변환하는 것
+디코딩 : 코드를 문자로 변환하는 것
+
+euc-kr (영어 + 한글) (ms949)
+utf-8       (65001)
+
+chcp
+: Displays or sets the active code page number
+CHCP [nnn]
+
+  nnn   Specifies a code page number.
+
+
+eclipse ->  Workspace  : 최상위 작업공간
+- Project
+- Source file
+what is workspace in java
+: The workspace is a directory on the disk
+where the Eclipse platform and all the installed plug-ins store
+preferences, configurations and temporary information.
+
+What is perspective in Java?
+: The Java perspective defines a layout containing the Package,
+Hierarchy, Outline and Tasks view.
+This is useful for java development.
+The Team perspective defines a layout containing the Repositories
+and Synchronize view. This is useful for code sharing and versioning.
+
+Reset perspective :
+> Windows > Perspective > Reset perspective
+
+자바 : 자바 주석 기호와 설명 , 실행문 설명
+
+주석 기호와 설명
+ - 프로그램 실행과 상관없이 코드에 설명 붙임
+구분 주석기호 설명
+행 주석 // //부터 행 끝까지 주석으로 처리한다
+범위 주석 /* */ /*와 */ 사이에 있는 내용은 모두 주석으로 처리한다
+도큐먼트 주석 /**  */ /** 와 */ 사이에 있는 내용은 모두 주석으로 처리한다
+javadoc 명령어로 API 도큐먼트를 생성하는 데 사용한다.
+
+- 주석 기호는 문자열 (" ") 내부에 작성하면 안됨
+System.out.println("Hello, /*주석이 될수 없음*/ welcome to the java world!");
+
+
+실행문
+- 실행문은 변수 선언, 변수값 저장, 메소드 호출에 해당하는 코드
+- 실행문 끝에는 반드시 세미콜론(;)을 붙여 실행문의 끝 표시
+
+int x ; //변수 x 선언
+x = 1; //변수 x에 1 값을 저장
+int y = 2; //변수 y를 선언하고 2 값을 저장
+int result = x + y; //변수 result를 선언하고 변수 x와 y를 더한 값을 저장
+System.out.println(result); //콘솔에 변수의 값을 출력하는 println() 메소드 호출
