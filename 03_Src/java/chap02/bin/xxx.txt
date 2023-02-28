@@ -1,0 +1,16 @@
+import util.Turtle;
+Turtle t = new Turtle();
+t.forward(200)
+t.backward(400)
+t.home();
+Math.pow(10, 3);
+Math.pow(10, 2);
+Math.sqrt(2)
+double length = 200* Math.sqrt(2);
+double radius = Math.sqrt(Math.pow(200,2) - Math.pow(length/2,2));
+t.dot("blue", radius*2)
+t.dot("blue", radius)
+t.dot("blue", radius*2)
+t.forward(200)
+t.backward(400)
+t.home()

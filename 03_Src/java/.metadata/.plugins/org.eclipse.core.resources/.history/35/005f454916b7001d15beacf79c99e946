@@ -1,0 +1,40 @@
+
+public class PrintfExample {
+
+	public static void main(String[] args) {
+		
+		int num = 100;
+		
+		System.out.printf("num = %d\n", num);		// %d 는 변환문자와 d정수를 뜻한다 num = 100
+
+		char ch = 49;
+		
+		System.out.printf("%c\n", ch);		// %c = char로 인식 	1
+		System.out.printf("[%c]\n", ch);		// %c = char로 인식	[1]
+		System.out.printf("[%c, %d]\n", ch, (int)ch);		// [1, 49]
+		
+		char ch2 = 'A';
+		System.out.printf("[%c, %d]\n", ch2, (int)ch2);		//	[A, 65]
+		System.out.printf("[%c, %d, %x]\n", ch2, (int)ch2, (int)ch2);		// [A, 65, 41]
+		
+		double pi = 3.141592;
+		System.out.println(pi);
+		System.out.printf("%f", pi);
+		
+	
+	}
+	public static void main2(String[] args) {
+		System.out.println("println()은 New Line을 추가한다");
+		System.out.println("############################" +"\n");
+		
+		System.out.print("print()은 New Line을 추가하지 않는다. \n");
+		System.out.print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+		
+		System.out.printf("[%50s]\n" , "printf");
+		System.out.printf("[%-50s]\n" , "printf");
+		
+		// 콘솔 출력 명령어는 println, print, printf가 있다. 
+		
+	}
+
+}

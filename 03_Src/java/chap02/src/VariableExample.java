@@ -29,6 +29,30 @@ public class VariableExample {
 	 */
 	
 	public static void main(String[] args) {
+		int num;
+		int num2 = 10;
+		int num3, num4, num5;
+		int num6 = 10, num7 = 20;
+		
+		byte b1 = 10;
+//		byte b2 = 10L;		// error
+		byte b3 = 0x33;
+		byte b4 = -0x10;
+		byte b5 = -0b1010;
+		
+		System.out.println(b4);		// -16
+		System.out.println(b5);		// -10
+		
+		double d1 = 10.5;			
+		double d2 = 0.105E2;		
+		
+		System.out.println(d1);		// 10.5
+		System.out.println(d2);		// 10.5
+		
+		
+	}
+	
+	public static void main2(String[] args) {
 		
 		int 대한민국 = 10;
 		int num1 = 100;

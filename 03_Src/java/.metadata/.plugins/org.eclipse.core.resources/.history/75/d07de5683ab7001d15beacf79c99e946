@@ -1,0 +1,10 @@
+
+public class RectangleExample {
+
+	public static void main(String[] args) {
+		Turtle t = new Turtle();
+		Turtle.setCanvasSize(600, 600);
+		
+	}
+
+}

@@ -1,0 +1,37 @@
+import java.awt.Color;
+
+public class RectangleExample {
+
+	public static void main(String[] args) {
+		Turtle t = new Turtle();
+		Turtle.setCanvasSize(600, 600);		// 
+		
+		t.speed(1000);
+		t.penColor(Color.yellow);
+		
+		t.up();								// 팬을 들고 
+		t.setPosition(-200, 0); 			// 절대좌표위치로 이동
+		
+		
+		t.down();							// 
+		t.forward(400);
+		
+		t.up();
+		t.setPosition(0, 200);
+		
+		t.down();
+		t.setDirection(270);
+		t.forward(400);
+		
+		t.left(90+45);
+		t.setPosition(200, 0);
+		
+//		t.setDirection(45);
+//		t.setPosition(200, 0);
+//		
+//		t.setDirection(45);
+//		t.setPosition(200, 0);
+		
+	}
+
+}
