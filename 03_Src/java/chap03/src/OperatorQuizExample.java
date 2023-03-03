@@ -1,5 +1,17 @@
 
 public class OperatorQuizExample {
+	
+	// Entry Point (진입점)
+	public static void main11(String[] args) {
+		System.out.println("Start Program");
+		
+		/*
+		 *  여기에 코드 작성
+		 */
+		
+		System.out.println("End Program...");
+	}
+	
 
 //	public static void main10(String[] args) {
 //		char ch = 'A';
@@ -16,6 +28,7 @@ public class OperatorQuizExample {
 //				
 //				
 //	}
+	
 	
 	public static void main8(String[] args) {
 		// 연습문제 [3-8]
@@ -62,7 +75,8 @@ public class OperatorQuizExample {
 	public static void main5(String[] args) {
 		// 연습문제 [3-5]
 		int num = 333;
-		System.out.println( );
+//		System.out.println(num - num%10 +1 );
+		System.out.println(num/ 10*10 +1);
 	}
 	public static void main4(String[] args) {
 		// 연습문제 [3-4]

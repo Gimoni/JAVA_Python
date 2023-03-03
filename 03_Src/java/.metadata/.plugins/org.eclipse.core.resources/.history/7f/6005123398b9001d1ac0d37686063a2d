@@ -1,0 +1,14 @@
+
+public class YeapExample {
+
+	public static void main(String[] args) {
+		
+		for (int year=1; year<100; year++ ) {
+			
+			System.out.println("Hello");
+		
+		}
+		
+	}
+
+}

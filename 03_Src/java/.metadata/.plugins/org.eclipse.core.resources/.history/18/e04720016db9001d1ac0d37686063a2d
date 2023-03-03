@@ -1,0 +1,17 @@
+
+public class IfStatementExample {
+
+	public static void main(String[] args) {
+		boolean b = true;
+		
+		
+		if (b) {
+			System.out.println("It will work when ifstatement is true.. ");
+		}
+
+		if (3 > 4) {
+			System.out.println("It will work when ifstatement is true");
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+
+public class YeapExample {
+
+	public static void main(String[] args) {
+		
+		for (int year=1; year<2030; year++ ) {
+			String leap;
+			if (year%4==0 && year%100!=0 || year%400==0)
+				leap = "윤년";
+			else 
+				leap = "평년";
+			
+			System.out.printf("%04d == %s\n" , year, leap);
+		
+		}
+		
+	}
+
+}

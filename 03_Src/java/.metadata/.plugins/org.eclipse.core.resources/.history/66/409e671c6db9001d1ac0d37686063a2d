@@ -1,0 +1,23 @@
+
+public class IfStatementExample {
+
+	public static void main(String[] args) {
+		
+		System.out.println(System.currentTimeMillis());
+		
+	}
+	
+//	public static void main1(String[] args) {
+//		boolean b = true;
+//		
+//		
+//		if (b) {
+//			System.out.println("It will work when ifstatement is true.. ");
+//		}
+//
+//		if (3 > 4) {
+//			System.out.println("It will work when ifstatement is true");
+//		}
+//	}
+
+}
