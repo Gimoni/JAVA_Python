@@ -1,21 +1,21 @@
 
 public class OperatorQuizExample {
 
-//	public static void main10(String[] args) {
-//		char ch = 'A';
-//		
-//		char lowerCase = 		?		: ch;
-//		
-//		System.out.println("ch:" + ch);
-//		System.out.println("ch to lowerCase:" + lowerCase);
-//	}
-//	public static void main9(String[] args) {
-//		// 연습문제 [3-9]
-//		char ch = 'z';
-//		boolean b =  || ;
-//				
-//				
-//	}
+	public static void main10(String[] args) {
+		char ch = 'A';
+		
+		char lowerCase = 		?		: ch;
+		
+		System.out.println("ch:" + ch);
+		System.out.println("ch to lowerCase:" + lowerCase);
+	}
+	public static void main9(String[] args) {
+		// 연습문제 [3-9]
+		char ch = 'z';
+		boolean b =  || ;
+				
+				
+	}
 	
 	public static void main8(String[] args) {
 		// 연습문제 [3-8]
@@ -27,7 +27,7 @@ public class OperatorQuizExample {
 		ch = (char) (ch + 2);
 		
 		double f = 3.0 / 2.0;
-		long l =  3000L * 3000L * 3000L;
+//		int l = (int) 3000 * 3000 * 3000;
 		
 		float f2 = 0.1f;
 		double d = 0.1;
@@ -37,7 +37,7 @@ public class OperatorQuizExample {
 		System.out.println("c=" +c);				// c=30
 		System.out.println("ch=" +ch);				// ch =C
 		System.out.println("f=" +f);				// f=1.5
-		System.out.println("l=" + l);				// 27000000000
+//		System.out.println("l=" + l);				// l=1230196224
 		System.out.println("result="+result);		// true
 		
 		

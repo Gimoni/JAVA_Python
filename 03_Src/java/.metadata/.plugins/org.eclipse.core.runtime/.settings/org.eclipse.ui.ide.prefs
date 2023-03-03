@@ -1,4 +1,5 @@
 IDE_ENCODINGS_PREFERENCE=euc-kr'
+SWITCH_PERSPECTIVE_ON_PROJECT_CREATION=never
 eclipse.preferences.version=1
 platformState=1677031778555
 quickStart=false
