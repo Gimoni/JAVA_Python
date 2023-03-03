@@ -1,8 +1,0 @@
-
-public class EscapeExample {
-
-	public static void main(String[] args) {
-		System.out.printf("\033[2J");
-	}
-
-}

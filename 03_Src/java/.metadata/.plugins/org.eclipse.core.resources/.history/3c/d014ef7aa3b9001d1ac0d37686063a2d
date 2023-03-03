@@ -8,7 +8,6 @@ public class YeapExample {
 				System.out.printf("%04d == 윤년****\n" , year);
 			else 
 				System.out.printf("%04d == 평년\n" , year);
-			
 		}
 		
 	}
