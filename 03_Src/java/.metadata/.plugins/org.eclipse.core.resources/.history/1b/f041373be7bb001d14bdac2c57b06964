@@ -1,0 +1,13 @@
+package util;
+
+public class Turtle {
+	
+	public static void main(String[] args) {
+		
+		Turtle t = new Turtle();
+		Turtle.setCanvasSize(800, 800);
+		
+		
+	}
+
+}

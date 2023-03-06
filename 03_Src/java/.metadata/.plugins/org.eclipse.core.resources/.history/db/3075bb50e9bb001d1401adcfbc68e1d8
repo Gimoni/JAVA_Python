@@ -1,0 +1,10 @@
+package util.trutle;
+
+public class TurtleTriangleExample {
+
+	Turtle t = new Turtle();
+	Turtle.setCanvasSize(800, 800);
+	
+	
+	
+}

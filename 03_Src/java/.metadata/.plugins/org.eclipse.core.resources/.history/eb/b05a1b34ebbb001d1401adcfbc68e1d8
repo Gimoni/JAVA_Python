@@ -1,0 +1,34 @@
+import util.Turtle;
+
+public class TrutleTriangleExample {
+
+	public static void main3(String[] args) {
+		Turtle t = new Turtle();
+		Turtle.setCanvasSize(800,800);
+		
+		t.speed(50);
+		
+		for (int j=0; j<2; j++) {
+			for(int i=0; i<4; i++) {
+				t.forward(100);
+				t.left(90);
+			}
+			t.left(10);
+		}
+	}
+	
+	public static void main2(String[] args) {
+		Turtle t = new Turtle();
+		Turtle.setCanvasSize(800,800);
+		
+		t.speed(500);
+		
+		for (int j=0; j<2; j++) {
+			for(int i=0; i<4; i++) {
+				t.forward(100);
+				t.left(90);
+			}
+			t.left(10);
+		}
+	}
+}

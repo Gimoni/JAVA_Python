@@ -1,0 +1,37 @@
+
+public class GuGuDanExample {
+
+	public static void main(String[] args) {
+		
+		for (int dan=2; dan<10; dan++) {
+			for(int i=1; i<10; i++) {
+				System.out.printf("%d X %d = %d\n", dan, i, dan*i );
+			}
+		}
+	}
+	
+	public static void main3(String[] args) {
+		
+		int dan = 4;
+		for(int i=1; i<10; i++) {
+//			System.out.printf("%d X %d = %d\n", 2, i, 2*i );
+			System.out.printf("%d X %d = %d\n", dan, i, dan*i );
+		}
+	}
+	
+	public static void main2(String[] args) {
+		
+		for(int i=1; i<10; i++) {
+			System.out.println(2*i);
+			System.out.println(3*i);
+			System.out.println(4*i);
+			System.out.println(5*i);
+			System.out.println(6*i);
+			System.out.println(7*i);
+			System.out.println(8*i);
+			System.out.println(9*i);
+		}
+		
+	}
+
+}

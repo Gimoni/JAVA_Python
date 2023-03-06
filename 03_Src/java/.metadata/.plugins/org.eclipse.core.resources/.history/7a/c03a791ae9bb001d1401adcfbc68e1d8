@@ -1,0 +1,6 @@
+package util;
+
+public class TurtleTriangleExample {
+
+	Turtle t = new Turtle();
+}
