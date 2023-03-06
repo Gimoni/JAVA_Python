@@ -1,0 +1,90 @@
+
+public class TriangleExample {
+	/*
+	 *  1.       2.         3.        4.
+	 *  *        *****      *****          *
+	 *  **        ****      ****          **
+	 *  ***        ***      ***          ***
+	 *  ****        **      **          ****
+	 *  *****        *      *          *****
+	 */
+	
+	public static void main(String[] args) {
+		System.out.println("1.");
+		for (int i=0; i<5; i++) {
+			for (int j=0; j<i+1; j++) {
+				char ch = (char)(Math.random()*26 + 'A');
+				int fg = (int)(Math.random()*8 + 30);
+				int bg = (int)(Math.random()*8 + 40);
+				
+				System.out.printf("\033[%dm", fg);
+				System.out.printf("\033[%dm" bg);
+				   
+				System.out.print(ch);
+				
+			}
+			
+			System.out.printf("\033[0m");
+			for (int j=0; j<4-i; j++)
+				System.out.print(" ");
+			
+			System.out.println();
+		}
+		
+		System.out.println("2."); //?Œë¬¸??
+		for (int i=0; i<5; i++) {
+			for (int j=0; j<i; j++)
+				System.out.print(" ");
+			
+			for (int j=0; j<5-i; j++)
+				System.out.print("*");
+			
+			System.out.println();
+		}
+		
+		System.out.println("3."); //?«ìž
+		for (int i=0; i<5; i++) {
+			for (int j=0; j<5-i; j++)
+				System.out.print("*");
+			
+			for (int j=0; j<i; j++)
+				System.out.print(" ");
+			
+			System.out.println();
+		}
+		
+		System.out.println("4."); //?¹ìˆ˜ë¬¸ìž
+		for (int i=0; i<5; i++) {
+			for (int j=0; j<4-i; j++)
+				System.out.print(" ");
+			
+			for (int j=0; j<i+1; j++)
+				System.out.print("*");
+			
+			System.out.println();
+		}
+		
+	}
+	
+	public static void main3(String[] args) {
+		
+		for (int i=0; i<5; i++) {
+			for (int j=0; j<5; j++)
+				System.out.print("*");
+		
+			System.out.println();
+		}
+		
+	}
+	
+	public static void main2(String[] args) {
+		
+		System.out.println("*");
+		System.out.println("**");
+		System.out.println("***");
+		System.out.println("****");
+		System.out.println("*****");
+		
+	}
+	
+}

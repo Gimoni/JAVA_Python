@@ -1,0 +1,99 @@
+03-06
+
+복습.
+
+- 코드가 실행되는 흐름 제어하기 -
+
+jvm 이 바이트 코드 파일을 실행시킨다 
+main method 를 실행시킨다 
+
+모든 프로그램은 main에서 시작되서 끝났다. 
+Entry point  프로그램 진입점  = main 
+
+cpu가 명령어를(main method) 수행하는 것을 실행흐름이라함.
+
+조건문 0번 또는 1번 수행 (1번 이상 수행되지 않는다)
+반복문 0번 또는 N번 수행
+
+조건문 if , switch
+
+조건에 따라 실행되는 if문 : 조건식의 결과에 따라 블록 실행 여부 결정
+statement안에는 expression이 있다. 
+
+if문은 단독으로 올 수있는데 이때는 조건식이 참일 때만 조건식이 수행된다. 
+
+if-else 문 조건식의 true와 false에 따라 수행이 진행된다. 
+참과 거짓에 따라 각 다른 수행이 이루어짐. 
+참과 거짓 중 한가지의 조건이 수행 됨 (상호배타적, 교집합이 없음. )
+
+else-if 문 참과 거짓에 따른 세부적인 조건을 판단하여 
+	하나의 조건식이 수행이 된다.
+
+switch 문 조건식이 true 일 경우 계속해서 반복, 
+	false 가 되면 반복을 멈추고while문을 종료
+	- 모든 switch문은 if문을 대체가능... 
+	- fallthrough 
+
+
+반복문 for 문, while 문, do-while문
+
+for문 
+for (1.초기화식; 2.조건식; 4.증감식) {
+	3.실행문
+}
+
+초기화문 (딱 한번 수행됨. )
+
+for문을 사용해서 구구단 만들기. 
+
+for문을 사용해서 삼각형 출력. 	
+
+for문을 사용해서 현재년도를 출력.
+
+public class ContinueBreakExample {
+
+	/*
+	 *  epoch time 에폭시 타임
+	 *  1970-01-01 00:00:00 부터 경과시간
+	 *
+	 */
+	public static void main4(String[] args) {
+		long epoch = System.currentTimeMillis()/1000;
+		
+		int year = 0; 
+		
+		for (int i =1970; i<Integer.MAX_VALUE; i++) {
+			int day = (i%4==0 && i%100!=0 || i%400==0) ? 366 : 365;
+			int second = day*24*60*60; 
+			
+			if (epoch-second >=0) {
+				epoch = epoch - second;
+				continue;
+				
+			}
+			
+			year = i;
+			break;
+		}
+		
+		System.out.println(year);
+		
+	}
+
+}	
+
+
+for문 반복 횟수를 예상 할 수 있을때 for문을 사용한다.
+while 문 반복 횟수를 예상 할 수 없을때 while문을 사용한다. 
+do-while 반드시 한번은 작성을 해야 할 때 사용한다. 
+
+
+
+
+
+
+
+
+
+
+
