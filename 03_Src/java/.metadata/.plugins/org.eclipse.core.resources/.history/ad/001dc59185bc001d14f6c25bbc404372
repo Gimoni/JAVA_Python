@@ -1,0 +1,30 @@
+
+public class EpochTimeExample {
+
+	/*
+	 * AC
+	 * 0001-01-01 Monday
+	 * 
+	 * 1970-01-01 00:00:00 부터 경과시간 (Thursday)
+	 * 
+	 *  0  1  2  3  4  5  6 
+	 *  일 월  화  수  목 금  토
+	 * 
+	 */
+	public static void main(String[] args) {
+		long epoch = System.currentTimeMillis()/1000 + 9*60*60;	// 한국시간 GMT+9 / UTC+9
+		
+		int year = 0;
+		int month = 0;
+		int day = 0;
+		
+		int week = 0;
+		long hour = epoch/60/60%24;
+		long minute = epoch/60%60;
+		long second = epoch%60;
+		
+		System.out.printf("%04d-%d-%d %d %02:%02d:%02d\n", year, month, day, week, hour, minute, second);
+		
+	}
+
+}

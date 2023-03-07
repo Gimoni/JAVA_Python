@@ -13,7 +13,7 @@ public class QuizControlStatementsExample {
 		}
 	}
 	public static void main2(String[] args) {
-		// [연습문제 4-2]
+		// [연습문제 4-2] 
 		int i ;
 		for (i=1; i<=20; i++) {
 			if (i%2!=0 && i%3!=0) {

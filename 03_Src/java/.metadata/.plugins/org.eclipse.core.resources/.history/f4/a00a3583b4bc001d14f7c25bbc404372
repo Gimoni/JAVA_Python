@@ -1,0 +1,13 @@
+package example;
+
+public class Exercise07 {
+
+	public static void main(String[] args) {
+		int dice = 0;
+		int dice2 = 0;
+		
+		
+		
+	}
+
+}
