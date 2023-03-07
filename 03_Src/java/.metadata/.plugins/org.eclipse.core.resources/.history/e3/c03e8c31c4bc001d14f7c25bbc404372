@@ -13,11 +13,13 @@ public class Exercise13 {
 		// 하나씩 읽어서 검사한다 
 		
 		for(int i=0; i<value.length(); i++) {
+			
 			ch = value.charAt(i);
-			if (!(ch>='0' && ch<='9')) {	// 조건식
+			if (!(ch>='0' && ch<='9'))
 				isNumber = false;
 				break;
-			}
+					
+							
 		}
 		
 		if (isNumber) {
@@ -27,7 +29,6 @@ public class Exercise13 {
 		}
 		
 	}
-	
 	public static void main2(String[] args) {
 		
 		String value ="12o34";
