@@ -1,0 +1,206 @@
+03-08
+
+참조타입 
+
+모든 참조 변수는 주소를 저장 - 주소를 찾아가면 값이 있다. 데이터의 저장장소를 포함하고 있는 참조변수.
+
+원시타입 : 변수가 있는 곳에 값이 있음. 
+참조타입 : 값이 있는 곳에 주소를 저장하는 타입. 
+------------------------------------------------------------------------------------------------
+
+
+원시타입 / primitive type - 정수, 실수, 문자, 논리 리터럴을 저장하는 타입.
+참조타입 / reference type - 객체의 번지를 참조하는 타입으로 배열, 열거, 클래스, 인터페이스 타입.
+
+참조타입 
+
+- 데이터 타입 분류 
+	참조타입
+	: 객체의 번지를 참조하는 타입
+	: 배열, 열거, 클래스, 인터페이스 타입
+	: 기본 타입으로 선언된 변수는 객체가 생성된 메노리 번지를 저장
+
+Data type : primitive type / reference type 
+
+What is primitive and non-primitive?
+Primitive data structure is a fundamental type of data structure 
+that stores the data of only one type whereas the non-primitive data structure is 
+a type of data structure which is a user-defined that stores the data of different types in a single entity.
+
+primitive types- includes byte , short , int , long , float , double , boolean and char. 
+reference types -  class, Arrays, String, Interface, etc. 
+
+-참조타입 데이터 크기 - 참조형 변수는 null 또는 객체의 주소(4byte, 0x0 ~ 0xFFFFFFFF)를 값으로 가진다. 
+		    null은 어떤 객체의 주소도 저장되지 않음을 뜻한다. 
+		    단, JVM이 32 bit가 아니라 64bit라면 참조형 변수의 크기는 8byte가 된다.
+			(주소의 크기는 같다 ~)
+(= 객체란? : 객체(object)는 데이터와 메소드로 구성된 덩어리라고 생각하면 된다.)
+( 객체 = 데이터(필드) + 메소드 )
+
+
+- 메모리 사용 영역 
+	메소드, 힙, 스택 영역
+	: JVM은 운영체제에서 할당받은 메모리 영역을 메소드 영역, 힙 영역, 스택 영역으로 구분해서 사용.
+	: 메소드 영역 : 바이트코드 파일을 읽은 내용이 저장되는 영역
+	: 힙 영역 : 객체가 생성되는 영역. 객체의 번지는 메소드 영역과 스택 영역의 상수와 변수에서 참조.
+	: 스택영역: 메소드를 호출할 때마다 생성되는 프레임이 저장되는 영역
+
+소스파일 작성. --> 컴파일 -->하드디스크에 프로그램 생성
+--> 프로그램으 실행시키면  RAM working (code area or method area ; 기계어로 저장, 수행진행) 
+--> 기계어가 수행을 시작하면 스택영역 에 메모리가 할당이 되어진다.
+
+메모리 공간 - Stack , Heap 
+Method : 	code file. 
+Stack (local variables): 계산의 중간값. 로컬 변수
+Heap :	문자열 값을 저장 , 더 큰 데이터 영역 .  	
+
+모든 프로세스는 동일하다. 프로그램을 실행하면 - 프로세스 동작. process 
+
+What is runtime data area in Java?
+Runtime Data Areas are responsible to provide memory to store 
+bytecode, objects, parameters, local variables, return values and 
+intermediate results of computations. It's a part of JVM. 
+The JVM organises the memory it needs to execute program 
+into serval runtime data areas.
+
+process map - > 	- Program - run - Process - ( Method/ < Stack/ Heap > )
+
+모든 변수는 스택영역에 만들어진다 
+모든 레퍼런스의 타입은 힙 영역에 저장된다. 
+
+- 참조 타입 변수의 ==, != 연산
+	==, != 연산자
+	: ==, != 연산자는 객체의 번지를 비교해 변수의 값이 같은지, 아닌지를 조사
+	: 번지가 같다면 동일한 객체를 참조하는 것이고, 다르다면 다른 객체를 참조하는 것
+
+
+	 . (dot) : 객체 참조 연산자 -  참조 타입에만 사용이 가능하다.  / 객체의 값을 찾아가는 연산자.. 
+	참조 = 주소.. okayyyy...
+	참조 변수의 위치는 스택에 저장되어 있고 참조 변수의 값은 힙에 저장되어 있다. 
+
+
+	특별한 참조 타입..  :  String ----> Scanner 
+	string concatenation :  문자열 연결 +
+
+- null과 NullPointerException
+	null 값
+	: null 값 - 참조 타입 변수는 아직 번지를 저장하고 있지 않다는 뜻.
+	: null도 초기값으로 사용할 수 있기 때문에 null로 초기화된 참조 변수는 스택 영역에 생성
+
+	NullPinterException
+	: 변수가 null인 상태에서 객체의 데이터나 메소드를 사용하려 할 때 발생하는 예외
+	: 참조 변수가 객체를 정확히 참조하도록 번지를 대입해야 해결됨. 
+
+reference type 초기화 
+	String str = null; 	// reference type 초기화 . 값을 할당하지 않은 상태 null. 
+			아무 값을 가지고 있지 않은 상태.
+
+	System.out.println(str.length());	// 실행시 에러 발생. NullPointexception error발생. 
+				// 프로그램이 비정상 종료됨. : str.lengh() 의 값이 없기 때문. 
+
+new . ==, != , + 이외에 문자열에서는 적용에 알맞는 method 메소드 를 사용해야함. 
+
+- 문자열 (String) 타입
+	String 타입	
+	: 문자열은 String 객체로 생성
+	
+	문자열 비교
+	: 문자열 리터럴이 동일하다면 String 객체를 공유
+	: new 연산자 (객체 생성 연산자)로 직접 String 객체를 생성/ 대입 가능
+
+	문자열 추출 
+	: charAt() 메소드로 문자열에서 매개값으로 주어진 
+	인덱스의 문자를 리턴해 특정위치의 문자를 얻을 수 있음
+
+	문자열 길이 
+	: 문자열에서 문자의 개수를 얻고 싶다면 length() 메소드를 사용
+
+	문자열 대체 
+	: replace() 메소드는 기존 문자열은 그대로 두고, 대체한 새로운 문자열을 리턴
+		String olfStr = "자바 프로그래밍";
+		String newStr = oldStr.replace("자바", "JAVA");	
+
+
+	문자열 잘라내기 
+	: 문자열에서 특정 위치의 문자열을 잘라내어 가져오고 싶다면 substring() 메소드를 사용
+		substring(int beginIndex) 	: beginIndex에서 끝까지 잘라내기
+		substring(int beginIndex, int endIndex)	: beginIndex에서 endIndex 앞까지 잘라내기
+
+	문자열 찾기
+ 	: 문자열에서 특정 문자열의 위치를 찾고자 할 때에는 indexOf() 메소드를 사용
+
+	문자열 분리 
+	: 구분자가 있는 여러개의 문자열을 분리할 때 split() 메소드를 사용
+
+eclipse find = ctrl +f // 문자열 찾기
+
+- 배열 (Array) 타입
+	배열
+	: 연속된 공간에 값을 나열시키고, 각 값에 인덱스를 부여해 놓은 자료구조
+	: 인덱스는 대괄호 [] 와 함께 사용하여 각 항목의 값을 읽거나 저장하는데 사용
+
+	배열의 요소는 인접하게 저장이됨 
+	배열의 값 = 원소 elements	배열의 위치 값 = 인덱스 index		
+	#### index의 번호는 0부터 시작. ###
+	
+	배열 변수 선언 
+	: 두 가지 형태로 작성. 첫 번째가 관례적인 표기
+	1)	타입 [ ] 변수;		2)	타입  변수 [ ] ;
+
+		int[] nums;			// 배열변수 : 		변수의 타입 [] 변수; 	 
+		String [] strs; 			// 배열변수 관례적인 표기
+		
+		int nums2 [];			// 배열변수 표기 2번째 방법.
+		String strs2 [];			//
+
+
+
+	값 목록으로 배열 생성
+	: 배열에 저장될 값의 목록이 있다면, 다음과 같이 간단하게 배열을 생성할 수 있음
+
+	타입 [] 변수 = { 값0, 값1, 값2, 값3,.... };
+
+	: 배열 변수를 선언한 시점과 값 목록이 대입되는 시점이 다르다면 new 타입 [] 을 중괄호 앞에 붙여줌.
+	타입은 배열 변수를 선언할 때 사용한 타입과 동일하게 지정
+	
+	변수 = new 타입[] {값0, 값1, 값2,...... };	
+
+
+
+	new 연산자로 배열 생성 
+	: new 연산자로 값의 목록은 없지만 향후 값들을 저장할 목적으로 배열을 미리 생성
+	
+	타입[] 변수 = new 타입[길이];
+	
+			int[] nums = new int[] {3, 4, 5, 1, 2, 3, 9, 8, 7};
+			new int[] 생략가능. 
+			int[] nums = {3, 4, 5, 1, 2, 3, 9, 8, 7};		// 배열의 원소를 나열할 때  {} 사용. 
+	: new 연산자로 배열을 처음 생성하면 배열 항목은 기본값으로 초기화된다. 
+		(데이터 타입별 기본값으로 원소 초기화)
+
+
+	배열 길이
+	: 배열의 길이란 배열에 저장할 수 있는 항목 수
+	: 코드에서 배열의 길이를 얻으려면 도트(.) 연산자를 사용해서 
+	참조하는 배열의 length 필드를 읽음
+		
+		배열변수.length;
+	
+	: 배열의 length 필드는 읽기만 가능하므로 값을 변경할  수는 없음. 
+	: 배열 길이는 for문을 사용해서 전체 배열 항목을 반복할 때 많이 사용.
+
+
+	다차원 배열
+ 	: 배열 항목에는 또 다른 배열이 대입된 배열
+		변수[1차원인덱스] [2차원인덱스] [3차원인덱스]
+
+
+	값 목록으로 다차원 배열 생성
+	: 값 목록으로 다차원 배열을 생성 시 배열 변수 선언시 타입 뒤에 
+	대괄호 [ ]를 차원의 수만큼 붙이고, 
+	값 목록도 마찬가지로 차원의 수만큼 중괄호를 중첩
+
+	
+syso f ( "%c", ch);
+
+Thread.sleep(10);

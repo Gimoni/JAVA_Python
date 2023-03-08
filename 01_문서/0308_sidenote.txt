@@ -1,0 +1,13 @@
+Program 
+.
+run	// von noiman 구조
+.
+Process
+
+code (method) area :  when JVM read code file (Method) - open and make the stack area.(Stack) : 
+(Heap) save most of usual reference data 
+
+
+
+------------------------------------------
+
