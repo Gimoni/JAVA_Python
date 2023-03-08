@@ -1,0 +1,16 @@
+
+public class ReferenceTypeExample {
+
+	public static void main(String[] args) {
+		int num = 100;
+		num = num*10;
+		
+		String str1 = "Hello";
+		
+	//	str1 = str1*10;	// (x) error 
+		
+		System.out.println(str1.length());
+		
+	}
+
+}

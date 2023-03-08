@@ -1,0 +1,21 @@
+
+public class AlphaExample {
+
+	public static void main(String[] args) {
+		
+		System.out.println("\033[2J");		// Clear screen
+		
+		for (;;) {
+			int line = (int)(Math.random()*20 + 1); 	// [1~20]
+			int column = (int)(Math.random()*40 + 1); 	// [1~40]
+			
+			char ch = (char)(Math.random()*26 + 'A'); 	// [A~Z]
+			
+			
+		}
+		
+		
+//		System.out.println("\033[0m");		// reset
+				
+	}
+}

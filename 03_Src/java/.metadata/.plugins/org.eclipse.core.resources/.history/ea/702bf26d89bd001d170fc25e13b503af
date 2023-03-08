@@ -1,0 +1,32 @@
+
+public class AlphaExample {
+
+	public static void main(String[] args) {
+		
+		System.out.println("\033[2J");		// Clear screen
+		
+		int forCount=0;
+		
+		for (;;) {
+			forCount++;
+			
+			int line = (int)(Math.random()*20 + 1); 	// [1~20]
+			int column = (int)(Math.random()*40 + 1); 	// [1~40]
+			
+			char ch = (char)(Math.random()*26 + 'A'); 	// [A~Z]
+			
+			System.out.printf("\033[%d;%dH", line, column);
+			System.out.printf("%c", ch);
+			
+			System.out.printf("\033[1;50H");
+			System.out.printf("forCount=%04d", forCount);
+			
+//			Thread.sleep(10);
+			
+		}
+		
+		
+//		System.out.println("\033[0m");		// reset
+				
+	}
+}

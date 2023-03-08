@@ -1,0 +1,15 @@
+
+public class StringExample {
+
+	public static void main(String[] args) {
+		
+		int num = 100; 		// stack에 메모리 생성
+		
+		String str = new String("Hello");		// new (참조타입연산자) : heap에 메모리가 생성, 할당 됨. 
+		String str1 = "Hello";					// new String을 생략해도 
+		
+		System.out.println(str == str1);
+		
+	}
+
+}

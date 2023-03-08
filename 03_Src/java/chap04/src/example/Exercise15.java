@@ -10,7 +10,7 @@ public class Exercise15 {
 		
 		while(tmp !=0) {
 			
-			result
+//			result
 			
 		}
 		

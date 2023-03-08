@@ -1,0 +1,24 @@
+
+public class MultiDimArrayExample {
+	
+	public static void main(String[] args) {
+		int[][]nums = {				// 2차원 배열 (행과열.. )
+				{1, 1, 1, 1},
+				{2, 2, 2, 2},
+				{3, 3, 3, 3},
+				{4, 4, 4, 4},
+				{5, 5, 5, 5},
+				
+		};
+		
+		System.out.println(nums[2][3]);
+		
+		for(int i=0; i<nums.length; i++) {
+			for (int j=0; j<nums[i].length; i++)
+				System.out.printf("%d,",nums[i][j]);
+			
+			System.out.println();
+		}
+		
+	}
+}
