@@ -1,0 +1,16 @@
+
+public class ThreeDimArrayExample2 {
+
+	public static void main(String[] args) {
+		int[][][] alphas = new int [3][4][5];
+		
+		for (int i=0; i<4; i++) {
+			for (int j=0; j<5; j++) {
+				alphas [0][i][j] = (char)(Math.random()*26 + 'A');
+				alphas [1][i][j] = (char)(Math.random()*8 + 30);
+				alphas [2][i][j] = (char)(Math.random()*8 + 40);
+			}
+			
+		}
+	}
+}
