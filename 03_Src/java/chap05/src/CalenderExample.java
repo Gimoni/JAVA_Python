@@ -58,64 +58,41 @@ public class CalenderExample {
 //	}
 	
 	static void printMonth(int year, int month) {
-//		long epoch = System.currentTimeMillis() / 1000;
 
-		System.out.printf("%4d년 %2d월\n", year, month);
+		System.out.printf("%14d년 %2d월\n", year, month);
 		
 		int [] dayOfMonth = {31,28,31,30,31,30,31,31,30,31,30,31} ;
-//		for (int i=1; i<=12; i++) {
-//		int dayOfMonth=switch (i) {
-//		case 1, 3, 5,7,8,10,12 -> 31;
-//		case 4,6,9,11 ->30;
-//		case 2 -> {
-//			if(year%4==0 && year%100!=0 || year%400==0)
-//				yield 29;
-//			else 
-//				yield 28;
-//		}
-//		default -> 99;
-//		};
-//		
-//		int secondOfMonth = dayOfMonth*24*60*60; 
-//		if (epoch - secondOfMonth >= 0) {
-//			epoch -= secondOfMonth;
-//			week += dayOfMonth;
-//		}else {
-//			month = i;
-//			break;
-//		}
-//	}
 		
-		int dayOfYear = (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? 366 : 365;
 		
+		int dayOfYear = (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? 366 : 365; 
 		
 		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
 			dayOfMonth[1] = 29;
 
-		int totalDay = (year-1)*365 + (year-1)/4 -(year-1)/100 + (year-1)/400;
+		int totalDay = (int)((year-1)*365 + (year-1)/4 -(year-1)/100 + (year-1)/400);
 		
 		for(int i=0; i<month-1; i++) {
 			totalDay += dayOfMonth[i];
 		}
 		
-//		totalDay += 1;
+		totalDay += 1;
 		
 		int week = totalDay/7;
 		
-
+		// 요일 작성 출력
 		char[] weekDay = {'S','M','T','W','T','F','S'};
 		
-		for (int i=0; i<7; i++) {
+		for (int i=0; i<7; i++) 
 			System.out.printf("%4c", weekDay[i]);
-		}
+			System.out.printf("%4s", " ");
 			System.out.println("");
 		
-		
 //		for (int i =0; i<week; i++) 
-//			System.out.print("    ");
+//			System.out.printf("%4s", " ");			// 
+			
+	
 		
-		
-		for(int i=1; i<dayOfMonth[month-1]; i++) {
+		for(int i=1; i<=dayOfMonth[month-1]; i++) {
 			System.out.printf("%4d", i);
 			week++;
 			if(week%7==0) {
