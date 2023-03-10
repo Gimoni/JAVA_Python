@@ -82,19 +82,29 @@ public class CalenderExample {
 		// 요일 작성 출력
 		char[] weekDay = {'S','M','T','W','T','F','S'};
 		
+
 		for (int i=0; i<7; i++) 
 			System.out.printf("%4c", weekDay[i]);
-			System.out.printf("%4s", " ");
+			System.out.printf("%s", " ");
 			System.out.println("");
+			
 		
 //		for (int i =0; i<week; i++) 
-//			System.out.printf("%4s", " ");			// 
+//			System.out.prinf("%4c", " ");			// 
 			
-	
+//		for (int i =0; i<weekDay; i++) 
+//			System.out.printf("");			// 
+			
+//		System.out.printf("%4c", " ");
 		
+		
+	
 		for(int i=1; i<=dayOfMonth[month-1]; i++) {
 			System.out.printf("%4d", i);
 			week++;
+//			if( week >0 ) {
+//				System.out.printf("%s", " ");
+//			}
 			if(week%7==0) {
 				System.out.println();
 			}
