@@ -1,0 +1,9 @@
+For Test
+
+use Scanner  - import java. util. Scanner;
+
+Scanner scan = new Scanner(System.in);  
+
+get info from user - user can typing tho.. 
+
+promp
