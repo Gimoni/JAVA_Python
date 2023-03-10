@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+/*
+ * 작성자 : 손진희
+ * 작성일 : 2023/03/10
+ * 교과목 : JAVA
+ * 
+ */
+public class CalenderExample {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		int year = 0, month=0;
+	
+//		long week = 4;
+		
+		while (true) {
+			
+
+		
+			
+			if (year < 1) {
+				break;
+			} else 
+				System.out.println("년도는 AC(서기) 입니다.");
+			
+			printMonth(year, month);
+			
+		}
+
+		System.out.print("year >>");
+		int year = scan.nextInt();
+		System.out.print("month >>");
+		int month = scan.nextInt();
+
+		System.out.println("Program End...");
+
+	}
+	
+	static void printMonth(int year, int month) {
+		
+		int lastDate = month;
+		
+	}
+	
+
+	static boolean leapYear() {
+
+		for (int year = 0; year < 2300; year++) {
+			if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+				System.out.printf("%04d == 윤년****\n", year);
+			else
+				System.out.printf("%04d == 평년\n", year);
+		}
+		return false;
+	}
+
+}
