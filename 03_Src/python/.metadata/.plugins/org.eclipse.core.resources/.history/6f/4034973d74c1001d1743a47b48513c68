@@ -1,0 +1,17 @@
+
+
+import turtle
+from tkinter import mainloop
+
+t = turtle.Turtle('Turtle')
+
+for i in range(4):
+    t.forward(100)
+    t.left(90)
+
+mainloop()
+
+print("Program End...")
+
+
+

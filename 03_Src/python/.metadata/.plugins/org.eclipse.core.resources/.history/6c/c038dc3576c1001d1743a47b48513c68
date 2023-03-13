@@ -1,0 +1,15 @@
+
+import random as r
+
+jumsu = r.random()
+
+
+print(jumsu)
+
+
+
+
+
+
+print ("Program End....")
+
