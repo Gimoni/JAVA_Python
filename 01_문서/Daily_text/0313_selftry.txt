@@ -1,0 +1,12 @@
+1. python install
+2. ipython install / pandas install 
+	- pip install ipython
+	- pip install pandas
+3. Liclipse install 
+	-1. interpreter setting
+	-2. Terminal pugin 
+	-3. create new Py Dev Moduel
+
+---------------------------------------
+
+try again in big1. 
