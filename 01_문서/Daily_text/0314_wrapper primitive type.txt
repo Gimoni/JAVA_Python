@@ -1,0 +1,7 @@
+wrapper primitive type Java
+
+what is wrapper primitive type? 
+	So a primitive wrapper class is a wrapper class that encapsulates, 
+	hides or wraps data types from the eight primitive data types, 
+	so that these can be used to create instantiated objects with methods in another class 
+	or in other classes. The primitive wrapper classes are found in the Java API.

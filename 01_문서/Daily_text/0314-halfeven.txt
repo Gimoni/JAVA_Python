@@ -1,0 +1,47 @@
+
+python 
+round - half even 
+
+half up : 실수 5이상은 무조건 반올림 
+half even : 파이썬에서 half even 법 
+ 	홀수에서는 반올림
+	짝수에서는 버림
+	- 발생하는 오류의 이유 : 1.8500001 작은 자리가 한자리 더 있다면 
+			1.85보다 더 크다고 생각하고 반올림이 된다. 
+	python의 float은 I754로 계산됨.
+	정확한 실수계산을 하기 위해서 라이브러리를 사용해야한다. 
+	
+
+	round( 실수 , 구하고자 하는 소수점자리)
+	round(Decimal('실수'), 구하고자 하는 소수점자리)	# 라이브러리 사용. 
+
+
+In [41]: from decimal import Decimal
+
+
+In [43]: round(Decimal('1.85'),1)
+Out[43]: Decimal('1.8')
+
+In [44]: round(1.85, 1)
+Out[44]: 1.9
+
+In [49]: round(Decimal('1.21345'),1)
+Out[49]: Decimal('1.2')
+
+In [50]: round(Decimal('1.21345'),4)
+Out[50]: Decimal('1.2134')
+
+In [51]: round(Decimal('1.21325'),4)
+Out[51]: Decimal('1.2132')
+
+In [52]: round(Decimal('1.21365'),4)
+Out[52]: Decimal('1.2136')
+
+In [53]: round(Decimal('1.21385'),4)
+Out[53]: Decimal('1.2138')
+
+In [54]: round(Decimal('1.21375'),4)
+Out[54]: Decimal('1.2138')
+
+In [55]: round(Decimal('1.21395'),4)
+Out[55]: Decimal('1.2140')

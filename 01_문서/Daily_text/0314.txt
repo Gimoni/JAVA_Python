@@ -1,0 +1,556 @@
+03-14
+ 
+Python 
+
+python 에서 실수는 float 하나 _ 정수는 int 뿐이다. 
+	java와 다르게 각각 하나씩 존재
+
+cmd 창에서 ipython을 사용해서 type을 확인해본다. 
+ 	In [5]: type(10/3)
+	Out[5]: float
+
+	In [6]: type(10.0/3)
+	Out[6]: float
+	
+	In [8]: type(10//3)
+	Out[8]: int
+
+
+floor division in python  : 	
+	In this tutorial, you'll learn how to perform floor division in Python. 
+	You'll use Python's // operator, the floor function from Python's math module, 
+	and more – with code examples.
+
+	Arithmetic Operators in Python.
+	Operator		Syntax		Result
+	Floor division (/)	num1//num2	Returns the quotient when num1 is divided by num2
+
+
+ex )  -3.3333 >>> floor >>> 4   /   4 >>> ceil >>> 3 
+floor division = 나눴을 때 /를 하나 더 추가하면 3.333 보다는 작지만 가장 큰 정수로 ceiling 한다. 
+		음수에서 -10//3 일때 -3.333 보다는 크지만 가장 작은 정수로 floor한다.
+
+jshell에서 floor 의 의미를 확인 했을 때
+	jshell> Math.floor(3.333)
+	$1 ==> 3.0
+
+	jshell> Math.floor(-3.3333)
+	$2 ==> -4.0
+ 
+Python에서는 문자열을 표현할 때 "" 또는 '' 둘 다 사용이 가능하고
+이스케이프 방식은 자바와 같이 \ 역슬래시를 사용한다. 
+
+Python에서 모든 변수는 참조타입 ! 
+
+
+==============================================================
+
+중요 !!! 프로그래밍 
+타입에 대한 이해 . 
+
+wrapper primitive type Java 
+ :  primitive type 에 대응되는 참조타입을  wrapper type 이라고 한다 
+자바에서 변수타입을 대문자 풀네임 으로 작성. 
+
+< java >
+
+public class WrapperTypeExample {
+
+	public static void main(String[] args) {
+		// Reference type
+		// wrapper type = Primitive type to Reference type 
+		Byte b1 = 100;
+		Short s1 = 200;
+	    Character  c1 = 'A';
+		Integer i1 = 300;
+		Long l1 = 400L;
+		
+		Float f1 = 10.5f;
+		Double d1 = 10.5;
+		
+		Boolean tf = true;
+		
+	}
+	
+	public static void main2(String[] args) {
+		// Primitive type
+		byte b1 = 100;
+		short s1 = 200;
+		char c1 = 'A';
+		int i1 = 300;
+		long l1 = 400;
+		
+		float f1 = 10.5f;
+		double d1 = 10.5;
+		
+		boolean tf = true;
+		
+	}
+
+}
+
+
+그렇지만 python은 다르다 
+
+
+Python 은 타입을 입력하지 않지만 
+변수가 가르키는 값을 type 함수를 사용해서 타입을 확인 할 수 있다.
+
+< python >
+
+b1 = 100
+s1 = 200
+c1 = 'A'    # 문자열
+i1 = 300
+l1 = 400 
+
+f1 = 10.5
+d1 = 10.5
+
+tf = True
+
+print("b1 = ", type(b1))    # int
+print("s1 = ", type(s1))    # int
+print("c1 = ", type(c1))    # str
+print("i1 = ", type(i1))    # int
+print("l1 = ", type(l1))    # int
+
+print("f1 = ", type(f1))    # float
+print("d1 = ", type(d1))    # float
+
+print("tf = ", type(tf))    # bool
+
+이렇듯 python 은 무조건 참조타입이고 
+java의 wrapper type과 같은 type들은 
+# 정수타입 int 와 실수타입 float
+# 문자열 str / 논리형 bool  이 있다. 
+
+파이썬의 타입 ==> (무조건 참조 타입) 
+#
+# 정수    int
+# 실수    float
+# 논리    bool    
+# 문자열  str ==> python은 문자(char)타입이 없다.
+
+
+
+In [25]: import math
+
+In [26]: math.sqrt(2)
+Out[26]: 1.4142135623730951
+
+In [27]: math.pow(2,3)
+Out[27]: 8.0
+
+In [28]: math.radians(180)
+Out[28]: 3.141592653589793
+
+In [29]: math.radians(144)
+Out[29]: 2.5132741228718345
+
+In [30]: math.degrees(3.14)
+Out[30]: 179.9087476710785
+
+In [31]: math.degrees(math.pi)
+Out[31]: 180.0
+
+In [32]: math.degrees(2*math.pi)
+Out[32]: 360.0
+
+In [33]: math.cos(math.radians(45))
+Out[33]: 0.7071067811865476
+
+
+2의 3 승 / 2의 10 승
+In [36]: 2**3
+Out[36]: 8
+
+In [37]: 2**10
+Out[37]: 1024
+
+In [38]: 2*3
+Out[38]: 6
+
+In [39]: math.pow(2,3)
+Out[39]: 8.0
+
+In [40]: math.pow(2,10)
+Out[40]: 1024.0
+
+In [41]: math.pow(2,100)
+Out[41]: 1.2676506002282294e+30
+
+
+python 
+round - half even 
+
+half up : 실수 5이상은 무조건 반올림 
+half even : 파이썬에서 half even 법 
+  홀수에서는 반올림
+짝수에서는 버림
+- 발생하는 오류의 이유 : 1.8500001 작은 자리가 한자리 더 있다면 
+1.85보다 더 크다고 생각하고 반올림이 된다. 
+python의 float은 IEEE 754로 계산됨.
+
+부동소수점 계산은 오차에 주의해야 한다 
+정확한 실수계산을 하기 위해서 라이브러리를 사용해야한다. 
+
+
+round( 실수 , 구하고자 하는 소수점자리)
+round(Decimal('실수'), 구하고자 하는 소수점자리) # 라이브러리 사용. 
+
+
+
+ch = chr(int(r.random()*26) + ord('A'))           # 코드값을 알아내는 함수 ord 
+
+In [1]: ord('A')
+Out[1]: 65
+
+In [2]: ord('a')
+Out[2]: 97
+
+In [3]: ord('0')
+Out[3]: 48
+
+In [4]: chr(65)
+Out[4]: 'A'
+
+In [5]: chr(97)
+Out[5]: 'a'
+
+In [6]: chr(48)
+Out[6]: '0'
+
+
+===============================================
+
+Python
+
+- 조건문의 구조 for문 / while문
+
+	if 조건 : 		# 콜른을 찍어서 아직 문장이 끝나지 않음을 표시한다.
+	   명령어 (true) 	# 조건이 참일 때 실행되는 명령어이다.
+	else :
+	   명령어(false) 	# 조건이 거짓일 때 실행되는 명령어이다.
+        (들여쓰기가 필요)  
+
+
+	while 조건 : 	# 콜른을 찍어서 아직 문장이 끝나지 않음을 표시한다.
+	        명령어(true)	# 조건이 참일 때 반복되는 문장이다.
+         (들여쓰기가 필요)
+
+- python에 대한 정리..  
+	: 프로그램은 명령어들로 이루어진 텍스트 파일 형태로 작성 (=소스파일)
+	: 파이썬 인터프리터는 소스 파일을 해석하여서 
+	컴퓨터가 이해할 수 있는 기계어 파일로 변환하여 생성.
+	: 문장들은 기본적으로 순차적으로 실행되지만 조건에 따라서 서로 다른 
+	경로로 실행되거나 반복될 수 있다. 
+
+
+Python 변수와 계산 
+
+	변수 
+	- 변수(variable)는 값을 저장하는 공강
+	- 변수는 값을 저장하는 상자라 생각할 수 있다.
+
+	변수와 메모리 
+	- 변수는 메모리에 만들어진다.
+	
+	변수 생성 
+	변수를 만드려면? >> 
+		변수 이름 = 값
+
+	>>> score = 20
+	>>> score
+	20
+ 	>>> print(score)
+	20
+
+	변수의 사용 
+	- 생성된 변수에는 얼마든지 다른 값을 저장할 수 있다.
+	- 변수에는 다른 변수의 값도 저장 할 수 있다.
+	- 파이썬의 변수에는 정수뿐만 아니라 문자열도 저장 할 수 있다. 
+	
+	변수가 저장하는 것 
+	- 파이썬에서 변수는 어떤 데이터든지 저장 할 수 있다.
+
+	변수의 이름 
+	- 의미 있는 이름 사용
+	- 소문자와 대문자는 서로 다른게 취급된다.
+	- 변수의 이름은 영문자와 숫자, 밑줄(_)로 이루어진다.
+	- 변수의 이름 중간에 공백이 들어가면 안 된다. 
+	단어를 구분하려면 밑줄(_)을 사용한다.
+
+	식별자(Identifiler)
+	
+	낙타표기법
+	- 낙타체는 변수의 첫 글자는 소문자로, 나머지 단의 첫 글자는 대문자로 적는 법이다. 
+	예를 들면  myNewCar 처럼 첫 'm'은 소문자로, 나머지 단어들의 첫 글자는 대문자로 표기.
+
+	상수 
+	- 상수 (constant) 는 한번 값이 결정되면 절대로 변경되지 않는 변수.
+	프로그램에서 대문자로 지은 변수는 상수이다 ... 
+
+	주석 
+	- 주석(comment)은 소스코드에 붙이는 설명글 
+	python 주석 = '#'
+
+	수식과 연산자 
+	>>> 3+4 
+	7
+	>>>3.14*5*5
+	78.5
+
+	연산자와 피연산자 
+	- 연산식, 수식(expression)= 피연산자들과 연산자의 조합
+ 	- 연산자 (operator) 는 연산을 나타내는 기호
+	- 피연산자 (operand) 는 연산의 대상이 되는 것
+	
+	산술 연산자
+	 + , -,  *, //,  /, %
+
+	나눗셈 
+	실수 / 	floor division //
+
+	지수 계산 
+	- 지수(power)를 계산하려면 ** 연산자를 사용한다. 
+	>>>2**7
+	128
+
+	원리금 계산
+	>>>a=1000
+	>>>r=0.05
+	>>>n=10
+	>>>a*(1+r)**n	# 복리계산 
+	1628.894626777442
+
+	나머지 계산 
+	>>> 7 % 4
+	3
+
+	초 단위의  시간을 받아서 시 분 초를 출력. 
+	
+	import time
+
+	current = time.time();          # 현재시간을 초단위로 return
+
+	hour = int(current)//60//60%24 + 9
+	minute = int(current)//60%60
+	second = int(current)%60
+
+	print("current = ", current)
+	print("current = ", current, type(current))
+
+	print(type(hour), type(minute), type(second))        # 연산자 오버로딩
+	print("%02d:%02d:%02d" % (hour, minute, second))        # 연산자 오버로딩
+
+
+	연산자의 우선 순위
+	>>> 10 + 20/2
+	20.0
+	>>> (10 + 20) / 2
+	15.0
+
+	In [6]: 2*3**2
+	Out[6]: 18
+
+	In [7]: (2*3)**2
+	Out[7]: 36
+	
+
+	괄호의 사용 
+
+	복리계산 
+	>>>a*(1+r)**n	# 복리계산 
+	24달러를 복리 6%로 382년 동안 계산한것.. 
+
+	24*(1+0.06)**382
+	
+	함수 호출 
+	- 함수 (function)란 특별한 작업을 담당하는 명령어들의 모임이다.
+	- 파이썬이 기본으로 제공하는 내장 함수는 상당히 많다
+
+	내장함수
+	>>> value=abs(-3)
+	
+	>>>round (1.2345)		#HALF_EVEN
+	1
+	>>>round(1.9876)
+
+	
+	>>> from math import * 	# 한번만 하면 된다
+	>>> squt(4.0)
+	2.0
+
+	>>> x=2.0
+	>>> y=3.0
+	>>> sqrt(x**2+y**2)
+	3.605551275463989
+
+
+	등산 시간 계산
+	산악 자전거를 평지 시속 20km/h 
+	오르막 10km/h 내리막 30km/로 주행했을 때
+	다음 경로의 시간을 구하기.
+	
+	from math import *
+	
+	time1 = 10/20
+	height = sqrt(3**2+4**2)
+	time2 = height/10
+	time3 = height/30
+	time4 = 8/20
+	total = time1+time2+time3+time4
+
+	print(total)
+
+	In [57]: 18/20 +5/10 + 5/30
+	Out[57]: 1.5666666666666667
+
+	In [60]: (18/20 + 5/10 + 5/30) * 60
+	Out[60]: 94.0
+
+	In [62]: 94.0/60
+	Out[62]: 1.5666666666666667
+
+
+
+	input() 함수 
+	- 사용자와의 상호작용
+	input() 함수의 구조 
+		변수 = input ("프롬프트 문자열") 
+
+	문자열 입력 
+	year = input ("year >>>")
+	print("year is" + year + "thx")
+	month = input("month >>>")
+	print("month is " + month + "thx")
+	
+	year>>>
+	year is 2023 thx
+	month>>>
+	month is 3 thx
+
+	숫자 입력
+	x = input("첫번째 정수 : ")
+	y = input("두번째 정수 : ")
+	sum = x + y 
+	print ("합은", sum)
+
+	출력 결과 	
+	첫번째 정수 : (입력한 정수 x)	
+	두번째 정수 : (입력한 정수 y)
+	합은 xy (문자열로 간주하여 합침)
+
+-----------------------------------------------------------
+
+	x = int(input("첫번째 정수 : "))
+	y = int(input("두번째 정수 : "))
+	sum = x + y 
+	print ("합은", sum)
+
+	출력 결과 	
+	첫번째 정수 : (입력한 정수 x)	
+	두번째 정수 : (입력한 정수 y)
+	합은 z
+
+
+
+	자료형 
+	- 정수 (integer), 실수 (floating-point), 문자열(string)
+	
+	but 실수에서 i754를 따라 근사치로 계산된다. .. 대안은 라이브러리를 사용하는것.. 
+		
+
+	
+
+	구의 부피 계산하기 
+	- 지구에서 가장 가까운 별은 프록시마 켄타우리(Proxima Centauri) 별이라고 한다 
+	프록시마 켄타우리는 지구로부터 4 * 10**12km 떨어져 있다고 한다. 
+	빛의 속도로 프록시마 켄타우리까지 간다면 시간이 얼마나 걸리는지 계산
+	
+	< ipython >
+	In [76]: (40*10**12)/300000
+	Out[76]: 133333333.33333333
+
+	In [77]: (40*10**12)/300000/60
+	Out[77]: 2222222.222222222
+
+	In [78]: (40*10**12)/300000/60/60
+	Out[78]: 37037.03703703704
+
+	In [79]: (40*10**12)/300000/60/60/24
+	Out[79]: 1543.20987654321
+	
+	In [80]: (40*10**12)/300000/60/60/24/365
+	Out[80]: 4.227972264501945
+	-------------------------------------------------------
+	<jshell>	
+	jshell> (40*Math.pow(10,12))/300000/60/60/24/365
+	$5 ==> 4.227972264501945
+	-------------------------------------------------------
+	
+	In [1]: speed = 300000	# 30만 km/sec
+
+	In [2]: distance = 40 * 10 ** 12
+
+	In [3]: secs = distance/speed
+
+	In [4]: light_year = secs/(60*60*24*365)
+
+	In [5]: print(light_year)
+	4.227972264501945
+
+
+
+
+
+	문자열 
+	- 컴퓨터에게는 숫자가 중요하지만 인간은 주로 문자열(String)를 사용하여 정보를 
+	표현하고 저장하므로 문자열의 처리도 무척 중요하다.
+
+	문자열이란? 
+	- 문자열(string)은 문자들의 순서있는 집합(sequence of characters)
+
+	문법 오류
+	- 문법 : 프로그램의 문장을 바르게 구성하기 위한 규칙
+
+	여러줄의 문자열  MultiLineString
+	- """(큰 따옴표3개) 나 '''(작은 따옴표 3개) 
+
+	특수 문자열 
+	: 문자 앞에 \(이스케이프문자)가 붙으면 문자의 특수한 의미를 잃어버린다.
+
+	문자열의 연결 
+	- 양쪽이 다 문자열이여야 문자열의 연결이 성립된다. 
+
+	
+	문자열과 정수 간의 변환  : 값에 타입을 주어서 문자열과 정수간의 타입을 변환시킨다. 
+	
+	In [7]: "Student"+str(26)
+	Out[7]: 'Student26'
+
+	In [8]: price = int("259000")
+
+	In [9]: height = float("290.54")
+	 
+
+	문자열의 반복 
+	>>> message = "Hi"
+	>>> print(message*3)
+	Hi Hi Hi
+
+	문자열의 출력 
+	>>> price = 10000
+	>>> print("상품의 가격은 %s원입니다." % price)
+	상품의 가격은 10000원입니다.
+
+
+
+
+
+
+
+
+
+	
