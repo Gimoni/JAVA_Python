@@ -1,0 +1,19 @@
+
+
+import turtle
+from tkinter import mainloop
+
+t = turtle.Turtle('turtle')
+
+t.speed(1)
+t.pencolor('red')
+
+t.home()
+
+
+mainloop()
+
+print("Program End...")
+
+
+

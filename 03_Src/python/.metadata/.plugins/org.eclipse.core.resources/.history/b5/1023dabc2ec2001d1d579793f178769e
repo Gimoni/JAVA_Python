@@ -1,0 +1,20 @@
+
+
+import time
+
+current = time.time();          # 현재시간을 초단위로 return
+
+hour = 0
+minute = 0 
+second = 0
+
+
+print("current = ", current)
+print("current = ", current*1000)
+print("current = ", current, type(current))
+print("%02d:%02d:%02d" % (hour, minute, second))        # 연산자 오버로딩
+
+
+
+
+print("Program End...")

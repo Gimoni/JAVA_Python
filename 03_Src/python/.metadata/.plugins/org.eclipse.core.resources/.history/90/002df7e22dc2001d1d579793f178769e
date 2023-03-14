@@ -1,0 +1,13 @@
+
+
+import time
+
+current = time.time();          # 현재시간을 초단위로 return
+
+
+print("current = ", current)
+
+
+
+
+print("Program End...")

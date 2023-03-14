@@ -1,13 +1,64 @@
 -- VERSION_5
 -- START DISKCACHE_3
 D:\03_Src\python\.metadata\.plugins\org.eclipse.core.resources\.projects\chap02\com.python.pydev.analysis\v2_indexcache
+VariableExample2|1678764976178684200|D:\03_Src\python\chap02\src\VariableExample2.py
+IfStatement|1678699019915937800|D:\03_Src\python\chap02\src\IfStatement.py
+VariableExample|1678763396252829700|D:\03_Src\python\chap02\src\VariableExample.py
+Star|1678773701945772800|D:\03_Src\python\chap02\src\Star.py
 TriangleExample|1678691596601745300|D:\03_Src\python\chap02\src\TriangleExample.py
+TypeExample|1678760009199479100|D:\03_Src\python\chap02\src\TypeExample.py
+turtlegrapics|1678699022639249200|D:\03_Src\python\chap02\src\turtlegrapics.py
+온도변환|1678693290933270600|D:\03_Src\python\chap02\src\온도변환.py
+InputExample|1678760323316103200|D:\03_Src\python\chap02\src\InputExample.py
+EpochTime|1678775648619601500|D:\03_Src\python\chap02\src\EpochTime.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+18
+16=VariableExample
+6=EpochTime
+5=D:\03_Src\python\chap02\src\EpochTime.py
+14=VariableExample2
+3=D:\03_Src\python\chap02\src\온도변환.py
+8=IfStatement
+9=D:\03_Src\python\chap02\src\Star.py
+15=D:\03_Src\python\chap02\src\VariableExample.py
+17=D:\03_Src\python\chap02\src\turtlegrapics.py
+1=D:\03_Src\python\chap02\src\TypeExample.py
+7=D:\03_Src\python\chap02\src\IfStatement.py
+10=Star
+2=TypeExample
+11=D:\03_Src\python\chap02\src\InputExample.py
+13=D:\03_Src\python\chap02\src\VariableExample2.py
+4=온도변환
+18=turtlegrapics
+12=InputExample
 -- END DICTIONARY
 -- START TREE 1
-0
+24
+b1|1|b1!1^13#1*19@
+c1|1|c1!1^15#1*19@
+cte|1|ctemp!3^5#1*35@
+cur|1|current!5^5#1*51@
+d1|1|d1!1^20#1*19@
+day|0|
+f1|1|f1!1^19#1*19@
+fte|1|ftemp!3^3#1*35@
+gra|1|grade!7^5#1*67@
+hou|1|hour!5^16#1*51@
+i1|1|i1!1^16#1*19@
+jum|1|jumsu!7^4#1*67@
+l1|1|l1!1^17#1*19@
+len|1|length!9^46#1*83@
+min|1|minute!5^17#1*51@
+mon|1|month!11^4#1*99@
+num|2|NUM!13^3#1*115@num!15^3#1*131@
+rad|1|radius!9^8#1*83@
+s1|1|s1!1^14#1*19@
+sec|1|second!5^18#1*51@
+t|2|t!9^6#1*83@t!17^6#1*147@
+tf|1|tf!1^22#1*19@
+wee|0|
+yea|1|year!11^3#1*99@
 -- END TREE
 -- START TREE 2
 0

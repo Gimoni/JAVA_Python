@@ -1,0 +1,14 @@
+
+
+year = int(input("year>>"))      # 
+month = int(input("month>>"))
+
+
+print("[", year, month, "]")
+print("[", type(year), type(month), "]")
+
+
+print("Program End..")
+
+
+

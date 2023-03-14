@@ -1,7 +1,9 @@
-INSTUP온도변환
-D:\03_Src\python\chap02\src\온도변환.py
-INFOS:&&3|1|2|0|3|3|1&&3|4|2|0|3|5|1
-D:\03_Src\python\chap02\src\온도변환.py=3
-ftemp=1
-온도변환=2
-ctemp=4
+INSTUPVT100Example
+D:\03_Src\python\chap02\src\VT100Example.py
+INFOS:&&3|1|2|0|3|3|1&&3|4|2|0|3|4|1&&3|5|2|0|3|9|1&&3|6|2|0|3|14|1
+str3=5
+D:\03_Src\python\chap02\src\VT100Example.py=3
+str4=6
+str1=1
+VT100Example=2
+str2=4

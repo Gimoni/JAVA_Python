@@ -1,0 +1,38 @@
+
+
+import turtle
+from tkinter import mainloop
+
+t = turtle.Turtle('turtle')
+
+radius = 200
+
+t.speed(8)
+t.pencolor('red')
+
+t.home()
+
+t.up()
+t.setposition(0,-radius)
+
+t.down()
+t.circle(radius)
+
+t.up()
+t.home()
+
+t.down()
+t.pencolor('black')
+t.speed(1)
+
+t.left(36)
+t.forward(radius)
+t.setpos(0, 0)
+t.home()
+
+mainloop()
+
+print("Program End...")
+
+
+

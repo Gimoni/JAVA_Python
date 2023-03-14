@@ -1,0 +1,16 @@
+
+b1 = 100
+s1 = 200
+c1 = 'A'    # 문자열
+i1 = 300
+l1 = 400 
+f1 = 10.5
+d1 = 10.5
+
+tf = True
+
+print("b1 = ", type(b1))
+print("s1 = ", type(s1))
+print("c1 = ", type(c1))
+print("i1 = ", type(i1))
+print("l1 = ", type(l1))

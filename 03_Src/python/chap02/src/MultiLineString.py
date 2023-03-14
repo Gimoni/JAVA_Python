@@ -1,0 +1,11 @@
+
+print('\033[2J')    # Clear Screen 
+
+print('\033[10;20H', end='')        # Cursor move
+print('\033[31m', end='')           # Forground RED
+print('\033[44m', end='')           # Background BLUE   
+print('Hello VT100')
+
+
+print('\033[0m')                    # Reset
+print("Program End...")
