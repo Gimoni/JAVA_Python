@@ -1,0 +1,18 @@
+# what is range?
+
+
+print(range(10))
+print(list(range(10)))
+print(list(range(1, 10)))
+
+for i in range(10):
+    print(i, ', ', end='')
+    
+print()
+
+for i in [0, 1, 2, 3, 4]:
+    print(i)
+    
+print()
+    
+print("Program End...")

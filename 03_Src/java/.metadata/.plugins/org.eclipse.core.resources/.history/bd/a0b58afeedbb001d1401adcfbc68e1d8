@@ -1,9 +1,0 @@
-
-public class ForFloatExample {
-
-	public static void main(String[] args) {
-		for (double d=0.0; d<1; d+=0.1) { // float type
-			System.out.println(d);
-		}
-	}
-}

@@ -1,9 +1,0 @@
-
-import random as r 
-
-line = r.random()
-
-
-
-print(line)
-print("Program End...")

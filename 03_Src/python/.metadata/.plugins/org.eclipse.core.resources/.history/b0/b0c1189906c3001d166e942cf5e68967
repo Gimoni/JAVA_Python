@@ -1,0 +1,9 @@
+
+
+print([False])
+print(type[False])
+
+print("="*50)
+print([False]*40)
+    
+print("Program End...")
