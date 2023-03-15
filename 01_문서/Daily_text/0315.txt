@@ -1,0 +1,253 @@
+03-15
+
+파이썬 변수와 계산 
+
+	인덱싱
+	- 인덱싱(indexing)이란 문자열에 [과 ]을 붙여서 문자를 추출하는 것이다.
+	인덱스는 0 부터 시작 
+	
+	리스트 
+	- 파이썬은 여러 개의 값을 모아서 하나의 변수에 저장 할 수 있다.
+	- 리스트는  [ ] 안에 값을 나열하고 값과 값 사이에 콤마를 찍으면 된다. 
+	
+	>>> shopping_list = ['milk', 'eggs', 'cheese'. 'butter', 'cream']
+	>>> print(shopping_list)
+	['milk', 'eggs', 'cheese'. 'butter', 'cream']
+
+	Indexing 
+	>>> print(shoppint_list[2])
+	cheese
+	>>> shoppint_list[2]='apple'
+	>>> print(shopping_list)
+	['milk', 'eggs', 'apple'. 'butter', 'cream']
+
+	
+
+
+	핵심정리 
+	
+	- 변수의 개념 이해. 
+	변수는 값을 저장하는 산자와 같은 것으로 변수에 저장된 값을 
+	나중에 유용하게 사용할 수 있다.
+	
+	- 다양한 산술 계산 연산자에 대하여 학습하였다. 
+	연산자들은 우선 순위를 가지고 있지만 우리는 괄호를 사용하여서
+	연산자의 우선순위를 변경할 수 있었다. 
+	지수를 계산하는 연산자는 ** 이다. 
+	
+	- 문자열은 큰따옴표나 작은 따옴표를 이용하여 표현한다.
+	input()  함수를 이용하여 사용자로부터 문자열을 받을 수 있다. 
+	인덱싱 연산자 [] 을 이용하여 각각의 문자를 추출 할 수 있다. 
+	
+
+===============================================
+
+Python 
+
+선택
+
+	조건문 
+	- 문제를 해결할 때 어떤 조건에 따라서 두개 또는 
+	여러 개의 실행 경로 가운데 하나를 선택해야 하는 경우
+
+	if-else 문 
+	전체적인 구조 
+	if score >= 60 :
+	      print("pass")
+	else : 
+	      print("fail") 
+
+	
+
+	관계 연산자
+	- 관계 연산자 (relational operator) 는 두개의 피연산자를 비교하는데 사용.
+	예를 들면 "변수 x가 변수 y보다 큰지, 를 따지는 데 사용된다. 
+	
+	관계연산자.
+	x==y
+	x!=y
+	x>y
+	x<y
+	x>=y
+	x<=y
+
+	- 관계 수식은 참이나 거짓이라는 값을 생성한다. 
+
+	블록 
+	- 만약 조건이 참인 경우에 여러 개의 문자이 실행되어야 한다면 ?
+	if score >= 90 :
+	      print ("pass")
+	      Print ("nice!")
+	- 블록은 들여쓰기로 구분한다.
+	
+	문자열의 중간문자
+	- 문자열의 중앙에 있는 문자를 출력. 
+	
+
+	논리 연산자 
+ 	- 논리 연산자 (logical operator)는 여러개의 조건을 조합하여 
+	참인지 거짓인지를 따질 때 사용. 
+	AND (논리곱), OR(논리합), NOT(논리부정)이 있다. 
+	- 논리 연산자(logical operatio) 는 여러 개의 조건을 조합하여 
+	참인지 거짓인지를 따질 때 사용한다. 
+	AND(논리곱), OR(논리합), NOT(논리부정)이 있다.
+	ex))
+	- 놀이공원에서 놀이기구를 탈 수 있는 조건을 논리 수식으로 작성
+	>>> 	
+		age >= 10 and height >= 165
+	논리 연산자를 사용하는 .. 
+	>>>
+	연속적인 if-else 문 
+	음수, 양수의 구별
+	중첩 if-else 문 (nesting if-else)
+	윤년 평년 
+	문자열과 숫자 구별 
+	
+	- 관계 연산자는 >=, <=. == 연산자를 
+	사용하여 2개의 피연산자의 크기를 비교한다. 
+	- 논리 연산자는 and, or, not을 사용하여 논리적인 연산을 수행한다.
+	- if-else 문은 조건이 참이면 하나의 블록을 실행하고 그렇지 않으면
+	다른 블록을 실행한다. 
+	
+
+
+
+
+===============================================
+
+import randome as r
+
+line = r.randint(1, 20)
+column = r.randint(1, 40)
+fg = r.randint(30, 37)
+bg = r.randint(40, 47)
+
+print(int(r.random()*20 +1))
+print(r.randint(1, 10))             # 1부터 10까지 포함됨
+print(r.randrange(1, 21))           # 1부터 20까지 포함 , 21은 출력이 되지 않음 
+                                 	  # randint , randrange = get random 
+    
+print(line, column, fg, bg, sep=",")            # basic string
+print("[%02d, %02d, %02d, %02d"  %  (line, column, fg, bg))  # % format 
+print(f"[{line}, {column}, {fg},{bg}]")         #f-string 
+
+수치를 화면에 보이도록 시각화 . 
+
+ch = chr(r.randint(ord('A'), ord('Z')))  
+문자형 함수 선언.
+인터프리터 언어에서는 소스파일 자체가 프로그램이다. 
+
+
+print 가 동작하는 메카니즘 
+print에 저장하면 버퍼에 1차적으로 저장이 됨. 
+\n 또는 버퍼가 꽉차면 콘솔에 출력시킨다.
+
+"flush"
+If you need to see the output, you need to make sure the buffer is flushed. 
+You can do this for an _IOLBF stream by making sure to 
+end each printf format string with a '\n' (new line). 
+Since the stdout stream is line buffered this will cause the buffer to be flushed.
+
+flush = True 
+python에서 true는 대문자로 사용해야 작동된다. 
+ex)     print("%c" % ch, end= '', flush=True)
+
+
+C: > opt > create new file 'bin' > 새로 만들기 > 텍스트파일 
+> 'cs.bat' 확장자를 다르게 저장 
+
+cs.bat 작성
+
+printf "\033[0m"
+cls
+
+> 환경변수 path 추가하기 
+(무한 루프 프로그램 작동 중지시 사용 . cmd ctrl+c / typing  > cs / : for reset the screen 
+
+--------------------------------------------------------------------
+In [22]: 'xxx' + "yyy"
+Out[22]: 'xxxyyy'
+
+In [23]: 'xxx' "yyy"
+Out[23]: 'xxxyyy'
+
++ 를 생략해도 같은 리터럴에서 문자열이 자동으로 이어진다 
+
+In [24]: "xxx" + str(10)
+Out[24]: 'xxx10'
+
+문자열로 변환 >> str() 로 변환. 
+숫자로 변환 >> int() 로 변환.
+
+python operator overloading
+What is operator overloading in Python explain?
+The operator overloading in Python means provide extended meaning
+beyond their predefined operational meaning. Such as, we use the "+" operator
+for adding two integers as well as joining two strings or merging two lists. 
+We can achieve this as the "+" operator is overloaded by the "int" class and "str" class.
+
+오퍼레이터 오버로딩 : 어떤 연산자에 대해서 
+그 연산자에 새로 의미를 부여해서 타입에 따라 사용할 수 있다.  
+추가기능을 생성 할 수 있음. 
+
+============================================
+
+In [46]: num
+Out[46]: 10
+
+In [47]: real
+Out[47]: 3.141592
+
+In [48]: str1
+Out[48]: 'Hello'
+
+In [49]: "%d, %f, %s" % (num, real, str1)	 	# % 포멧
+Out[49]: '10, 3.141592, Hello'
+
+In [50]: "%5d, %.2f, %10s" % (num, real, str1)	# 자릿수 지정
+Out[50]: '   10, 3.14,      Hello'
+
+In [51]: "%5d, %.3f, %10s" % (num, real, str1)	# half-up /
+Out[51]: '   10, 3.142,      Hello'
+
+In [58]: f"{num+100:<10}, {real:<10}, {str1:>10}" 	# 자릿수 지정
+Out[58]: '110       , 3.141592  ,      Hello'		
+
+In [60]: f"{num+100:<10}, {real:<20.2f}, {str1:>10}"	#소수점 출력 지정 / 자릿수 지정 
+Out[60]: '110       , 3.14                ,      Hello'
+
+===============================================
+
+python은 index에 음수를 줄 수 있다 . 
+	str1 [] = {'h', 'e', 'l', 'l', 'o'}
+
+	What is Indexing and slicing in Python?
+	What are Indexing and Slicing? 	
+	Indexing: Indexing is used to obtain individual elements. 
+	Slicing: Slicing is used to obtain a sequence of elements. 
+	Indexing and Slicing can be be done in Python Sequences types 
+	like list, string, tuple, range objects.
+	
+	index slicing 
+	python
+	In [84]: str1
+	Out[84]: 'Hello'
+
+	In [85]: str1[1:3]	
+	Out[85]: 'el'
+	
+	java jshell
+	jshell> String str1 = "Hello"
+	str1 ==> "Hello"
+
+	jshell> str1
+	str1 ==> "Hello"
+
+	jshell> str1.substring(1,3)
+	$5 ==> "el"
+
+python 에는 리스트가 있다. 자바의 배열과 같음.. 
+ python 에는 ++ , -- 연산자가 없다. 
+
+
+	
