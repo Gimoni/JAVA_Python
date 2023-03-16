@@ -1,0 +1,92 @@
+03-16
+
+python 
+반복
+
+컴퓨터와 반복
+	- 반복적이고 지루한 작업은 컴퓨터를 이용하여 자동화하여야 한다. 
+	동일할 작업을 오류 없이 반복하는 것은 컴퓨터가 아주 잘할 수 있는 일. 
+
+반복구조 (자바의 향상된 for문 구조와 같다.) 
+
+for x in range(5):
+	print("Hello")
+
+>>> Hello Hello Hello Hello Hello
+
+2가지 반복 구조 
+	- for 문 : 정해진 횟수만큼 반복하는 구조이다.
+	- while 문 : 어떤 조건이 만족되는 동안, 반복을 계속하는 구조.
+
+for 문
+
+ 	for 변수 in 시퀀스(묶음): 		# 리스트처럼 요소들을 가지고 있는 객체.. 
+	     반복문장
+	     반복문장 ( 블록으로 들여쓰기 하여야 한다. )
+	
+ex ) In [145]: for ch in "Hello":
+     ...:     print(ch)
+     ...:
+H
+e
+l
+l
+o
+	리스트반복. 	정수 리스트 반복
+
+
+range() 함수
+	- range() 함수를 이용하면 특정 구간의 정수들을 생성할 수 있다. 
+		In [141]: range(5)
+		Out[141]: range(0, 5)
+
+		In [142]: list(range(5))
+		Out[142]: [0, 1, 2, 3, 4]
+
+		In [143]: list(range(2,5))
+		Out[143]: [2, 3, 4]
+
+		In [144]: list(range(2,10,3))
+		Out[144]: [2, 5, 8]
+
+
+함수 그래프 그리기 
+	- 싸인(sine) 그래프를 반복문을 이용.
+	싸인 함수는 수학, 물리학, 공학에서 아주 많이 나타나는 함수. 
+	
+
+while 문  
+	- while 문은 조건을 정해놓고 반복을 하는 구조이다.
+
+--------------------------------------------------실습
+
+In [164]: li = ['linux', 'java', 'python', 'android', 'oracle']
+
+In [165]: while li :
+     ...:     print ("...", li.pop(), li)
+     ...:
+... oracle ['linux', 'java', 'python', 'android']
+... android ['linux', 'java', 'python']
+... python ['linux', 'java']
+... java ['linux']
+... linux []
+
+================================
+
+중첩 루프 
+	- 반복문은 중첩하여 사용될 수 있다. 
+	즉 반복문 안에 다른 반복문이 포함될 수 있다. 
+	ex ) 
+	for y in range(5):
+		for x in range(10):
+			print ("*", end="")
+		print("")		* 내부 반복문이 종료될 때마다 실행 
+
+문자열 처리  - 문자열도 시퀀스의 일종. 
+	ex) 
+
+	fruit = "apple"
+	for letter in fruit:
+	     print(letter, end="")
+
+	>>> a p p l e 
