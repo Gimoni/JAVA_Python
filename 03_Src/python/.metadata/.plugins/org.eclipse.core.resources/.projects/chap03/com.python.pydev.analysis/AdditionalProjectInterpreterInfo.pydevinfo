@@ -1,0 +1,41 @@
+-- VERSION_5
+-- START DISKCACHE_3
+D:\03_Src\python\.metadata\.plugins\org.eclipse.core.resources\.projects\chap03\com.python.pydev.analysis\v2_indexcache
+ConditionalStatementExapmle|1678931478693133400|D:\03_Src\python\chap03\src\ConditionalStatementExapmle.py
+화씨섭씨|1678950158734932200|D:\03_Src\python\chap03\src\화씨섭씨.py
+TriangleForExample|1678955537031960700|D:\03_Src\python\chap03\src\TriangleForExample.py
+SineTurtle|1678951855853829300|D:\03_Src\python\chap03\src\SineTurtle.py
+loopStatementExapmle|1678949498318902400|D:\03_Src\python\chap03\src\loopStatementExapmle.py
+-- END DISKCACHE
+-- START DICTIONARY
+10
+7=D:\03_Src\python\chap03\src\TriangleForExample.py
+5=D:\03_Src\python\chap03\src\loopStatementExapmle.py
+2=화씨섭씨
+4=ConditionalStatementExapmle
+8=TriangleForExample
+9=D:\03_Src\python\chap03\src\SineTurtle.py
+1=D:\03_Src\python\chap03\src\화씨섭씨.py
+3=D:\03_Src\python\chap03\src\ConditionalStatementExapmle.py
+10=SineTurtle
+6=loopStatementExapmle
+-- END DICTIONARY
+-- START TREE 1
+13
+c|1|c!1^3#5*19@
+day|0|
+isl|1|isLeap!3^7#1*35@
+li|1|li!5^2#1*51@
+mon|0|
+num|1|num!3^11#1*35@
+odd|1|oddEven!3^13#1*35@
+sta|4|stars3!7^11#1*67@stars!7^9#1*67@stars2!7^10#1*67@stars4!7^12#1*67@
+t|1|t!9^9#1*83@
+tot|0|
+wee|0|
+y|1|y!9^18#5*83@
+yea|1|year!3^5#1*35@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

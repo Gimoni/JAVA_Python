@@ -1,0 +1,15 @@
+
+li = ['linux', 'java', 'python', 'android', 'oracle']
+
+for name in li :
+    print(name, '=', name)
+
+
+
+
+
+print("Program End...")
+
+
+
+

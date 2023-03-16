@@ -1,0 +1,14 @@
+
+
+
+import turtle
+
+import tkinter
+
+t = turtle.Turtle('Turtle')
+
+
+
+tkinter.mainloop()
+
+

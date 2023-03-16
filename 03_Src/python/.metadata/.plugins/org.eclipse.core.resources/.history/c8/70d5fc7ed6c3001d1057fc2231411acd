@@ -1,0 +1,13 @@
+# 달력
+
+year = int(input("year>>>" ))
+
+month = int(input("month>>>" ))
+
+print(type(year))
+print(type(month))
+
+# print([%4d, %2d] % (year, month))
+    
+
+print ("Program End...")

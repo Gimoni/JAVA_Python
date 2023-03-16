@@ -1,0 +1,9 @@
+
+for f in range(0, 101, 10):
+    print (f)
+
+print("Program End...")
+
+
+
+

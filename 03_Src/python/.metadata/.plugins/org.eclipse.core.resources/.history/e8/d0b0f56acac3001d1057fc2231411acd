@@ -1,0 +1,21 @@
+
+
+
+import turtle
+from tkinter import mainloop
+from math import sin, radians
+
+
+t = turtle.Turtle('turtle')
+
+for x in range(360):
+    y = sin(radians(x)) * 200
+    t.up()
+    print (x-180, y)
+    t.down()
+    t.setpos(x-180, y)
+
+
+mainloop()
+
+

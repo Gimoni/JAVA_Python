@@ -15,7 +15,7 @@ print(type(fg))
 
 rect = [];
 for i in range(20):
-    rect.append([ch]*40)
+    rect.append([False]*40)
     for j in range(20):
         rect.append([fg]*40)
         for y in range(20):

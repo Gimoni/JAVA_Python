@@ -1,0 +1,36 @@
+
+#
+# 1.             2.            3.           4.
+# *                *           *****           *
+# **              **           ****           **
+# ***            ***           ***           ***
+# ****          ****           **           ****
+# *****        *****           *           *****
+
+print("1.")
+
+for y in range(5):
+    for x in range(5):
+        
+        print("*", end="")
+    print()
+        
+
+print("2.")
+for y in range(5):
+    for x in range(5):
+        print("*", end="")
+    print()
+
+print("3.")
+for y in range(5):
+    for x in range(5):
+        print("*", end="")
+    print()
+    
+print("4.")
+for y in range(5):
+    for x in range(5):
+        print("*", end="")
+    print()
+print ("Program End...")
