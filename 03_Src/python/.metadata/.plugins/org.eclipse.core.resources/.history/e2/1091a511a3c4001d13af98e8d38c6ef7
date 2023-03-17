@@ -1,0 +1,27 @@
+from util.VT100 import cursorMove, reset, clearScreen, setForeground,\
+    setBackground
+
+from util.Font import printFont
+from time import sleep
+from random import randint
+
+
+
+clearScreen()
+
+for i in range(30):
+    ch = chr(randint(ord('0'), ord('9')))
+    printFont(ch, 1, 1+i)
+    sleep(0.1)
+    printFont(' ', 1, 1+i)
+    
+for i in range(30):
+    ch = chr(randint(ord('0'), ord('9')))
+    printFont(ch, 10+i, 10)
+    sleep(0.1)
+    printFont(' ', 10+i, 10)
+    
+reset()
+
+
+print("Program End")

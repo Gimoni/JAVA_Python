@@ -1,0 +1,41 @@
+from util.VT100 import clearScreen, cursorMove, reset, setForeground,\
+    setBackground
+import random as r 
+import time as t
+from random import randint
+
+clearScreen()
+
+rect = []
+
+for i in range(20):
+    rect.append([False]*40)
+    
+loopCount = 0
+count = 0
+
+while True:
+    line = randint(1, 20)
+    column = randint(1,40)
+    fg = randint(30,37)
+    bg = randint(40,47)
+    ch = randint(ord('A'), ord('Z'))
+    
+    cursorMove(line, column)
+    setForeground(fg)
+    setBackground(bg)
+    print(ch)
+                 
+    pass
+
+
+reset()
+cursorMove(21, 1)
+
+print("Program End")
+
+
+
+
+
+

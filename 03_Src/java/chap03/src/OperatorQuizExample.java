@@ -22,6 +22,7 @@ public class OperatorQuizExample {
 		System.out.println("ch:" + ch);
 		System.out.println("ch to lowerCase:" + lowerCase);
 	}
+	
 	public static void main9(String[] args) {
 		// 연습문제 [3-9]
 		char ch = 'z';

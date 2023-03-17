@@ -1,0 +1,19 @@
+from util.VT100 import clearScreen
+
+
+clearScreen()
+
+while True:
+    pass
+
+
+
+
+
+print("Program End")
+
+
+
+
+
+

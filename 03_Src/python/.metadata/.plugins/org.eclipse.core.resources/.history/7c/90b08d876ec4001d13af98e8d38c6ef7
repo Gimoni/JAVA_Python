@@ -1,0 +1,23 @@
+
+
+def clearScreen():
+    print("\o33[2J", end='', flush=True)
+    pass
+
+def cursorMove(line, column):
+    pass
+
+def setForeground(fg):
+    pass
+
+def setBackground(bg):
+    pass
+
+def reset(10):
+    pass
+
+
+
+
+
+

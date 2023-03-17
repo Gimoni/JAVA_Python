@@ -1,0 +1,21 @@
+from util.VT100 import cursorMove, reset, clearScreen, setForeground,\
+    setBackground
+
+from util.Font import printFont
+from time import sleep
+
+
+
+clearScreen()
+
+for i in range(50):
+    printFont('8', 10, 1+i)
+    
+    sleep(0.05)
+    
+    printFont(' ', 10, 1+i)
+
+reset()
+
+
+print("Program End")

@@ -1,0 +1,15 @@
+
+def gugudan(dan):
+    pass        # 함수를 완정하기 전에 임시로 컴파일 에러를 중지 시키는 용
+    
+
+
+gugudan(2)      # argument 
+gugudan(3)
+gugudan(4)
+gugudan(5)
+gugudan(6)
+gugudan(7)
+gugudan(8)
+gugudan(9)
+
