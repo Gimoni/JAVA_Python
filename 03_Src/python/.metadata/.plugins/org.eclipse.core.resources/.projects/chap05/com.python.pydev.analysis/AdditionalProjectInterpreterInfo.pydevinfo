@@ -14,10 +14,10 @@ RectangleExample|1679025039266241300|D:\03_Src\python\chap05\src\RectangleExampl
 VT100Example3|1679022656325031300|D:\03_Src\python\chap05\src\VT100Example3.py
 VT100Example4|1679022880023460500|D:\03_Src\python\chap05\src\VT100Example4.py
 FontExample4|1679039319871859100|D:\03_Src\python\chap05\src\FontExample4.py
-util.__init__|1679037203424170400|D:\03_Src\python\chap05\src\util|^
+util.__init__|1679037203424170400|D:\03_Src\python\chap05\src\util|^|0
 VT100Example2|1679022525517381400|D:\03_Src\python\chap05\src\VT100Example2.py
 FontExample3|1679038639338956300|D:\03_Src\python\chap05\src\FontExample3.py
-FontExample6|1679045344951263100|D:\03_Src\python\chap05\src\FontExample6.py
+FontExample6|1679045401718076800|D:\03_Src\python\chap05\src\FontExample6.py
 FontExample5|1679044711082909500|D:\03_Src\python\chap05\src\FontExample5.py
 -- END DISKCACHE
 -- START DICTIONARY
@@ -27,45 +27,45 @@ FontExample5|1679044711082909500|D:\03_Src\python\chap05\src\FontExample5.py
 13=D:\03_Src\python\chap05\src\util\VT100.py
 12=VT100Example
 18=util.Font
-3=D:\03_Src\python\chap05\src\FontExample.py
-1=D:\03_Src\python\chap05\src\RectangleExample.py
+1=D:\03_Src\python\chap05\src\FontExample.py
+3=D:\03_Src\python\chap05\src\RectangleExample.py
 11=D:\03_Src\python\chap05\src\VT100Example.py
 16=FuntionExample
 9=D:\03_Src\python\chap05\src\FontExample5.py
 20=FontExample2
 15=D:\03_Src\python\chap05\src\FuntionExample.py
 19=D:\03_Src\python\chap05\src\FontExample2.py
-4=FontExample
+2=FontExample
 7=D:\03_Src\python\chap05\src\FontExample6.py
 14=util.VT100
 6=RectangleExample2
 22=FuntionExample2
-2=RectangleExample
+4=RectangleExample
 5=D:\03_Src\python\chap05\src\RectangleExample2.py
 8=FontExample6
 10=FontExample5
 -- END DICTIONARY
 -- START TREE 1
 21
-bg|3|bg!1^23#5*19@bg!3^85#1*35@bg!5^20#5*51@
-ch|4|ch!1^24#5*19@ch!5^21#5*51@ch!7^13#5*67@ch!9^13#5*83@
+bg|3|bg!1^85#1*19@bg!3^23#5*35@bg!5^20#5*51@
+ch|4|ch!3^24#5*35@ch!5^21#5*51@ch!7^13#5*67@ch!9^13#5*83@
 cle|2|clearScreen!11^3#5*98@clearScreen!13^3#5*114@
-col|3|column!1^21#5*19@column!5^18#5*51@column!3^83#1*35@
-cou|2|count!1^14#1*19@count!5^14#1*51@
+col|3|column!1^83#1*19@column!3^21#5*35@column!5^18#5*51@
+cou|2|count!5^14#1*51@count!3^14#1*35@
 cur|2|cursorMove!11^7#5*98@cursorMove!13^7#5*114@
-fg|3|fg!3^84#1*35@fg!1^22#5*19@fg!5^19#5*51@
+fg|3|fg!1^84#1*19@fg!3^22#5*35@fg!5^19#5*51@
 gug|1|gugudan!15^2#5*130@
-lin|3|line!3^82#1*35@line!1^20#5*19@line!5^17#5*51@
-loo|2|loopCount!1^13#1*19@loopCount!5^13#1*51@
-n|1|n!3^88#1*35@
-num|3|number!17^83#1*147@number!3^77#1*35@number!19^77#1*163@
+lin|3|line!3^20#5*35@line!5^17#5*51@line!1^82#1*19@
+loo|2|loopCount!5^13#1*51@loopCount!3^13#1*35@
+n|1|n!1^88#1*19@
+num|3|number!17^83#1*147@number!1^77#1*19@number!19^77#1*163@
 pow|1|power!21^3#5*178@
 pri|2|printFont!17^88#5*146@printFont!19^82#5*162@
-rec|2|rect!1^8#1*19@rect!5^8#1*51@
+rec|2|rect!3^8#1*35@rect!5^8#1*51@
 res|2|reset!11^19#5*98@reset!13^19#5*114@
 set|4|setForeground!11^11#5*98@setForeground!13^11#5*114@setBackground!13^15#5*114@setBackground!11^15#5*98@
 spa|1|space!17^9#1*147@
-tmp|1|tmp!3^100#9*35@
+tmp|1|tmp!1^100#9*19@
 tot|1|totalSum!21^11#5*178@
 val|1|value!21^18#1*179@
 -- END TREE

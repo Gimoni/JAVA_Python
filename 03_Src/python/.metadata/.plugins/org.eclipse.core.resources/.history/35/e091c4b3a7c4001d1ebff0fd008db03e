@@ -11,27 +11,27 @@ clearScreen()
 
 for i in range(50):
     ch = chr(randint(ord('0'), ord('9')))
-    printFont(ch, 1, 1+i)
+    printFont(ch, 10, 1+i)
     sleep(0.1)
-    printFont(' ', 1, 1+i)
+    printFont(' ', 10, 1+i)
     
 for i in range(30):
     ch = chr(randint(ord('0'), ord('9')))
-    printFont(ch, 1+i, 50)
+    printFont(ch, 10+i, 50)
     sleep(0.1)
-    printFont(' ', 1+i, 50)
-    
-for i in range(50):
-    ch = chr(randint(ord('0'), ord('9')))
-    printFont(ch, 30, 50-i)
-    sleep(0.1)
-    printFont(' ', 30, 50-i)
+    printFont(' ', 10+i, 50)
     
 for i in range(30):
     ch = chr(randint(ord('0'), ord('9')))
-    printFont(ch, 30-i, 1)
+    printFont(ch, 35, 50-i)
     sleep(0.1)
-    printFont(' ', 30-i, 1)
+    printFont(' ', 35, 50-i)
+    
+for i in range(30):
+    ch = chr(randint(ord('0'), ord('9')))
+    printFont(ch, 35-i, 1)
+    sleep(0.1)
+    printFont(' ', 35-i, 1)
     
 reset()
 

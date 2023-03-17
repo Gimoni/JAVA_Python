@@ -1,6 +1,10 @@
 MODULES_MANAGER_V3
 FontExample|D:\03_Src\python\chap05\src\FontExample.py
 FontExample2|D:\03_Src\python\chap05\src\FontExample2.py
+FontExample3|D:\03_Src\python\chap05\src\FontExample3.py
+FontExample4|D:\03_Src\python\chap05\src\FontExample4.py
+FontExample5|D:\03_Src\python\chap05\src\FontExample5.py
+FontExample6|D:\03_Src\python\chap05\src\FontExample6.py
 FuntionExample|D:\03_Src\python\chap05\src\FuntionExample.py
 FuntionExample2|D:\03_Src\python\chap05\src\FuntionExample2.py
 RectangleExample|D:\03_Src\python\chap05\src\RectangleExample.py
@@ -10,5 +14,6 @@ VT100Example2|D:\03_Src\python\chap05\src\VT100Example2.py
 VT100Example3|D:\03_Src\python\chap05\src\VT100Example3.py
 VT100Example4|D:\03_Src\python\chap05\src\VT100Example4.py
 VT100Example5|D:\03_Src\python\chap05\src\VT100Example5.py
+util.Font|D:\03_Src\python\chap05\src\util\Font.py
 util.VT100|D:\03_Src\python\chap05\src\util\VT100.py
 util.__init__|D:\03_Src\python\chap05\src\util|^
