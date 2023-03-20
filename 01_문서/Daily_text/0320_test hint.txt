@@ -1,0 +1,48 @@
+hint for tomorrow test 
+2023-03-21
+
+함수를 이용해서 현재 날짜와 시간을 vt100에 
+
+def getDate():
+	epoch= time.time()
+
+	year = 0 
+	month = 0
+	day = 0
+
+	return f'{y:04d}-{m:02d}-{d:02d} % (year, month, day)'
+
+date = getDate()
+
+def detTime():
+	epoch =
+	
+	hour = 0
+	minute = 0
+	second = 0 
+
+return("%02d:%02d:%02d" % (hour, minute, second))
+
+def getWeek():
+	epoch = 
+	
+	week = 0
+
+return (f'{}' % week )
+
+date = getDate()
+time = getTime()   
+week = getWeek()
+
+
+
+FontExample7 
+getDateTime
+EpochTimeMake
+Font
+EpochTime
+CalenderExample
+
+
+https://codechacha.com/ko/python-what-day-is-it/
+https://www.bing.com/search?q=python+%EC%9A%94%EC%9D%BC+%EC%B6%9C%EB%A0%A5+&form=ANNTH1&refig=66ee0f78f8df4e34a9e2afdc7ad3b255
