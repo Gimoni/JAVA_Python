@@ -1,0 +1,9 @@
+from util.VT100 import clearScreen
+from datetime import date
+
+
+clearScreen()
+dateprint = date.day
+
+print(dateprint)
+

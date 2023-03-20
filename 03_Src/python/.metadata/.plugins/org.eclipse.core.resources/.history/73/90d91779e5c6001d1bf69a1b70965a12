@@ -1,0 +1,18 @@
+
+def modify1(v):
+    v += "###"
+    
+value = "Hello"
+
+
+
+print("전 :" ,value)
+modify1(v=value)
+print("후 :" ,value)
+
+print("Program End...")
+
+# value -> Hello 
+# value 의 참조가 v 에 대잇 
+# value 의 id = Hello
+# v의 id = Hello

@@ -1,0 +1,10 @@
+
+def multifly(a, b=2):
+    return a * b 
+
+print(multifly(10, 20), multifly(10), multifly(5))
+
+print("Hello", "World", sep='&', end='\n\n')
+
+
+print("Program End..")

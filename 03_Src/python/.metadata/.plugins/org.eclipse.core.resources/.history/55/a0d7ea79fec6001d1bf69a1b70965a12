@@ -1,0 +1,70 @@
+import time
+from datetime import datetime
+# from pandas._libs.tslibs.offsets import Week
+
+def printDate(year, month, day):
+    current = time.time();
+    
+    while(True):
+        year = 1970
+        week = 4
+        dayOfYear = 365
+        if(year%4==0 and year%100!=0 or year%400==0):
+            dayOfYear+=1
+            
+        secondOfYear = dayOfYear*24*60*60
+        
+        if (current-secondOfYear >=0):
+            current -= secondOfYear
+            week += dayOfYear
+        else: 
+            dayOfYear
+        
+        year +=1
+    year = f'{year}'
+
+    month = 0
+    for i in range(1,13):
+        dayOfMonth =[31,28,31,30,31,30,31,31,30,31,30,31]
+        if(year%4==0 and year%100!=0 or year%400==0):
+            dayOfYear[1] = 29
+    
+    secondOfMonth = dayOfMonth*24*60*60
+    if (current-secondOfMonth >= 0):
+        current -= secondOfMonth
+        week += dayOfMonth
+    else : 
+        month = i
+        # break
+    month='f{month}'
+    
+    day = current/60/60/24
+    return day
+    return week
+
+# return "%04d-%02d-%02d" % (year, month, day)
+
+
+def getWeekDay():
+    week += day
+    if (current - day*24*60*60 >0 ):
+        day+=1
+    # week = week%7 
+    weekName = ['MON','TUE','WED','THU','FRY','SAT','SUN']
+    return week
+#
+# print(f'{getWeek()}')
+
+    # day = pass
+    
+def printTime(hour, minute, second):    
+    current = time()
+    hour = int(current)//60//60%24 + 9
+    minute = int(current)//60%60
+    second = int(current)%60
+    
+    return hour, minute, second
+
+
+# print(printDate(year, month, day))
+

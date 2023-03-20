@@ -1,0 +1,26 @@
+from util.VT100 import clearScreen
+from datetime import datetime
+from util.Font import space, dash, column2, number, printFont
+from time import time
+
+
+clearScreen()
+
+
+        
+
+
+
+# year = 
+# month = 
+# day = 
+# hour=
+# minute=
+# second=
+
+# epoch = now.strftime("%y-%m-%d %H:%M:%S")
+
+# date = f'{y:04d}-{m:02d}-{d:02d}'
+# print(current_milli_time())
+# print(epoch)
+

@@ -1,0 +1,15 @@
+
+
+
+num = 100       #전역변수 
+
+def xxx():
+    print(num)
+    num = 200
+    
+xxx()
+
+print(num)
+print()
+
+print("Program End.. ")

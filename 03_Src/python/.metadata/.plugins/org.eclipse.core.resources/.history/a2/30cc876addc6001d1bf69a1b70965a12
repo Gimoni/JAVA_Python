@@ -1,0 +1,12 @@
+from util.VT100 import clearScreen
+from datetime import datetime
+from util.Font import space, dash, column2, number, printFont
+
+clearScreen()
+now = datetime.now()
+
+
+epoch = now.strftime("%y-%m-%d %H:%M:%S")
+
+print(epoch)
+

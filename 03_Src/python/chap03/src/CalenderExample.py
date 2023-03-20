@@ -22,7 +22,7 @@ if(year%4==0 and year%100!=0 or year%400==0):
     dayOfMonth[2]= '29'
     
 for i in range(0,11):
-    totalDay = isLeap + dayOfMonth[i-1]
+    totalDay = isLeap + (dayOfMonth[i-1])
     
 week = (1 + totalDay)% 7
 

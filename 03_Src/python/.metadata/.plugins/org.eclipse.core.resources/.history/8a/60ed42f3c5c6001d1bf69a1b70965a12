@@ -1,0 +1,9 @@
+from util.VT100 import clearScreen
+from datetime import datetime
+
+
+clearScreen()
+now = datetime.now()
+
+print(now)
+

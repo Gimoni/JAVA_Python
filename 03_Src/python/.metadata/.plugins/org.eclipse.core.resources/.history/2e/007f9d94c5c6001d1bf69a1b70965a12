@@ -1,0 +1,6 @@
+from util.VT100 import clearScreen
+
+
+clearScreen()
+
+
