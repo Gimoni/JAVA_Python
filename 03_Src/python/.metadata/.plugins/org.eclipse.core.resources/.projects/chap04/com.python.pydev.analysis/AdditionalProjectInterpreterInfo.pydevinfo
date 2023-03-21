@@ -1,0 +1,93 @@
+-- VERSION_5
+-- START DISKCACHE_3
+D:\03_Src\python\.metadata\.plugins\org.eclipse.core.resources\.projects\chap04\com.python.pydev.analysis\v2_indexcache
+뮤터블이뮤터블|1679360751203743700|D:\03_Src\python\chap04\src\뮤터블이뮤터블.py
+튜풀대입2|1679360751232670700|D:\03_Src\python\chap04\src\튜풀대입2.py
+VT100Example|1679360751178819700|D:\03_Src\python\chap04\src\VT100Example.py
+epoch|1679360751080053800|D:\03_Src\python\chap04\src\epoch.py
+FontExample|1679360751123942600|D:\03_Src\python\chap04\src\FontExample.py
+FactorialExample|1679360751094017900|D:\03_Src\python\chap04\src\FactorialExample.py
+전역변수지역변수|1679360751224721900|D:\03_Src\python\chap04\src\전역변수지역변수.py
+튜풀대입|1679360751229677600|D:\03_Src\python\chap04\src\튜풀대입.py
+PrimeExample|1679360751165851300|D:\03_Src\python\chap04\src\PrimeExample.py
+VT100Example3|1679360751189805600|D:\03_Src\python\chap04\src\VT100Example3.py
+VT100Example4|1679360751193795000|D:\03_Src\python\chap04\src\VT100Example4.py
+VT100Example2|1679360751184791100|D:\03_Src\python\chap04\src\VT100Example2.py
+임포트방식|1679360751208730700|D:\03_Src\python\chap04\src\임포트방식.py
+함수|1679360751256610700|D:\03_Src\python\chap04\src\함수.py
+임포트방식3|1679360751216738400|D:\03_Src\python\chap04\src\임포트방식3.py
+임포트방식2|1679360751212750000|D:\03_Src\python\chap04\src\임포트방식2.py
+패스워드생성기|1679360751244642700|D:\03_Src\python\chap04\src\패스워드생성기.py
+FontExample2|1679360751130926000|D:\03_Src\python\chap04\src\FontExample2.py
+임포트방식4|1679360751220728300|D:\03_Src\python\chap04\src\임포트방식4.py
+RectangleExample|1679360751173827800|D:\03_Src\python\chap04\src\RectangleExample.py
+디폴트인수|1679360751199753400|D:\03_Src\python\chap04\src\디폴트인수.py
+함수2|1679360751268580200|D:\03_Src\python\chap04\src\함수2.py
+FontExample4|1679360751151873200|D:\03_Src\python\chap04\src\FontExample4.py
+FontExample3|1679360751140900100|D:\03_Src\python\chap04\src\FontExample3.py
+FontExample6|1679360751161882700|D:\03_Src\python\chap04\src\FontExample6.py
+FontExample5|1679360751158876600|D:\03_Src\python\chap04\src\FontExample5.py
+-- END DISKCACHE
+-- START DICTIONARY
+28
+19=D:\03_Src\python\chap04\src\전역변수지역변수.py
+16=뮤터블이뮤터블
+10=튜풀대입2
+3=D:\03_Src\python\chap04\src\FontExample.py
+23=D:\03_Src\python\chap04\src\임포트방식3.py
+9=D:\03_Src\python\chap04\src\튜풀대입2.py
+4=FontExample
+11=D:\03_Src\python\chap04\src\패스워드생성기.py
+20=전역변수지역변수
+26=튜풀대입
+1=D:\03_Src\python\chap04\src\RectangleExample.py
+7=D:\03_Src\python\chap04\src\FontExample5.py
+13=D:\03_Src\python\chap04\src\함수.py
+25=D:\03_Src\python\chap04\src\튜풀대입.py
+17=D:\03_Src\python\chap04\src\디폴트인수.py
+15=D:\03_Src\python\chap04\src\뮤터블이뮤터블.py
+21=D:\03_Src\python\chap04\src\함수2.py
+28=임포트방식
+14=함수
+24=임포트방식3
+12=패스워드생성기
+5=D:\03_Src\python\chap04\src\FontExample4.py
+2=RectangleExample
+18=디폴트인수
+22=함수2
+27=D:\03_Src\python\chap04\src\임포트방식.py
+6=FontExample4
+8=FontExample5
+-- END DICTIONARY
+-- START TREE 1
+26
+bg|2|bg!1^13#5*19@bg!3^82#1*35@
+ch|3|ch!5^10#5*51@ch!1^14#5*19@ch!7^13#5*67@
+col|2|column!1^11#5*19@column!3^80#1*35@
+dat|2|date1!9^8#1*83@date!7^10#1*67@
+day|1|day!7^8#1*67@
+fg|2|fg!3^81#1*35@fg!1^12#5*19@
+gen|1|genPass!11^4#5*98@
+get|2|getDate1!9^2#5*82@getDateTime!9^12#5*82@
+gug|1|gugudan!13^2#5*114@
+lin|2|line!3^79#1*35@line!1^10#5*19@
+mod|3|modify1!15^2#5*130@modify3!15^24#5*130@modify2!15^15#5*130@
+mon|1|month!7^7#1*67@
+mul|1|multifly!17^2#5*146@
+n|1|n!3^84#1*35@
+num|2|number!3^75#1*35@num!19^3#1*163@
+pow|2|power!21^2#5*178@power!13^7#5*114@
+sle|1|sleep!23^4#5*194@
+tmp|2|tmp!25^13#1*211@tmp!3^96#9*35@
+tot|1|totalSum!21^9#5*178@
+val|2|value!21^16#1*179@value!15^7#1*131@
+x|1|x!25^2#1*211@
+x1|1|x1!25^14#1*211@
+xxx|2|xxx!27^8#5*226@xxx!19^5#5*162@
+y|1|y!25^3#1*211@
+y1|1|y1!25^15#1*211@
+yea|1|year!7^6#1*67@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

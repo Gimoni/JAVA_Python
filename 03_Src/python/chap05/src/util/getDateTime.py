@@ -1,11 +1,11 @@
-import time
-from datetime import datetime, date
+from time import time
+
 
 def printDate(year, month, day):
-    current = time.time();
-    
+
     while(True):
-        year = 1970
+        global current
+        # year = 1970
         week = 4
         dayOfYear = 365
         if(year%4==0 and year%100!=0 or year%400==0):
@@ -17,38 +17,48 @@ def printDate(year, month, day):
             current -= secondOfYear
             week += dayOfYear
         else: 
-            dayOfYear
+            break
         
-        year +=1
-    return year 
+    year +=1
+    return year
 
-    month = 0
-    for i in range(1,13):
-        dayOfMonth =[31,28,31,30,31,30,31,31,30,31,30,31]
-        if(year%4==0 and year%100!=0 or year%400==0):
-            dayOfYear[1] = 29
-    
-    secondOfMonth = int(dayOfMonth)*24*60*60
-    if (int(current)-int(secondOfMonth) >= 0):
-        current -= int(secondOfMonth)
-        week += dayOfMonth
-    else : 
-        month = i
-    # break
+    while(True):
+        for i in range(1,13):
+            dayOfMonth =[31,28,31,30,31,30,31,31,30,31,30,31]
+            if(year%4==0 and year%100!=0 or year%400==0):
+                dayOfYear[1] = 29
+        
+        secondOfMonth = int(dayOfMonth)*24*60*60
+        if (int(current)-int(secondOfMonth) >= 0):
+            current -= int(secondOfMonth)
+            week += dayOfMonth
+        else : 
+            dayOfMonth = i
+            break
     return month
     
-    day = int(current)/60/60/24
+    while(True):
+        day = int(current)//60//60//24
+        week += day
+        if (int(current)-day*24*60*60 > 0):
+            day +=1
+        
     return day
     # return week
+    
+    # year = int(current)//60
+    # month = int(current)//60//60
+    # day = int(current)//60//60%24
+    # return day
+    # return "%04d-%02d-%02d" % (year, month, day)
 
+
+year, month, day = printDate()
 
 
 #### 해결하기.. 
 def getWeekDay(week):
-    week = 4;
-    current = time.time();
-    week += printDate.day
-    
+    week += printDate.day    
     while(True):        
         weekName = ['MON','TUE','WED','THU','FRY','SAT','SUN']
         week=(4+int(current)/60/60/24)%7
@@ -58,13 +68,8 @@ def getWeekDay(week):
     return week
 
 
-
-# print(f'{getWeek()}')
-
-    # day = pass
-    
 def printTime(hour, minute, second):    
-    current = time.time()
+    current = time()
     hour = int(current)//60//60%24 + 9
     minute = int(current)//60%60
     second = int(current)%60
@@ -72,7 +77,4 @@ def printTime(hour, minute, second):
     return hour
     return minute
     return second
-
-
-# print(printDate(year, month, day))
-
+hour, minute, second = printTime()

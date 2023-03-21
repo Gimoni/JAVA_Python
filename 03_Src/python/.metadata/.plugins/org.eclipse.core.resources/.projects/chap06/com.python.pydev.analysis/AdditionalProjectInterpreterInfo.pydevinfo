@@ -1,0 +1,49 @@
+-- VERSION_5
+-- START DISKCACHE_3
+D:\03_Src\python\.metadata\.plugins\org.eclipse.core.resources\.projects\chap06\com.python.pydev.analysis\v2_indexcache
+util.Math|1679279986051000000|D:\03_Src\python\chap06\src\util\Math.py
+util.getDateTime|1679371419017127300|D:\03_Src\python\chap06\src\util\getDateTime.py
+util.VT100|1679046278698000000|D:\03_Src\python\chap06\src\util\VT100.py
+ClockExample|1679377208609876100|D:\03_Src\python\chap06\src\ClockExample.py
+util.Font|1679285800555000000|D:\03_Src\python\chap06\src\util\Font.py
+util.__init__|1679359210772315800|D:\03_Src\python\chap06\src\util|^
+-- END DISKCACHE
+-- START DICTIONARY
+10
+5=D:\03_Src\python\chap06\src\util\Font.py
+8=util.Math
+9=D:\03_Src\python\chap06\src\util\getDateTime.py
+7=D:\03_Src\python\chap06\src\util\Math.py
+10=util.getDateTime
+3=D:\03_Src\python\chap06\src\util\VT100.py
+4=util.VT100
+1=D:\03_Src\python\chap06\src\ClockExample.py
+2=ClockExample
+6=util.Font
+-- END DICTIONARY
+-- START TREE 1
+20
+ch|1|ch!1^32#5*19@
+cle|1|clearScreen!3^3#5*34@
+col|1|column2!5^34#1*51@
+cur|2|cursorMove!3^7#5*34@current!1^7#1*19@
+das|1|dash!5^26#1*51@
+day|1|day!1^17#1*19@
+fac|1|factorial!7^3#5*66@
+get|2|getWeekDay!9^45#5*82@getWeekDay!1^42#1*19@
+hou|1|hour!1^21#1*19@
+min|1|minute!1^22#1*19@
+mon|1|month!1^16#1*19@
+num|1|number!5^108#1*51@
+pri|5|printTime!1^37#1*19@printDate!9^4#5*82@printDate!1^30#1*19@printTime!9^64#5*82@printFont!5^113#5*50@
+res|1|reset!3^19#5*34@
+sec|1|second!1^23#1*19@
+set|2|setForeground!3^11#5*34@setBackground!3^15#5*34@
+spa|1|space!5^9#1*51@
+und|1|undefined!5^18#1*51@
+wee|1|week!1^19#1*19@
+yea|1|year!1^15#1*19@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
