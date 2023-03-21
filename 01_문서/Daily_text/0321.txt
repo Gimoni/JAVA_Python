@@ -1,0 +1,89 @@
+03-21
+
+Android
+android studio download .. 
+
+QEMU 프로그램으로 
+가상안드로이드 폰 동작가능
+(pc BIOS setting 활성화해야함)
+
+BIOS setting 
+시스템 종료 
+when power on
+press Del key 
+bios program setting 
+- overcloking - cpu 상태 - intel 가상화 기술 활성화 - intel VT-D 기술 활성화
+
+저장 종료 - 변경 내용을 저장하고 재부팅
+
+
+Android Studio Download
+
+SDK Components Setup 시 
+- android sdk location setting : C:\opt\Android\Sdk\platfrom-tools  
+경로 복사 
+시스템환경설정 고급시스템 설정 
+환경변수 새로 만들기 추가 세팅
+
+Emulator Settings 
+RAM allocation : 4096 MiB
+
+
+
+
+Android Studio setting
+- android studio - customize - all settinges
+
+-keymap - eclipse
+
+- Appearance & behavior - system settings - update 
+; unchecked about update all of them..  apply 
+
+- editor - general - appearance - check 'Show line numbers'
+
+- Appearance & behavior - system settings - android SDK - SDK Tools 
+- checked Google play services - apply - (unzippin) ok!
+
+
+AVD 생성
+- more actions- virtual device manager - create virtual device
+
+select hardware 
+phone - pixel2 - next! 
+
+select a system image - S x86_64 - download / unzipping
+
+
+AVD 
+verify configration - show advanced Settings
+internal storage 4096 mb 로 조정 
+
+새로고침 후  picel 2 api 31 actions run 
+
+at CMD 
+
+C:\Users\python>where adb
+C:\opt\Android\Sdk\platform-tools\adb.exe
+
+C:\Users\python>adb devices
+List of devices attached
+emulator-5554   device
+
+avd로 접속 --------
+C:\Users\python>adb shell
+emulator64_x86_64_arm64:/ $
+
+
+
+1. Android studio install
+2. AVD install
+3. chap01 create
+4. install & set & run 
+
+
+
+
+
+
+
+
