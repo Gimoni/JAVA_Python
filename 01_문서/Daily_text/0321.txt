@@ -73,13 +73,22 @@ avd로 접속 --------
 C:\Users\python>adb shell
 emulator64_x86_64_arm64:/ $
 
+emulator64_x86_64_arm64:/ $ ls -lf
+
+emulator64_x86_64_arm64:/ $ df
+
+emulator64_x86_64_arm64:/ $ cd /etc
+emulator64_x86_64_arm64:/etc $ ls
+
+emulator64_x86_64_arm64:/etc $ cat fstab.postinstall
+
+
 
 
 1. Android studio install
 2. AVD install
 3. chap01 create
 4. install & set & run 
-
 
 
 
