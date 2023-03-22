@@ -1,0 +1,28 @@
+
+import time as t 
+
+def getDateTime():
+    epoch = int(t.time()) + 9*60*60;
+    
+    year = 2023
+    month = 3
+    day = 22
+    week = 3
+    
+    hour = 12
+    minute = 13
+    second = 46 
+    
+    return year, month, day, week, hour, minute, second
+    pass
+
+
+year, month, day, week, hour, minute, second = getDateTime()
+
+date = f"{year:04d}-{month:02d}-{day:02d}"
+time = f"{hour:02d}:{minute:02d}:{second:02d}"
+
+print(date)
+print(time)
+
+print("Program End")

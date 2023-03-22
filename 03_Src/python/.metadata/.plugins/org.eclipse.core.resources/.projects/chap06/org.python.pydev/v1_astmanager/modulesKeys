@@ -1,5 +1,6 @@
 MODULES_MANAGER_V3
 ClockExample|D:\03_Src\python\chap06\src\ClockExample.py
+ClockExample2|D:\03_Src\python\chap06\src\ClockExample2.py
 util.Font|D:\03_Src\python\chap06\src\util\Font.py
 util.Math|D:\03_Src\python\chap06\src\util\Math.py
 util.VT100|D:\03_Src\python\chap06\src\util\VT100.py
