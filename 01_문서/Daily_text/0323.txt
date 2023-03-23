@@ -1,0 +1,67 @@
+03-23
+
+안드로이드 
+
+usb driver download
+
+설정 - 휴대전화 정보 - 빌드번호 - 
+개발자 옵션 - usb 디버깅 on
+
+----------------------------------
+
+windows 장치관리자
+
+
+android studio - project open - terminal - $ adb devices (// connect device)
+ 
+
+안드로이트 스튜디오는 workspace 가 없다 . 
+
+두개 이상의 프로젝트를 작성할 땐 
+각각 따로 프로젝트를 열어서 사용해야함. 
+ 
+
+// Entry point at android studio //     
+ super.onCreate(savedInstanceState);
+ setContentView(R.layout.activity_main);
+
+
+명령어 adb
+Android Debug Bridge
+
+logcat 명령어 
+adb logcat -h  
+
+adb logcat -s  	//silent option . 
+
+adb logcat -s -v raw System.out  	// raw option 
+
+logcat 명령어 설정. 
+logcat.bat 
+
+C:\opt\bin\logcat.bat
+==================================
+@echo off
+REM
+REM Usage :
+REM     logcat
+REM     logcat com.example.chap01
+REM     logcat -d
+REM     logcat -e
+REM     logcat -e com.example.chap01
+REM
+
+adb %1 logcat -c
+adb %1 logcat -s -v raw System.out %2 | grep "[[:cntrl:]]\["
+====================================
+
+
+Gradle Scipts - Module :app - 
+
+compileOptions change to version-11 - click the  'Sync Now'
+
+
+Settings - Editor - Inlay Hints - check the Parameter names 
+
+
+
