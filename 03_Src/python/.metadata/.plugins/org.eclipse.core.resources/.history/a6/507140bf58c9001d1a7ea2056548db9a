@@ -37,11 +37,9 @@ def getDateTime():
     
     day = epoch//60//60//24   # 1일에 해당하는 
     epoch -= day*24*60*60
-    week += day
-    
     day += 1    # 오늘 날짜 추가
     
-    week = week%7  
+    week %= 7 + 1
     
     hour = epoch//60//60%24 
     minute = epoch//60%60
@@ -77,11 +75,7 @@ while True :
     cursorMove(17, 10)
     reset()
     setForeground(31)
-    
-    if blink:
-        print(dayofweek[week], end='')
-    else:
-        print('        ', end='')
+    print(dayofweek[week], end='')
         
     for i in range(len(time)):
         ch = time[i]

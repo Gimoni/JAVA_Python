@@ -41,7 +41,7 @@ def getDateTime():
     
     day += 1    # 오늘 날짜 추가
     
-    week = week%7  
+    week = week%7 + 1   # 오늘 하루를 추가  
     
     hour = epoch//60//60%24 
     minute = epoch//60%60
