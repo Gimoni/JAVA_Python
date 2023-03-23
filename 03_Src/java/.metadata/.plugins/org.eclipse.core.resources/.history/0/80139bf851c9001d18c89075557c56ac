@@ -1,0 +1,18 @@
+package com.example;
+
+//import util.VT100;
+
+public class MainClassExample {
+
+	public static void main(String[] args) {
+
+		int num = 100; 	// 로컬변수, 임시변수, 스택변수  
+		
+//		VT100 v = new VT100();
+//		v.clearScreen();
+		
+		System.out.println("End...");
+		
+	}
+
+}

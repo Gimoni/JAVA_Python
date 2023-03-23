@@ -1,0 +1,16 @@
+package com.example;
+
+import util.VT100;
+
+public class MainClassExample {
+
+	public static void main(String[] args) {
+
+		VT100 v = new VT100();
+		v.clearScreen();
+		
+		System.out.println("End...");
+		
+	}
+
+}
