@@ -15,6 +15,6 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.time.temporal.TemporalAdjusters"/>
-    <fullyQualifiedTypeName name="util.VT100"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="util.VT100"/>
 </qualifiedTypeNameHistroy>

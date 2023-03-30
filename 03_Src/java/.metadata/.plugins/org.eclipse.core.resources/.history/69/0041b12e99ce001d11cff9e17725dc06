@@ -1,0 +1,17 @@
+package com.example;
+
+public class TypeConversionExample {
+
+	static class Parent {
+		
+	}
+	
+	static class Child extends Parent {
+		
+		
+	}
+	public static void main(String[] args) {
+
+	}
+
+}
