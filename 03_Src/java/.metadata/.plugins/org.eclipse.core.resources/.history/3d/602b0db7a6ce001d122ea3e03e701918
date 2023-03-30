@@ -1,0 +1,32 @@
+package com.example.polymorphism;
+
+public class PolymorphismExample {
+
+	static class Vehicle {
+		
+		void drive () {
+			System.out.println("드라이브 한다");
+		}
+	}
+	
+	static class Car extends Vehicle {
+		
+	}
+	static class Truck extends Vehicle {
+		
+	}
+	static class Motorcycle extends Vehicle {
+		
+	}
+	public static void main(String[] args) {
+		Vehicle v1 = new Car();
+		Vehicle v2 = new Truck();
+		Vehicle v3 = new Motorcycle();
+		
+		v1.drive();
+		v2.drive();
+		v3.drive();
+		
+	}
+
+}
