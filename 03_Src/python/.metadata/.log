@@ -1204,3 +1204,50 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2023-03-31 10:03:09.576 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=14.0.2
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-03-31 10:03:24.580
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\python'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.help.base 2 0 2023-03-31 13:43:30.104
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.platform.doc.user_4.25.0.v20220830-0901 [217]'. The index should be rebuilt with Lucene 8.4.1
+
+!ENTRY org.eclipse.help.base 4 4 2023-03-31 13:43:32.032
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.032
+!MESSAGE Help document /com.brainwy.liclipse.help/customize_yaml.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.032
+!MESSAGE Help document /com.brainwy.liclipse.help/change_color_theme.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.032
+!MESSAGE Help document /com.brainwy.liclipse.help/spell_checking.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.032
+!MESSAGE Help document /com.brainwy.liclipse.help/customize_html.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.032
+!MESSAGE Help document /com.brainwy.liclipse.help/preview.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.032
+!MESSAGE Help document /com.brainwy.liclipse.help/search.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.032
+!MESSAGE Help document /com.brainwy.liclipse.help/ctags.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.033
+!MESSAGE Help document /com.brainwy.liclipse.help/templates.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.033
+!MESSAGE Help document /com.brainwy.liclipse.help/supported_languages.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.033
+!MESSAGE Help document /com.brainwy.liclipse.help/customize_javascript.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.033
+!MESSAGE Help document /com.brainwy.liclipse.help/launch.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.033
+!MESSAGE Help document /com.brainwy.liclipse.help/textmate_bundles.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.033
+!MESSAGE Help document /com.brainwy.liclipse.help/scope_definition.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2023-03-31 13:43:32.033
+!MESSAGE Help document /com.brainwy.liclipse.help/indent.html cannot be opened.

@@ -1,8 +1,0 @@
-
-
-def power(a, b):    
-    c = a**b
-    return c 
-    pass
-
-print(power(2, 3))

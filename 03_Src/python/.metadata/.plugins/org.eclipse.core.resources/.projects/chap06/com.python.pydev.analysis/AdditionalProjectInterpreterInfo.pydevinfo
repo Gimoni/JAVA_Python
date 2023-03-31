@@ -5,7 +5,7 @@ util.Math|1679279986051000000|D:\03_Src\python\chap06\src\util\Math.py
 util.getDateTime|1679371419017127300|D:\03_Src\python\chap06\src\util\getDateTime.py
 util.VT100|1679046278698000000|D:\03_Src\python\chap06\src\util\VT100.py
 ClockExample|1679377208609876100|D:\03_Src\python\chap06\src\ClockExample.py
-ClockExample2|1679477020674677300|D:\03_Src\python\chap06\src\ClockExample2.py
+ClockExample2|1679562525485604200|D:\03_Src\python\chap06\src\ClockExample2.py
 util.Font|1679474803277106700|D:\03_Src\python\chap06\src\util\Font.py
 util.__init__|1679359210772315800|D:\03_Src\python\chap06\src\util|^
 -- END DISKCACHE
@@ -26,14 +26,14 @@ util.__init__|1679359210772315800|D:\03_Src\python\chap06\src\util|^
 -- END DICTIONARY
 -- START TREE 1
 23
-bli|1|blink!1^48#1*19@
-ch|2|ch!1^64#9*19@ch!3^32#5*35@
+bli|1|blink!1^56#1*19@
+ch|2|ch!1^74#9*19@ch!3^32#5*35@
 cle|1|clearScreen!5^3#5*50@
 col|1|column2!7^34#1*67@
 cur|2|cursorMove!5^7#5*50@current!3^7#1*35@
 das|1|dash!7^26#1*67@
-dat|1|date!1^54#5*19@
-day|1|day!3^17#1*35@
+dat|1|date!1^64#5*19@
+day|2|dayofweek!1^62#5*19@day!3^17#1*35@
 fac|1|factorial!9^3#5*82@
 get|3|getDateTime!1^6#5*18@getWeekDay!11^45#5*98@getWeekDay!3^42#1*35@
 hou|1|hour!3^21#1*35@
@@ -45,7 +45,7 @@ res|1|reset!5^19#5*50@
 sec|1|second!3^23#1*35@
 set|2|setForeground!5^11#5*50@setBackground!5^15#5*50@
 spa|1|space!7^9#1*67@
-tim|1|time!1^57#9*19@
+tim|1|time!1^67#9*19@
 und|1|undefined!7^18#1*67@
 wee|1|week!3^19#1*35@
 yea|1|year!3^15#1*35@

@@ -1,0 +1,15 @@
+package com.example;
+
+import util.VT100;
+
+public class TestAndroidPreView {
+
+	public static void main(String[] args) {
+		VT100.clearScreen();
+		VT100.reset();
+
+		VT100.font();
+		
+	}
+
+}

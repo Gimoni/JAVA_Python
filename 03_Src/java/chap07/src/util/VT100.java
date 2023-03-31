@@ -8,6 +8,23 @@ public final class VT100 {
 		
 	}
 	
+    public void font(char ch) {
+        char[][] equal = {
+                {'=','=','=','=','=',},
+                {'=',' ',' ',' ','=',},
+                {'=','=','=','=','=',},
+                {'=',' ',' ',' ','=',},
+                {'=',' ',' ',' ','='},
+        };
+        for (int i=0; i<equal.length; i++) {
+            for (int j=0; j<equal[i].length; j++) {
+                System.out.printf("%c", equal[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+	
 	public static void clearScreen() {
 		System.out.printf("\033[2J");
 		System.out.flush();
