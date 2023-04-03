@@ -1,41 +1,53 @@
 package com.example;
 
+import java.util.Random;
+
+import util.Color;
 import util.VT100;
 
 public class TestAndroidPreView {
 	
 
-	 public class Alpha {
-	
-		 char ch = equal;
-	   
-	    public void font(char ch) {
-	        char[][] equal = {
-	                {'=','=','=','=','=',},
-	                {'=',' ',' ',' ','=',},
-	                {'=','=','=','=','=',},
-	                {'=',' ',' ',' ','=',},
-	                {'=',' ',' ',' ','='},
-	        };
-	        for (int i=0; i<equal.length; i++) {
-	            for (int j=0; j<equal[i].length; j++) {
-	                System.out.printf("%c", equal[i][j]);
-	            }
-	            System.out.println();
-	        }
-	    }
-	
-	    void show() {
-	        VT100.cursorMove(10,20);
-	//        alpha.font();
-	    }
-	        
-	 }
-	 
- 	public static void main(String[] args) {
- 		Alpha alpha = new Alpha();
- 		VT100.cursorMove(10, 20);
-		alpha.font(equal);
+	 class Alpha {
+
+		 Random r = new Random();
+		 int line;
+		 int column;
+		 Color fg;
+		 Color bg;
+		 String str;
+		 char[][] ch = {
+				{'=','=','=','=','='},
+				{'=','=','=','=','='},
+				{'=','=','=','=','='},
+				{'=','=','=','=','='},
+				{'=','=','=','=','='},
+			};
+		 
+		 public Alpha () {
+			 line = 10;
+			 column = 20;
+			 
+			 do {
+				 fg = Color.values()[2];
+				 bg = Color.values()[2];			 
+			 }while (fg==bg);
+			 
+		 }
+		 
+		 void show() {
+			 VT100.cursorMove(line, column);
+			 VT100.setForeground(fg);
+			 VT100.setBackground(bg);
+			 for(int i=0; i<ch.length; i++) {
+				 for(int j=0; j<ch[i].length; j++) {
+					 
+					 
+				 }
+			 }
+			 
+		 }
+		 
 	}
 
 }
