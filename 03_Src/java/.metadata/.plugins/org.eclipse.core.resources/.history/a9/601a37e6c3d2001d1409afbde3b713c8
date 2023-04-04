@@ -1,0 +1,58 @@
+package com.example.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class EmpSelectPractice {
+
+	public static void main(String[] args) throws SQLException {
+//		Class.forName("oracle.jdbc.OracleDriver");
+		// sqlplus scott/tiger 
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+		
+		Connection conn = DriverManager.getConnection(url, user, password);
+		
+		Statement stmt =  conn.createStatement();
+		
+		ResultSet rs = stmt.executeQuery("select * from country");
+		
+		rs.next();
+
+		
+		while(rs.next()) {
+			String code 	= rs.getString("code");
+//			String name 	= rs.getString("name"); 
+//			String continent 	= rs.getString("continent"); 
+//			String region		= rs.getString("region");
+//			String surface_area		= rs.getString("surface_area");
+//			Integer indep_year		= rs.getInt("indep_year");
+//			Integer papulation		= rs.getInt("papulation");
+//			double life_expectancy		= rs.getDouble("life_expectancy");
+//
+////			System.out.println(gnp);
+//			System.out.println(life_expectancy);
+//			System.out.println(papulation);
+//			System.out.println(indep_year);
+//			System.out.println(surface_area);
+//			System.out.println(region);
+//			System.out.println(continent);
+//			System.out.println(name);
+			System.out.println(code);
+//			
+		}
+		
+		rs.close();
+		stmt.close();
+		conn.close();
+		
+		
+		System.out.println("Program End...");
+	
+	}
+
+}

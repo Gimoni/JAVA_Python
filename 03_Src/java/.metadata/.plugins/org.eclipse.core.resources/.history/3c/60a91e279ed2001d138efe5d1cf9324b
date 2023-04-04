@@ -1,0 +1,10 @@
+select * from emp;
+
+select ename from emp;
+
+select ename, job from emp;
+
+--select from where 절  
+select ename, job, gender 
+	from emp
+ where gender =='M'

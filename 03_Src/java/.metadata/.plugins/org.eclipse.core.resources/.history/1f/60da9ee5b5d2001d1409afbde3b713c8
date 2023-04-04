@@ -1,0 +1,13 @@
+package com.example.jdbc;
+
+public class DeptSelectExample {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		Class.forName("oracle.jdbc.OracleDriver");
+		
+		
+		System.out.println("Program End...");
+	
+	}
+
+}

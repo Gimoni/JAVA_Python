@@ -1,0 +1,5 @@
+select * from emp;
+
+select ename from emp;
+
+select ename, job from emp;

@@ -1,0 +1,8 @@
+package com.example.jdbc;
+
+public class Snippet {
+	public static void main(String[] args) {
+		jdbc:oracle:thin:@localhost:1521:xe
+	}
+}
+
