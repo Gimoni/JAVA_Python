@@ -1,0 +1,203 @@
+java - connected with JSP, Spring, SQL (데이터베이스)
+
+front end = HTML, CSS, Javascript 
+
+web 개발에서는 javascript를 잘 다루어야 한다..
+
+
+oracle developer download.. 
+=================
+오라클 디벨롭퍼 설치후 . 
+cdm 접속확인.  
+D:\02_Software\05_oracle\sql>sqlplus / as sysdba
+exit
+
+D:\02_Software\05_oracle\sql>sqlplus scott/tiger
+exit 
+
+----------------------- 접속확인이 된다면 sql / eclipse 접속완료 및 사용 가능. 
+
+
+DBMS는 네트워크만 연결되어 있으면 
+어디에서든 접속 할 수 있도록 가능. 
+
+메카니즘 이해.. 
+sqlplus 명령어로 oracle 접속. 
+sql 프롬프트에서 쿼리를 작성하고 
+sql 문이 DBMS 오라클 서버에 전송되고 
+DBMS 서버에서 컴파일해서 에러와 문제 가 없으면 
+sqlplus(클라이언트)에 전달 하고 sqlplus는 전달받은 데이터를 
+화면에 출력한다.. 
+
+web/sqlplus/ SQL Developer / eclipse + DB ==>>>  클라이언트 /// 
+- web 서버의 브라우저를 통해서 접속하고 출력하는 것. 
+- sqlplus 에서 데이터 출력.  
+커멘드라인에서 사용하는 툴.. / 
+사용하기 쉽다 but  장시간 사용이 불편.. 
+- SQL Developer (클라이언트 ) : oracle 전용 툴 /
+/오라클에서는 전부 사용 가능 
+but it can use with only oracle
+
+- sql developer의 단점을 보안하기 위해서 eclipse + DB (클라이언트 툴)사용 ..
+// 화면의 이동없이 eclipse에서 각 다양한 툴을 이용해서 database를 사용가능.  
+
+
+
+==============================
+----> sql developer 에서 oracle 접속. 
+open Oracle SQL Developer - 접속 새로 만들기 / 데이터베이스 접속선택 
+- name : sys / pw: 1234 / 비밀번호 저장.. (실무에서는 저장하지 않는다..)
+- 롤(L) : SYSDBA 	// 호스트 이름 : local host // 포트 1531 // SID : xe 
+- 테스트 (T)  --> 상태: 성공 
+- 저장 - 접속. 
+
+open Oracle SQL Developer - 접속 새로 만들기 / 데이터베이스 접속선택 
+- name : scott / pw: tiger / 비밀번호 저장.. (실무에서는 저장하지 않는다..)
+- 롤(L) : 기본값 	// 호스트 이름 : local host // 포트 1531 // SID : xe 
+- 테스트 (T)  --> 상태: 성공 
+- 저장 - 접속. 
+
+==================================
+
+최초에는 드라이버 설정을 해줘야 한다. 
+
+JAR List 
+
+
+connection url  - localhost1521:xe
+ 
+xe.. 
+
+
+
+=============
+D:\02_Software\05_oracle > sql file copy > chap07  > scr 에 붙여넣기 
+
+
+
+
+
+
+oracle developer 새로만들기 scott 비밀번호 tiger . 
+
+==================================
+
+What is Database 
+A database is an organized collection of structured information, 
+or data, typically stored electronically in a computer system. 
+A database is usually controlled by a database management system (DBMS).
+
+관계형 데이터베이스  - 테이블 (표) , 엑셀과 구조 개념 == 동일..
+
+file system model 
+
+CRUD 
+create read update delete 
+: 컴퓨터 소프트웨어가 가지는 기본적이 데이터 처리 기능인 
+create read update delete 를 묶어서 일컫는 말이다. 
+SQL 
+
+
+chech sql at cmd
+
+> python>sqlplus / as sysdba
+
+SQL> show user
+USER은 "SYS"입니다
+
+// * oracle sys user 확인. 
+
+
+
+CMD open 
+> sqlplus system/1234 
+계정로그인. ..
+
+SQL> select table_name from user_tables;
+
+sql문은 반드시 ; 세미콜른을 줘야한다. 
+
+> SQL> desc dept 		// 테이블의 구조를 설명하는 cmd 명령어.. 
+
+> SQL> select * from dept;
+> SQL> select deptno, dname from dept; 		//
+
+SQL문 : 
+select insert update delet create drop alth 
+기본적인 SQL문 구분 .. 7가지 일반적. .. 
+
+
+SQL 명령어의 유형 ..
+
+DML:
+데이터 차체 변경 
+
+DDL:
+데이터를 담아 놓는 데이터 베이스의 변경
+테이블데이터 베이스 변경
+
+
+SQL은 문자열 밖에 없고 싱글따옴표를 사용.. 
+
+데이터는 숫자하고 문자 뿐. 
+* 숫자와 날짜 둘다 가지고 있는 특별한 것은 날짜 데이터... 
+
+
+
+
+
+같은 테이블을 또 만들 수는 없다. 
+[ORA-00955: 기존의 객체가 이름을 사용하고 있습니다.]
+테이블 삭제 후 재생성해야 함. 
+drop table (table name);	// 테이블 삭제
+
+
+=====================
+
+Oracle 
+데이터베이스 개념 
+
+오라클 : 데이터 베이스 관계형 데이터베이스 관리 시스템(RDBMS)
+
+관계형 데이터베이서 관리 시스템 
+: 테이블  
+department의 약자 DEPT 
+테이블은 2차원 행렬구조를 가짐
+로우를 행이라고도 하는데 파일 시스템에서 레코드에 해당되는 것으로서 
+개별적인 사원정보나 부서 정보가 바로 로우에 해당.
+로우는 서로 구분되는 속성으로 구성되는데, 부서번호 (DEPTNO)나 부서이름 (DNAME),
+지역(LOC) 등과 같은 속성이 바로 컬럼에 해당된다. 
+	
+DML(Data Manipulation Language)
+- INSERT : 새로운 데이터를 삽입
+- UPDATE : 기존의 데이터를 변경
+- DELETE : 기존의 데이터를 삭제
+
+TCL (Transaction Control Language)
+- COMMIT : 변경된 내용을 영구 저장.
+- ROLLBACK : 변경되기 이전 상태로 되돌림
+- SAVEPOINT : 특정 위치까지를 영구 저장 혹은 이전 상태로 되돌릴 수 있도록 
+	트랜잭션 중에 저장점을 만듬.
+
+DDL (Data Definition Language) 
+- CREATE : 새로운 테이블을 생성 
+- ALTER : 기존의 테이블을 변경 
+- RENAME : 테이블의 이름을 변경
+- TRUNCATE : 테이블의 모든 내용을 제거 
+- DROP : 기존의 테이블을 삭제 
+
+DCL ( Data Control Language) 
+ :  특정 사용자에게 권한을 부여하거나 제거하기 위해서 사용하는 명령어 DCL.
+DCL 은 DBA만 사용할 수 있는 명령어.
+- GRANT : 사용자에게 특정 권한을 부여
+- REVOKE : 사용자로부터 특정 권한을 제거
+
+ 오라클에 접속하기 
+SYS, SYSTEM, HR 계정별 시스템 권한 사용자 구분.
+
+ 오라클 접속 형식 
+> sqlplus  사용자계정/ 암호
+
+
+
+

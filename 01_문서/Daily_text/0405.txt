@@ -1,0 +1,196 @@
+0405
+
+SQL 기본 
+
+산술sql
+
+-- null 을 정수 0으로 바꾸어주는 nvl 
+select comm, nvl(comm, 0)
+  from emp;
+  
+-- 중복되는 값을 제거하고 표시 distinct 
+-- result set에 중복된 값이 있으면 하나만 선택해서 보낸다 //로우를 대상으로함. 
+select distinct deptno, deptno+10
+  from emp;
+
+as 로 컬럼에 별칭 부여하기 
+
+" " 네임드 별칭 부여는 더블 따옴표로 ., 
+' ' 데이터 를 사 용할 때는 싱글 따옴표 사용
+
+
+select 
+where
+update
+
+조건식 참인 경우만 사용하는 것이  where sql 문
+
+where절 //조건절
+선택적 데이터 추출.. 
+
+논리 연산자 AND , OR, NOT 
+
+between and 연산자 
+
+
+in 연산자 - in은 or을 여러개 사용할 때 쓰인다. 
+
+like 연산사 - 와일드카드 % , _
+
+null인 값을 찾기 위한 is null 
+// is not null 
+
+
+-=========================-
+
+정렬을 위한 order by 절
+
+데이터 정렬에 쓰이는 order by 
+2개 이상의 데이터 정렬.. 
+
+order by // (오름차순)asc , (내림차순)desc
+order by 절의 정렬 방식.  
+
+정렬 방식에 여러 가지 조건 제시
+SELECT *
+FROM emp 
+ORDER BY hiredate DESC, ename ASC;
+
+==========================
+
+집합 연산자 
+union , difference, intersect 
+union all, difference all, intersect all  
+
+-- 합집합 연산자 union  입력 테이블과 결과 테이블에서 중복된 레코드가 배제됨.
+select * from emp where deptno = 10
+union
+select * from emp where sal >= 500;
+
+-- union all 연산은 union과 같지만 중복된 데이터가 제거되지 않음. 
+select * from emp where deptno = 10
+union all
+select * from emp where sal >= 500;
+
+-- 교집합 intersect
+select * from emp where deptno = 10
+intersect
+select * from emp where sal >= 500;
+
+--차집합 minus
+select * from emp where deptno = 10
+minus
+select * from emp where sal >= 500;
+
+select * from emp where sal >= 500
+minus
+select * from emp where deptno = 10;
+
+=======================
+
+오라클 주요 함수 
+dual table // 가상 테이블 . 
+간단한 산술연산 결과를 한줄로 얻기 위해 오라클에서 제공하는 테이블..
+
+--  dual table
+select 10/3 from dept;
+select 10/3 from emp;
+select 10/3 from dual;
+
+-- DUAL 
+-- 모든 유저가 접근할 수 있는 결과를 한줄로 얻기 위해서 
+-- 오라클에서 제공해주는 테이블 // 함수 자체를 이해할 때 활용도가 높다. 
+select * from dual;		// (>> 결과  dummy 1 : x)
+
+숫자 함수 
+: 숫자 데이터를 처리하기 위한 함수.. 
+
+========================
+
+jdbc 프로그램에서 할수 있는게 기본 
+
+실무에서는 자동화 프레임워크를 사용.  
+
+at eclipse 
+scott user - connect. 
+
+windows - preferences - data management 
+- sql editor - sql files/  setting 
+oracle scott xe sql file is default opened after creation manual 
+
+windows - preferences - general - keys - search : sql 
+- execute selected text : shift + enter - apply and close
+- execute current text : ctrl+enter - apply and close
+
+
+=============================
+
+--
+-- DDL (Data Definition Language)
+-- create
+-- alter
+-- drop
+-- truncate
+--
+-- DQL ( Data Query Language)
+select * from alpha;
+
+--
+-- CRUD ( Create Retrive Update Delete)
+-- DML ( Data Manipulation Langueage)
+-- insert
+-- update
+-- delete
+--
+
+
+============================
+
+at eclipse 
+main 작성 시 database connection -----------
+DriverMagager.getConnection(url, user, password);
+
+unhandled exception type SQLException 
+: add throw ~~~~
+
+DriverMagager.getConnection(url, user, password);
+how to get url user password?? 
+data source explorer - scott 우측마우스 - properties 
+- Driver Properties - general / connection url / user name / password
+
+============================
+
+package com.example.jdbc;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class AlphaInsertExample {
+
+	public static void main(String[] args) throws SQLException {
+		// 예외처리 
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+		DriverManager.getConnection(url, user, password);
+		
+		System.out.println("Program end...");
+
+	}
+
+}
+============================
+Alpha 배열을 데이터베이스에 저장..
+
+
+
+
+
+
+
+
+
+
+
+
+

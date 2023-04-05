@@ -1,0 +1,75 @@
+0404
+
+DB의 데이터를 가져오려면 반드시 SQL문을 사용.
+database 필수 SQL (Structuerd Query Language 구조적 질의 언어) 
+관계형 데이터베이스 시스템(RDBMS)에서 자료를 
+관리 및 처리하기 위해 설계된 언어. 
+
+at eclipse /////>>
+preference - data management - sql editor - checked execute SQLs between delimiters ; > apply
+preference - data management - sql editor 
+- sql files/scrapbooks - checked ( sql file is default opened ~...) / manual  > apply
+
+select from where 문 
+
+오라클 데이터베이스 개념 
+데이터베이스에 접속하기 위해서 사용자 생성.
+형식	create user (사용자id)  identified by (비밀번호);
+
+사용자 생성
+ex)> create user tester1 identified by 1234;
+역할 부여 
+   >  grant connect, resource to tester1;
+
+데이터 타입과 제약 조건
+
+데이터 타입
+스칼라
+수치 numer 
+문자 char/ varchar
+날짜 date
+
+데이터 타입 
+CHAR 데이터 타입 - 고정길이 데이터타입
+VARCHAR2 데이터 타입 - 가변길이 데이터타입
+
+공통점은 문자열을 저장하는 것. 데이터를 정해놓고 저장하고 
+데이터가 입력된 이후 나머지 공간은 공백으로 채워짐
+
+number는 10이나 12.3과 같은 수치 데이터를 저장하며 다음과 같은 형식으로 사용. 
+형식 : numer ( precision, scale )
+
+NUMBER(5)	12345
+NUMBER(8, 2) 	123456.78 
+
+
+데이터 무결성과 제약 조건 
+NOT NULL 제약 조건 - null은 할당 받지 않은 값, 
+		아직 무엇인지 모르는 값을 의미.
+기본 키 제약 조건 - 이상(anomaly) 현상이 일어나지 않도록 하기 위한 
+		방법으로 제공되는 것이 기본키로 제약조건 
+		기본키로 지정한 컬럼은 널(null)값이나 중복된 값을 
+		가질 수 없기 때문에 개체가 무결성을 유지할 수 있음.
+외래 키 제약 조건 - 관계형 데이터 베이스는 데이터가 중복되어 저장하는 것을 
+		지양한다 .. 
+
+
+Select문 (DQL) 
+데이터를 조회하기 위한 SELECT문 
+형식 select * from table_name;
+
+> select [distinct] [*, column(alias), ...] from table_name;
+
+
+특정 데이터만 보기 
+emp 테이블의 empno, emname 컬럼 내용만 출력하기
+
+데이터를 조회하기 위한 SELECT 문
+산술 연산자
+ex) select ename, sal, sal*12
+     from emp;
+
+null 처리를 위한 nvl 함수 
+> select ename, comm, sal*12+nvl(comm, 0)
+> FROM emp;
+

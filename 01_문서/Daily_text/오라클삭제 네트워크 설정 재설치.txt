@@ -1,0 +1,25 @@
+sever application 
+network setting - 
+
+host name change 
+파일탐색기 내pc- 설정  - 이 pc의 이름 바꾸기 
+
+
+오라클 삭제하는 방법 
+1. 프로그램 추가 삭제 -  오라클 앱 삭제 
+
+2. 국가 및 지역 beta unchecked 
+
+3. 서비스 - oracle 프로그램 추가 삭제
+(최대 5개의 oracle 프로그램 ) 
+- 명령클롬프트 관리자권한으로 열기 
+>>> sc delete 'oracle 프로그램 네임'
+
+F5 refresh
+
+4. opt-oracle folder 까지 삭제. 
+
+5. oracle 재설치
+
+6. 국가 및 지역 beta checked
+

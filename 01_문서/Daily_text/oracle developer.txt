@@ -1,0 +1,53 @@
+oracle developer download and settings 
+
+D:\02_Software\05_oracle >>> sqldeveloper-22.2.1.234.1810-x64.zip 파일 복사 후 
+
+C:\opt >> 붙여넣기 >> 여기에 압축 풀기 file name : sqldeveloper 
+
+>> open sqldeveloper >> sqldeveloper.exe 바탕화면에 바로가기 만들기 
+
+>> 바탕화면에서 sqldevelover 실행
+
+=====================================
+
+oracle developer >> 접속 >> 새로만들기 / 데이터베이스 접속 선택
+> name : sys  사용자이름 : sys  비밀번호 1234 / 비밀번호 기억하기   롤 SYSDBA >> test
+> 저장 > 접속
+> name : scott 사용자 이름 : scott 비밀번호 tiger / 비밀번호 기억하기 롤 기본값 >> test
+> 저장 > 접속
+
+
+명령 크롬프트에서 실습테이블 생성하기 
+cmd 
+
+> D:\02_Software\05_oracle>\sql
+
+> dir 
+> sqlplus scott/tiger
+
+> @employee_oracle.sql
+> @ world_oracle.sql
+
+
+=========================
+ 
+at sql development 
+
+
+
+at eclipse > window > show view > (other) Data source Explorer 
+> Database connections > new > name change to 'scott'
+> new connection profile > new driver definition 
+> Name/ Type clecked 'Oracle Thin Driver oracle 11 '
+> JAR List > remove default list > add JAR/Zip. >
+> C:\opt\oracle\product\21c\dbhomeXE\jdbc\lib\ojdbc8.jar
+
+
+
+
+
+
+
+
+
+
