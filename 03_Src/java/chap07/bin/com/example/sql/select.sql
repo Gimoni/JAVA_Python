@@ -56,3 +56,31 @@ select + from dept;
 select * from country;
 
 select count(*) from country;
+
+select * 
+  from emp 
+ where ename = '이문세';
+ 
+-- 문자열에서 동등비교를 할수 없을때 like문 연산자 사용. 
+-- % 는 자리수에 상관없이 문자를 찾을 때. 
+-- 
+select * 
+  from emp
+-- where ename like '이%';
+-- where ename like '%문%'; 
+ where ename like '이__'; 
+ 
+select name from country;
+
+select *
+  from country
+-- where name like '%Korea%';
+ where lower(name) like '%korea%';
+ 
+select 'Hello World',
+      upper('Hello World'),
+      lower('Hello World')
+  from dual;
+  
+
+

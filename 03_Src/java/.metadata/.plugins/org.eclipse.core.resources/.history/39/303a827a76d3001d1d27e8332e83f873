@@ -1,0 +1,17 @@
+--
+-- DDL (Data Definition Language)
+-- create
+-- alter
+-- drop
+-- truncate
+--
+drop table alpha;
+
+create table alpha (
+	no,
+	line,
+	col,
+	fg,
+	bg,
+	ch
+);

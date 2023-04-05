@@ -1,0 +1,22 @@
+package com.example.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class AlphaInsertExample {
+
+	public static void main(String[] args) throws SQLException {
+		// 예외처리 
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+		Connection conn = DriverManager.getConnection(url, user, password);
+		
+		conn.prepareStatement("insert int alpha values (?, ?, ?, ?, ?)");	// place holder 
+		
+		System.out.println("Program end...");
+
+	}
+
+}

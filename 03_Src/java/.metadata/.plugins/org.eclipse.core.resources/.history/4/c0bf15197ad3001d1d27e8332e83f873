@@ -1,0 +1,20 @@
+package com.example.jdbc;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class AlphaInsertExample {
+
+	public static void main(String[] args) throws SQLException {
+		// 예외처리 
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+		DriverManager.getConnection(url, user, password);
+		
+		System.out.println("Program end...");
+		
+
+	}
+
+}
