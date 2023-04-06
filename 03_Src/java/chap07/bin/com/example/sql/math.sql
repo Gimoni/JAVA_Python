@@ -20,3 +20,14 @@ with temp as (
 select abs (v), power(v, 3), mod(v, 3), floor(v1), ceil(v1), round(v1)
   from temp;
   
+select 12.345, trunc(12.345, 2), trunc(12.345, -1)
+  from dual;
+  
+select 15.345, round(15.345, 2), round(15.345, -1) 
+  from dual;
+  
+select length('Oracle'), lengthb('Oracle'),
+       length('오라클'), lengthb('오라클')
+  from dual;
+  
+  

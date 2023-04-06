@@ -25,6 +25,7 @@ public class AlphaInsertExample3 {
 		Statement stmt = conn.createStatement();
 		stmt.execute("truncate table alpha");
 		
+		VT100.reset();
 		VT100.clearScreen();
 		
 		Random r = new Random();
@@ -81,7 +82,8 @@ public class AlphaInsertExample3 {
 		conn.commit(); 	
 		// save 
 		// commit의 반대는 rollback
-		
+		VT100.reset();
+		VT100.cursorMove(21, 1);
 		System.out.println("Program end...");
 
 	}

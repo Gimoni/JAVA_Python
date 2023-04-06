@@ -12,9 +12,9 @@ create table alpha (
 	no		number,
 	line	number,
 	col		number,
-	fg		varchar2(7),
-	bg		varchar2(7),
-	ch		char(1)
+	fg		varchar2(7 char),
+	bg		varchar2(21 char),
+	ch		char(1 char)
 );
 
 
@@ -25,8 +25,12 @@ truncate table alpha;
 select * from alpha;
 
 
+
 -- 전체 카운트
 select count(*) from alpha;
+
+-- fg & bg 의 중복을 제거한 데이터
+select distinct fg, bg from alpha;
 
 -- fg 데이터만 보기
 select distinct fg from alpha;
@@ -49,7 +53,7 @@ with duple as (
 	select distinct line, col
   	  from alpha
 )
-select count(*) from duple;
+select count(*)from duple;
 
 select count(distinct to_char(line, '00')||to_char(col, '00'))
   from alpha;
@@ -70,9 +74,22 @@ with duple as (
 )
 select count(*) from duple;
 
+select count(distinct line + col)
+  from alpha;
+  
+-- 
+select line, col, to_char(line, '00') || to_char(col, '00')
+  from alpha;
+  
+  
+select count(distinct to_char(line, '00') || to_char(col, '00'))
+  from alpha;
+  
 
 
 
+  
+  
 --
 -- CRUD ( Create Retrive Update Delete)
 -- DML ( Data Manipulation Langueage)
@@ -83,8 +100,34 @@ select count(*) from duple;
 
 -- insert 문의 기본 문형.. 
 insert into alpha values (1, 1, 1, 'Black', 'Red', 'A');
-insert into alpha values (2, 2, 2, 'Black', 'Red', 'B');
-insert into alpha values (3, 3, 3, 'Yellow', 'Blue', 'Z');
+insert into alpha values (2, 2, 2, 'Black', '대한민국화이팅', 'B');
+insert into alpha values (3, 3, 3, 'Yellow', 'Blue', '가');
 
 
-
+select *
+  from alpha
+ where line=1 and col=1
+ order by no desc;
+-- order by no (asc);
+ 
+ 
+select * 			
+  from alpha
+ order by line asc, col asc;
+ 
+select *
+  from alpha
+ order by no desc;
+ 
+select *
+  from alpha
+ order by line asc;
+           decode(fg, 'Black', 30,
+                  'Red', 31,
+                  'Green', 32,
+                  'Yellow', 33,
+                  'Blue', 34,
+                  'Magenta', 35,
+                  'Cyan', 36,
+                  'White', 37, 99) asc;
+                  
