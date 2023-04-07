@@ -1,0 +1,120 @@
+04-07
+
+그룹함수 
+단일행 함수와 그룹 함수의 차이 
+single / group 
+
+그룹 함수는 하나 이상의 행을 그룹으로 묶어 연산하여 
+총합, 평균 등 하나의 결과로 나타냄. 
+
+database connetion check /./ 
+at cmd >>> sqlplus myusername/mypassword@Host/urltype??
+
+
+
+SQL문 순차적으로 처리되지 않는다 .. 
+select * 
+  from emp
+ where deptno=10
+ order by sal desc;
+
+in this case... from line starts first, 
+and the where line starts seconds after that .,, 
+select comes , lastly,, 'order by sal desc' comes  
+
+
+그룹함수는 null을 제외하고 동작한다.
+(null을 포함하지 않는다. )
+만일 count 함수에 count(*)처럼 *를 적용하면 
+전체 로우 수를 구하게 됨. 
+
+
+
+select  count(*), count(comm), sum(comm)	// projection 
+  from emp				// 1번으로 수행.
+ where comm is not null;			// 2번으로 수행. 
+
+
+
+
+제 1 정류화? 
+1개의 컬럼 안에는 한개의 정보만 담을 수 있다. 
+각각의 컬럼은 각각의 정보를 소유한다. 
+
+데이터 그룹 group by 절 
+특정 컬럼을 기준으로 그룹 함수를 사용해야 할 경우 어떤 컬럼 값을 
+기준으로 그룹함수를 적용해 줄지를 결정해주어야 하는데 이때 사용하는 것이
+group by  절.  ( : 요약한 테이블을 구해냄. )
+
+그룹
+ where - from에서 온 low 결과 제한
+ having - group by에서 온 group 결과 제한
+where 와 having의 조건식 작성을 같다.
+
+그룹 결과 제한 having 절
+select절에 조건을 사용하여 결과를 제한할 때는 where절을 사용하지만
+그룹의 결과를 제한 할때는 having 절을 사용. 
+
+
+
+SELECT문의 수행순서=====
+1. from 
+2. where
+3. group by
+4. having 
+5. select
+6. order by
+
+
+------------------
+
+쿼리 작성. + 연결 .. 
+
+서브쿼리   - sql문 안에 sql문.. 
+
+group by 를 쓰는 순간 low는 없어짐 
+group을 요약한다 min / mix사용이 유용하다..
+having 사용해서 그룹함수에 
+제한을 주고 조건문을 작성한다. 
+
+
+====================
+
+
+테이블에 내용을 추가하는 Insert문
+테이블의 내용을 추가, 수정, 삭제하는 dml와 트랜젝션
+
+테이블의 무결성 제약조건. 
+table primary key 
+ -- table primary key 테이블 제약조건이 있기 때문에 
+ -- 중복된 값을 넣을 수 없다. /// 제약조건에 위배되는 것을 제한한다. 
+ -- 오류 . 무결성 제약조건에 위배 됨.  
+
+==================
+update
+
+테이블에 내용을 수정하는 update문
+update - where
+where절을 생략하면 전체 테이블의 모든 행이 수정 업데이트됨. 
+
+
+===================
+delete
+
+테이블 내용을 삭제하는 delete문
+delete - where
+where절을 생략하면 전체 테이블의 모든 행이 삭제됨. 
+
+===================
+Transection
+
+TCL (transection control language)
+
+commit 과 rollback  
+영구저장하기 위해서 commit 문 실행하기 
+
+복원을 위해서 rollback 실행하기 
+
+===================
+
+

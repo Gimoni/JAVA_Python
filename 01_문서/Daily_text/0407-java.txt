@@ -1,0 +1,48 @@
+0407 java
+
+예외 처리 
+java error/ exception 
+오류와 예외 처리...
+
+예외와 예외 클래스
+ 
+예외와 에러 
+
+- 예외: 잘못된 사용 또는 코딩을 인한 오류 
+- 에러와 달리 예외 처리를 통해 계속 실행 상태를 유지할 수 있음
+- 일반 예외 (Exception): 컴파일러가 예외 처리 코드 여부를 검사하는 예외
+- 실행 예외 (Runtime Exception): 컴파일러가 예외 처리 코드 여부를 검사하지 않는 예외
+
+예외 처리 
+- 예외 발생 시 프로그램의 갑작스러운 종료를 막고 정성 실행을 유지할 수 있게 처리하는 코드
+- 예외 처리 코드는 try-catch-finally 블록으로 구성
+- try- catch - finally 블록은 생성자 내부와 메소드 내부에서 작성
+
+다중 catch로 예외 처리하기
+- catch 블록의 예외 클래스는 try 블록에서 발생된 예외의 종류를 말함. 
+해당 타입의 예외가 발생하면 catch블록이 선택되어 실행 
+- catch 블록이 여러 개라도 catch 블록은 단 하나만 실행됨
+- 처리해야 할 예외 클래스들이 상속 관계에 있을 때는 하위 클래스 catch 블록을 먼저 작성하고 
+상위 클래스 catch 블록을 나중에 작성해야 함
+
+
+================================
+
+error : 컴파일 에러, 실행 에러 
+exceptcion 실행시에 발생하는 에러 
+-------  exepction 일반 예외  / runtime exepction 실행 예외 
+
+
+[exception] - checked exception / unchecked exception 
+
+	checked exception : 예외발생지점에서 예외처리를 반드시 해주어야 하도록 
+			강제하는 예외 
+	unchecked exception : 예외 처리를 강제하지 않는다 . ( 최상위 부모 클래스에 
+			RuntimeException을 가지고 있으면 unchecked exception)
+
+**** unhandled exception = checked exception 
+
+=================================
+
+Sort Example.. 
+
