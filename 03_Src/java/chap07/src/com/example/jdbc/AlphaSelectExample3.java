@@ -21,7 +21,12 @@ public class AlphaSelectExample3 {
 		
 		var rs = stmt.executeQuery(
 				"""
-				
+					with tmp as (
+					select max(no) as no  
+					  from alpha
+					 group by line, col
+					 order by line, col
+					)
 					select * 			
 					  from alpha
 					 order by no asc
@@ -52,7 +57,12 @@ public class AlphaSelectExample3 {
 		
 		var rs = stmt.executeQuery(
 				"""
-				
+					with tmp as (
+					select max(no) as no  
+					  from alpha
+					 group by line, col
+					 order by line, col
+					)				
 					select * 			
 					  from alpha
 					 order by line asc, col asc
@@ -84,7 +94,12 @@ public class AlphaSelectExample3 {
 		
 		var rs = stmt.executeQuery(
 				"""
-				
+					with tmp as (
+					select max(no) as no  
+					  from alpha
+					 group by line, col
+					 order by line, col
+					)				
 					select * 			
 					  from alpha
 					 order by line asc, col desc
@@ -116,7 +131,12 @@ public class AlphaSelectExample3 {
 		
 		var rs = stmt.executeQuery(
 				"""
-				
+					with tmp as (
+					select max(no) as no  
+					  from alpha
+					 group by line, col
+					 order by line, col
+					)				
 				select *
 				  from alpha
 			     order by line asc,

@@ -1,0 +1,30 @@
+package com.example;
+
+public class ExceptionExample {
+
+	public static void main(String[] args) throws InterruptedException {
+
+//		System.out.println(10/0);
+		String str = null;
+		
+		
+//		System.out.println(str.charAt(0));	// exception : cannot invoke "String.charAt(int)...
+		
+//		NullPointerException
+		
+		String[] x = {};
+		System.out.println(x[10]);
+		
+//		ArrayIndexOutOfBoundsException
+		
+		// checked exception 
+//		InterruptedException
+		
+		// checked exception : InterruptedException  
+		Thread.sleep(100);
+		
+		
+		System.out.println("Program end.. ");
+	}
+
+}

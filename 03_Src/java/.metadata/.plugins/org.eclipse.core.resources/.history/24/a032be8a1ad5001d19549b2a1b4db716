@@ -1,0 +1,59 @@
+package com.example.jdbc;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+import util.Color;
+
+public class SortExample {
+
+	static class Alpha {
+		int line;
+		int column;
+		Color fg;
+		Color bg;
+		char ch;
+		
+		public Alpha(int line, int column, Color fg, Color bg, char ch) {
+			this.line = line;
+			this.column = column;
+			this.fg = fg;
+			this.bg = bg;
+			this.ch = ch;
+		}
+		
+		//Override 
+		public String toString() {
+			System.out.println("......");
+			return String.format("(%2d,%2d,%7s,%7s,'%c')", line, column, fg, bg, ch);
+		}
+	}
+	
+	static class Order implements Comparator<Alpha>{
+
+		@Override
+		public int compare(Alpha o1, Alpha o2) {
+			
+			
+			return 0;
+		}
+
+		
+	}
+	
+	static class Order2 implements Comparator<Alpha>{
+
+		@Override
+		public int compare(Alpha o1, Alpha o2) {
+			return o1.fg.ordinal() - o2.fg.ordinal();
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		Alpha a = new Alpha(10, 10, Color.Black, Color.Red, 'A');
+		
+		System.out.println(a);
+	}
+
+}

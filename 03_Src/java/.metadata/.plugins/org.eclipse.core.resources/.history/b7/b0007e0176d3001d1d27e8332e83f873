@@ -1,8 +1,0 @@
---
--- DDL (Data Definition Language)
--- create
--- alter
--- drop
--- truncate
---
-drop table alpha;

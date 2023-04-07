@@ -9,11 +9,11 @@
 drop table alpha;
 
 create table alpha (
-	no		number,
+	no		number primary key,
 	line	number,
 	col		number,
 	fg		varchar2(7 char),
-	bg		varchar2(21 char),
+	bg		varchar2(7 char),
 	ch		char(1 char)
 );
 
@@ -22,7 +22,8 @@ create table alpha (
 truncate table alpha;
 
 -- DQL ( Data Query Language)
-select * from alpha;
+select
+* from alpha;
 
 
 
@@ -98,6 +99,7 @@ select count(distinct to_char(line, '00') || to_char(col, '00'))
 -- delete
 --
 
+select * from alpha;
 -- insert 문의 기본 문형.. 
 insert into alpha values (1, 1, 1, 'Black', 'Red', 'A');
 insert into alpha values (2, 2, 2, 'Black', '대한민국화이팅', 'B');
@@ -131,3 +133,19 @@ select *
                   'Cyan', 36,
                   'White', 37, 99) asc;
                   
+                  
+                  
+with tmp as (
+select max(no) as no  
+  from alpha
+ group by line, col
+ order by line, col
+)
+
+select * 
+  from alpha
+ where no in (select no from tmp)
+order by line asc, col asc, fg asc;
+
+
+

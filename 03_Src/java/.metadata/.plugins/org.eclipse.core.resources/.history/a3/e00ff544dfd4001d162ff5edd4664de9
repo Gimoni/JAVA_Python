@@ -1,0 +1,8 @@
+
+select hiredate, round(hiredate, 'mm') 
+  from emp; 
+  
+  -- round : single row change ;; 
+  
+select min(hiredate), max(hiredate)
+  from emp;
