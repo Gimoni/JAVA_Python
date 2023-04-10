@@ -1,0 +1,25 @@
+package com.example.jdbc;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DMLExample {
+
+	public static void main(String[] args) throws SQLException{
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password= "tiger";
+		
+		
+		var conn = DriverManager.getConnection(url, user, password);
+		conn.setAutoCommit(false);
+		
+		conn.commit();
+		conn.close();
+		
+		System.out.println("End...");
+
+		
+	}
+
+}
