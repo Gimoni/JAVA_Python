@@ -1,0 +1,138 @@
+04-10
+oracle join 
+
+1. 조인 join 
+조인의 필요성
+조인 : 관계형 데이터베이스에서는 테이블 간의 관계가 
+중요하기 때문에 하나 이상의 테이블이 빈번히 결합하여 사용됨. 
+한개 이상의 테이블에서 데이터를 조회하기 위해서 사용되는 것이 조인. 
+
+SQL에서는 두 개 이상의 테이블을 결합해야만 
+원하는 결과를 얻을 수 있을 때 한 번의 질의로 
+원하는 결과를 얻을 수 있는 조인 기능을 제공.   
+
+2. Cross Join 
+특별한 키워드 없이 select문의 from 절에 사원(emp) 테이블과 
+부서(dept) 테이블을 콤마로 연결해서 연속으로 기술하는 것. 
+
+조인의 종류 
+: 조인 결과가 의미 있으려면 조인할 때 조건을 지정해야 함. 
+조인 조건에 따라 조인의 종류가 결정됨
+
+종류 			설명
+Equi Join 		동일 칼럼을 기준으로 조인.
+Non-Equi Join 	동일 칼럼이 없이 다른 조건을 사용하여 조인
+Outer Join 	조인 조건에 만족하지 않는 행도 나타냄
+Self Join 		한 테이블 내에서 조인.
+
+3. Equi Join 
+ : Equi Join은 가장 많이 사용하는 조인 방법. 
+조인 대상이 되는 두 테이블에서 공통으로 존재하는 칼럽의 값이 
+일치되는 행을 연결하여 결과를 생성하는 조인 방법.
+
+Equi Join 에 AND 연산하기 
+
+> select ename, dname
+> from emp, dept
+> where emp.deptno = dept.deptno;
+
+> select ename, dname 
+> from emp, dept
+> where emp.deptno = dept.deptno 
+> and ename = '사원이름'; 
+
+컬럼의 모호성 해결 
+ ) 칼럼 명 앞에 테이블 명을 명시하기 
+테이블에 별칭 부여하기
+> from (테이블명)emp (별칭)e, (테이블명)dept (별칭)d
+
+Non-Equi Join   
+: 조인 저건에 특정 범위 내에 있는 지를 조사하기 위해서 where절에
+조인 조건을 = 연산자 이외의 비교 연산자를 사용함.
+대소 등급  <=, >= 
+
+
+4. self join
+self join:  조인은 두 개 이상의 서로 다른 테이블을 서로 연결하는 것뿐만 
+아니라 , 하나의 테이블 내에서 조인을 해야만 원하는 자료를 얻는 경우가 생김.
+Self join 이란 말 그대로 자기 자신과 조인을 맺는 것을 말함. 
+
+
+
+
+
+==========================
+
+select	/5 
+from 	/1
+where	/2
+group by 	/3
+having 	/4
+order by 	/6
+
+where/ group by / having 은 Select 이전에 수행되어야 한다. 
+
+
+single row function / group function 
+
+when you connect the data with the program it's mainly 
+use by 'select', 'insert', 'update', 'delete'
+
+db의 무결성 data integrity 
+data는 무결성을 유지해야 한다  database 의data가 논리적으로 합당해야함
+
+
+data integrity 를 지키기 위해서는 transaction이 확실하게 이루어져야함.
+
+transaction - commit or rollback , savepoint 
+transaction ' all or nothing '
+
+db의 변경을 시작하면 transaction 이 계속해서 수행된다. 
+(commit과 rollback으로 transaction 이 끝나기까지 계속해서 transactioning 되는 상태)
+
+=============================
+
+데이터의 효율성 - 데이터를 중복시키지 않는 것. 
+테이블을 분산해서 저장한다 - why ? 중복을 피하기 위해서.
+
+cross join 이후에  inner join으로 데이터의 의미있는 중복을 제한 한 
+데이터를 가져오는 것 . 조인 조건은 where / on 으로 inner join에 대한 조건을 준다. 
+
+cross join(물리적인 데이터 통합)으로 메모리상에 데이터가 합해지고 
+이후에 inner join 으로 유의미한 데이터를 조건을 통해서 출력 할 수 있음.
+중복 또는 잘못된 정보를 제한 join 정보를 가져옴. 
+
+join 조건,, 
+inner join - on / where
+inner join - equi join / non equi join 
+
+sql 표준  - inner join .. 
+
+cross join을 잘 이해해야 inner join/ outer join을 이해할 수 있다. 
+
+outer join은 inner join에 더한 정보를 전부 포함 시키는 join
+outer join 에는 right / left / full join이 있다. 
+
+
+Join 종류  cross join - inner join / outer join 
+
+
+
+======================
+Q.
+country table +  city table 
+South korea / city name / city population number  
+
+--=====한국의 도시와 도시별 큰 인구수별로 정렬===  
+select c1.name, c2.name, c2.population
+  from country c1 inner join city c2
+    on c1.code = c2.country_code
+ where c1.code = 'KOR'
+ order by c2.population desc;
+
+
+
+
+
+
+

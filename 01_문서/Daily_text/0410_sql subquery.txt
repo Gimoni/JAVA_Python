@@ -1,0 +1,137 @@
+0410-sub query 
+
+서브쿼리
+1. 서브쿼리의 기본개념 
+: 하나의 select 문장의 절 안에 포함된 또 하나의 select 문장. 
+그렇게에 서브쿼리를 포함하고 있는 쿼리문을 메인쿼리, 
+포함된 또하나의 쿼리를 서브쿼리라고 함.
+
+- 서브쿼리는 일반적으로 select, insert, update, delete와 같은 
+DML(data manipulation language)문 모두에서 사용할 수 있다. 
+
+서브쿼리의 전형적 형식...
+> select select_list 			// main query
+> from table_list
+> where column = ( select expression 	// sub query 
+		from select_list
+		where table_list )
+
+서브쿼리 규칙 
+- 서브 쿼리 안에 서브 쿼리가 들어갈 수 있음. 이것을 (nesting)네스팅이라 하며, 
+메모리가 허용하는 한 무제한으로 중첩할 수 있음. 
+- 메인쿼리에서 서브쿼리의 결과값을 조건으로 사용할 때 some, any 또는 all 연산자를 
+사용하지 않는 일반적인 경우에슨 서브쿼리에서는 하나의 레코드 값만 리턴해야 한다. 
+그러므로 대부분의 경우 서브쿼리에는 group by, having 문을 사용할 수 없다.
+- 서브쿼리에서 order by 문은 top 연산자와 함께 있을 때만 사용 가능. 
+- 서브쿼리에서 select하지 않은 칼럼은 주 쿼리에서 사용할 수 없다.
+
+
+단일 행 서브쿼리
+단일 행 (single row) 서브쿼리는 수행 결과가 오직 하나의 로우(행, row) 만을 
+반환하는 서브쿼리를 갖는 것을 말함. 
+ex ) '이문세'의 부서명 알아내기 
+> select dname 
+> from dept
+> where deptno = ( select deptno 
+		from emp
+		where ename = '이문세' );
+
+_____ 단일 행 (single row) 서브쿼리에서는 수행 결과가 오직 하나의 로우(행, row) 만을 
+반환되는 서브 쿼리의 결과는 메인 쿼리에 보내게 되는데 메인 쿼리 where 절에서는 단일 행 
+비교 연산자인 =, >, <, >=, <=, <>를 사용해야 함. 
+
+
+
+서브 쿼리에서 그룹 함수의 사용
+	* 평균 급여보다 더 많은 급여를 받는 사원 출력.. 
+> select ename, sal
+> from emp
+> where sal > (  select avg(sal)
+	         from emp);
+
+
+다중 행 서브쿼리 
+: 다중 행 서브 쿼리는 서브 쿼리에서 반환되는 결과가 하나 이상의 행일 때 사용하는 서브쿼리
+다중 행 서브쿼리는 반드시 다중 행 연산자 (multiple row operator)와 함께 사용. 
+IN	
+ANY, SOME
+ALL
+EXIST
+
+in 연산자 : 메인 쿼리의 비교 저건에서 서브 쿼리의 출력 결과와 하나라도 일치하면
+	메인 쿼리의 where 절이 참이 되도록 하는 연산자..
+
+all 연산자 : 메인쿼리의 비교 저건이 서브쿼리의 검색 결과와 모든 값이 일치하면 참. 
+	찾아진 값에 대해서 and 연산을 해서 모두 참이 되면 참이 되는 셈. 
+	> ALL 은 " 모든 비교값 보다 크냐" 고 묻는 것이 되므로 최대값보다 더 크면 참. 
+
+any 연산자 : 메인 쿼리의 비교 조건이 서브쿼리의 검색 결과와 하나 이상만 일치하면 참
+	> ANY 는 찾아진 값에 대해서 하나라도 크면 참이되는 셈 
+	찾아진 값 중에서 가장 작은 값 즉, 최소값 보다 크면 참이 됨.
+
+exists 연산자 : 서브 쿼리문에서 주로 사용하며 서브쿼리의 결과 값이 참이 나오기만 하면 
+	바로 메인 쿼리의 결과 값을 리턴한다. 
+	서브쿼리의 결과 값이 존재하지 않는다면 메인 쿼리의 어떤 값도 리턴되지 않는 문장. 
+	쿼리 속도 면에서는 서브쿼리 사용시 in 보다는 exists가 훨씬 빠름. 
+ 	exists의 반대말로 not exists도 사용가능.
+
+1. 서브쿼리를 이용한 테이블 생성, 데이터 조작.
+
+서브쿼리로 테이블 생성하기  create table 문에서 서브쿼리를 사용하며 
+이미 존재하는 테이블과 동일한 구조와 내용을 갖는 새로운 테이블을 생성할 수 있음. 
+
+> create table emp05
+> as
+> select * from emp
+> where deptno=10;
+
+테이블의 구조만 복사하기
+> create table emp06
+> as
+> select * from emp where 1=0;
+
+: where 1=0; 조건은 항상 거짓. 이를 이용하여 
+테이블의 데이터는 가져오지 않고 구조만 복사하게 됨.
+
+서브쿼리로 데이터 삽입하기 
+ 	테이블에 내용추가하기 
+	> insert into dept01
+	> select * from dept;
+
+서브쿼리를 이용한 데이터 변경
+	테이블 내용 변경. 
+> update dept01
+> set loc = ( select loc
+	      from dept01
+  	     where deptno = 40)
+> where deptno = 20;
+
+테이블 내용 확인
+> select * from dept01;
+
+서브쿼리를 이용한 데이터 삭제 
+	데이터 삭제하기
+> delete from emp02
+> where deptno = ( select deptno
+		  from dept
+		 where dname = '영업부');
+
+
+
+======================================
+
+select insert update delete 
+
+jdbc 프로그램에서 사용 . 
+
+what we gonna do?  
+create 2 column table / no , cnt
+	row max.. 
+no > 1 ~ 1000 	// making random number but shouldnt be same numer at cnt 
+cnt > counting about no times... 
+
+use all about DML
+ 
+
+
+
