@@ -88,6 +88,35 @@ select count(distinct to_char(line, '00') || to_char(col, '00'))
   
 
 
+create table random (
+    no number, 
+    cnt number
+);
+
+
+select * from random;
+
+select * 
+  from random
+ order by no;
+ 
+select count(*) from random;
+select count(distinct no) from random;
+
+delete from random;
+
+commit;
+rollback;
+
+update random
+   set cnt= (select cnt from random where no = 1) + 1 
+ where no = 1;
+
+select *
+  from alpha a inner join random r
+    on a.no = r.no;
+  
+
 
   
   
@@ -142,7 +171,7 @@ select max(no) as no
  order by line, col
 )
 
-select * 
+select count(*)
   from alpha
  where no in (select no from tmp)
 order by line asc, col asc, fg asc;

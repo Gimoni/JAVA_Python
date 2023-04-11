@@ -182,15 +182,7 @@ public class AlphaSelectExample6 {
 	}
 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	public static void main(String[] args) throws SQLException, InterruptedException {
