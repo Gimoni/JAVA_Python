@@ -1,0 +1,199 @@
+0411
+
+관계형 데이터 베이스 RDBMS
+JDBC - java database connectivity 
+
+자바소스안에 sql은 단순히 문자열 
+단지 함수를 콜, 결과를 얻어냄. 
+
+자바는 DB와 아무 연관은 없다.. java는 아무것도 몰라용~ 
+
+Client Tool 설치 
+DB 구성
+DB 연결 
+데이터 저장
+데이터 수정
+데이터 삭제
+데이터 읽기 
+프로시저와 함수 호출
+트랜잭션 처리
+게시판 구현 
+
+16강 데이터베이스 입출력
+JDBC 개요 
+JDBC 라이브러리 
+자바는 데이터베이스(DB)와 연결해서 데이터 입출력 작업을 할 수 있도록 
+JDBC라이브러리(java.sql패키지)를 제공
+JDBC는 데이터베이스 관리시스템 (DBMS)의 종류와 상관없이 동일하게
+사용할 수 있는 클래스와 인터페이스로 구성
+
+<CLASSPATH 환경설정 중요> - 실제 실무에서는 build tool 사용하여 
+			외부라이브러리 설정과 classpath를 자동화시켜줌.
+			
+
+JDBC Driver
+JDBC 인터페이스를 구현한 것으로 , DBMS마다 별도로 다운로드받아 사용
+DriverManager클래스 : JDBC Driver를 관리하며 DB와 연결해서 Connection 구현 객체를 생성
+Connection 인터페이스: Statement, PreparedStatement, CallableStatement 구현 객체를 생성하며,
+트랜잭션 처리 및 DB연결을 끊은 때 사용
+Statement 인터페이스: SQL의 DDL과 DML 실행시 사용
+PreparedStatement: SQL의 DDL, DML 문 실행 시 사용.
+매개변수화된 SQL문을 써 편리성과 보안성 유리
+CallableStatement: DB에 저장된 프로시저와 함수를 호출
+ResultSet: DB에서 가져온 데이터를 읽음
+
+
+Statement
+prepared statement 
+
+
+Oracle 설치 . 
+프로그램에서 사용할  DB 계정을 생성하기 위해 SQL plus에서 SQL문 실행. 
+
+원격 연결
+원격 연결 요청을 수락하기 위해 Net Configuration Assistant를 실행
+
+
+방화벽 해제
+oracle을 설치한 운영체제의 방화벽 설정에서 1521 포트를 개방
+windows defender 방화벽 대화상자에서 (인바운드 규칙)을, 
+오른쪽 작업 창에서(새 규칙)을 선택해 설정 변경
+
+SQL Developer 
+- oracle DB 모델링에서부터 DB 상태 확인, 
+SQL 스크립트 및 PL/SQL 개발등 용이한 무료 Client Tool
+설치 후 [새로 만들기/ 데이터베이스 접속 선택] 대화상제에서 설정 후 테스트
+
+DB구성 
+데이터베이스 구성 
+- 테이블, 시퀀스, 프로시저, 함수를 생성하여 데이터베이스를 구성
+
+데이터베이스 연결 
+- 클라이언트 프로그램에서 DB와 연결하려면 해당 DBMS의 JDBC Driver가 필요
+1. DBMS가 설치된 컴퓨터의 IP 주소, 
+2. DBMS가 허용하는 포트(port) 번호, 
+3. 사용자( DB  계정) 및 비밀번호
+4. 사용하고자 하는 DB 이름 필요
+
+JDBC Driver 설치
+- 로컬 pc에 oracle을 설치하면 JDBC Driver 파일을 찾을 수 있음. 
+- 원격 PC에 Oracle을 설치하면  JDBC Driver만 별도로 다운로드
+
+DB연결 
+- Class.forName() 메소드는 문자열로 주어진 JDBC Driver 클래스를 BuildPath에서 찾고, 
+JDBC Driver를 메모리로 로딩
+
+	jdbc:orcle:thin:@localhost:1521/orcl
+		         IP주소    포트  (DB명)
+
+Class.forName("oracle.jdbc.OracleDriver");
+Connection conn = DriverManager.getConnection("url", "user", "password");
+
+데이터 저장 
+INSERT 문 
+- users 테이블에 새로운 사용자 정보를 저장하는 INSERT문 실행
+- INSERT문을 String 타입 변수 sql에 문자열로 대입
+
+> insert into users (userid, username, userpassword, userage, useremail)
+> values (?, ?, ?, ?, ?)
+
+- 매개변수화된 SQL문을 실행하기 위해 Connection의 
+prepareStatement() 메소드로부터 PreparedStatement를 얻음. 
+- 값을 지정한 후 executeUpdate() 메소드를 호출하면 
+SQL 문이 실행되면서 users 테이블에 1개의 행이 저장
+
+- close() 메소드를 호출하면 PreparedStatement가 사용했던 메모리 해제
+
+UPDATE 문
+- JDBC를 이용해서 UPDATE 문을 실행
+- prepareStatement() 메소드로부터 PreparedStatement를 얻고, ? 에 
+해당하는 값을 지정.
+- executeUpdate() 메소드를 호출. 수정된 행의 수가 리턴
+
+DELETE 문
+- JDBC를 이용해서  DELETE문 실행.
+매개변수화된 DELETE 문을 String 타입 변수 sql에 대입
+- prepareStatement() 메소드로부터 PreparedStatement를 얻고 ? 에 값을 지정한 후, 
+executeUpdate로 SQL문을 실행.
+
+ResultSet 구조
+- SELECT 문에 기술된 컬럼으로 구성된 행(row)의 집합
+	SELECT userid, username, userage FROM users
+- 커서 cursor가 있는 행의 데이터만 읽을 수 있음
+- first행을 읽으려면 next() 메소드로 커서 이동
+	boolesn result = rs.next();
+
+	ResultSet rs = pstmt.executeQuery();
+	while (rs.next()) {		// n개의 데이터행을 가져올 경우
+	if(rs.next()) {} else{}		// 1개의 데이터 행만 가져올 경우
+
+데이터 행 읽기 
+- 커서가 있는 데이터 행에서 각 컬럼의 값은 Getter 메소드로 읽음
+- SELECT 문에 연산식이나 함수 호출이 포함되어 있다면 
+컬럼 이름 대신에 컬럼 순번으로 읽어야함. 
+
+사용자 정보 읽기
+- 사용자 정보를 가져오는 SELECT 문.
+prepareStatement() 메소드로부터 
+PreparedStatement를 얻고, ?에 값을 지정
+
+- executeQuery() 메소드로 SELECT 문을 실행해서 ResultSet을 얻음
+- if문을 이용해서 next() 메소드가 true를 리턴할 경우에서는 데이터 행을 
+User 객체에 저장하고 출력
+
+게시물 정보 읽기 
+
+프로시저와 함수 호출.
+
+트랜잭션 처리 
+트랜잭션 
+- 기능 처리의 최소단위 , 하나의 기능은 여러 소작업들로 구성 
+- 트랜잭션은 소작업들이 모두 성공하거나 실패해야 함. 
+- 커밋은 내부작업을 모두 성공 처리하고 , 
+롤백은 실행 전으로 돌아간다는 의미에서 모두 실패 처리
+- JDBC 에서 트랜잭션 제어 시 Connection의 setAutoCommit() 메소드로 
+자동 커밋 기능을 꺼야 함. 
+		conn.setAutoCommit(false);
+
+
+
+==================================
+
+execute();		// sql문 또는 기타사용 시
+executeUpdate();	// insert, update, delete 에 사용.
+executeQuery();	// result set을  얻고자 할 때 사용. 
+
+ResultSet 에 next()를 반드시 해야 함.. rs.next();
+
+Transaction : 데이터의 무결성을 유지하기 위해서 
+	논리적으로 타당한 데이터만 와야한다. 
+	"ALL or NOTHING" 	
+Transaction = " TCL : Transaction control language" 
+		- Commit
+		- Rollback
+		- Savapoint
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
