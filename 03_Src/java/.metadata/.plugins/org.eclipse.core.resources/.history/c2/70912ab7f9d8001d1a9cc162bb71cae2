@@ -1,0 +1,62 @@
+package com.example.mapper;
+
+import com.example.model.Alpha;
+
+public class AlphaMapper {
+	
+	public int selectCountByLineColumn(int line, int column) {
+		
+		String sql = """
+				select count(*)
+				  from alpha
+				 where line = ? and col = ? 
+				""";
+		
+		int rtn = 0;
+		
+		return rtn;
+	}
+	
+	public int selectAll() {
+		
+		String sql = """
+				select count(*)
+				  from alpha
+				""";
+		
+		int rtn = 0;
+		
+		return rtn;
+	}
+	
+	public int insertAlpha(Alpha alpha) {
+		
+		String sql = """
+				insert into alpha
+				(no, line, col, fg, bg, ch)
+				values
+				(?, ?, ?, ?, ?, ?)
+				""";
+		
+		int rtn = 0;
+		
+		return rtn;
+	}
+	
+	public int updateAlphaByLineColumn(Alpha alpha) {
+		
+		String sql = """
+				update alpha
+				   set no = ?,
+				   	   fg = ?,
+				   	   bg = ?,
+				   	   ch = ?
+				 where line = ? and col = ? 
+				""";
+		
+		int rtn = 0;
+		
+		return rtn;
+	}
+	
+}

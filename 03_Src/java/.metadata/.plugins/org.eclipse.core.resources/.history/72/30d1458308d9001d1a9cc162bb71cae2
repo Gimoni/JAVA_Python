@@ -1,0 +1,48 @@
+package com.example.controller;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.example.mapper.AlphaMapper;
+import com.example.model.Alpha;
+
+import util.Oracle;
+
+/*
+ * 프로그램 실행 메인
+ */
+public class AlphaController2 {
+
+	public static void main(String[] args) throws SQLException {
+		
+		Connection conn = Oracle.getInstance();
+		conn.setAutoCommit(false);
+		
+		AlphaMapper mapper = new AlphaMapper(conn);
+		
+		Alpha[] alphas = mapper.selectAll();
+
+		for(int i=0; ; i++) {
+			Alpha a = new Alpha();
+			a.setNo(i);
+			
+			int rows = mapper.selectCountByLineColumn(a.getLine(), a.getColumn());
+			if (rows==0) {// insert 
+				mapper.insertAlpha(a);
+			} else {	// update
+				mapper.updateAlphaByLineColumn(a);
+			}
+			
+			int count = mapper.selectCountAll();
+			if (count == 800)
+				break;
+		}
+		
+		conn.commit();
+		conn.close();
+		
+		System.out.println("Program End..");
+				
+	}
+
+}

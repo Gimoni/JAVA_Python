@@ -1,0 +1,15 @@
+package com.example.model;
+
+import util.Color;
+
+/*
+ * 
+ */
+public class Alpha {
+	int no;
+	int line;
+	int column;
+	Color fg;
+	Color bg;
+	char ch;
+}

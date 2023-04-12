@@ -1,0 +1,19 @@
+package com.example.controller;
+
+import java.sql.Connection;
+
+import util.Oracle;
+
+/*
+ * 프로그램 실행 메인
+ */
+public class AlphaController {
+
+	public static void main(String[] args) {
+		
+		Connection conn = Oracle.getInstance();
+		conn.setAutoCommit(false);
+		
+	}
+
+}
