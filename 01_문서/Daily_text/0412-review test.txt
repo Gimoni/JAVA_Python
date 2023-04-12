@@ -1,0 +1,18 @@
+하나의 기능을 구현하기 위해서 전형적으로 3가지의 클래스가 구성.. 
+>>> controller/ mapper/ model 
+
+데이터를 담는 그릇 같은 역할 - Model 
+
+	// 다른 패키지에서도 접근 가능하도록 getter setter 설정.  
+	// : Sources - Generate Getters and Setters
+
+mapper ->java - database
+
+mapper에서는 java와 database의 갭을 연결시켜주는 역할
+
+mapper - db 기능을 구현하기 위해 쿼리가 들어감. 
+	쿼리 수행의 메소드 .. 
+
+java - chap10 - com.example.controller/maper/model. // util Oracle.java.. 
+
+ctrl + shift + m === import/// 
