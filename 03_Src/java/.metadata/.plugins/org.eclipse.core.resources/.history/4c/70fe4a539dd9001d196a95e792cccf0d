@@ -1,0 +1,24 @@
+package com.example;
+
+public class InterfaceExample {
+	
+	class A {
+		
+	}
+	
+	enum Gender {
+		
+	}
+	
+	interface Drawable {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}

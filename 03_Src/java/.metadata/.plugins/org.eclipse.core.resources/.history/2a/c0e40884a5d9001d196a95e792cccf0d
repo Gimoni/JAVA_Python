@@ -1,0 +1,11 @@
+package com.example;
+
+public class CompareExample {
+
+	public static void main(String[] args) {
+		Integer [] nums = {1, 6, 3, 7, 5};
+		
+		
+	}
+
+}

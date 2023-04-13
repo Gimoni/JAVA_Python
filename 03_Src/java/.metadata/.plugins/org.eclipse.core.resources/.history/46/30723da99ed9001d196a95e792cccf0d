@@ -1,0 +1,27 @@
+package com.example;
+
+
+public class InterfaceExample {
+	
+	static class A {
+		
+	}
+	
+	enum Gender {
+		MALE, FEMALE
+	}
+	
+	interface Drawable {
+
+		void draw();
+	}
+	
+	public static void main(String[] args) {
+		A a = new A();
+		
+//		Gender g = new Gender();	// new 생성 불가 
+//		Drawable d = new Drawable();	// 
+		
+	}
+
+}

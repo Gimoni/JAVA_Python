@@ -1,0 +1,25 @@
+package com.example;
+
+class A {
+	
+}
+
+enum Gender {
+	
+}
+
+interface Drawable {
+	
+}
+
+public class InterfaceExample {
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}

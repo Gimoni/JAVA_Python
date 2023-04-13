@@ -1,0 +1,20 @@
+package com.example;
+
+public class InterfaceExample {
+	
+	class A {
+		
+	}
+	
+	interface Drawable {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}

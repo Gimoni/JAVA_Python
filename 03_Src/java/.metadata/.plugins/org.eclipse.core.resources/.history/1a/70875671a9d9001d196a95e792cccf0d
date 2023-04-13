@@ -1,0 +1,19 @@
+package com.example;
+
+public class InterfaceMemberExample {
+	
+	int num;
+	public int num2;
+	
+	// interface는 대부분 형용사 형태이다. 
+	interface Movable {
+		void move();
+	}
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}
