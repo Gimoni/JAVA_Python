@@ -1,0 +1,9 @@
+Dynamic web package 내에서 
+
+java resources - src/main/java - creat new - servlet
+
+java package name ./ class name  - next
+
+url mappings edit -> * url mappings start with lowcap..  
+- > next >>>  check the option of the create servlet 
+	/// checked inherited abstract methods , doGet 
