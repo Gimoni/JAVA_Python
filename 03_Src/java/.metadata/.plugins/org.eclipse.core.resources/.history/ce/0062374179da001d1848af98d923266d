@@ -1,0 +1,23 @@
+package com.example;
+
+public class Q {
+
+	public class Car {
+		class Tire {
+			int tire;
+		}
+		
+		static class Engine {
+			static int engine;
+		}
+	}
+	public static void main(String[] args) {
+
+		Car myCar = new Car();
+		
+		Car.Tire tire = ;
+		
+		Car.Engine engine = ;
+	}
+
+}

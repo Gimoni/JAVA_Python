@@ -1,0 +1,31 @@
+package com.example;
+
+public class SoundableExample {
+
+	private static void printSound(Soundable soundable) {
+		System.out.println(soundable.sound());
+	}
+	public static void main(String[] args) {
+
+		
+	}
+	public interface Soundable {
+		void cat();
+		void dog();
+	}
+
+	class Print implements Soundable {
+
+		@Override
+		public void cat() {
+			System.out.println("야옹");
+		}
+
+		@Override
+		public void dog() {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+}

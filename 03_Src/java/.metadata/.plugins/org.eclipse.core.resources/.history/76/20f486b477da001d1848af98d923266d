@@ -1,0 +1,26 @@
+package com.example;
+
+public class SoundableExample {
+
+	public static void main(String[] args) {
+		
+	}
+	public interface Soundable {
+		void cat();
+		void dog();
+	}
+
+	static class cat implements Soundable {
+
+		@Override
+		public void cat() {
+			System.out.println("야옹");
+		}
+
+		@Override
+		public void dog() {
+			System.out.println("멍멍");
+		}
+		
+	}
+}

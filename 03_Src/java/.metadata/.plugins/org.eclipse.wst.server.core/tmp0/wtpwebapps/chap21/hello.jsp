@@ -13,5 +13,9 @@ btn1.onclick = function() {
 </script>
 </head>
 <body>
+<h1>별</h1>
+<img alt="xxx" src="img/star.png" width="300">
+<h1>스티브잡스</h1>
+<img alt="xxx" src="img/steve.jpg" width="100">
 </body>
 </html>

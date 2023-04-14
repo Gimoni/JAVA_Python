@@ -73,7 +73,6 @@ public class InterfaceExample {
 //		Drawable d = new Drawable();	// 
 		
 		
-		
 	}
 
 }

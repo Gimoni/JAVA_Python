@@ -1,0 +1,62 @@
+package com.example;
+/*
+ * 클래스 - 필드 / 로컬 
+ */
+public class NestedClassExample {
+	// 인스턴스 클래스
+	class A {
+		int num;
+		static int num2;
+		
+		static {
+			
+		}
+		
+		void xxx() {
+			
+		}
+		
+		static void yyy() {
+			
+		}
+	}
+	// 정적 클래스 
+	static class B {
+		int num;
+		static int num2;
+		
+		static {
+			
+		}
+		
+		void xxx() {
+			
+		}
+		
+		static void yyy() {
+			
+		}
+		
+	}
+	public static void main(String[] args) {
+		// 로컬 클래스
+		class C {
+			int num; 
+			static int num2;
+			
+			static {
+				
+			}
+			void xxx() {
+				
+			}
+			
+			static void yyy() {
+				
+			}
+			
+		}
+		
+	}
+
+}
