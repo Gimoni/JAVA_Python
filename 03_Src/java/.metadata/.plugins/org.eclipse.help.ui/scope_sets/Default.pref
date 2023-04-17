@@ -1,2 +1,5 @@
-#Mon Feb 27 11:26:12 KST 2023
+#Mon Apr 17 16:43:35 KST 2023
+org.eclipse.help.ui.localSearch.master=true
+org.eclipse.sdk.Google.master=true
+org.eclipse.sdk.Eclipse.master=true
 __DEFAULT__=true

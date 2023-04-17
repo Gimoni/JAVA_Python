@@ -1,0 +1,37 @@
+package com.example.ex;
+
+import java.util.Arrays;
+
+import util.Alpha;
+
+public class EX14_3 {
+	interface Max {
+		int max(int a, int b);
+	}
+	interface F {
+		int f(int a, int b);
+	}
+	
+	
+	public static void main(String[] args) {
+
+	
+		Total6 [] totals = new Total6{1,2,3,4,5,6};
+		Arrays.sort(Total6, (a, b) -> {
+			int rtn = 0;
+			
+			rtn = a + b;	// asc
+			
+			
+			return rtn;
+		}); 
+		for (var v : total6)
+			System.out.println(v);
+	
+		// 람다식
+		Max m2 = (a, b) -> a>=b ? a:b;
+		
+		System.out.println();
+	}
+
+}

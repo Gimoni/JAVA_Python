@@ -5,8 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.example.model.Alpha;
-
+import util.Alpha;
 import util.Color;
 
 public class AlphaMapper {

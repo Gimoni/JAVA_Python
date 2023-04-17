@@ -1,0 +1,29 @@
+package com.example.ex;
+
+import java.util.Arrays;
+
+import util.Alpha;
+
+public class EX14_3 {
+	interface Max {
+		int max(int a, int b);
+	}
+	interface F {
+		int f(int a, int b);
+	}
+	
+	
+	public static void main(String[] args) {
+
+	
+		Integer [] nums ={1, 2, 3, 4, 5};
+		Arrays.sort(nums , Math::subtractExact);
+		
+	
+		// 람다식
+		Max m2 = (a, b) -> a>=b ? a:b;
+		
+		System.out.println();
+	}
+
+}

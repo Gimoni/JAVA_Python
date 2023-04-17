@@ -26,6 +26,11 @@ public class Star extends HttpServlet {
 		}
 	}
 
+//	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		
+//		System.out.println("...");
+//		
+//	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setContentType("text/plain");
@@ -86,6 +91,9 @@ public class Star extends HttpServlet {
 				return i<=j;
 			}
 		});
+		
+		triangle(out, (i, j) -> i<=j);
+		
 //		for (int i=0; i<5; i++) {
 //			for (int j=0; j<i+1; j++) 
 //				out.print(" ");
@@ -113,6 +121,8 @@ public class Star extends HttpServlet {
 			}
 		});
 		
+		triangle (out, (i, j) -> i<4-(j-1));
+		
 //		for (int i=0; i<5; i++) {
 //			for (int j=0; j<5-i; j++) 
 //				out.print(" ");
@@ -130,6 +140,8 @@ public class Star extends HttpServlet {
 				return i>=5-(j+1);
 			}
 		});
+		
+		
 //		for (int i=0; i<5; i++) {
 //			for (int j=0; j<4+i; j++)
 //				out.print(" ");
@@ -152,10 +164,19 @@ public class Star extends HttpServlet {
 			
 			@Override
 			public boolean check(int i, int j) {
-				return i>=5-(j+2);
+				return i==0 || i==4 || j==0 || j==4;
 			}
 		});
 		out.println("6.");
+		
+		triangle(out, new Checkable() {
+			
+			@Override
+			public boolean check(int i, int j) {
+				return i==j || 1-i==j-3;
+			}
+		});
+		
 		out.println("7.");
 		triangle(out,new Checkable() {
 			

@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.example.mapper.AlphaMapper;
-import com.example.model.Alpha;
 
+import util.Alpha;
 import util.Oracle;
 import util.VT100;
 

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ScannerExample"/>
-    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
-    <fullyQualifiedTypeName name="java.math.BigInteger"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="javax.swing.event.SwingPropertyChangeSupport"/>
     <fullyQualifiedTypeName name="util.Turtle"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
     <fullyQualifiedTypeName name="java.util.EnumSet"/>
     <fullyQualifiedTypeName name="java.time.DayOfWeek"/>
@@ -16,9 +11,7 @@
     <fullyQualifiedTypeName name="java.util.TimerTask"/>
     <fullyQualifiedTypeName name="com.example.blink.BlinkWorldExample2"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.awt.Color"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
@@ -39,4 +32,32 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="util.VT100"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="com.example.AnonymousExample2.Drawable"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="com.example.SoundableExample"/>
+    <fullyQualifiedTypeName name="com.example.SoundableExample.Soundable"/>
+    <fullyQualifiedTypeName name="com.example.Q.Car.Tire"/>
+    <fullyQualifiedTypeName name="com.example.Q.Car.Engine"/>
+    <fullyQualifiedTypeName name="com.example.QNestedClassExample.Car"/>
+    <fullyQualifiedTypeName name="com.example.SoundableExample.sound"/>
+    <fullyQualifiedTypeName name="com.example.Star.Checkable"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="com.example.FunctionalInterfaceExample.Checkable"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.example.ex.EX14.Max"/>
+    <fullyQualifiedTypeName name="com.example.ex.EX14_2.Str"/>
+    <fullyQualifiedTypeName name="com.example.ex.EX14_2.S"/>
+    <fullyQualifiedTypeName name="com.example.ex.EX14_3.F"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.example.ex.EX14_3.Max"/>
+    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.util.function.IntBinaryOperator"/>
+    <fullyQualifiedTypeName name="java.awt.Button"/>
 </qualifiedTypeNameHistroy>
