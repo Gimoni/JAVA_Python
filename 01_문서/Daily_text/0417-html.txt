@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HtmlServlet</title>
+</head>
+<body>
+<button id='btn' style ='background-color: red'> Button</button>
+<script>
+btn.onclick = function() {
+	alert('버튼 클릭') 
+};
+</script>
+</body>
+		
+</html>
