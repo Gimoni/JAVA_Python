@@ -1,0 +1,44 @@
+0418- java collecion framework
+
+java 컬렉션 프레임워크는 일반적으로 재사용 가능한 
+컬렉션 데이터 구조를 구현하는 클래스 및 인터페이스 집합. 
+프레임워크라고 하지만 라이브러리 방식으로 작동. 
+컬렉션 프레임워크는 다양한 컬렉션을 
+정의하는 인터페이스와 컬렉션을 구현하는 클래스를 모두 제공
+
+배열을 한번 설정하면 배열의 크기를 변경할 수 없지만 list는 변경 설정이 가능하다. 
+list 분류에는 각각의 리스트별로 성능에 따른 차이가 있다 // 대표적으로 속도
+List 의 특징 : 순서를 유지하고 저장 / 중복 저장 가능 / ( 구현 클래스 : ArrayList, Vector, LinkedList )
+List의 CRVD 성능은 각기 다르다 
+
+
+
+
+=====================================
+
+컬렉션 프레임워크 
+- 널리 알려진 자료구조를 바탕으로 객체들을 효율적으로 추가, 삭제, 검색할 수 있도록 
+관련 인터페이스와 클래스들을 포함시켜 놓은 java.util 패키지
+- 주요 인터페이스 : List, Set, Map 
+Collection : List, Set	/		Map
+
+(Collection)List - ArrayList / Vector / LinkedList ( 각 리스트 분류에는 성능에 따른 차이가 있다.)
+	list 특징 : 순서를 유지하고 저장 , 중복 저장 가능	
+(Collection)Set - HashSet / TreeSet 
+	set 특징 : 순서를 유지하지 않고 저장 , 중복 저장 불가
+Map -  HashMap / Hashtable / TreeMap / Properties
+map 특징 : 키와 값으로 구성된 엔트리 저장 , 키는 중복 저장 안됨
+
+List Collection 리스트 컬렉션 
+-  객체를 인덱스로 관리하기때문에 객체를 저장하면 인덱스가 부여되고
+인덱스로 객체를 검색, 삭제할 수 있는 기능을 제공
+객체 추가 - boolean add(E e) : 주어진 객체를 맨 끝에 추가 
+	- void add(int index, E element) : 주어진 인텍스에 객체를 추가 
+	- set(int index, E element) : 주어진 인텍스의 객체를 새로운 객체로 바꿈
+
+객체 검색 - boolean contains(Object o) : 주어진 객체가 저장되어 있는지 여부 
+	- E get(int index) : 주어진 인덱스에 저장된 객체를 리턴
+	- isEmpty() : 컬렉션이 비어있는지 조사
+	- int size() : 저장되어 있는 전체 객체 수를 리턴 
+
+객체 삭제 -

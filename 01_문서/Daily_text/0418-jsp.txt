@@ -1,0 +1,288 @@
+0418
+jsp 
+
+
+
+front end ---> HTML, SCC, JavaScript
+<clientside rendering>
+back end ---> servlet/JSP , SpringFramework, python -- / Database /  
+<serverside rendering> 
+
+what is serverside rendering 
+Server-side rendering is the most common method 
+for displaying information onto the screen.
+It works by converting HTML files in the server into 
+usable information for the browser.
+Whenever you visit a website, your browser makes 
+a request to the server that contains the contents of the website.
+
+
+Html (Hyper text markup language) // 텍스트 기반; 시공간의 이동.. 
+Css (Cascading Style Sheet)
+JavaScript // 동적인 작동을 담당함. (ECMA Script)
+ 
+
+backend 중심 개발 / frontend 중심 개발
+
+==============================
+chapter 01웹 프로그래밍의 이해
+
+chapter 01 웹프로그래밍의 이해 0414 jsp + 
+
+chapter 01 웹프로그래밍의 이해 /
+section 03 웹 프로그래밍의 구조/ 0417 jsp +
+
+백엔드 중심 개발과 프런트엔드 중심 개발 
+백엔드 중심 개발의 장점 
+- 서비스 연동에 필요한 다양한 서버 환경에 대응할 수 있음
+- 검색 엔진 최적화에 유리함
+- 기술이 안정적이고 검증됨
+- 기존에 개발된 시스템이 많고 레거시 시스템은 오랫동안 유지됨
+
+백엔드 중심 개발의 단점
+- 모바일 네트워크의 속도가 느리며 이용에 많은 비용을 지불해야 함
+- 서버에 화면 갱신을 요청할 경우 모든 데이터가 다시 전송되어야 하므로 
+모바일 환경에는 부적합함
+- REST API와 클라우드 인프라가 보편화되면서 기존의 대규모로 서버를 구축하는 
+모놀리식 아키텍처 방식보다는 소규모 서버를 연동하는 MSA 방식이 확산되고 있음
+ MSA(Micro Service Architecture)
+
+프런트엔드 중심 개발의 장점
+- 필요한 부분의 데이터만 갱신이 가능하기 때문에 서버로부터 
+매번 갱신된 전체 화면을 받아올 필요가 없음
+- 실시간 데이터 갱신이 자유로움
+- SPA(Single Page App), PWA(Progressive Web App) 등의 구현에 적용할 수 있음
+- React.js, Vue.js 등 다양한 라이브러리/프레임워크를 사용할 수 있음
+
+
+프런트엔드 중심 개발의 단점
+- 프런트엔드 중심의 개발이라 하더라도 데이터 제공을 위한 서버는 필요함
+- 데이터 제공 서버는 주로 REST API로 개발되기 때문에 백엔드 작업은 당연히 존재함
+- 프런트 엔드 중심 개발을 하더라도 콘텐츠가 검색 엔진에 노출될 수 있도록 
+검색 엔진 최적화를 위해 SSR(Server Side Rendering)을 접목하기도 함
+
+section04
+새로운 웹 개발 트렌드 
+
+1. 자바 언어의 대안 등장
+- 오라클과 구글의 자바 라이선스 문제가 오라클의 승리로 끝남
+- 구글은 새로운 안드로이드 개발 언어로 젯브레인스에서 개발한 코틀린(Kotlin) 언어
+를 추가하면서 안드로이드 개발 트렌드는 점점 코틀린 쪽으로 이전하고 있음
+- 코틀린은 최신 프로그래밍 언어의 특징을 모두 가지는 모던 프로그래밍 언어
+(Modern Programming Language)임
+
+2. 백엔드 개발 및 운영 환경의 변화
+- 스프링 프레임워크가 등장하게 됨
+- 클라우드 기반의 서버 운영이 보편화되면서 전통적인 모놀리식 아키텍처 중심의 서
+버 운영 전략이 소규모 분산 서비스 운영 방식인 MSA로 전환되기 시작함
+- 프런트엔드 중심의 개발이 가속화되면서 서버 프로그램이 보다 간결한 형태로 전환
+되고 Node.js, 파이썬을 이용한 서버 프로그램 개발이 늘어나고 있음
+- 특히 REST API 형태의 개발이 주를 이루게 되면서 백엔드에서 화면을 다루어야 하는
+경우는 점점 줄어들고 있음
+- 구글의 파이어베이스(Firebase)를 비롯한 클라우드 기반의 서비스 인프라가 보편화
+되어 필요한 데이터를 REST API 형태로 손쉽게 제공받을 수 있는 서버리스 환경도 보
+편화되고 있음
+
+3. 프런트엔드 중심 개발로의 이동
+- 웹에서 모바일로 이동하면서 데이터를 서버에서 조합(바인딩Binding)한 다음 화면을
+구성(렌더링Rendering)하는 서버 사이드 렌더링(SSR)은 방식에서 여러 문제가 부각되
+기 시작함
+	－예시1) 모바일에서 인터넷을 사용하려면 데이터 요금을 부담해야 하고 
+		유선에 비해 상대적으로 속도도 느림
+	－예시2) 인터넷 접속이 항상 보장되지 않으며, 실시간으로 데이터 갱신은 필요함
+- 이러한 새로운 요구는 서버로부터 데이터만 수신하고 클라이언트(웹 브라우저)에서
+데이터를 조합한 다음 화면을 구성하는 클라이언트 사이드 렌더링(CSR) 방식으로 개
+발을 전환하게 되는 계기가 됨
+
+4. 스프링 프레임워크
+- 스프링 프레임워크(Spring Framework, 이하 스프링)는 상용화할 수 있는 수준의 대
+규모 서비스를 누구라도 쉽게 개발할 수 있도록 해줌
+- 자바 기반의 대표적인 백엔드 개발 프레임워크로 국내에서는 절대적인 위치에 있음
+- 전자정부 프레임워크 역시 스프링 기반임
+- 스프링을 쉽게 사용할 수 있게 하는 스프링 부트(Spring Boot)의 경우 JSP 사용에 제
+약이 있음
+
+
+
+============================================
+
+
+XML은 웹을 떠나 전영역에서 사용되는 마크업 언어 
+HTML은 웹 영역에서만 사용되는 마크업 언어 
+
+
+data의 data  = meta data/ 
+
+HTML <!DOCTYPE html> 무조건 입력해야함 ~ 
+
+
+>>>>>>>>>>HTML 최상위 ROOT TAG
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서의 구조</title>
+</head>
+<body>
+
+</body>
+</html>
+
+**** html - 트리구조/
+
+
+meta tag 에서 캐시를 막는 역할 // 저장하지 않고 출력을 보임. 
+REFRESH 
+html - no-cache/no-store
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-store">
+
+HTML은 html text 파일 
+JSP는 servlet으로 저장됨.
+
+html에서 텍스트 스페이스를 줄 때 
+&nbsp; 사용. ( non-breaking space ) 
+텍스트 사이에 스페이스 하나는 설정이 가능하지만 
+1개 이상의 스페이스를 줄 때 &sbsp; 사용.  
+
+텍스트의 줄바꿈은 <br> break 사용. 
+
+<p>와 <p> 태그사이에는 문단이 띄어진다. 공백이 생김. 
+
+<pre></pre> 태그 안에서는 줄바꿈 스페이스를 태그없이 사용이 가능하다. 
+
+&lt; ---- <
+&gt; ---- >
+
+jsp 템플릿 설정. 
+window -preferences - web - html file - editor - templates - html5 - edit 
+ >>> <meta http-equiv="Coche-Control" content="no-store"> 
+ 
+window -preferences - web - html file - editor - templates - html5 - edit 
+ >>> <meta http-equiv="Coche-Control" content="no-store"> 
+
+<%@ page language="java" contentType="text/html; charset=${encoding}"
+    pageEncoding="${encoding}"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="${encoding}">
+<meta http-equiv="Coche-Control" content="no-store"> 
+<title>xxx.jsp</title>
+</head>
+<body>
+${cursor}
+</body>
+</html>
+
+-apply -
+
+
+<li>
+<ol>
+
+=============================================
+Chapter 03
+웹 프로그래밍의 기초 
+
+웹표준 - HTML / CSS / JavaScript
+
+section 01
+HTML 기초 
+ 
+HTML 이란?
+
+HTML(HyperText Markup Language)
+- 모든 웹 콘텐츠는 HTML로 이루어져 있음
+- 웹 브라우저는 서버로부터 전달받은 HTML 문서의 구조를 해석해 화면을 구성함
+- 클라이언트인 웹 브라우저가 서버로부터 수신하는 데이터의 구조는 HTML임
+
+하이퍼텍스트(HyperText)
+- 다른 정보와 연결된 텍스트를 의미하며 
+사용자가 관련 문서를 링크를 통해 이동하며 정보를 얻을 수 있음
+- 초기 월드 와이드 웹은 바로 이러한 정보의 연결에 중점을 두고 설계됨
+
+마크업 언어(Markup Language)
+- 텍스트에 의미를 부여하기 위해 문서에 주석을 다는 표현 시스템
+- 표현하고자 하는 정보가 있을 때 정보의 앞뒤에 태그(Tag) 표기를 
+달아 정보에 의미를 부여하는 형식
+	: 예) <h1>안녕하세요?</h1>
+XML(eXtensible Markup Language)
+- HTML보다 범용적으로 사용할 수 있는 마크업 언어
+- HTML : 사용할 수 있는 태그의 종류가 정해져 있음
+- XML : 자신만의 규격을 정의할 수 있음
+
+<단순한 텍스트 정보 > - 홍길동, 010-1234-5678, 서울시 마포구
+
+<XML로 표현된 정보> 
+<name>홍길동</name>
+<tel>010-1234-5678</tel>
+<addr>서울시 마포구</addr>
+
+HTML의 기본 용어
+태그(Tag)
+- 태그는 < >를 사용하여 나타냄
+- 태그는 일반적으로 시작과 끝을 표시하는 2개의 쌍으로 이루어져 있으며, 
+종료 태그앞에는 /를 붙여야 함
+- 사용할 수 있는 태그는 표준으로 정해져 있으며 태그마다 역할이 다름
+
+<시작 태그 속성 = "값"  속성= "값"...> 내용 </종료 태그>
+
+
+태그의 특징
+- 모든 태그가 종료 태그를 가지는 것은 아님
+- 태그 이름은 대소문자를 구분하지 않음
+- 태그에 추가적인 정보 부여는 속성을 사용
+
+속성(Attribute)
+- 태그에 추가 정보를 제공하기 위해 사용함
+- 사용할 수 있는 속성 역시 정해져 있음
+- 디자인과 관련된 속성은 거의 사용하지 않고 뒤에서 배울 CSS를 사용함
+
+<img src = "photo.jpg" alt = "사진" >
+<태그 속성 = "파일명.확장자" 속성 ="파일을 찾을수 없을 때 출력할 대체 텍스트">
+
+
+태그 바디(Tag Body)
+- 시작 태그와 종료 태그 사이에 위치하는 내용(콘텐츠)을 의미함
+-대체로 텍스트가 위치하며, 다른 태그를 태그 보디에 둘 수도 있음
+	: 즉 태그 사이에 다른 태그를 위치시키는 것이 가능함
+- 단, 태그 사이에 부모-자식 관계가 정해져 있는 경우 규칙을 따라야 원하는 결과물을
+보여줌
+
+	<h2>Hello World</h2>	// 태그 바디가 텍스트인 경우
+	<ul>
+	     <li>아이템</li>		// 태그 바디가 다른 태그인 경우
+	</ul>
+
+시맨틱 태그(Semantic Tag)
+- HTML5에서 도입된 개념으로, 특별한 의미를 가지는 태그를 말함
+- 문서의 구조를 정의하는 데 주로 사용됨
+- 시맨틱 태그 그 자체로는 별다른 역할을 수행하지 않고 화면 디자인에도 영향을 미
+치지 않지만 코드의 가독성을 높이는 데 도움을 줌
+－ 또한 부모-자식 관계 없이 다른 태그를 자유롭게 사용할 수 있음
+	<header>, <footer>, <article>, <section>, <aside>, <nav>
+
+HTML 문서의 구조 
+- <!DOCTYPE html>: HTML5 문서를 선언하는 구문으로 웹 브라우저에 문서가 HTML5로
+작성됨을 알림
+- <html> … </html>: HTML 문서의 시작과 끝을 의미함
+- <head> … </head>: CSS, 자바스크립트, 메타 태그 등이 위치함
+:－ <title> 태그 : 문서의 상단 제목을 표시
+:－ <meta> 태그 : 문서의 정보를 설정하는 등도 포함
+- <body> … </body>: 문서 본문에 해당하는 부분으로 실제 화면에 나타나는 메인 부분
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
