@@ -1,0 +1,45 @@
+package com.example;
+
+import java.util.Random;
+
+public class GenericExample {
+	
+	static class BoxString {
+		String content;
+	}
+	
+	static class BoxInteger {
+		Integer content;
+	}
+	
+	static class BoxDouble {
+		Double content;
+	}
+	
+	static class BoxBoolean {
+		Boolean content;
+	}
+	
+	static class Box<T> {
+		T content;
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Box<String> box1;
+		Box<Integer> box2;
+		Box<Boolean> box3;
+		Box<Random> box4;
+		Box<System> box5;
+		
+		String[] strs = {"java", "python", "html"};
+		
+		
+		
+		
+		
+	}
+
+}

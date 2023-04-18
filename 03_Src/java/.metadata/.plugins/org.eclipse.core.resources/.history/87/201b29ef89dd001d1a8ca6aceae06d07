@@ -1,0 +1,29 @@
+package com.example;
+
+public class GenericExample {
+	
+	static class BoxString {
+		String content;
+	}
+	
+	static class BoxInteger {
+		Integer content;
+	}
+	
+	static class BoxDouble {
+		Double content;
+	}
+	
+	static class BoxBoolean {
+		Boolean content;
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}
