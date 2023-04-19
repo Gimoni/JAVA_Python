@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store"> 
+<title>internalstylesheet.jsp</title>
+<style type="text/css">
+/* Internal Style Sheet */
+	/* 	태그선택자 */
+	body {
+		font-family: monospace;
+		font-size: 30px;
+	}
+	header {
+		color: red;
+		background-color: blue;
+	}s
+	
+	article {
+		background-color: green;
+		height: 400px;
+	}
+	
+	footer {
+		color: yellow;
+		background-color: purple;
+	}
+</style>
+</head>
+<body>
+<!-- Inline style sheet -->
+<header style= "font-size:10pt">Header</header>
+<article>
+
+
+
+</article>
+<footer>Footer1</footer>
+<footer>Footer2</footer>
+<footer>Footer3</footer>
+<footer>Footer4</footer>
+
+</body>
+</html>

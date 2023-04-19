@@ -1,5 +1,6 @@
 package util;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Alpha {
@@ -11,8 +12,8 @@ public class Alpha {
 	char ch;
 	
 	public Alpha() {
-		line = r.nextInt(1, 21);
-		column = r.nextInt(1, 41);
+		line = r.nextInt(1, 21*1000000);
+		column = r.nextInt(1, 41*1000000);
 		do {
 			fg = Color.values()[r.nextInt(8)];
 			bg = Color.values()[r.nextInt(8)];
@@ -30,6 +31,19 @@ public class Alpha {
 	@Override
 	public String toString() {
 		return String.format("[%02d, %02d, %7s, %-7s, '%c']",  line, column, fg, bg, ch);
+	}
+	
+	@Override
+	public int hashCode() {
+		System.out.println("hashcode...");
+		return Objects.hash(line, column);
+	}
+	
+	@Override
+	public boolean equals (Object obj) {
+		System.out.println("equals..");
+		Alpha target = (Alpha)obj;
+		return this.line == target.line&&this.column==target.column;
 	}
 
 	public int getLine() {

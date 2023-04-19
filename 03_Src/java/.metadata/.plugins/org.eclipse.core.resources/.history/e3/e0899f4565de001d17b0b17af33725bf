@@ -1,0 +1,19 @@
+package com.example;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetExample {
+	
+	public static void main(String[] args) {
+		HashSet<Integer> set1 = new HashSet<>();
+		var set2 = new HashSet<Integer>();
+		Set<Integer> set3 = new HashSet<>();
+		
+		set1.add(1);
+		set1.add(1);
+		set1.add(1);
+		
+		System.out.println(set1);	// set은 toString이 정의되어있어서 원소를 바로 출력해줌. 
+	}
+}

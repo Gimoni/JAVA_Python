@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store"> 
+<title>xxx.jsp</title>
+<style type="text/css">
+	h1 {
+		background-color: red;
+	}
+	h2 {
+		background-color: blue;
+	}
+</style>
+</head>
+<body>
+<h1>블록태그</h1><h2>블록태그</h2>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store"> 
+<title>xxx.jsp</title>
+<style type="text/css">
+/* Internal Style Sheet */
+	/* 	태그선택자 */
+	body {
+		font-family: monospace;
+		font-size: 20pt;
+	}
+	header {
+		color: red;
+		background-color: blue;
+	}
+	
+	article {
+		background-color: green;
+		height: 400px;
+	}
+	
+	footer {
+		color: yellow;
+		background-color: purple;
+	}
+</style>
+</head>
+<body>
+<header>Header</header>
+<article>
+
+
+
+</article>
+<footer>Footer</footer>
+
+</body>
+</html>
