@@ -5,15 +5,15 @@ import java.util.Random;
 
 public class Alpha {
 	static Random r = new Random();
-	int line;
-	int column;
-	Color fg;
-	Color bg;
-	char ch;
+	protected int line;
+	protected int column;
+	protected Color fg;
+	protected Color bg;
+	protected char ch;
 	
 	public Alpha() {
-		line = r.nextInt(1, 21*1000000);
-		column = r.nextInt(1, 41*1000000);
+		line = r.nextInt(1, 21);
+		column = r.nextInt(1, 41);
 		do {
 			fg = Color.values()[r.nextInt(8)];
 			bg = Color.values()[r.nextInt(8)];
@@ -35,15 +35,13 @@ public class Alpha {
 	
 	@Override
 	public int hashCode() {
-		System.out.println("hashcode...");
 		return Objects.hash(line, column);
 	}
 	
 	@Override
 	public boolean equals (Object obj) {
-		System.out.println("equals..");
 		Alpha target = (Alpha)obj;
-		return this.line == target.line&&this.column==target.column;
+		return this.line==target.line && this.column==target.column;
 	}
 
 	public int getLine() {

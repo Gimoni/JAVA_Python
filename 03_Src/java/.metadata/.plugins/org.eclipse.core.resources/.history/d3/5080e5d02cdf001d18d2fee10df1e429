@@ -1,0 +1,14 @@
+package com.example;
+
+import java.util.Properties;
+
+public class PropertiesExample {
+
+	public static void main(String[] args) {
+		Properties prop = System.getProperties();
+		
+		prop.forEach((k, v) -> System.out.printf("%s=%s\n", k, v));
+		
+		
+	}
+}

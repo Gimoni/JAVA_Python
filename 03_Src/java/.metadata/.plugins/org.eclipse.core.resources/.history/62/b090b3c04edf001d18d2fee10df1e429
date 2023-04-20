@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store"> 
+<title>xxx.jsp</title>
+</head>
+<body>
+
+<hr>
+<a href="form.jsp">양식으로 이동합니다. moved to the form</a><br>
+<a href="http://www.naver.com">naver</a>
+</body>
+</html>

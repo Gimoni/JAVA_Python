@@ -1,13 +1,28 @@
 package util;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class Oracle {
-	static String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	static String user = "scott";
-	static String password = "tiger";
+	static String url;
+	static String user;
+	static String password;
+	
+	static {
+		Properties db = new Properties();
+		try {
+			db.load(Oracle.class.getResourceAsStream("db.properties"));
+			url = db.getProperty("url");
+			user = db.getProperty("user");
+			password = db.getProperty("password");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	private Oracle() {
 		
 	}

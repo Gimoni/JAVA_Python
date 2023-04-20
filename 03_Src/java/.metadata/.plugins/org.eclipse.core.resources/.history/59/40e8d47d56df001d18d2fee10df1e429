@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store"> 
+<title>alphatest.jsp</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+<hr>
+<form action="alpha.jsp">
+	<label for="line">line : </label>
+	<input id="line" name="line" type="text">
+	<label for="column">column : </label>
+	<input id="column" name="column" type="text">
+	<label for="fg" >fg : </label>
+	<input id="fg" name="fg" type="text">
+	<label for="bg">bg : </label>
+	<input id="bg" name="bg" type="text">
+	<label for="ch">ch : </label>
+	<input id="ch" name="ch" type="text">
+	<input type="submit">
+</form>
+<hr>
+<%
+	
+
+
+%>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<%@page import="java.util.Random"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store"> 
+<title>alphatest.jsp</title>
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+<hr>
+<form action="alpha.jsp">
+	<label for="line">line : </label>
+	<input id="line" name="line" type="number" min="1" max="20"><br>
+	
+	<label for="column">column : </label>
+	<input id="column" name="column" type="number" min="1" max="40"><br>
+	
+	<label for="fg" >fg : </label>
+	<input id="fg" name="fg" type="number" min="31" max="38"><br>
+
+	</select><br>
+	
+	<!-- <input class="alpha" name="fg" type="color" ><br> -->
+	
+	<label for="bg">bg : </label>
+	<input id="alpha" name="bg" type="number" min="41" max="48"><br>
+	
+	<label for="ch">ch : </label>
+	<input id="alpha" name="ch" type="text" min="A" max="Z" value=""><br>
+	
+	<input type="submit">
+</form>
+<hr>
+<%
+	Random r = new Random();
+	Integer line = null;
+	Integer column = null;
+	Integer fg = null;
+	Integer bg = null;
+	char ch = (char)r.nextInt('A','Z'+1);;
+
+	for(int i=0; i<10; i++)
+	 ch = (char)r.nextInt('A','Z'+1);
+/* 	out.println(String.format("<span>%c</span>\n", ch)); */
+	
+	
+
+
+%>
+<hr>
+<h3><span>line:</span><%=line%></h3>
+<h3><span>column:</span><%=column%></h3>
+
+</body>
+</html>

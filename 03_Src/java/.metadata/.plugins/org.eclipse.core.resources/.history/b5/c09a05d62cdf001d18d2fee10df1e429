@@ -1,0 +1,25 @@
+package com.example;
+
+import java.util.HashSet;
+import java.util.TreeSet;
+
+public class TreeSetExample {
+
+	public static void main(String[] args) {
+		var set1 = new HashSet<Integer>();
+		var set2 = new TreeSet<Integer>();
+		
+		for (int i=0; i<10; i++) {
+			set1.add(i);
+			set2.add(i);
+		}
+		
+		System.out.println(set1);
+		System.out.println(set2);
+		
+		
+		
+		
+	}
+
+}

@@ -37,10 +37,12 @@
 </head>
 <body>
 <!-- Inline style sheet -->
-<header style= "font-size:10pt">Header</header>
+<header style= "font-size:50pt">Header</header>
 <article>
-
-
+<marquee width="50%" height="50px" font-size="90%">HELLO WORLD</marquee><br>
+<marquee width="50%" height="50px" font-size="90%">HELLO WORLD</marquee><br>
+<marquee width="50%" height="50px" font-size="90%">HELLO WORLD</marquee><br>
+<marquee width="50%" height="50px" font-size="90%">HELLO WORLD</marquee><br>
 
 </article>
 <footer>Footer1</footer>
