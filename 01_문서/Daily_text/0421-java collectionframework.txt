@@ -1,0 +1,45 @@
+0421- collection framework
+
+collection framework 자료구조 
+= list, set, map 
+
+LIFO (Last in First Out) : 마지막에 들어간 것이 처음으로 나온다.
+LIFO  = > stack 
+
+
+FIFO(First in First Out) : 처음 들어간 데이터가 처음으로 나온다.
+FIFO => queue
+
+=======================================
+LIFO와 FIFO 컬렉션
+후입선출과 선입선출
+- 후입선출(LIFO): 나중에 넣은 객체가 먼저 빠져나가는 구조
+- 선입선출(FIFO): 먼저 넣은 객체가 먼저 빠져나가는구조
+- 컬렉션 프레임워크는LIFO 자료구조를제공하는 스택 클래스와 FIFO 자료구조를 제공하는큐
+인터페이스를제공
+
+Stack
+- Stack 클래스: LIFO 자료구조를구현한 클래스
+리턴타입 		메소드 		설명
+E		push( E item ) 	주어진 객체를 스택에 넣는다. 
+E		pop()		스택의 맨 위 객체를 빼낸다.
+Queue
+- Queue 인터페이스: FIFO 자료구조에서사용되는 메소드를정의
+- LinkedList: Queue 인터페이스를구현한 대표적인 클래스
+리턴타입 		메소드 		설명
+boolean		offer( E e ) 	주어진 객체를 큐에 넣는다. 
+E		poll()		큐에서 객체를 빼낸다.
+
+동기화된 컬렉션
+- 동기화된 메소드로구성된 Vector와 Hashtable는멀티
+스레드 환경에서 안전하게요소를 처리
+- Collections의 synchronizedXXX() 메소드: ArrayList, 
+HashSet, HashMap 등 비동기화된메소드를 동기화된
+메소드로 래핑
+
+
+수정할 수 없는 컬렉션
+- 요소를 추가, 삭제할 수 없는 컬렉션. 컬렉션 생성 시 저장된 요소를 변경하고싶지 않을 때 유용
+- List, Set, Map 인터페이스의정적 메소드인 of()로 생성
+- List, Set, Map 인터페이스의정적 메소드인 copyOf()을 이용해 기존 컬렉션을 복사
+- 배열로부터수정할 수 없는 List 컬렉션을 만듦
