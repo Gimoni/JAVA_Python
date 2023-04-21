@@ -1,0 +1,15 @@
+package com.example;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class FileExample {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		FileInputStream in = new FileInputStream("text.txt");
+		
+		System.out.println("End..");
+
+	}
+
+}

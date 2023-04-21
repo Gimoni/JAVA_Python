@@ -1,0 +1,17 @@
+package com.example;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileWriteExample {
+	// project에 f5 새로고침시 만들어진 파일 확인 가능. "xxx.txt"
+	public static void main(String[] args) throws IOException {
+		FileOutputStream out = new FileOutputStream("xxx.txt");
+		
+		out.write(65);
+		out.close();
+		
+		System.out.println("End..");
+	}
+
+}

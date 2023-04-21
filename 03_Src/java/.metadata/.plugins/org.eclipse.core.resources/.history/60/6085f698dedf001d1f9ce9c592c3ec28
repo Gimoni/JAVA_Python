@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store"> 
+<title>alpha.jsp</title>
+<style type="text/css">
+	span {
+		font-family: monospace;
+		font-size: 20pt;
+		line-height: 100%
+	}
+	form {
+		border: thin;
+	}
+</style>
+</head>
+<h1>Alpha Generator</h1>
+<table>
+	<tbody>
+		<tr>
+			<td>만든이 :</td>		
+			<td>손진희</td>		
+		</tr>
+		<tr>
+			<td>작성일 :</td>		
+			<td>2023/04/21</td>		
+		</tr>
+		<tr>
+			<td>과 목 :</td>		
+			<td>JSP</td>		
+		</tr>
+	</tbody>
+</table>
+<body>
+<form action="alpha.jsp">
+	<label for= "line"> line :</label>
+	<input id="line" name="line" type="number" min="1" max ="100">
+	<label for= "column"> column :</label>
+	<input id="column" name="column" type="number" min="1" max ="100">
+</form>
+</body>
+</html>

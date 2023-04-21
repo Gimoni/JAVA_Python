@@ -1,0 +1,8 @@
+package com.example;
+
+import java.io.FileInputStream;
+
+public class SelfStudyFileStreamExample throws IOException {
+	FileInputStream mp4 = new FileInputStream("Willife.mp4");
+	
+}

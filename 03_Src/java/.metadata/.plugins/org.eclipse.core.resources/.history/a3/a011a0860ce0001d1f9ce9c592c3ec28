@@ -1,0 +1,8 @@
+package com.example;
+
+public class QueueExample {
+
+	public static void main(String[] args) {
+		// FIFO(First in First Out) - Queue 처음 들어간 데이터가 처음으로 나온다. 
+	}
+}
