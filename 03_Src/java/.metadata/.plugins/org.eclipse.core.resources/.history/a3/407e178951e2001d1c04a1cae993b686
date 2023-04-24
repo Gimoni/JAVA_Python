@@ -1,0 +1,15 @@
+package com.example;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class SocketExample {
+	// PrintStream 개념. 확인. 
+	public static void main(String[] args) throws UnknownHostException, IOException {
+		Socket soc = new Socket("www.soen.kr", 80); // io checked exception/ 도메인 DNS에 ip 확인/ ip의 http의 80 port로 접속.
+		
+		
+		System.out.println("End..");
+	}
+}

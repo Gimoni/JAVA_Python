@@ -1,0 +1,16 @@
+package com.example;
+
+import java.io.IOException;
+import java.net.URL;
+
+public class DownloadExample {
+
+	public static void main(String[] args) throws IOException {
+		URL url = new URL("https://www.w3schools.com/html/pic_trulli.jpg");
+		
+		var conn = url.openConnection();
+		
+		
+		System.out.println("End.. s");
+	}
+}

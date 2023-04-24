@@ -13,7 +13,6 @@ public class FileWriteExample {
 		w.write('A');
 		w.write("Hello");
 		w.write("대한민국");
-		w.write("\n");
 		
 		new Random().ints(10, 0, 100)
 					.forEach(n -> {
