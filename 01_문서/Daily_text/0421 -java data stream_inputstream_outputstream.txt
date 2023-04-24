@@ -49,6 +49,14 @@ OutputStream
 - OutputStream은 바이트 출력 스트림의 최상위 클래스로 추상 클래스
 - 모든 바이트 출력 스트림 클래스는 이 OutputStream 클래스를 상속받아서 만들어짐
 - OutputStream 클래스에는 모든 바이트 출력 스트림이 기본적으로 가져야 할 메소드가 정의됨
+리턴 타입 		메소드 		설명
+void 		write(int b)	1byte를 출력
+void 		write(byte[] b)	매개값으로 주어진 배열b의 모든 바이트를 출력
+void		write(byte[] b, int off, int len) 	매개값으로 주어진 배열 b[off]부터 len개의 바이트를 출력
+void 		flush()		출력 버퍼에 잔류하는 모든 바이트를 출력
+void 		close() 		출력 스트림을 닫고 사용 메모리 해제
+
+
 
 1 바이트 출력
 - write(int b) 메소드: 매개값 int(4byte)에서 끝 1byte만 출력. 매개변수는 int타입.
@@ -61,8 +69,13 @@ OutputStream
 InputStream
 - InputStream은 바이트 입력 스트림의 최상위 클래스로, 추상 클래스
 - 모든 바이트 입력 스트림은 InputStream 클래스를 상송받아 만들어짐
+InputStream - FileInputStream/ BufferedInputStream/ DataInputStream
 - InputStream 클래스에는 바이트 입력 스트림이 기본적으로가져야 할 메소드가정의됨
-
+InputStream 
+리턴타입 		메소드 		설명
+int 		read()	 	1byte를 읽은 후 읽은 바이트를 리턴
+int 		read(byte[] b)	읽은 바이트를 매개값으로 주어진 배열에 저장 후 읽은 바이트 수를 리턴
+void		close() 		입력 스트림을 닫고 사용 메모리 해제
 
 
 

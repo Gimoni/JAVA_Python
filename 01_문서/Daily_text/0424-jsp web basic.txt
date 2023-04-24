@@ -1,0 +1,149 @@
+0421 - jsp 
+jsp 웹프로그래밍의 기초.
+자바스크립트 
+- 객체기반 oop기반언어이다. // 
+함수형 프로그래밍 : 코드를 매개변수로 넘겨줄 수 있음
+- 타입을 명시할 필요없는 : 인터프리터 언어. 
+자바 + 파이썬? 
+
+자바스크립트
+초기에는 
+웹브라우저에서 사용하도록 만들어진 언어 // 
+
+
+웹 페이지에서 개발자 도구 오픈 ctrl +shift + I
+elements = DOM
+
+
+nodejs 설치 
+eclipse contants assistant + plug in 
+1. node js 설치
+2. Tern 설치 - 수동 다운로드를 추천 .. 속도의 차이 
+수동 다운로드 : https://github.com/angelozerr/tern.java/releases
+3. eclipse에 tern 설치 
+
+------->> eclipse - help - install new software - add
+- archive - term.repository zip file / add
+- select all --- next --- accept license agreements checked/ -
+-- finish - 
+Preference > Web > Client-side JavaScript > Tern > Server > Node.js > Native Node.js 클릭
+navtiv path : 설정 opt - nodejs-node.exe - apply and close- 
+
+Project > 우측마우스 > Configure > Convert Tern Project 클릭
+Bootstrap, Browser, Browser Extension 클릭  - Apply and Close
+
+
+
+
+
+==============================
+
+section 03 자바스크립트 기초 
+
+자바스크립트란?
+자바스크립트(Javascript)
+- 정적인 HTML 콘텐츠에서 사용자와 상호작용하며 동적으로 변경하는 부분을 담당
+- 객체(Object) 기반의 스크립트 언어로 기본적으로는 웹 브라우저에서 
+해석되는 인터프리터 언어임
+- Node.js와 같은 프레임워크를 사용하면 서버 프로그래밍에도 사용할 수 있음
+ 
+자바스크립트의 특징
+- 동적이며 타입을 명시할 필요가 없는 인터프리터 언어
+- 객체지향 프로그래밍과 함수형 프로그래밍을 모두 표현할 수 있음
+- HTML의 내용, 속성, 스타일을 변경할 수 있음
+- 이벤트를 처리하고 사용자와의 상호작용을 가능하게 함
+- 서버와 실시간 통신 기능을 제공
+
+
+
+==============================
+
+자바스크립트 기본 용어와 출력 방법.
+
+ 자바스크립트 기본 용어
+- 표현식 - 값을 만들어 내는 간단한 코드
+- 문장 - 프로그래밍 언어에 실행할 수 있는 코드의 최소 단위
+- 종결 - 문장 마지막에 세미콜론(;) 또는 줄 바꿈
+
+273;
+10 + 20 + 30 * 2;
+var name = '윤' + '인' + '성';
+alert ('Hello JavaScript' );
+
+273
+10 + 20 + 30 * 2
+'JavaScript'
+
+
+자바스크립트 기본 용어
+
+- 키워드 - 자바스크립트를 처음 만들 때 정해진 특별한 의미가 부여된 단어
+ >>> break / else/ instanceof / true / case / false / new / try / catch / finally / null 
+typeof/ continue / for / return / var / defualt / function / switch / void / delete / if / this
+while / do / in / throw / with / const / class
+
+- 식별자 - 자바스크립트에서 변수나 함수 등에 이름을 붙일 때 사용하는 단어
+	: 식별자 생성 규칙. 
+	- 키워트를 사용하면 안됨
+	- 특수 문자는 _와 $만 허용
+ 	- 숫자로 시작하면 안됨
+	- 공백은 입력하면 안됨
+식별자 생성 규칙 
+	- 생성자 함수이름은 항상 대문자로 시작
+	- 변수, 인스턴스, 함수, 메서드의 이름은 항상 소문자로 시작
+	- 여러 단어로 된 식별자는 각 단어의 첫 글자를 대문자로. 
+
+주석 - 프로그램 진행에 전혀 영향을 주지 않는 코드로, 프로그램을 설명하는 데 사용
+	// , /**/
+
+자바스크립트 출력 
+ - 가장 기본적인 출력 방법 - alert() 함수를 사용해 웹 브라우저에 경고 창을 띄우기
+alert() 화면상의 출력 //// console.log() - 콘솔 화면에 출력
+
+
+자료형과 변수 
+ 자료형 : 숫자, 문자열, 불(boolean), 비교 연산자, 논리 연산자 
+ 숫자 
+- 가장 기본적인 자료형 
+- 정수와 실수를 구분하지 않음 
+
+ 문자열 
+- 문자 집합 
+- 'abcdefg', 'Hello World'. '안녕하세요.'
+
+참거짓 (boolean)
+- true / false 
+
+비교 연산자 
+- 두 대상을 비교할 수 있는 연산자
+>=, <=, >, <, ==, !=
+
+논리 연산자 
+!, &&, || 
+
+변수 
+- 값을 저장할 때 사용하는 식별자 
+: 변수 선언 / : 변수 초기화
+변수 선언과 초기화 : >> var pi = 3.14159265;
+
+변수 선언과 값 할당 
+: > var pi; 		// 변수 선언
+: > pi = 3.14159265;	// 값 할당
+
+변수에 저장된 값 출력
+: > var pi = 3.14259265;
+:> alert(pi);
+
+
+
+
+
+
+
+
+
+
+
+
+
+

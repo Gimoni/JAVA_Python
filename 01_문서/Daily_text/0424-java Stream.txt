@@ -1,0 +1,135 @@
+0424 java 데이터 입출력
+
+
+
+
+문자 스트림 -  인코딩/ 디코딩  
+
+파일 복사만을 할 때  - 바이트 스트림 파일만을 사용. 
+utf-8 파일을 복사 인코딩해서 euc-kr로 변경할때 - 문자 스트림을 사용.
+
+Stream : byte stream - InputStream, OutputStream 
+	Character stream - Reader, Writer
+
+img file download
+인터넷에서의 이미지 다운로드 
+url connection 사용. 
+
+text file download
+
+buffer
+
+보조스트림 = 편리한 기능 제공. 
+
+bufferedReader는 라인단위로 읽을 수 있다.
+
+Input/ Outpur / read / write 차이를 확실히 알 것. 
+
+OutputStream / reader - char type 문자 타입/// byte 변환 - reader , writer
+
+Socket - 접속. 
+
+
+ 
+
+
+
+==================================
+           
+데이터 입출력 
+
+바이트 입력 스트림
+
+1 바이트 입력
+- read() 메소드: 입력 스트림으로부터1byte를 읽고 int(4byte) 타입으로 리턴. 리턴된 4byte 중 끝
+1byte에만 데이터가 들어 있음
+- 더 이상 입력 스트림으로부터바이트를 읽을 수 없다면 read() 메소드는 -1을 리턴. 읽을 수 있는
+마지막 바이트까지반복해서 한 바이트씩읽을 수 있음
+
+바이트 배열로 읽기
+- read(byte[ ] b) 메소드: 입력 스트림으로부터
+주어진 배열의 길이만큼 바이트를읽고
+배열에 저장한 다음 읽은 바이트 수를 리턴
+- read(byte[ ] b)도 입력 스트림으로부터
+바이트를 더 이상 읽을 수 없다면 -1을 리턴.
+읽을 수 있는 마지막 바이트까지 반복해서
+읽을 수 있음
+
+문자 출력
+- Writer는 문자 출력 스트림의 최상위 클래스로, 추상 클래스. 모든 문자 출력 스트림 클래스는
+Writer 클래스를상속받아서 만들어짐
+- Writer 클래스에는모든 문자 출력 스트림이
+기본적으로가져야 할 메소드가 정의됨
+리턴 타입 		메소드 		설명 
+void		write(int c)	매개값으로 주어진 한 문자를 출력
+void		write(char[ ] cbut)	매개값으로 주어진 배열의 모든 문자를 출력
+void 		write(char[ ] cbut, int off, int len) 	매개값으로 주어진 배열에서 cdbf[off]부터 len개 까지의 문자를 출력
+void		write(String str)	매개값으로 주어진 문자열을 출력
+void		write(String str, int off, int len) 	매개값으로 주어진 문자열에서 off 순번부터 len개까지의 문자를 출력
+void 		flush() 		버퍼에 잔류하는 모든 문자를 출력
+void 		close()		출력 스트림을 닫고 사용 메모리를 해제 
+
+Reader
+- Reader는 문자 입력 스트림의 최상위 클래스로, 추상 클래스
+- 모든 문자 입력 스트림 클래스는 Reader 클래스를상속받아서 만들어짐
+- Reader 클래스에는문자 입력 스트림이 기본적으로가져야 할 메소드가정의됨
+메소드 			설명
+int	read()		1개의 문자를 읽고 리턴
+int 	read(char[] cbut)	읽은 문자들을 매개값으로 주어진 문자 배열에 저장하고 읽은 문자수를 리턴
+void 	close()		입력 스트림을 닫고, 사용 메모리 해제
+
+
+보조 스트림
+- 다른 스트림과 연결되어 여러 편리한 기능을 제공해주는스트림. 자체적으로입출력을 수행할 수
+없기 때문에 입출력 소스로부터 직접 생성된 입출력 스트림에 연결해서사용
+- 입출력 스트림에 보조 스트림을 연결하려면보조 스트림을 생성할 때 생성자 매개값으로입출력
+스트림을 제공
+- 보조스트림변수 = new 보조스트림(입출력스트림);
+- 보조 스트림은 또 다른 보조 스트림과 연결되어 스트림 체인으로구성할 수 있음
+- 보조스트림2 변수 = new 보조스트림2(보조스트림1);
+보조 스트림 		기능
+InoutStreamReader		바이트 스트림을 문자 스트림으로 변환
+BufferedInputStream,
+BufferedOutputStream,		입출력 성능 향상
+BufferedReader, BufferedWriter
+DataInputStream, DataOutputStream	기본 타입 데이터 입출력
+PrintStream, PrintWriter		줄바꿈 처리 및 형식화된 문자열 출력
+ObjectInputStream, ObjectOutputStream 	객체 입출력
+
+InputStream을 Reader로 변환
+- InputStream을 Reader로 변환하려면InputStreamReader 보조 스트림을연결
+
+OutputStream을 Writer로 변환
+- OutputStream을 Writer로 변환하려면OutputStreamWriter 보조 스트림을 연결
+
+메모리 버퍼로 실행 성능을 높이는 보조 스트림
+- 프로그램이중간에 메모리 버퍼buffer와 작업해서 실행 성능 향상 가능
+- 출력 스트림의 경우 직접 하드 디스크에 데이터를보내지 않고 메모리 버퍼에 데이터를
+보냄으로써출력 속도를 향상. 입력 스트림에서도버퍼를 사용하면 읽기 성능 향상
+- 바이트 스트림에는BufferedInputStream, BufferedOutputStream이 있고 문자 스트림에는
+BufferedReader, BufferedWriter가 있음
+
+기본 타입 스트림
+- 바이트 스트림에 DataInputStream과 DataOutputStream 보조 스트림을 연결하면 기본 타입(boolean, 
+char, short, int, long, float, double) 값을 입출력할 수 있음
+
+바이트-> InputStream - DataInputStream -> 프로그램 : 기본 데이터 타입 (int, double)
+ -> DataOutputStream - OutputStream - 바이트
+
+
+PrintStream과 PrintWriter
+- 프린터와 유사하게출력하는 print(), println(), printf() 메소드를 가진 보조 스트림
+프로그램 			PrintStream/PrintWriter
+기본 타입 또는 문자열 =>> print()/ println()/ printf() =>> OutputStream/Writer => 출력
+- PrintStream은 바이트 출력 스트림과 연결되고, PrintWriter는 문자 출력 스트림과 연결
+	PrintStream ps = new PrintStream(바이트 출력 스트림);
+	PrintStream pw = new PrintWriter(문자 출력 스트림);
+
+직렬화와 역직렬화
+- 직렬화: 메모리에 생성된 객체를 파일 또는 네트워크로 출력하기위해 필드값을일렬로 늘어선
+바이트로 변경하는것
+- 역직렬화: 직렬화된바이트를 객체의 필드값으로복원하는 것.
+- ObjectOutputStream은 바이트 출력 스트림과 연결되어객체를 직렬화하고, ObjectInputStream은
+바이트 입력 스트림과 연결되어 객체로 복원하는역직렬화
+	ObjectInputStream ois = new ObjectInputStream (바이트 입력 스트림)
+	ObjectOutputStream ois = new ObjectOutputStream (바이트 출력 스트림)
