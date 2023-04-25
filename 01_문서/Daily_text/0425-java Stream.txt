@@ -1,0 +1,71 @@
+0425-java Stream
+
+
+Input/ Output Stream - 기본 : 바이트 단위로 스트림 처리.. 
+
+reader/ writer - 글자 encoding에 따라 단위를 다르게 읽어서 처리를 한다. 
+
+Reader/Writer -> char 
+byte 데이터를 data output Stream/ input Stream 에서 
+int/ long / float / double 리턴가능. 
+보조스트림... buffer로 동작 처리 함으로서 속도를 상승
+
+Serialize 직렬 역직렬화에서 
+transient 키워드를 사용하면 직렬화에서 제외 됨. ( default value : null ) 
+
+
+
+
+==============================
+Serializable 인터페이스
+- 멤버가 없는 빈 인터페이스이지만, 객체를
+직렬화할 수 있다고 표시하는 역할
+- 인스턴스 필드값은 직렬화 대상. 정적 필드값과
+transient로 선언된 필드값은 직렬화에서
+제외되므로 출력되지 않음
+
+serialVersionUID 필드
+- 직렬화할 때 사용된 클래스와 역직렬화할 때
+사용된 클래스는 동일한 클래스여야 함
+- 클래스 내용이 다르더라도 두 클래스가 동일한
+serialVersionUID 상수값을 가지면 역직렬화 가능
+
+File과 Files 클래스
+File 클래스
+- File 클래스로부터File 객체를 생성
+	File file = new File("경로");
+	
+- exists() 메소드가false를 리턴할 경우, 다음 메소드로파일 또는 폴더를 생성 
+- exists() 메소드의리턴값이 true라면 다음 메소드를 사용
+
+Files 클래스
+- Files 클래스는 정적 메소드로 구성되어 있기 때문에 File 클래스처럼객체로 만들 필요 없음
+- Files의 정적 메소드는 운영체제의파일 시스템에게파일 작업을 수행하도록 위임
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
