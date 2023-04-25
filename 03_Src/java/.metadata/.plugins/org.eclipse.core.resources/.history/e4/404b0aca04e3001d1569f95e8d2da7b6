@@ -1,0 +1,14 @@
+package com.example;
+
+import util.Alpha;
+
+public class SerializeExample {
+
+	public static void main(String[] args) {
+		Alpha a = new Alpha();
+		
+		System.out.println(a);
+		
+		
+	}
+}
