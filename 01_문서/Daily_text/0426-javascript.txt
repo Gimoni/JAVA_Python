@@ -1,0 +1,14 @@
+0426 - javascript 
+
+DOM 
+
+css - > javascript 식별자 -는 생략되고 카멜 표기법을 사용. 
+
+Boolean - 0을 제외한 나머지는 true 음수 양수 모두. 
+	Boolean(0) > false
+
+실습..
+javascript 라이브러리 다운 - npm download
+해당 파일 터미널 오픈 > npm search sprintf
+
+> npm install sprintf-s
