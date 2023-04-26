@@ -31,6 +31,9 @@
 	console.log("### 3 START")
 	console.log(head.textContent)
 	console.log("### 3 END")
+	head.style.backgroundColor = "blue";
+	head.style.color = "red";
+	head.innerText = "Hello";
 	alert("3");
 </script>
 
@@ -40,5 +43,7 @@
 	console.log("### 4 START")
 	console.log(head.textContent)
 	console.log("### 4 END")
+	head.style.width = "100px"
+	head.style.height = "100px"
 	alert("4");
 </script>

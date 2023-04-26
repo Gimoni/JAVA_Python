@@ -76,7 +76,7 @@ class Alpha {
 
 VT100.clearScrean();
 
-let a = new Alpha(1, 1, fg, bg, ch);
+let a = new Alpha();
 let b = new Alpha();
 let c = new Alpha();
 let d = new Alpha();
@@ -115,6 +115,7 @@ function loop() {
 	let ch		= Math.trunc(Math.random()*25 + 'A'.codePointAt(0))
 	ch = String.fromCodePoint(ch);
 	
+	rect.sort((a, b) => a.line-b.line)
 	VT100.cursorMove(line, column);
 	VT100.setForeground(fg);
 	VT100.setBackground(bg);
