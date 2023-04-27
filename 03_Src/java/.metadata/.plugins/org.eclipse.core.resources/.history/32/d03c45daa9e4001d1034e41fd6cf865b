@@ -1,0 +1,6 @@
+
+function xxx () {	// 선언적 함수 
+	console.log("xxx 입니다.");
+	
+}
+

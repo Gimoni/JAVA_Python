@@ -1,0 +1,27 @@
+/**
+ *  함수별 호출 차이 확인 
+ *  function의 this. 객체는 자기자신. 
+ */
+
+class Alpha {
+	line = 10;
+	column = 10;
+	constructor() {
+		let x = function() {
+			console.log("x() = " + this.line)
+		}
+		let y = () => {
+			console.log("y() = " + this.line)
+		}
+		
+		try {	// 에러처리 try catch 처리 
+			x();
+		} catch (e) {
+			
+		}
+				
+		y();
+	}
+}
+
+new Alpha();

@@ -1,0 +1,12 @@
+/*
+매개변수와 반환 값
+*/
+
+function xxx(a) {
+	console.log(a);
+	
+}
+
+xxx(10, 20);
+
+console.log("End...");

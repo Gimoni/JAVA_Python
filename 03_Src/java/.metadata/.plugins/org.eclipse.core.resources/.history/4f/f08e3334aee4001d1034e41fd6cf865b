@@ -1,0 +1,13 @@
+/*
+함수 function
+
+*/
+
+let i = 0;
+
+// 이름이 없는 함수로 
+let tId =  setInterval(function() {
+	console.log(i++);
+	if (i==10) 
+		clearInterval(tId);
+}, 1000)

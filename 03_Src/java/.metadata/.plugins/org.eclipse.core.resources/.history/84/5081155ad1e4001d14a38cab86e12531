@@ -1,0 +1,20 @@
+
+// 객체 리터럴 
+let job = {
+	
+	then : function(resolve, reject) {
+		
+		setTimeout(resolve, 2000);
+	}
+}
+
+// 비동기 처리 
+async function main() {
+	await job;	// job 수행을 기다림 / timeout 2sec
+	
+	console.log("main() End...")
+}
+
+main();
+console.log("End...")
+

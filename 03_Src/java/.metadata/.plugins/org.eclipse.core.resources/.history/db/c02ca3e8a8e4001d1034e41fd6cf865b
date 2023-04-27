@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+// 변수에 타입이 없고.. 값에 타입이 있당
+/*let num = "Hello";
+console.log(typeof num)
+num = 100;
+console.log(typeof num)*/
+
+let num;
+
+function xxx () {
+	
+}
+
+let rtn = xxx();
+console.log("num = " + num);
+console.log(rtn); 	// undefined : 값이 할당되지 않은 상태

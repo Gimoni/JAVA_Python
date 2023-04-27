@@ -1,0 +1,8 @@
+
+
+xxx(); 	// 함수의 위치에 상관없이 출력하능. 
+
+function xxx () {	// function key word 사용한 단독 선언적 함수 
+	console.log("xxx 입니다.");
+}
+
