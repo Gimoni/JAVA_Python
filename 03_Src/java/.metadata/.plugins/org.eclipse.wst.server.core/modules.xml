@@ -2,5 +2,6 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:chap22" serverId="Tomcat v10.1 Server at localhost (2)"/>
   <module moduleId="org.eclipse.jst.jee.server:chap21" serverId="Tomcat v10.1 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:chap24" serverId="Tomcat v10.1 Server at localhost (2)"/>
   <module moduleId="org.eclipse.jst.jee.server:chap23" serverId="Tomcat v10.1 Server at localhost (2)"/>
 </modules>

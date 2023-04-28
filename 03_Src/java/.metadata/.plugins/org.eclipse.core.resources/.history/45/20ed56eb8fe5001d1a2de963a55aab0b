@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<link rel="icon" href="faviconAlpha.png"> 
+<title>alpha.jsp</title>
+<style type="text/css">
+	body {
+		border-width: 10px;
+		border-style: solid;
+		border-color: orange;
+	}
+	span {
+		position : absolute;
+	}
+</style>
+</head>
+<body>
+<span>A</span>
+<span>J</span>
+</body>
+</html>
