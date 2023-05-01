@@ -1,0 +1,13 @@
+05-01 javascript 
+
+project - propertise - 
+clientside javascript - term - 
+: change ECMAscript 6 version , checked  : use EXMAScript modules 
+
+position : absolute 자유자재로 움직ㅇㅁ. 
+
+table = 배열과 비슷.. tag간에 관계가 있음. 
+
+html table 구현 . 
+
+alpha 2 for table // bilnk2. 
