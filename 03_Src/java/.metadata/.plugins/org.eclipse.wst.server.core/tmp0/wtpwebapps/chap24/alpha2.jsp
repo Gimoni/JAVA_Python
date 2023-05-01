@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Coche-Control" content="no-store">
 <link rel="icon" href="faviconAlpha.png"> 
-<title>alpha.jsp</title>
+<title>alpha2.jsp</title>
 <style type="text/css">
 main {
 	position: relative;
