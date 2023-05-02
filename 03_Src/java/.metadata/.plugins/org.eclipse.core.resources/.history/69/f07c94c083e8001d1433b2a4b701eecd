@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<link rel="icon" href="faviconAlpha.png"> 
+<title>alpha.jsp</title>
+<style>
+ td#td#td1#td2 {
+ 	alian: right;
+ 	background-color: pink; 
+ }
+
+</style>
+</head>
+<body>
+<main>
+<h1>Alpha Move</h1>
+<table border="1" style= "border-color: pink">
+	<tbody>
+		<tr><td alian:"right" background-color: "pink">만든이</td><td>손진희</td></tr>
+		<tr><td id="td1" >작성일</td><td>2023/05/02</td></tr>
+		<tr><td id="td2">과 목</td><td>HTML/CSS/JAVASCRTIPT</td></tr>
+	</tbody>
+</table>
+<%
+
+%>
+
+</main>
+
+</body>
+</html>

@@ -48,8 +48,8 @@ class Color {
 
 class Alpha {
 	constructor() {
-		this.line = parseInt(Math.random()*20 + 1);
-		this.column = parseInt(Math.random()*40 + 1);
+		this.line = parseInt(1, 20);
+		this.column = parseInt(1, 40);
 		do {
 			this.fg = Color.values()[parseInt(Math.random()*8)];
 			this.bg = Color.values()[parseInt(Math.random()*8)];
@@ -69,6 +69,19 @@ class Alpha {
 		let cell = table.rows[this.line-1].cells[this.column-1];
 		cell.style.opacity = 0;
 	}
+	move() {
+		this.hide();
+		
+		if(this.line===1 && this.column < 40) {
+			this.column++;
+		} else if  (this.column === 40 && this.line < 20) {
+            this.line++;
+        } else if (this.line === 20 && this.column > 1) {
+            this.column--;
+        } else if (this.column === 1 && this.line > 1) {
+            this.line--;
+        }
+	}
 	
 	isShow = true;
 	blink() {
@@ -81,6 +94,11 @@ class Alpha {
 	}
 }
 
+class run() {
+	hide();
+	
+	if (this.line==1 &&)
+}
 </script>
 <script type="text/javascript">
 window.onload = function() {
@@ -101,7 +119,6 @@ window.onload = function() {
 		<tr><td>작성일</td><td>2023/05/02</td></tr>
 		<tr><td>과 목</td><td>HTML/CSS/JAVASCRIPT</td></tr>
 	</tbody>	
-	
 </table>
 <table id="table">
 	<tbody>
