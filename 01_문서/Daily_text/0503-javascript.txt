@@ -1,0 +1,73 @@
+0503- javascript
+
+문서 객체의 속성과 스타일 속성을 구분. 
+
+=================================
+
+
+문서 객체 
+스타일 조작 
+스타일 식별자 변환 
+스타일시트의 스타일 속성 	자바스크립트의 스타일 식별자
+background-image 		backgroundImage
+background-color		backgroundColor
+box-sizing			boxSizing
+
+
+
+getAttribute
+setAttribute
+
+문서 객체 조작 
+- 속성 조작 
+
+메서드 		 		설명
+setAttribute(속성 이름, 속성 값) 	속성 지정
+getAttribute(속성 이름) 		속성 추출
+
+: getAttribute(), setAttribute() 메서드 
+: 웹 표준에서 지정하지 않은 속성에 접근할 때 사용
+
+이벤트 용어 정리
+- 이벤트 속성 (event attribute) - onload
+- 이벤트 이름(event name) 또는 이벤트 타입(event type) - on을 제외한 load
+- 이벤트 리스너(event listener) 또는 이벤트 핸들러(event handler) 
+: 이벤트 속성에 넣는 함수
+▪ 기본적으로 지원하는 이벤트
+▪ 마우스 이벤트
+▪ 키보드 이벤트
+▪ HTML 프레임 이벤트
+▪ HTML 입력 양식 이벤트
+▪ 사용자 인터페이스 이벤트
+▪ 구조 변화 이벤트
+▪ 터치 이벤트
+
+
+ 이벤트 연결
+▪ 이벤트 모델(event model) - 문서 객체에 이벤트를 연결하는 방식
+이벤트 모델 종류 (이벤트 연결 방식)
+구분 		종류
+DOM 레벨0	인라인 이벤트 모델
+		고전 이벤트 모델	
+DOM 레벨2 	마이크로소프트 인터넷 익스플로러 이벤트 모델
+		표준 이벤트 모델
+ 인라인 이벤트 모델
+- HTML 태그 내부에 자바스크립트 코드를 넣어 이벤트를 연결하는 방식
+<button onclick="alert('click')"> 버튼 < /button>
+
+ 고전 이벤트 연결
+<script> window.onload = function() { }
+
+이벤트 사용 
+- 이벤트 객체를 사용하면 이벤트와 관련한 정보를 알아낼 수 있음. 
+
+기본 이벤트 제거 
+window.onload = function() {
+	return false;
+	(또는 e.prevantDefault();)
+}
+
+
+
+
+
