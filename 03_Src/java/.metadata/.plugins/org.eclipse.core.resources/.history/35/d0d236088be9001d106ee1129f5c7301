@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+
+/*window.onload = function(e) {
+	console.log("onload..." + e.type);
+}*/
+
+// class 
+
+class Alpha {
+	constructor() {
+		window.addEventListener("load", this);
+		document.forms.alpha.addEventListener("submit", this);	
+		
+	}
+	
+	handleEvent(e) {
+		console.log("handleEvent..." + e.type);
+	}	
+}
+
+new Alpha();

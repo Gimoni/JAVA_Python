@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<link rel="icon" href="faviconAlpha.png"> 
+<title>image.jsp</title>
+<script type="text/javascript">
+window.onload = function() {
+	let img = document.querySelector('img');
+	
+	img.onclick = function(e) {
+		let width = parseInt(Math.random()*500 + 100);
+		let height = parseInt(Math.random()*500 + 100);
+		let url = `http://via.placeholder.com/\${width}x\${heigh}`;
+		this.src = url;
+		console.log(e);
+	}
+}
+</script>
+</head>
+<body>
+<h1>Img 실습</h1>
+<hr>
+<img alt="xxxx" src="">
+</body>
+</html>

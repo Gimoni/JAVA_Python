@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<link rel="icon" href="faviconAlpha.png"> 
+<script src="js/alpha.js"></script>
+<title>alpha.jsp</title>
+</head>
+<body>
+<h1>Form 실습</h1>
+<hr>
+<form name="alpha">
+<fieldset name="position">
+	<legend>Position</legend>
+</fieldset>
+<fieldset name="color">
+	<legend>Color</legend>
+</fieldset>
+<fieldset name="char">
+	<legend>Character</legend>
+</fieldset>
+<fieldset name="exe">
+	<legend>Execution</legend>
+	<input type="reset">
+	<input type="submit">
+</fieldset>
+</form>
+
+
+</body>
+</html>

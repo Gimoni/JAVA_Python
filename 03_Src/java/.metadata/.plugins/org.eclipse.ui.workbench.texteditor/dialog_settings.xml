@@ -8,6 +8,8 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="&#x09;&#x09;&#x09;&#x09;&lt;tr&gt;"/>
+			<item value="&#x09;&lt;main&gt;"/>
 			<item value="int"/>
 			<item value="&#x09;&#x09;int line = r.nextInt(1, 21);"/>
 			<item value="printf"/>
