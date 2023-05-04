@@ -97,7 +97,7 @@ ol {
 </fieldset>
 </form>
 <div></div>
-<ol id="ol"></ol>
+<ol id="ol" reversed="reversed"></ol>
 
 </body>
 </html>

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+html {
+	border : 10px solid red;
+}
+body {
+	border : 10px solid green;
+ 	margin : 0;
+}

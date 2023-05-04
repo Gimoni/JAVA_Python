@@ -1,8 +1,0 @@
-/*
-함수 function
-
-*/
-// 이름이 없는 함수로 
-let tId =  setInterval(function() {
-		
-}, 1000)

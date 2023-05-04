@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+html {
+	border : 10px solid blue;
+	overflow : hidden;
+}
+body {
+	border : 10px solid pink;
+ 	margin : 0;
+ 	overflow : scroll;
+}

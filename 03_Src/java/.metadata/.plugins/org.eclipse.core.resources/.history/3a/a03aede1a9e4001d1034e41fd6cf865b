@@ -1,6 +1,0 @@
-
-function xxx () {	// function key word 사용한 단독 선언적 함수 
-	console.log("xxx 입니다.");
-	
-}
-

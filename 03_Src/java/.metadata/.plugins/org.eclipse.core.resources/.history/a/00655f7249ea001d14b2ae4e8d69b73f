@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<base href="../">
+<link rel="icon" href="faviconAlpha.png"> 
+<link rel="stylesheet" href="css/main.css">
+<title>anchor.jsp</title>
+</head>
+<body>
+<h1>Anchor 실습</h1>
+<hr>
+<a href="http://www.naver.com" target="_blank">naver</a>
+<a href="http://www.google.com" target="_blank">google</a>
+<a href="http://www.nate.com" target="_blank">nate</a>
+<a href="http://djlog.netlify.app/" target="_blank">djlog</a>
+<a href="http://alpha2.jsp" target="_blank">alpha2</a>
+</body>
+</html>

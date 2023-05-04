@@ -30,6 +30,7 @@ org.eclipse.launchbar.core.descriptorType.default\:OperatorQuizExample/activeLau
 org.eclipse.launchbar.core.descriptorType.default\:PerformanceExample/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:ReferenceEqualsExample/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:ThreeDimArrayExample/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Tomcat\ v10.1\ Server\ at\ localhost\ /activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:TreeSetExample/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:TriangleExample\ (1)/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:TryCatchExample/activeLaunchMode=run
