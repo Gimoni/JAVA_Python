@@ -1,0 +1,283 @@
+0508 
+
+personal project / side project / 
+
+spring - java - eclipse dynamic web project 
+
+spring 사용해서 프로젝트 진행 
+
+< java + spring >
+
+ 
+STS 사용 STS eclipse plugin
+
+eclipse market place Spring tools 4 install . 
+
+install 전에 eclipse 백업
+eclipse.zip file backup. 
+
+
+eclipse - eclipse market place - search : sts 
+- > Spring Tools 4 (aka Spring Tool Suite 4) - install 
+- defualt 상태로 confirm 
+- review licenses : accept the terms - finish 
+- waiting for Eclipse Progress : installing Software download 
+
+--------------------------------------------------------
+open web perspective 
+
+how to make spring project? (for spring basic study) 
+new - project - springboot - spring starter project 
+
+( build tool  // maven (XML) , Gradle ) 
+spring starter project type : Gradle- Groovy 
+packaging : War	(web / for using jsp )
+
+type of dependencies select// 
+spring boot version : 3.0.6 
+> developer tools > select : spring boot devtools, lombok
+ ( 개발 툴 관련해서 __
+두가지(spring boot devtools, lombok)는 반드시 있어야함)
+> web > select : spring web  
+
+> finish . 
+
+open build gradle in project 
+add libaries from https://mvnrepository.com/
+download 
+
+웹에서 저장소 접속 - 다운로드 
+https://mvnrepository.com/
+
+serch oracle : ojdbc8 
+23.3.0.0 version click. 
+
+Gradle/ Gradle(Short) Builder copy
+add dependencies at build gradle in project /// 
+
+gradle refresh >> right mouse click - Gradle - Refresh Gradle Project
+
+: setting for auto gradle refresh >> ? you can set up the settings 
+>>> window -  preferences - gradle - 
+- checked : Automatic Project Synchronization - apply and close 
+
+---------------------------------------------------------
+builde tool // 
+
+run and build gradle at cmd ///
+commend lind - gradle build 
+
+gradle
+ at cmd ----------- grablew commendline build . 
+D:\03_Src\java\chap30>gradlew
+
+D:\03_Src\java\chap30>gradlew build
+
+checked build folder. 
+Directory of D:\03_Src\java\chap30\build
+D:\03_Src\java\chap30\build>tree /f
+
+---------------------------------------------------------
+dependencies setting // lombok 은 필수 한번만 하면됨. ///
+setting lombok 
+:::: >>>>>>>>>>
+lombok setting at eclipse 
+how to ? --------------------------------------------
+
+where you can see the lombok after set up lombok?>
+>>> - opt / eclipse / eclipse.ini file >>> you can see the lombok set up at 'eclipse.ini'
+
+
+C:\Users\python\.gradle\caches\modules-2\files-2.1
+\org.projectlombok\lombok\1.18.26\8f8cf0372abf564913e9796623aac4c8ea44025a
+
+lombok 경로에서 shift + 우측 마우스클릭 >> 여기에 powershell열기. 
+
+> cmd
+> dir (file check)
+> java -jar lombok-1.18.26.jar
+
+can't find any IDES on your computer > OK
+
+> project lomboke install > specify location > C:\opt\eclipse > install/ update
+> install successful.
+
+check the lombok 
+>>> - opt / eclipse / eclipse.ini file >>> you can see the lombok set up at 'eclipse.ini'
+
+( at 'eclipse.ini' can see the added line about lombok
+--add-modules=ALL-SYSTEM
+-javaagent:C:\opt\eclipse\lombok.jar)
+
+close eclipse and re-open. 
+
+
+
+---------------------------------------------------------
+chap30 add util folder //
+remove geter setter at alpha
+
+add > '@Data' above public class Alpha 
+geter setter add... /// 
+import lombok.Data;
+
+
+- spring starter project 는 빌드툴이 내장되어 있음 
+
+original spring 
+spring - legacy	:설정 XML  
+
+easy cut spring 
+spring boot - XML 설정 생략. 
+
+
+
+=========================
+
+
+
+spring boot 는 내장 tomcat 사용. 
+port는 중복해서 사용할 수 없음
+같은 port를 사용했을 시 application failed. 
+
+dynamic web / spring boot 동시 사용을 하려면 .. ?
+- 각 tomcat을 사용시 하나씩 작동을 해서 운영해야함
+- but 외장 (dynamic web)/ 내장(spring boot) tomcat을 다 사용하려면 
+둘 중 하나의 port를 달리 해야한다 
+보통 spring boot tomcat의 port를 달리함. 
+
+spring boot 의 설정 변경은 대부분 (99%)
+project -> src/main/resources - apllication.properties
+::: >>> server.port=(port.no) 
+
+springboot project 에 jsp 파일 작성. 
+> src > main > new folder : 'webapp' create
+> at webapp > create new jsp "hello.jsp"
+> project properties - project facets - clicked dynamic web module version 5.0
+
+Spring Boot + JSP + Port 설정
+
+    // https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api
+    compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.0.0'
+    // https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api
+    implementation group: 'jakarta.servlet.jsp.jstl', name: 'jakarta.servlet.jsp.jstl-api', version: '3.0.0'
+    // https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl
+    implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '3.0.1'
+
+    // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper
+    implementation group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '11.0.0-M4'
+
+copy and peast to dependencies at build.gradle file
+
+
+gradle version setting change // add id :    
+>>>    id 'eclipse-wtp'   at plugins in build.gradle file. 
+
+eclipse setting add in build.gradle file. 
+
+eclipse {
+    wtp {
+        facet {
+            facet name: 'jst.web', version: '5.0' // Servlet Spec Version 지정
+            facet name: 'jst.java', version: '17' // Java Version 지정, 17
+        }
+    }
+}
+
+
+jsp script - project configure - tern 
+// checked bootstrap./.../browser browserextenstion jqurey ..extention / node js.. 
+
+
+---------------------------------------------------------------------------
+livereload setting >>>>>
+src/main/resources - create new folder 'jsp' - add (file).jsp (from webapp - hello.jsp)
+delect webapp folder. 
+
+webapp folder symbol link to src/main/resources
+delet webapp uner src - main // 
+cmd 우측 마우스클릭 관리자 권한으로 실행
+D:\03_Src\java\chap30\src\main>
+> dir 
+D:\03_Src\java\chap30\src\main 에서 link 걸기.
+> mklink 
+ㄴ
+
+D:\03_Src\java\chap30\src\main>mklink
+Creates a symbolic link.
+
+MKLINK [[/D] | [/H] | [/J]] Link Target
+
+        /D      Creates a directory symbolic link.  Default is a file
+                symbolic link.
+        /H      Creates a hard link instead of a symbolic link.
+        /J      Creates a Directory Junction.
+        Link    Specifies the new symbolic link name.
+        Target  Specifies the path (relative or absolute) that the new link
+                refers to.
+
+D:\03_Src\java\chap30\src\main>
+(webapp folder create with commendlind and link with springboot_jsp)
+
+D:\03_Src\java\chap30\src\main>mklink /D webapp resources\jsp
+> dir ( 심볼 링크 확인)
+
+D:\03_Src\java\chap30\src\main>dir
+ Volume in drive D is ProjectData
+ Volume Serial Number is D0C7-C89C
+
+ Directory of D:\03_Src\java\chap30\src\main
+
+2023-05-08  오후 03:58    <DIR>          .
+2023-05-08  오후 03:58    <DIR>          ..
+2023-05-08  오후 12:48    <DIR>          java
+2023-05-08  오후 03:50    <DIR>          resources
+2023-05-08  오후 03:58    <SYMLINKD>     webapp [resources\jsp]
+               0 File(s)              0 bytes
+               5 Dir(s)  499,185,487,872 bytes free
+
+D:\03_Src\java\chap30\src\main>
+
+---------------------------------------------------------------
+크롬확장프로그램 설치/ livereload ++ plugin
+크롬에서 설치. 
+
+---------------------------------------------------------------
+
+프로젝트 완성 후(?) 
+
+project open termenal at eclipse 
+> gradlew build
+> gradlew task
+> gradlew bootwar
+
+D:\03_Src\java\chap30\build\libs /// (checked the files..)
+project >>>>> shift + right mouse click = open powershell 
+>>>> dir
+check the snapshot.war file >> run snapshot.war file
+ 
+PS D:\03_Src\java\chap30\build\libs> java -jar chap30-0.0.1-SNAPSHOT.war
+
+cmd > check ip address // >> ipconfig 
+IPv4 Address. . . . . . . . . . . : 192.168.30.***
+
+at chrom : 192.168.30.***:(server no :8090)/filename.jsp 
+
+http://localhost:8090/hello.jsp
+=========================
+
+오라클 설치 오류가 있을 시 
+
+컴퓨터 시스템 접속  oracle service back ground systimes (more than 3~5) 
+실행 중인 oracle system 실행 모두 중지//// 
+
+커멘드 관리자 권한으로 실행. 
+명령어로 서비스 제거 실시. 
+>>>> sc delete (oracle systme name all typing) 
+
+모든 오라클 시스템을 다 작성해서 삭제 하고
+프로그램 추가삭제에서 오라클 삭제. 
+리부팅 시에 시스템과 프로그램 추가 삭제에서 
+오라클 시스템이 삭제 된 것을 확인 후 
+다시 재 설치 해야함 .  
+ 
