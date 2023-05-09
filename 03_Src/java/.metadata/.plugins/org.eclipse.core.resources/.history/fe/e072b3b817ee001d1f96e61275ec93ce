@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<link rel="icon" href="faviconAlpha.png"> 
+<title>form_checkbox.jsp</title>
+</head>
+<body>
+<h1>From checkbox 실습</h1>
+<hr>
+<form action="result_checkbox.jsp" method="get">
+	<input type="checkbox">
+	<input type="submit"> 
+</form>
+
+</body>
+</html>

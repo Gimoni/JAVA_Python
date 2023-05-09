@@ -1,0 +1,7 @@
+#
+# MyBatis Oracle 설정
+#
+spring.datasource.driver-class-name=
+spring.datasource.url=
+spring.datasource.username=scott
+spring.datasource.password=tiger
