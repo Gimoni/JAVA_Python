@@ -1,0 +1,118 @@
+0509- web _javascript_with DB
+
+대표적인 데이터 베이스 프레임워크 : MyBatis, JPA
+대부분 MyBatis 사용. 
+
+spring boot db connect Project Dependencies checked - Oracle Driver, MyBtis Framework
+// Spring boot devtools , lombok, Spring Web/// 
+ 
+MyBatis setting ->> application properties 
+
+DB 연결 spring에서 Mapper // @Mapper 
+jsp는 spring boot가 지원하지 않기 때문에 수동 설정이 필요. 
+
+
+spring boot - jsp link
+C:\WINDOWS\system32>srcj
+
+C:\WINDOWS\system32>d:
+
+D:\>cd D:\03_Src\java
+
+D:\03_Src\java>cd chap32
+
+D:\03_Src\java\chap32>cd src
+
+D:\03_Src\java\chap32\src>cd main
+
+D:\03_Src\java\chap32\src\main>mklink /D webapp resourse\jsp
+
+jsp link
+
+========================================
+
+	Request 
+// 입력정보 노출
+form에 입력한 것이 url에 실려가는 방식 = GET 방식	
+
+// 입력정보 비노출	
+form에 입력한 것이 http에 내용을 담아 전동 되는 방식 = POST 방식	
+
+post 방식은 대량의 정보 또는 보안유지를 위해 사용하고 처리한다.
+
+input tag .. 
+checkbox는 여러개 를 입력 받을 수 있고 radio는 한 개의 정보만 입력 받을 수 있다.
+
+
+서버에 데이터를 보내는 입력태그는 
+<a>, <form>
+
+<a>는 GET방식으로만 데이터를 서버로 보내고
+<form> tag는 GET, POST 두 방식으로 데이터를 서버로 보낼 수 있다. 
+
+html /  header / body / 
+
+layout = header / nav / section / article / aside / footer
+========================================
+
+
+web - HTML, CSS, JavaScript
+
+html5 입력 양식 태그와 구조 
+
+입력양식 : 사용자에게 정보를 입력받는 요소
+
+입력양식 개요 
+<form> 태그 : 영역생성
+사용자에게 입력받는 입력 양식 태그 
+입력받는 정보는 DB로 저장
+
+<form>태그는 method속성의 방식으로 action 속성 장소에 데이터 전달
+GET 방식 – 주소에 데이터를 입력해서 전달
+POST 방식 – 주소 변경 없이 비밀스럽게 데이터 전달
+
+입력 양식 종류 
+-form- 
+input	: text, button, checkbox, file, hidden, image, 
+	  password, radio, reset, submit
+textarea	: cols/rows
+select, optgroup, option
+fieldset, legend
+
+기본입력 양식 태그 
+<input> 태그의 type 속성을 이용해 다양한 기본 입력 양식 생성
+
+선택 가능한 입력 양식
+한 항목만 선택하기 : <select> 태그 이용
+: 목록으로 보여 주는 항목 중 하나 또는 여러 개를 선택할 때 사용
+: 기본적으로 하나만 선택가능
+: <optgroup>, <option> 태그를 함께 사용
+
+여러 항목 선택하기 : <select> 태그의 multiple 속성 사용
+
+선택 옵션 묶기 : <optgroup> 태그 사용
+
+연관 있는 입력 양식 그룹으로 묶기
+<fieldset> 태그,<legend> 태그
+
+공간 분할 태그
+CSS로 원하는 레이아웃을 구성하기 위해 공간 분할
+
+<div> tag, <span> tag
+div - 블록 형식으로 공간 분할
+span - 인라인 형식으로 공간 분할
+
+공간을 인라인 형식으로 분할하기
+: 자신의 글자 크기만큼 영역 차지
+: 왼쪽에서 오른쪽으로 쌓임
+
+시맨틱 태그
+- 시멘틱 웹 
+: 특정 태그에 의미를 부여한 웹
+: 프로그램이 코드를 읽고 의미를 인식할 수 있는 지능형 웹
+
+header / nav / aside / section / article / footer
+
+
+
+
