@@ -1,0 +1,141 @@
+0510 - springboot _jsp_web frontend
+
+Springboot javascript content assistents setting . 
+project - properties - project facets : javascript checked
+build.gradle 수동 추가해주어야 javascript 체크가 고정됨. 
+
+eclipse {
+    wtp {
+        facet {
+            facet name: 'jst.web', 		version: '5.0' // Servlet Spec Version 지정
+            facet name: 'jst.java', 	version: '17' // Java Version 지정, 17
+            facet name: 'wst.jsdt.web', version: '1.0' // JavaScript
+        }
+    }
+}
+
+
+
+bootstrap 사용 
+head 사이에 다음 코드 적용. 
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+animation / transition 시작값이 있어야 적용가능
+==================================================
+
+DOM을 생각하고 구상하는 것.  
+웹의 구조 : 트리 구조. 
+문서객체 확인하는 html query 선택자문 document.querySlectorAll("*")
+선택자문법 : 요소를 찾기 위해서 내용을 확인하고 수정, 변경
+
+선택자를 지정하고 스타일의 속성을 적용하고 각각 속성의 의미를 파악.
+
+javascript  className으로 class속성에 접근해야함. 
+
+box3.classList.add("center"); // 클래스를 더하는 선택자문법
+box3.classList.remove("green"); // 클래스를 지우는 선택자문법
+
+
+
+box3.classList.toggle("red");
+false
+box3.classList.toggle("red");
+true
+
+toggle : 있으면 지우고 없으면 더하는 문법키워드 
+
+
+
+==============================================
+
+웹표준 
+CSS
+CSS3가 지원하는 스타일 속성과 스타일 값을 활용_ 레이아웃을 잡는다. 
+
+CSS3 내용 :
+	박스 속성, 가시 속성, 배경 속성, 글자 속성, 위치 속성, 유동 속성
+	그림자와 그레이디언트 속성
+	- 선택자의 용도와 사용법
+	- 기본 선택자 / 속성 선택자
+	- 후손 선택자와 자손 선택자
+	- 반응, 상태, 구조 선택자
+	- CSS 단위 
+CSS 개요 
+- 선택자 : CSS3에서 특정 HTML 태그를 선택할 때 사용
+	   h1   {    color       :   red; }
+	선택자 { 스타일속성 : 스타일값 }
+
+- 스타일시트 
+	: CSS 로 작성된 코드
+	: <style>.....</style>
+
+CSS 선택자 종류 
+- 전체 선택자  :  * 
+- 태그 선택자  :  태그 	// h1 { }
+- 아이디 선택자  :  #아이디 	// #id
+- 클래스 선택자 :  .클래스 	// .header
+
+- 속성 선택자 : 선택자 [속성 = 값] // input[type = text]
+(~=, |=, ^=, $=, *=)  
+	: div[class^='btn'] { } : 시작 문자열의 클래스에 속성적용 // 
+	: div[class$='btn'] { } : 마지막 문자열의 클래스에 속성적용 // 
+	: div[class~='btn'] { } : 문자열에 클래스명이 표함되어 있다면 속성적용 // 
+	: div[class*="tn re"] { /*class 속성의 문자열 중 tn r 로 일치하는 클래스가 있으면 적용 */
+
+- 후손 선택자 : 선택자 선택자 	// header h1 
+- 자손 선택자 : 선택자 > 선택자 // header > h1
+- 반응 선택자 : 선택자: active 	// div:active  || 선택자:hover // div:hover
+- 상태 선택자 : checked (checkbox, radio)/ focus / enabled / disabled / 
+- 구조 선택자 : first-child / last-child /nth-child(수열) / nth-last-child(수열)
+	       
+
+박스 속성 
+- 웹 페이지의 레이아웃을 구성할 때 가장 중요
+
+박스 크기와 여백 
+- width와 height 속성 : 글자를 감싸는 영역의 크기를 지정
+- border 속성 : 테두리 두께 지정
+- margin  : 테두리와 다른 태그의 간격을 지정
+- padding :  테두리와 바깥쪽 여백을 지정
+
+박스 크기와 패딩 조정 
+- 웹 브라우저에서 검사로 코드 분석
+- 태그 전체의 크기 구하기 
+: margin, border, padding 속성은 양쪽에 위치하므로 2를 곱함.
+= 전체 너비 : width + 2 *(margin + border + padding)
+= 전체 높이 : height + 2 *(margin + border + padding)
+
+박스 여백 부분 조정 
+- margin 속성과 padding  속성은 두 가지 방법으로 상하좌우를 각각 지정할 수 있음.
+
+*** 네 방향 속성의 순서는 : 위쪽 오른쪽 아래쪽 왼쪽의 순서로 단위를 지정할 수있다.
+ex ) margin: 0 30px 0 30px;
+
+*** 두방향씩 속성지정 : 네 방향을 2개씩 묶어 지정 <위아래> <왼쪽오른쪽>
+ex )  margin: 0 30px;
+
+박스 테두리 
+- border-width : 테두리 두께
+- border-style : 테두리 형태
+- border-color : 테두리 색상
+- border : border-width, border-style, border-color 속성을 한 번에 입력할 수도 있음
+<style>
+       .box {
+	border: thick dashed black;
+        }
+</style>
+
+: 상하좌우 속성을 각각 입력할 수 있음. 
+ 
+박스 둥근테두리 만들기 border-radius///
+
+가시 속성 
+- 태그가 화면에 보이는 방식을 지정
+- display 속성
+
+키워드 		설명
+none 		화면에 보이지 않음
+block 		블록 박스 형식으로 지정
