@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<link rel="icon" href="faviconAlpha.png"> 
+<title>후손선택자.jsp</title>
+</head>
+<body>
+<div>
+	<h1> Header1
+		<div>
+			<h2>Header2</h2>
+		</div>
+	</h1>
+</div>
+
+<section>
+<div>
+	<h1> Header1
+		<div>
+			<h2>Header2</h2>
+		</div>
+	</h1>
+</div>
+</section>
+
+</body>
+</html>

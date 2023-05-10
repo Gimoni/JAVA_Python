@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<link rel="icon" href="faviconAlpha.png"> 
+<title>study.jsp</title>
+<style type="text/css">
+* { /* 전체 선택자 */
+	color : cyan;
+}
+
+/* 태그 선택자 */
+h1 {
+	color: red;
+}
+
+p {
+	color: blue;
+}
+
+#header {
+	background: red;
+}
+
+#wrap {
+	background: blue;
+}
+
+#content {
+	background: green;
+}
+
+</style>
+</head>
+<body>
+<h1>제목 글자 태그</h1>
+<p>안녕하세요 지금은 전체선택자와 태그 선택자를 공부하고 있습니다.</p>
+
+<div>+++++++++++++++++++++++++++++++++</div>
+
+<div id="header">
+	<h1>#header 태그</h1>
+</div>
+<div id="wrap">
+	<div id="aside">
+		<h1>#aside 태그</h1>
+	</div>
+	<div id="content">
+		<h1>#content 태그</h1>
+	</div>
+</div>
+
+</body>
+</html>

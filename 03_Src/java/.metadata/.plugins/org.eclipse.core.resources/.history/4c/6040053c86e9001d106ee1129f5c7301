@@ -1,7 +1,0 @@
-/**
- * 
- */
-
-window.onload = function(e) {
-	console.log("onload..." + e.type);
-}

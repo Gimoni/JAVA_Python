@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<link rel="icon" href="faviconAlpha.png"> 
+<title>속성선택자.jsp</title>
+<style type="text/css">
+	div {
+		width: 100px;
+		height: 100px;
+	}
+	div[class="red"] {
+		border: 10px dashed yellow;
+	}
+
+</style>
+</head>
+<body>
+<div class="red">box1</div>
+<div class="btn box green">box2</div>
+<div class="btn red">box3</div>
+<div class="btn box green">box4</div>
+<div class="btn red">box5</div>
+
+</body>
+</html>

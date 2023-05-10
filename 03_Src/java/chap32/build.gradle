@@ -20,11 +20,13 @@ repositories {
 	mavenCentral()
 }
 
+
 eclipse {
     wtp {
         facet {
-            facet name: 'jst.web', version: '5.0' // Servlet Spec Version 지정
-            facet name: 'jst.java', version: '17' // Java Version 지정, 17
+            facet name: 'jst.web', 		version: '5.0' // Servlet Spec Version 지정
+            facet name: 'jst.java', 	version: '17' // Java Version 지정, 17
+            facet name: 'wst.jsdt.web', version: '1.0' // JavaScript
         }
     }
 }
