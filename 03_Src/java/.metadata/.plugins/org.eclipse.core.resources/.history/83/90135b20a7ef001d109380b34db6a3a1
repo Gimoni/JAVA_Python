@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<link rel="icon" href="faviconAlpha.png"> 
+<title>박스모델.jsp</title>
+<style type="text/css">
+	.box {
+		border: 1px solid red;
+	}
+</style>
+
+</head>
+<body>
+<div class="box">box1</div>
+<div class="box">box2</div>
+
+</body>
+</html>
