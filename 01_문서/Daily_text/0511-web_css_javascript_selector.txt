@@ -1,0 +1,12 @@
+0511 선택자 Selector
+
+<a> link / visited 
+
+
+
+box-sizing : content-box;
+box-sizing : border-box;
+
+margin / padding 크기 속성만 있다. 
+border는 크기, 스타일, 컬러 속성이 있다. 
+

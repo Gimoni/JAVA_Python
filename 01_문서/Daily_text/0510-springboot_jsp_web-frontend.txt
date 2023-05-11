@@ -139,3 +139,71 @@ ex )  margin: 0 30px;
 키워드 		설명
 none 		화면에 보이지 않음
 block 		블록 박스 형식으로 지정
+inline		인라인 박스 형식으로 지정
+inline-block	블록과 인라인의 중간 형태로 지정
+
+display 속성
+none 키워드 적용 - 태그가 화면에서 보이지 않음.
+block 키워드 - #box 태그의 display 속성을 block 키워드로 바꿈
+inline과 inline-block 키워드
+- inline과 inline-block 적용 
+- block 형식, inline-block 형식
+: margin 속성, padding 속성을 상하좌우 네 방향으로 지정할 수 있음
+- inline 형식
+: margin 속성, padding 속성을 왼쪽과 오른쪽으로만 지정할 수 있음
+
+배경 속성
+ background-image 		배경 이미지 삽입
+ background-size 		배경 이미지의 크기 지정
+ background-repeat 		배경 이미지의 반복 형태 지정
+ background-attachment 	배경 이미지의 부착 형태 지정
+ background-positon 	배경 이미지의 위치 지정
+ background 		한 번에 모든 배경 속성 입력 
+
+
+배경 이미지 삽입과 크기 지정 
+- background-image 속성
+: 배경 이미지 지성
+: URL, 그레이디언트 입력
+-background-size 속성
+: 배경이미지 크기 
+
+배경으로 사용할 이미지 파일 준비하기 
+: 배경이미지와 작성할 HTML 페이지를 같은 폴더에 넣기 
+
+...
+
+배경이미지 반복과 부착 형태, 위치 
+- background-repeat 속성
+: 배경 이미지의 반복 형태 지정
+: repeat-x : X축 방향으로만 이미지 반복.
+: repeat-y : Y축 방향으로만 이미지 반복.
+
+- background-attachment 속성
+: 배경 이미지를 화면에 고정
+
+- background-position 속성
+: 배경 이미지의 배치 위치 지정
+: background-position: 키워드;
+: background-position: X축 위치;
+: background-position: X축 위치 Y축 위치;
+
+배경 이미지 반복 없애기
+: background-repeat : no-reapeat;
+
+스크롤이 가능한 분량의 텍스트 추가하기 
+: background-attachment : scroll;
+
+배경 이미지 화면에 고정시키기
+: background-attachment : fixed;
+배경 이미지 위치조정 
+: background-attachment : buttom; (top, left, right, top-left, top-right.....)
+: backgroudn-attachment : 0px 50%;
+
+글자 속성
+- 글자 크기와 글꼴 
+font-size 속성 : 글자 크기 
+font-family 속성 : 글꼴
+generic-family - 다국적 사용자 대상용 글꼴
+
+
