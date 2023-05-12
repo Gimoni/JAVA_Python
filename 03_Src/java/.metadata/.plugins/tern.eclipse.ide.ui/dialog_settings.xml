@@ -6,4 +6,5 @@
 	<item key="tern.eclipse.ide.ui.repository..columnWidth0" value="100"/>
 	<item key="tern.eclipse.ide.ui.repository..columnWidth1" value="300"/>
 	<item key="tern.eclipse.ide.ui.repository..sortColumn" value="1"/>
+	<item key="tern.eclipse.ide.ui.sortColumn" value="1"/>
 </section>
