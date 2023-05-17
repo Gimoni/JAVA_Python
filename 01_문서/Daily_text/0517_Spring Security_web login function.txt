@@ -1,0 +1,139 @@
+05-17 
+
+first page : login / (front end + back end)
+
+using  Webjars / Spring Security 
+
+basic of spring security for web : let the login function automatically work and run.. 
+
+인증, 권한 부여 및 기타 보안 기능을 제공하는 java/ javaEE 프레임워크 
+
+===== Webjars : 웹라이브러리를 파일 패키징한 것 . (jQuery, bootstrap, ..)
+html,css - bootstrap/ javascript - jQuery ///////
+
+Webjars sre client-frontend libraries
+Bootstrap , jQuery settings 
+
+frontend library >>>>> https://www.webjars.org/
+https://mvnrepository.com/
+
+
+search results - build tool select (gradle) - compile code copy - >> add at build.gradle
+dependency settings
+
+jsp file link setting/// 
+bootstrap압축파일 위치를 확인.
+http://localhost:8093/webjars/bootstrap/5.2.3/css/bootstrap.css
+
+<link rel="stylesheet" href="http://localhost:8093/webjars/bootstrap/5.2.3/css/bootstrap.css">
+<script src="http://localhost:8093/webjars/bootstrap/5.2.3/js/bootstrap.js"></script>
+
+javascript dependency setting/ 
+
+viewport setting <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+SPRING SECURITY   // chap34 //
+
+New Spring Starter Project Dependencies add ' Spring Security '
+이전 build.gradle 소스 복사 .. 
+application.properties 작성. 
+
+application.properties add
+-------------------------------------------------------------------------
+#
+# MVC View Settings
+#
+spring.mvc.view.prefix=/WEB-INF/
+spring.mvc.view.suffix=.jsp
+
+#
+# Security In-Memory User/Password
+#
+spring.security.user.name=python
+spring.security.user.password=1234
+
+-------------------------------------------------------------------------
+
+WEB-INF 폴더는 외부에서 접근이 불가하게 제한 
+내부에서 접근이 가능 // 내부용으로 사용되는 자원
+
+project ? com.example > change name to Application 
+at com.example > new class > package : com.example.controller / name : HomeController
+ 
+HomeController.java
+@Contrlloer > import // 
+mapping set up .  @GetMapping 
+
+심벌릭
+D:\03_Src\java\chap34\src\main>mklink /D webapp resources\jsp
+
+WEB-INF folder create
+D:\03_Src\java\chap34\src\main\webapp>mkdir WEB-INF
+
+
+MVC Design Pattern
+
+controller 는 사용자로부터 입력만 담당하고 
+response 는 view가 담당한다 
+
+사용자가 입력한 정보를 찾고 만들어서 view에 전달하는 것 controller의 역할
+This is MVC pattern
+
+controller - response ->> view /// web :::::::: Spring Security 의 구조 ///
+web 뿐만 아니라 역할을 나누어 기능을 작동하도록 하는게 프로그램 확장에 있어서 유용하다. 
+
+각 elements의 역할의 조합이 이루어지고 협업하여 기능이 수행되고 작동을 원활하게 하는 것
+객체지향 개념에 패턴화가 이루어진 것을 mvc 패턴.. Model-View-Controller
+
+forward / redirect 의 차이 
+forward - 실행흐름을 전달하는 것 
+	// 서버에서 작업을 끝내고 정보를 전달하고 다음 수행동작으로 이동.
+redirect - 프론트에서 온 요청을 컨트롤러보다 뷰가 먼저 바로 응답을 넘기는 것. 
+	//  경로 수행 재실행 응답을 명령한다.
+
+
+  
+application > security 적용 // > 로그인 설정 // forward, redirect 
+
+
+
+
+
+===========================================================
+
+
+Bootstrap5 /// Bootstrap 5 is the newest version of Bootstrap, 
+which is the most popular HTML, CSS, and JavaScript framework 
+for creating responsive, mobile-first websites.
+
+반응형웹 Responsive web design, RWD
+디바이스 종류에 따라 페이지의 크기가 자동적으로 재조정되는 것. 
+
+Bootstrap을 사용해서 쉽게 반응형웹을 작성할 수 있음. 
+반드시 viewport 가 입력되어야함!
+cdn방식으로 링크를 걸어주기도 함 // 간단한 웹 작성~
+
+
+bootstrap의 클래스 선택자를 사용해서 반응형웹 작성.
+
+반응형 웹에서는 width 가 중요. 
+반응형 웹 개념
+
+
+화면 width와 관계 Containers
+container 
+container-fluid 
+The .container class provides a responsive fixed width container  
+The .container-fluid class provides a full width container, spanning the entire width of the viewport
+ 
+
+
+
+
+
+
+
+
+

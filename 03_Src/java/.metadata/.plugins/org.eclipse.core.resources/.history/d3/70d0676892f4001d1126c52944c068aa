@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko" class="border border-5 border-primary">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Coche-Control" content="no-store">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/faviconAlpha.png"> 
+<link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.css">
+<script src="/webjars/bootstrap/5.2.3/js/bootstrap.js"></script>
+<script src="/webjars/jquery/jquery.min.js"></script>
+<title>반응형 연습하기.jsp</title>
+<script type="text/javascript">
+</script>
+<style type="text/css">
+	div {
+		border: 5px solid black;
+	}
+</style>
+</head>
+<body>
+
+<h1>반응형 연습하기</h1>
+<div class="container mt-3">
+  <div class="row">
+      <div class="row">
+    <div class="col p-3 bg-primary ">.top</div>
+  </div>
+    <div class="col p-3 bg-green ">.left</div>
+    <div class="col p-3 bg-orange ">.center</div>
+    <div class="col p-3 bg-navy ">.right</div>
+  </div>
+    <div class="row">
+    <div class="col p-3 bg-primary ">.bottom</div>
+  </div>
+</div>
+
+
+</body>
+</html>
