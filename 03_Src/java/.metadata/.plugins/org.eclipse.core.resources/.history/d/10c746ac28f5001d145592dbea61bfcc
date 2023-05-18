@@ -1,0 +1,29 @@
+package com.example;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class SecurityConfig {
+	public SecurityConfig() {
+		System.out.println("SecurityConfig()...");
+		
+		// 메소드 체인 설명
+		"Hello".toUpperCase()
+			   .toLowerCase()
+			   .stripIndent()
+			   .toString();
+		
+	}
+	
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+		http.csrf().disable()
+			.cors().disable();
+		
+		System.out.println("filterChain()...");
+		return http.build();
+	}
+}
