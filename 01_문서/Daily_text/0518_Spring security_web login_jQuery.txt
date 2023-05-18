@@ -1,0 +1,91 @@
+0518 login _ bootstrap 
+
+MVC 동작원리 이해 
+controller에서 mapping >> application.properties MVC view settings
+
+Auth 인증 // 
+Spring Security - 
+Authorization role  
+권한 설정  
+=======================================
+spring.security.user.roles=USER,ADMIN,SQL
+=======================================
+
+SecurityConfig 
+
+
+어노테이션이 붙어 있는건 무조건 NEW >> 빈 팩토리에 저장을 함
+
+메소드에 @Bean 이 붙어있다면 메소드를 무조건 수행하고 빈팩토리에 저장.
+
+//http request에 대해 권한을 허용 : url 기본 권한 설정
+		http.authorizeHttpRequests()
+
+form 작성
+실제 로그인 처리를 하는 url 
+로그인은  POST 방식으로 // 패스워드 노출 방지. 
+
+
+
+HTTP 프로토콜의 특징 - 요청과 응답 프로토콜 / 1회성 요청과 응답
+///( 동시접속자 수를 더 높이기 위해서 )//
+(request, response, authentication)
+
+forward / redirect 구별 확실하게 할 것. 
+
+
+login page - 인증되지 않았다면 login page로 redirect// 설정 
+login 성공 -> home으로 redirect
+login 실패 -> login fail로 forward , 로그인 실패 메세지와 함께 로그인 페이지 링크 
+
+
+
+================================
+
+jQuery 
+
+jQuery = JavaScript Library 
+
+식별자 $ 사용. ///   $ = jQuery 함수 이름.. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
