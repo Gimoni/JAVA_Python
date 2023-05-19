@@ -17,9 +17,9 @@
 <h1>home page</h1>
 <hr>
 <ol>
-	<li><a href="/login" target="_blank">Login</a></li>
-	<li><a href="/logout" target="_blank">Logout</a></li>
-	<li><a href="/hello.jsp" target="_blank">hello.jsp</a></li>
+	<li><a href="/" target="_blank">HOME</a></li>
+	<li><a href="/login" target="_blank">LOGIN</a></li>
+	<li><a href="/logout" target="_blank">LOGOUT</a></li>
 </ol>
 <hr>
 </body>
