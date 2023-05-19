@@ -1,0 +1,47 @@
+0519- bootstrap
+
+media query // responsive 
+"Mobile post" 
+===========================
+@media(min-width: 500px) {
+	body {
+		background: yellow;
+	}
+
+}
+@media(min-width: 700px) {
+	body {
+		background: black;
+	}
+	h1 {
+		color: white;
+	}
+
+}
+@media(min-width: 900px) {
+	body {
+		background: purple;
+	}
+	h1 {
+		color: white;
+	}
+
+반응형
+media query // 화면의 크기에 따라 css가 다르게 정의해 놓음. 
+
+Grid Classes 
+.col 
+.col-sm-
+.col-md-
+.col-lg-
+.col-xl-
+.col-xxl-
+
+
+col 12 기준 
+
+
+https://www.w3schools.com/bootstrap5/bootstrap_grid_system.php
+
+
+
