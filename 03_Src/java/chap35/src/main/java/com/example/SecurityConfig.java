@@ -45,7 +45,9 @@ public class SecurityConfig {
 			.requestMatchers("/webjars/**").permitAll()
 			.requestMatchers("/img/**").permitAll()
 			.requestMatchers("/admin/**").hasAnyRole("ADMIN")
+			.requestMatchers("/security").permitAll()
 			.anyRequest().authenticated();
+		
 		
 		http.formLogin()
 			.loginPage("/login")
