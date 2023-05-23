@@ -1,0 +1,18 @@
+0523 
+
+Spring 
+
+url 이름 짓는 규칙 
+Spring  + mvc 모델// 개발 
+
+url 로 controller를 call ... 
+url create lowcap -- 
+mvc model - server protocol // controller call 
+mvc 모델은 url을 컨트롤러의 메소드에 맵핑해서 서버로 불러온다
+  자동호출이 되도록 spring이 작동함 // 
+  request mapping 작성을 해놓으면 spring이 자동으로 읽고 작동시킴.
+
+mvc model  -  스프링 라이브러리가 자동화되어 수행
+
+url 설계 ////
+
