@@ -1,0 +1,76 @@
+0524 JUnit 
+
+JUnit test 
+what is JUnit ? 
+/// 
+new - junit test case create : name 이름에는 항상 Test를 붙인다.
+
+메소드 이름에 ctrl + f11 // 해당 메소드 실행 됨
+
+
+Test life Cycle ///
+각각의 test 수행 이전 이후에 수행되는 
+BeforeEach/AfterEach (개별적으로 수행)
+
+전체 test 수행 이전 이후에 수행되는 
+BeforeAll/ AfterAll (전체 Test의 전후에 수행) 
+****** BeforeAll과 AfterAll은 new 이전에 
+한번만 수행이 되기 때문에 static 이여야만 한다. 
+
+
+Assert //
+AssertThat
+
+
+test하고자 하는 mapper 클래스 이름과 동일하게 만들고 
+class name 뒤에 Test라고 붙여서 구분을 확실히 하는 것
+보통의 관례. 
+
+Mapper Test를 통해서 쿼리 코드를 확인하고 에러 확인 오류를 수정함
+
+JUnit에서는 코드의 에러를 확인하고 수정을 하는 기능을 간결하고 효율적으로 확인한다. 
+
+===========================================
+
+
+web 서버에서 클러이언트에 데이터를 전달하는 양식.
+
+1번 xml 형태로 데이터를 전달 
+태그방식으로 바디(데이터)를 저장하는 방식 = xml .. 
+단점 실제 데이터 보다 데이터를 설명하는 코드가 더 많음. 해석시간이 오래걸림.
+
+2번 web Sever에서 JSON 형식 데이터를 전달 
+JSON : javascript object notation  
+java object --> json 변환 /// bean 객체를 사용해서 json 으로 전환 
+ 
+
+json 라이브러리 대표적으로 jackson 
+json : test에서 ObjectMapper 사용.  
+
+
+objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+Autowire /// 
+
+
+new spring project dependencies 
+spring boot version 3.1.0 setting
+lombok spring boot devtools 
+spring security spring web 
+mybatis framework oracle dirver
+
+
+버전이 달라진걸 확인하고 필요 부분을 따로 복사한다 이전 gradle 확인
+chap36 mvc model로 진행. 
+
+
+
+
+
+
+
+
+
+
+
+
