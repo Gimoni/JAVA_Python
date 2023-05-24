@@ -1,0 +1,21 @@
+package com.example;
+
+import org.junit.jupiter.api.Test;
+
+public class LifeCycleTest {
+
+	
+	
+	
+	
+	
+	@Test
+	void test1() {
+		System.out.println("@test1 ...");
+	}
+	@Test
+	void test2() {
+		System.out.println("@test2 ...");
+	}
+
+}

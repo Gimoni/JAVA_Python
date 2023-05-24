@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun DeptMapperTest" project="chap35" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.mapper.DeptMapperTest" time="1.504" displayname="DeptMapperTest" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]">
+    <testcase name="selectAll" classname="com.example.mapper.DeptMapperTest" time="1.411" displayname="selectAll()" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]/[method:selectAll()]"/>
+    <testcase name="json" classname="com.example.mapper.DeptMapperTest" time="0.065" displayname="json()" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]/[method:json()]"/>
+    <testcase name="selectByDept" classname="com.example.mapper.DeptMapperTest" time="0.025" displayname="selectByDept()" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]/[method:selectByDept()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,24 @@
+package com.example;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.Random;
+
+import org.junit.jupiter.api.Test;
+
+public class Random3Test {
+
+	@Test
+	void random() {
+		for (int i=0; i<100000; i++) {
+			double value = Math.random();
+			assertTrue(value>=0);
+			assertTrue(value< 1); // 단정문 assert
+		}
+	}
+	
+	@Test
+	void random2() {
+		double value = (int)(Math.random()*6 + 1);
+	}
+}

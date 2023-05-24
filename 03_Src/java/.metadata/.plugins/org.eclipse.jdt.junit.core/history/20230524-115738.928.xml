@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RandomTest (1)" project="chap35" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.RandomTest" time="0.095" displayname="RandomTest" uniqueid="[engine:junit-jupiter]/[class:com.example.RandomTest]">
+    <testcase name="random" classname="com.example.RandomTest" time="0.092" displayname="random()" uniqueid="[engine:junit-jupiter]/[class:com.example.RandomTest]/[method:random()]"/>
+    <testcase name="random2" classname="com.example.RandomTest" time="0.002" displayname="random2()" uniqueid="[engine:junit-jupiter]/[class:com.example.RandomTest]/[method:random2()]"/>
+  </testsuite>
+</testrun>

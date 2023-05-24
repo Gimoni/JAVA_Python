@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Random3Test.random4" project="chap16" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.Random3Test" time="0.134" displayname="Random3Test" uniqueid="[engine:junit-jupiter]/[class:com.example.Random3Test]">
+    <testcase name="random4" classname="com.example.Random3Test" time="0.133" displayname="random4()" uniqueid="[engine:junit-jupiter]/[class:com.example.Random3Test]/[method:random4()]"/>
+  </testsuite>
+</testrun>

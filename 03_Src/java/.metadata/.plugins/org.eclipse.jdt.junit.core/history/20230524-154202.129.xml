@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ObjectMapperTest.writeInt" project="chap35" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.ObjectMapperTest" time="0.043" displayname="ObjectMapperTest" uniqueid="[engine:junit-jupiter]/[class:com.example.ObjectMapperTest]">
+    <testcase name="writeInt" classname="com.example.ObjectMapperTest" time="0.043" displayname="writeInt()" uniqueid="[engine:junit-jupiter]/[class:com.example.ObjectMapperTest]/[method:writeInt()]"/>
+  </testsuite>
+</testrun>
