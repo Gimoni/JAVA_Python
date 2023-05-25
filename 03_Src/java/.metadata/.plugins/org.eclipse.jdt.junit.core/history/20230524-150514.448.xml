@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun json()" project="chap35" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.mapper.DeptMapperTest" time="1.397" displayname="DeptMapperTest" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]">
-    <testcase name="json" classname="com.example.mapper.DeptMapperTest" time="1.397" displayname="json()" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]/[method:json()]"/>
-  </testsuite>
-</testrun>

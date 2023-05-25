@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Random3Test" project="chap16" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.Random3Test" time="0.041" displayname="Random3Test" uniqueid="[engine:junit-jupiter]/[class:com.example.Random3Test]">
-    <testcase name="random" classname="com.example.Random3Test" time="0.03" displayname="random()" uniqueid="[engine:junit-jupiter]/[class:com.example.Random3Test]/[method:random()]"/>
-    <testcase name="random2" classname="com.example.Random3Test" time="0.005" displayname="random2()" uniqueid="[engine:junit-jupiter]/[class:com.example.Random3Test]/[method:random2()]"/>
-    <testcase name="random3" classname="com.example.Random3Test" time="0.001" displayname="random3()" uniqueid="[engine:junit-jupiter]/[class:com.example.Random3Test]/[method:random3()]"/>
-    <testcase name="random4" classname="com.example.Random3Test" time="0.002" displayname="random4()" uniqueid="[engine:junit-jupiter]/[class:com.example.Random3Test]/[method:random4()]"/>
-  </testsuite>
-</testrun>

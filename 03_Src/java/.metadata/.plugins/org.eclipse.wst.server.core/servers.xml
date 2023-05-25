@@ -3,4 +3,7 @@
   <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v10.1 Server at localhost (2)-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v10.1 Server at localhost (2)" name="Tomcat v10.1 Server at localhost " runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="14">
     <list key="modules" value0="chap30::org.eclipse.jst.j2ee.server:chap30::jst.web::2.4" value1="chap31::org.eclipse.jst.j2ee.server:chap31::jst.web::2.4" value2="chap31::org.eclipse.jst.jee.server:chap31::jst.web::5.0" value3="chap32::org.eclipse.jst.jee.server:chap32::jst.web::5.0" value4="chap24::org.eclipse.jst.jee.server:chap24::jst.web::5.0"/>
   </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v10.1 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v10.1 Server at localhost" name="Tomcat v10.1 Server at localhost" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="1">
+    <list key="modules" value0="chap36::org.eclipse.jst.jee.server:chap36::jst.web::5.0"/>
+  </server>
 </servers>

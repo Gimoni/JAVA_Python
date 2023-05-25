@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="LifeCycleTest" project="chap35" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.LifeCycleTest" time="0.015" displayname="LifeCycleTest" uniqueid="[engine:junit-jupiter]/[class:com.example.LifeCycleTest]">
-    <testcase name="test1" classname="com.example.LifeCycleTest" time="0.013" displayname="test1()" uniqueid="[engine:junit-jupiter]/[class:com.example.LifeCycleTest]/[method:test1()]"/>
-    <testcase name="test2" classname="com.example.LifeCycleTest" time="0.001" displayname="test2()" uniqueid="[engine:junit-jupiter]/[class:com.example.LifeCycleTest]/[method:test2()]"/>
-  </testsuite>
-</testrun>

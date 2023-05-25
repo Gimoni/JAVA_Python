@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Thu May 25 13:00:31 KST 2023
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\python\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.tomcat\\tomcat-jasper\\11.0.0-M4\\c787e0081f4a6128a0721d7a85b12ca06d670a25\\tomcat-jasper-11.0.0-M4.jar=WEB-INF/lib/tomcat-jasper-11.0.0-M4.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\python\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.tomcat\\tomcat-jasper-el\\11.0.0-M4\\615c4ec7287e61df8836dcd409aede3bb40449c5\\tomcat-jasper-el-11.0.0-M4.jar=WEB-INF/lib/tomcat-jasper-el-11.0.0-M4.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\python\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\6.0.9\\2837dec8a75ecfdad367d6c30ce9cbdfc89caa7a\\spring-web-6.0.9.jar=WEB-INF/lib/spring-web-6.0.9.jar
