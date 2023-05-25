@@ -1,0 +1,89 @@
+0525 JUnit 
+
+JUnit - 단위 테스트 / 통합 테스트 
+
+
+에자일 개발 방법론 
+TDD  테스트 기반 
+
+
+Mybites 문법///
+
+@Select ("""
+	select * 
+	  from dept
+	 where deptno = #{dept}
+	""")
+Dept selectByDeptno(int deptno)
+
+
+
+=======================================
+
+
+
+dept table은 primary key 제약이 걸려 있당.
+제약성 
+왜 제약이 걸려 있는지?  데이터베이스의 무결성을 유지하기 위해서 .
+
+
+Can a table have duplicate primary keys?
+You can define keys which allow duplicate values. 
+However, do not allow duplicates on primary keys 
+as the value of a record's primary key must be unique.
+
+=============================================
+Database 에서 SQL 확인/ 
+
+
+select *
+from dept
+where deptno=90;
+
+insert into dept
+values
+ (50, '개발부', '서울');
+ 
+insert into dept
+values
+ (60, '인사부', null); 
+
+select * from dept;
+
+delete dept where deptno=60;
+
+commit;
+
+rollback;
+
+=============================================
+chap36  - DeptMapper / test) DeptMapperTest  작성해서 
+DB랑 동시에 test 확인 검사/// DataBase 
+
+test에 작성되는 것 - 새 데이터를 입력할 때 try catch 를 
+사용해서 insert는 작동하되 commit이 되지 않도록 
+test에 적용만 가능하도록 확인 후 (error가 없으면 test 성공)
+- test 성공 후 db에서 확인. (commit이 되지 않은 상태 확인) 
+
+
+src/main/resources -> create new folder 'sql' 
+
+sql folder에  employee_oracle.sql / world_oracle.sql 저장 (from :D:\02_Software\05_oracle\sql)
+
+db 에서 커밋 또는 롤백을 안했다면 junit 작동은 대기 상태가 된다 // Junit무응답 상태로 지속된다.
+이를 처리하기 위해서 데이터 체크를 db에서 한다면 커밋 또는 롤백을 마무리한 이후 junit test 사용. 
+
+
+테이블 제약 조건 
+database PK FK UK 개념을 확인 할 것. 
+PK - 테이블에 특정 데이터를 중복하지 않음 
+FK - 데이터를 참조 
+
+
+
+
+
+
+
+
+
