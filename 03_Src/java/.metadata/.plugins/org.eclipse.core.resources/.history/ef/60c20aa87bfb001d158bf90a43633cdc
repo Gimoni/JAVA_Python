@@ -1,0 +1,76 @@
+package com.example.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+
+import com.example.model.Dept;
+import com.example.model.Emp;
+
+@Mapper
+public interface EmpMapper {
+	
+	@Select("select count(*) from emp")
+	int countAll();
+	
+	@Select("select * from emp")
+	List<Emp> selectAll();
+	
+	@Select("""
+			select *
+			  from emp
+			 where empno = #{empno} 
+			""")
+	Emp selectByEmpno(@Param("empno") int empno);
+	
+	@Insert("""
+			insert into emp
+			(empno, ename)
+			values
+			(#{empno}, #{ename, jdbcType=VARCHAR})
+			""")
+	int insertByEmpnoWithEname(@Param("empno") int empno, @Param("ename") String ename);
+	
+	@Insert("""
+			insert into emp
+			values (
+				#{e.empno}, 
+			 	#{e.ename,  	jdbcType=VARCHAR}, 
+			 	#{e.gender, 	jdbcType=VARCHAR},
+			 	#{e.job, 		jdbcType=VARCHAR},
+			 	#{e.mgr, 		jdbcType=INTEGER},
+			 	#{e.hiredate, 	jdbcType=DATE},
+			 	#{e.sal, 		jdbcType=DOUBLE},
+			 	#{e.comm, 		jdbcType=DOUBLE},
+			 	#{e.deptno, 	jdbcType=INTEGER}
+			)
+			""")
+	int insertEmp(@Param("e") Emp emp);
+	
+	@Update("""
+			update dept
+			   set dname = #{dname, jdbcType=VARCHAR},
+			       loc   = #{loc,   jdbcType=VARCHAR}
+			 where deptno= ${deptno}     
+			""")
+	int update(@Param("deptno") int deptno, 
+			   @Param("dname")  String dname, 
+			   @Param("loc")	String loc);
+	
+	@Update("""
+			update dept
+			   set dname = #{d.dname, jdbcType=VARCHAR},
+			       loc   = #{d.loc,   jdbcType=VARCHAR}
+			 where deptno= ${d.deptno}     
+			""")
+	int updateDept(@Param("d") Dept dept);
+	
+	@Delete("delete from dept where deptno=#{deptno}")
+	int delete(int deptno);
+
+}

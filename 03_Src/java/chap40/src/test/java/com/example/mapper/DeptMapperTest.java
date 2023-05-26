@@ -8,8 +8,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.model.Dept;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
@@ -68,7 +70,42 @@ public class DeptMapperTest {
 		});
 	}
 	
+	@Test
+	@Transactional
+	void insertDept() throws IOException {
+		var dept = new Dept(50,"개발1부", "경기");
+		int cnt = deptMapper.insertDept(dept);
+		assertThat(cnt).isEqualTo(1);
+
+		dept = new Dept(60, "개발2부", null);
+		cnt = deptMapper.insertDept(dept);
+		assertThat(cnt).isEqualTo(1);
+		
+		assertThrows(DuplicateKeyException.class, ()-> {
+			deptMapper.insertDept(new Dept(60, "개발3부", null));
+		}); // 개발3부가 이미 존재하기 때문에 DuplicateKeyException이 발생할 것이라는 것을 테스트에 작성.
+		
+		assertThrows(DataIntegrityViolationException.class, ()->{
+			deptMapper.insertDept(new Dept(60, null, null));			
+		});	// null이 들어갈 수 없는 DataIntegrityViolationException을 확신하는 테스트.
+		
+		assertThrows(DataIntegrityViolationException.class, () ->{
+			deptMapper.insertDept(new Dept(100, "개발부", null));
+		}); // deptno는 2자리 수로 작성되게 설정이 되어 있기때문에 100이라는 넘버는 올수 없다 
+		// 따라서 DataIntegrityViolationExecption 발생을 확신하는 코드 작성으로 테스트 성공시킨다.
+		
+		objectMapper.createGenerator(System.out)
+					.useDefaultPrettyPrinter()
+					.writeObject(cnt);
+		
+		
+	}
 	
+	@Test
+	@Transactional
+	void updateDept() {
+		
+	}
 	
 	
 	

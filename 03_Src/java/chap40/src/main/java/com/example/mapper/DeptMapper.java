@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.example.model.Dept;
 
@@ -31,4 +32,24 @@ public interface DeptMapper {
 	int insert(@Param("deptno")   int deptno, 
 			   @Param("dname") String dname, 
 			   @Param("loc")   String loc);
+	
+	@Insert("""
+			insert into dept
+			  values(
+			  	#{d.deptno},
+			  	#{d.dname, jdbcType=VARCHAR},
+			  	#{d.loc, 	jdbcType=VARCHAR}
+			  )
+			
+			""")
+	int insertDept(@Param("d") Dept dept);
+	
+	@Update("""
+			update dept
+			   set dname = #{d.dname, jdbcType=VARCHAR},
+			   	   loc   = #{d.loc,   jdbcType=VARCHAR}
+			 where deptno = #{d.deptno}
+			""")
+	int updateDept(@Param("d") Dept dept);
+	
 }

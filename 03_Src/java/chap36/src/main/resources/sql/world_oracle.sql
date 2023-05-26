@@ -22,21 +22,21 @@ create sequence city_id_seq start with 4080;
  * Country
  */
 create table country (
-	code 			char(3 char),						
-	name 			varchar2(52 char)	not null,						
+	code 				char(3 char),						
+	name 				varchar2(52 char)	not null,						
 	continent			varchar2(20 char),		
-	region			varchar2(26 char),						
+	region				varchar2(26 char),						
 	surface_area		number(10,2),		
-	indep_year		number(6),							
-	population		number(11),			
+	indep_year			number(6),							
+	population			number(11),			
 	life_expectancy		number(3,1),						
-	gnp			number(10,2),
-	gnp_old			number(10,2),
-	local_name		varchar2(45 char),						
+	gnp					number(10,2),
+	gnp_old				number(10,2),
+	local_name			varchar2(45 char),						
 	government_form		char(45 char),
 	head_of_state		varchar2(60 char),
-	capital			number(11),
-	code2			char(2  char),
+	capital				number(11),
+	code2				char(2  char),
 	constraint ck_continent check (continent in ('Asia','Europe','North America','Africa','Oceania','Antarctica','South America')),
 	constraint pk_country primary key (code)
 );
@@ -45,11 +45,11 @@ create table country (
  * City
  */
 create table city (
-	id			number(11),
-	name			varchar2(35 char) not null,
+	id					number(11),
+	name				varchar2(35 char) not null,
 	country_code 		char(3 char),
 	district			varchar2(20 char),
-	population		number(11),
+	population			number(11),
 	constraint pk_city primary key (id),
 	constraint fk_country foreign key (country_code) references country(code) on delete cascade 
 );
@@ -61,7 +61,7 @@ create table country_language (
 	country_code		char(3 char),
 	language			varchar2(30 char),
 	is_official			char(1 char)		default 'F',
-	percentage		number(4,1)		default '0.0',
+	percentage			number(4,1)		default '0.0',
 	constraint ck_isofficial check (is_official in ('T','F')),
 	constraint pk_country_language primary key (country_code, language)
 );

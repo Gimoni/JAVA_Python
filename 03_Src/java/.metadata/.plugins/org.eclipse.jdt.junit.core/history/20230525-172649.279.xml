@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DeptMapperTest.delete" project="chap36" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.mapper.DeptMapperTest" time="2.233" displayname="DeptMapperTest" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]">
-    <testcase name="delete" classname="com.example.mapper.DeptMapperTest" time="2.233" displayname="delete()" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]/[method:delete()]"/>
-  </testsuite>
-</testrun>

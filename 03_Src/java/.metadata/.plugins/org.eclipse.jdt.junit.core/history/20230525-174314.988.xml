@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DeptMapperTest.selectDeptno" project="chap40" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.mapper.DeptMapperTest" time="1.915" displayname="DeptMapperTest" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]">
-    <testcase name="selectDeptno" classname="com.example.mapper.DeptMapperTest" time="1.915" displayname="selectDeptno()" uniqueid="[engine:junit-jupiter]/[class:com.example.mapper.DeptMapperTest]/[method:selectDeptno()]"/>
-  </testsuite>
-</testrun>
