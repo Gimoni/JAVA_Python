@@ -1,0 +1,51 @@
+0526 - mybites Mapper 
+
+
+Same = 참조비교 /// 정수일경우 int 1byte 는 자바가 성능 향상을 위해서 미리 만들어놓음 
+1byte 범위를 벗어나면 new // -128 ~ 127 
+
+Mybaites Mapper Annotation study // Mapper Test
+
+===============================
+
+gradle dependencies pageHelper를 추가해준다  
+    //
+    //PageHelper
+    //
+    implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.4.6'
+
+
+
+	@Test
+	void selectPage() throws IOException {
+		50번째 페이지(startpage) 페이지당 데이터 개수5개 (size)
+		PageHelper.startPage(50, 5);
+		var list = cityMapper.selectPage();
+		System.out.println(list.size());
+		assertThat(list.size()).isEqualTo(5);
+		
+		// 화면에 보여지는 페이지 리스트 개수. 
+		var paging = PageInfo.of(list, 20);
+		System.out.println(paging);
+		paging.getTotal();
+		paging.getList();
+		paging.getPageNum();
+		paging.getSize();
+		paging.getStartRow();
+		paging.getEndRow();
+		paging.getPages();
+		paging.getPrePage();
+		paging.getNextPage();
+		paging.isIsFirstPage();
+		paging.isIsLastPage();
+		paging.isHasPreviousPage();
+		paging.isHasNextPage();
+
+		
+		objectMapper.createGenerator(System.out)
+					.useDefaultPrettyPrinter()
+					.writeObject(paging);
+	}
+
+페이지넘버가 54이고 페이지 사이즈는 5개
+ 
