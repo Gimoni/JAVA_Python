@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DeptMapperTest.selectAll (1)" project="chap36" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.imple.dept.mapper.DeptMapperTest" time="2.024" displayname="DeptMapperTest" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.dept.mapper.DeptMapperTest]">
+    <testcase name="selectAll" classname="com.example.imple.dept.mapper.DeptMapperTest" time="2.024" displayname="selectAll()" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.dept.mapper.DeptMapperTest]/[method:selectAll()]"/>
+  </testsuite>
+</testrun>

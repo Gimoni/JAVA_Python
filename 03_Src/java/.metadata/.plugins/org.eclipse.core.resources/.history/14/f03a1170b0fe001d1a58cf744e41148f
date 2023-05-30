@@ -1,0 +1,12 @@
+package com.example.imple.dept;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class DeptController {
+
+	void list(Model model) {
+		
+	}
+}

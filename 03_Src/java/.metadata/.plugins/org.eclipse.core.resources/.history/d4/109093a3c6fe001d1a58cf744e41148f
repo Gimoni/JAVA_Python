@@ -1,0 +1,5 @@
+package com.example.imple.salgrade.mapper;
+
+public interface SalgradeMapper {
+
+}

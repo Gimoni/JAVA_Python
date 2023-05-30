@@ -3,18 +3,39 @@ package com.example.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Many;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.example.model.Dept;
+import com.example.model.Emp;
 
 @Mapper
 public interface DeptMapper {
 	
+	@Select("""
+			select  *
+			  from emp
+			 where deptno = #{deptno}
+			""")
+	List<Emp> selectEmps(int deptno);
+	
+	
 	@Select("select * from dept")
 	List<Dept> selectAll(); 
+	
+	@Select("select * from dept")
+	@Results({
+		@Result(property = "deptno", column = "deptno"),
+		@Result(property = "emps", column = "deptno", many = @Many(select="selectEmps"))
+	})
+	List<Dept> selectAllWithEmps(); 
+	
+	
 	
 	@Select ("""
 			select  * 

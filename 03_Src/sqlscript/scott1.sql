@@ -22,6 +22,8 @@ update dept
          loc = 'null'
 where deptno = 10;
 
+select * from dept;
+select * from dept where deptno=10;
 
 
 commit;
@@ -59,4 +61,4 @@ select id
  
 select *
   from city
-where country_code = 'KOR'; 
+ where country_code = 'KOR'; 

@@ -1,0 +1,26 @@
+package com.example.imple.salgrade.mapper;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.io.IOException;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public interface SalgradeMapperTest {
+
+	Autowired
+	ObjectMapper objectMapper;
+	
+	@Test
+	void selectAll() throws IOException {
+		var list = SalgradeMapper.selectSalgradeAll();
+			System.out.println(list);
+		}
+
+	}
+	
+	
+

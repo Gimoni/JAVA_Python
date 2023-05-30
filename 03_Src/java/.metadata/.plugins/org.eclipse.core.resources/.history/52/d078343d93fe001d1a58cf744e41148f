@@ -1,0 +1,20 @@
+package com.example.imple.dept.model;
+
+import org.junit.jupiter.api.Test;
+
+public class DeptTest {
+	
+	@Test
+	void of() {
+		// default constructor can make with new();
+		var dept1 = new Dept();
+//		var dept2 = new Dept(10, "xxx", "yyy");
+		var dept2 = Dept.of(10, "xxx", "yyy");
+	
+	}
+	
+	@Test
+	void builder() {
+		
+	}
+}

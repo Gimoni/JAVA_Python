@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DeptTest" project="chap36" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.imple.dept.model.DeptTest" time="0.08" displayname="DeptTest" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.dept.model.DeptTest]">
+    <testcase name="of" classname="com.example.imple.dept.model.DeptTest" time="0.079" displayname="of()" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.dept.model.DeptTest]/[method:of()]"/>
+    <testcase name="builder" classname="com.example.imple.dept.model.DeptTest" time="0.001" displayname="builder()" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.dept.model.DeptTest]/[method:builder()]"/>
+  </testsuite>
+</testrun>

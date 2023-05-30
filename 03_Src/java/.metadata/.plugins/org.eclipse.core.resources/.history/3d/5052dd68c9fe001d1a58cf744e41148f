@@ -1,0 +1,18 @@
+package com.example.imple.salgrade.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+
+import com.example.imple.emp.model.Emp;
+import com.example.imple.salgrade.model.Salgrade;
+
+@Mapper
+public interface SalgradeMapper {
+
+	@Select("select * from salgrade")
+	List<Salgrade>selectAll();
+	
+}

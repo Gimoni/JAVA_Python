@@ -1,4 +1,4 @@
-# List of external plug-in models previously loaded. Timestamp: 1685061427333
+# List of external plug-in models previously loaded. Timestamp: 1685407976856
 file:/C:/opt/eclipse/plugins/bcpg_1.72.0.jar
 file:/C:/opt/eclipse/plugins/bcprov_1.72.0.jar
 file:/C:/opt/eclipse/plugins/biz.aQute.bnd.util_6.3.1.202206071316.jar
@@ -61,6 +61,7 @@ file:/C:/opt/eclipse/plugins/junit-platform-suite-engine_1.9.1.jar
 file:/C:/opt/eclipse/plugins/junit-vintage-engine_5.9.1.jar
 file:/C:/opt/eclipse/plugins/minimal-json_0.9.4.jar
 file:/C:/opt/eclipse/plugins/minimatch.java_1.1.0.jar
+file:/C:/opt/eclipse/plugins/net.harawata.mybatipse_1.3.0.202210300418.jar
 file:/C:/opt/eclipse/plugins/net.i2p.crypto.eddsa_0.3.0.v20220506-1020.jar
 file:/C:/opt/eclipse/plugins/net.sourceforge.lpg.lpgjavaruntime_1.1.0.v201004271650.jar
 file:/C:/opt/eclipse/plugins/org.apache.ant_1.10.12.v20211102-1452/
