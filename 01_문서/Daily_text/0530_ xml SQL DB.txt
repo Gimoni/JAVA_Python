@@ -1,0 +1,79 @@
+0530 
+
+1. paramMap ->> SQL --->> resultMap
+    mapping        XML/mapper     mapping .
+
+xml 은 실제로 실무에서 대부분 사용. 
+
+plugin 
+eclipse - help - eclipse marketplace - search "mybatis 1.3.0" install 
+
+application.properties 
+mybaits config //  JSON config
+
+#mybatis 
+mybatis.configuration.map-underscore-to-camel-case=true
+
+# JSON
+spring.jackson.serialization.indent-output=true
+
+#Logging 
+logging.level.com.example.mapper=trace
+
+# PageHelper
+pagehelper.helper-dialect=oracle
+pagehelper.reasonable=true
+=======================
+package presentation - hierarchical
+=======================
+
+standard - 공통 인터페이스 
+imple - 각각 인터페이스의 기능을 작성함. 
+
+mapper가 달라지면 test code의 위치도 달라져야함. 
+
+
+@Results(property = "emps", column = "deptno", many = @Many(select="selectEmps"))
+
+
+
+
+web에서 접근하는 url 설계 ..
+url / mathod mapping ___>>> from controller 
+
+
+
+trimDirectiveWhitespaces="true"
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+template Edit ################################################
+<%@ page language="java" contentType="text/html; charset=${encoding}"
+    pageEncoding="${encoding}" trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="${encoding}">
+<meta http-equiv="Coche-Control" content="no-store">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/faviconAlpha.png"> 
+<link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.css">
+<script src="/webjars/bootstrap/5.2.3/js/bootstrap.js"></script>
+<script src="/webjars/jquery/jqurey.min.js"></script>
+
+<title>xxx.jsp</title>
+</head>
+<body>
+${cursor}
+</body>
+</html>
+###########################################################
+
+
+
+
+
+
