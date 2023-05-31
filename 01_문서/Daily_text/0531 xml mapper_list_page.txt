@@ -1,0 +1,19 @@
+0531 _ xml 
+
+
+XML은 소스파일이 아니기 때문에 resources 아래에 작성. 
+
+package create at resources/// it should be same with mapper file path. 
+ex) CityMapper.xml 
+
+
+MyBaits - MyBaits XML Mapper 
+
+
+termenal open ..at package /// ctrl alt T 
+D:\03_Src\java\chap36\src\main\resources\sql>sqlplus scott/tiger
+
+host cls 
+host dir
+SQL> @world_oracle 
+
