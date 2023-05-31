@@ -1,0 +1,5 @@
+package com.example.imple.country.model;
+
+public class Country {
+
+}

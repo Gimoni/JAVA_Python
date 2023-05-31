@@ -14,13 +14,8 @@ import com.example.imple.emp.mapper.EmpMapper;
 @SpringBootTest
 public interface SalgradeMapperTest {
 
-	Autowire
-	SalgradeMapper salgradeMapper;
 	
-	@Test
-	void countsalgradeAll() {
-		
-	}
+
 
 }
 	

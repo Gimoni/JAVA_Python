@@ -25,10 +25,10 @@ public interface EmpMapper {
 	
 	@Select("""
 			select * 
-			  from dept, 
-			 where deptno
+			  from dept 
+			 where deptno =${deptno}
 			""")
-	Dept selectDept(int depntno);
+	Dept selectDept(int deptno);
 	
 	@Select("select * from emp")
 	List<Emp> selectAll();
@@ -48,7 +48,22 @@ public interface EmpMapper {
 			  from emp
 			 where empno = #{empno} 
 			""")
-	Emp selectByEmpno(@Param("empno") int empno);
+	Emp selectByEmpno(int empno);
+	
+	
+	@Select("""
+			select *
+			  from emp
+			 where empno = #{empno} 
+			""")
+	@Results({
+		@Result(property = "deptno", column="deptno"),
+		@Result(property = "dept", 
+				column = "deptno",
+				one = @One(select = "selectDept"))
+	})
+	Emp selectByEmpnoWithDept(int empno);
+	
 	
 	@Insert("""
 			insert into emp

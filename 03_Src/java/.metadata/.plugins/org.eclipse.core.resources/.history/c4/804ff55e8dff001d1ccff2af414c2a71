@@ -1,0 +1,5 @@
+package com.example.imple.city.mapper;
+
+public interface CityMapperTest {
+
+}

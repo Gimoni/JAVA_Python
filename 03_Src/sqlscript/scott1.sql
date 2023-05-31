@@ -25,6 +25,10 @@ where deptno = 10;
 select * from dept;
 select * from dept where deptno=10;
 
+select * from salgrade;
+
+select * from salgrade ORDER BY salgrade.grade;
+select count(*) from salgrade;
 
 commit;
 
@@ -62,3 +66,5 @@ select id
 select *
   from city
  where country_code = 'KOR'; 
+ 
+ select by id FROM city;

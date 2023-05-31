@@ -1,0 +1,31 @@
+package com.example.imple.city;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.imple.city.mapper.CityMapper;
+import com.example.standard.controller.PageableController;
+import com.example.standard.controller.StandardController;
+
+@Controller
+@RequestMapping("/city")
+public class CityController implements StandardController, PageableController{
+
+	@Autowired
+	CityMapper mapper;
+	
+	@Override
+	public void list(Model model) {
+		var list = mapper.selectAllWithCountry();
+		model.addAttribute("list", list);
+	}
+
+	@Override
+	public void page(int pageNum, int pageSize, Model model) {
+		var page = mapper.selectAllWithCountry();
+		model.addAttribute("page", page);
+	}
+
+}

@@ -1,0 +1,45 @@
+package com.example.imple.city;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.imple.city.mapper.CityMapper;
+import com.example.standard.controller.PageableController;
+import com.example.standard.controller.StandardController;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@RequestMapping("/city")
+@Slf4j
+public class CityController implements StandardController, PageableController{
+
+	@Autowired
+	CityMapper mapper;
+	
+	@Override
+	public void list(Model model) {
+		var list = mapper.selectAllWithCountry();
+		model.addAttribute("list", list);
+	}
+
+	@Override
+	public String page(int pageNum, int pageSize, Model model) {
+		log.info(String.format("%s, %s", pageNum, pageSize));
+		
+		PageHelper.startPage(pageNum, pageSize);
+		var list = mapper.selectPage();
+		var paging = PageInfo.of(list, 20);
+		model.addAttribute("list", list);
+		model.addAttribute("paging", paging);
+		
+		return "city/page";
+		
+		
+	}
+
+}

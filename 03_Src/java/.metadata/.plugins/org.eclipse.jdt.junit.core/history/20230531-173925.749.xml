@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CityMapperTest.selectAll" project="chap36" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.imple.city.mapper.CityMapperTest" time="2.688" displayname="CityMapperTest" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.city.mapper.CityMapperTest]">
+    <testcase name="selectAll" classname="com.example.imple.city.mapper.CityMapperTest" time="2.688" displayname="selectAll()" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.city.mapper.CityMapperTest]/[method:selectAll()]"/>
+  </testsuite>
+</testrun>

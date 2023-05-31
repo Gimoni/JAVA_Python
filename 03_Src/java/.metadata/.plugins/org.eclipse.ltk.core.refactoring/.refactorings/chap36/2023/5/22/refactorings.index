@@ -26,3 +26,13 @@
 1685413811463	Move compilation unit
 1685428953847	Move file
 1685436310792	Move compilation unit
+1685494268539	Copy file
+1685506448061	Delete element
+1685511301792	Rename resource 'CityMapper.xml'
+1685511335515	Rename resource 'CityMapperTest.xml'
+1685511543613	Delete element
+1685511960934	Rename type 'CityMapper'
+1685512235083	Copy file
+1685513299076	Copy compilation unit
+1685515767810	Copy file
+1685522348367	Delete element

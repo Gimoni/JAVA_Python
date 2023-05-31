@@ -33,7 +33,7 @@ create table country (
 	gnp					number(10,2),
 	gnp_old				number(10,2),
 	local_name			varchar2(45 char),						
-	government_form		char(45 char),
+	government_form		varchar2(45 char),
 	head_of_state		varchar2(60 char),
 	capital				number(11),
 	code2				char(2  char),

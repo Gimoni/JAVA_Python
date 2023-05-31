@@ -12,93 +12,63 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.example.imple.city.model.City;
+import com.example.imple.country.model.Country;
 import com.example.imple.dept.model.Dept;
 import com.github.pagehelper.Page;
 
 @Mapper
 public interface CityMapper {
 	
-	@Select("select count(*) from city")
 	int countAll();
-	
-	@Results({
-		@Result(property = "countryCode", column= "country_code")
-	})
-	@Select("select * from city")
-	List<City> selectAll();
-	
-	@Results({
-		@Result(property="countryCode", column= "country_code")
-	})
-	@Select("select * from city")
-	Page<City> selectPage();
-	
-	@Results({
-		@Result(property = "countryCode", column = "country_code")
-	})
-	@Select("""
-			select * 
-			  from city
-			 where id = #{id}
-			""")
-	City selectById(@Param("id") int id);
-	
-	
-	@Results({
-		@Result(property = "countryCode", column = "country_code")
-	})	
-	@Select("""
-			select *
-			  from city
-			 where country_code =#{countryCode}
-			""")
 
-	List<City> selectByCountryCode(@Param("countryCode") String CountryCode);
+	Country selectCountry();
+	List<City> selectAll();
+	List<City> selectAllWithCountry();
 	
+	Page<City> selectPage();
+	Page<City> selectPageWithCountry();
 	
+	City selectById(int id);
+	City selectByIdWithCountry(int id);
 	
-//	@Insert("""
-//			insert into dept
-//			values
-//			(#{deptno}, #{dname, jdbcType=VARCHAR}, #{loc, jdbcType=VARCHAR})
+	List<City> selectByCountryCode(String CountryCode);
+	
+
+	
+//	@Select("select count(*) from city")
+//	int countAll();
+//	
+//	@Results({
+//		@Result(property = "countryCode", column= "country_code")
+//	})
+//	@Select("select * from city")
+//	List<City> selectAll();
+//	
+//	@Results({
+//		@Result(property="countryCode", column= "country_code")
+//	})
+//	@Select("select * from city")
+//	Page<City> selectPage();
+//	
+//	@Results({
+//		@Result(property = "countryCode", column = "country_code")
+//	})
+//	@Select("""
+//			select * 
+//			  from city
+//			 where id = #{id}
 //			""")
-//	int insert(@Param("deptno") int deptno, 
-//			   @Param("dname")  String dname, 
-//			   @Param("loc")	String loc);
+//	City selectById(@Param("id") int id);
+//	
+//	
+//	@Results({
+//		@Result(property = "countryCode", column = "country_code")
+//	})	
+//	@Select("""
+//			select *
+//			  from city
+//			 where country_code =#{countryCode}
+//			""")
 //
-//	@Insert("""
-//			insert into dept 
-//			values(
-//				#{d.deptno},
-//				#{d.dname,  jdbcType=VARCHAR},
-//				#{d.loc,  	jdbcType=VARCHAR}
-//			)
-//			""")
-//	int insertDept(@Param("d") Dept dept);
-//	
-//	
-//	@Update ("""
-//			update dept
-//			   set dname  = #{dname, jdbcType=VARCHAR},
-//			   		 loc  = #{loc,	jdbcType=VARCHAR}
-//			 where deptno = #{deptno}
-//			""")
-//	
-//	int update(@Param("deptno")   int deptno,
-//			  @Param("dname") String dname, 
-//			  @Param("loc")   String loc);
-//	
-//	@Update("""
-//			update dept
-//			   set dname  = #{d.dname, jdbcType=VARCHAR},
-//			   		 loc  = #{d.loc,	jdbcType=VARCHAR}
-//			 where deptno = #{d.deptno}			
-//			
-//			""")
-//	int updateDept(@Param("d") Dept dept);
-//	
-//	
-//	@Delete ("delete from dept where deptno=#{deptno}")
-//	int delete(int deptno);
-	
+//	List<City> selectByCountryCode(@Param("countryCode") String CountryCode);
 }
