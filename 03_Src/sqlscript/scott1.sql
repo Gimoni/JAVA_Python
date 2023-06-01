@@ -67,4 +67,40 @@ select *
   from city
  where country_code = 'KOR'; 
  
- select by id FROM city;
+ select city.population from city;
+
+
+select distinct continent from country;
+
+select count(*) from country;
+
+select code
+  from country;
+  
+select code, lower(code)
+  from country;
+  
+select code, lower(code), upper(code)
+  from country;
+  
+select * 
+  from country
+ where code = 'kor';
+ 
+select * 
+  from country
+ where lower(code) = 'kor';
+ 
+select * 
+  from country 
+ where upper(code) = upper('kor');
+ 
+select * 
+  from country
+ where code = upper('kor');
+
+select * from country;
+
+select *  from country_language;
+
+select count(*) from country_language;

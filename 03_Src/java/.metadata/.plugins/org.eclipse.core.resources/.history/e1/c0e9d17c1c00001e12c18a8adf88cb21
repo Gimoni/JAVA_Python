@@ -1,0 +1,22 @@
+package com.example.imple.standard.util;
+
+import org.junit.jupiter.api.Test;
+
+import com.example.standard.util.Gender;
+
+public class GenderTest {
+
+	@Test
+	void values() {
+		for (var g : Gender.values())
+			System.out.println(g);
+		
+		System.out.println(Gender.M);
+		System.out.println(Gender.F);
+	}
+	
+	@Test
+	void stringToEnum() {
+	
+	}
+}

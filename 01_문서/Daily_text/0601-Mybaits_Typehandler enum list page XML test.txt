@@ -1,0 +1,49 @@
+0601 spring boot list page /// 
+ 
+400 error client error
+500 error server error 
+
+default 처리에 문제가 있을 때 
+db에서 변환 처리를 하면서 
+만들고 작성된 Type handler를 사용해서 
+서버오류를 방지. 
+
+mybatis 에서 space name을 
+가져와서 enum 처리 할 때 TypeHandler를 
+구현 사용. 
+
+@Getter 
+enum을 스트링으로 변환. // 
+D:\03_Src\java\chap36\src\test\java\com\example\imple\standard\util\Continent 
+
+
+Assertions. import /// add static + * 
+
+
+
+standard / util / enum class create // >>> @Getter String 변환 ( get ____ )
+type handler 작성. at standard util /// 
+
+mybaits setting  at  application.properties 
+>>>>>  mybaits.type-handlers-package=(handler path)
+
+log setting @Slf4j
+.. at  application.properties 
+
+
+
+
+
+
+C:\opt\eclipse\eclipse.ini
+-Xmx2048m __>>> -Xmx4096m 변경
+
+
+==================================
+
+1. 정보처리 자격증.. 
+2. SQL 자격증 
+3. 빅데이터 기사
+4. 리눅스 마스터
+
+

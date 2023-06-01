@@ -1,0 +1,16 @@
+package com.example.imple.country;
+
+import org.springframework.stereotype.Controller;
+
+import com.example.standard.controller.StandardController;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class CountryController implements StandardController{
+	
+
+}

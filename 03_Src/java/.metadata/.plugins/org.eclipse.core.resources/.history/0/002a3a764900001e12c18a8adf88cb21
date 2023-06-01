@@ -1,0 +1,35 @@
+package com.example.imple.country;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.standard.controller.PageableController;
+import com.example.standard.controller.StandardController;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+@RequestMapping("/country")
+public class CountryController implements StandardController, PageableController{
+
+	@Autowired
+	CountryMapper mapper;
+	
+	@Override
+	public void list(Model model) {
+		
+	}
+
+	@Override
+	public String page(int pageNum2, int pageSize, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

@@ -1,5 +1,10 @@
 package com.example.imple.country.model;
 
+import java.util.List;
+
+import com.example.imple.city.model.City;
+import com.example.standard.util.Continent;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +18,7 @@ import lombok.NonNull;
 public class Country {
 	@NonNull String 	code; 						
 	@NonNull String 	name; 
-	         String 	continent;					
+	         Continent 	continent;					
 			 String 	region;									
 			 Double 	surfaceArea;			
 			 Integer 	indepYear;								
@@ -25,5 +30,6 @@ public class Country {
 			 String 	governmentForm;		
 			 String 	headOfState;		
 			 Long 		capital;			
-			 String 	code2;			
+			 String 	code2;		
+			 List<City>	citys;
 }

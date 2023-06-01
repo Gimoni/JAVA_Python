@@ -1,0 +1,34 @@
+package com.example.imple.standard.util;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+import com.example.standard.util.Continent;
+import com.example.standard.util.Gender;
+
+public class ContinentTest {
+
+	@Test
+	void enumToString() {
+		for (var c : Continent.values())
+			System.out.println(c);
+		
+		System.out.println(Continent.Asia);
+		System.out.println(Continent.Europe);
+		System.out.println(Continent.NorthAmerica);
+		System.out.println(Continent.Africa);
+		System.out.println(Continent.Oceania);
+		System.out.println(Continent.Antarctica);
+		System.out.println(Continent.SouthAmerica);
+	}
+	
+	@Test
+	void stringToEnum() {
+		Continent c1 = Continent.valueOf("Asia");
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			Gender g3 = Gender.valueOf("A");
+		});
+			
+	}
+}

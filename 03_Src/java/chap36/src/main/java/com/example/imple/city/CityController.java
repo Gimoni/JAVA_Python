@@ -37,7 +37,7 @@ public class CityController implements StandardController, PageableController{
 		log.info(String.format("%s, %s", pageNum, pageSize));
 		
 		PageHelper.startPage(pageNum, pageSize);
-		var list = mapper.selectPage();
+		var list = mapper.selectPageWithCountry();
 		var paging = PageInfo.of(list, 10);
 		model.addAttribute("list", list);
 		model.addAttribute("paging", paging);
