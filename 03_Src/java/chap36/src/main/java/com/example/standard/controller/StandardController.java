@@ -7,4 +7,6 @@ public interface StandardController {
 	
 	@GetMapping("/list")
 	void list(Model model);
+
+	String page(int pageNum, int pageSize, Model model);
 }

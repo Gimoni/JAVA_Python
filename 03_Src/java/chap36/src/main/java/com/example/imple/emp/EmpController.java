@@ -20,6 +20,12 @@ public class EmpController implements StandardController  {
 		var list = mapper.selectAll();
 		model.addAttribute("list", list);
 	}
+
+	@Override
+	public String page(int pageNum, int pageSize, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 	

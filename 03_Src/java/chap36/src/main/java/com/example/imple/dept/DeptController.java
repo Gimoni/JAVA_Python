@@ -21,6 +21,12 @@ public class DeptController implements StandardController{
 		var list = mapper.selectAllWithEmps();
 		model.addAttribute("list", list);
 	}
+
+	@Override
+	public String page(int pageNum, int pageSize, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 //	@GetMapping("/list")
 //	void list(Model model) {

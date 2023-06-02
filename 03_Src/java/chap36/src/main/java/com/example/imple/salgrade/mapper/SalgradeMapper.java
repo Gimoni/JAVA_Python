@@ -20,11 +20,17 @@ public interface SalgradeMapper {
 			""")
 	Dept selectDept(int depntno);
 	
+	@Select("""
+			select * 
+			  from salgrade
+			""")
+	List<Salgrade> selectSalgrade();
+	
 	@Select("select * from emp")
 	List<Emp> selectAll();
 	
 	@Select("select count(*) from salgrade")
-	int countsalgradeAll();
+	int countSalgradeAll();
 	
 	@Select("select * from salgrade")
 	List<Salgrade> selectSalgradeAll();

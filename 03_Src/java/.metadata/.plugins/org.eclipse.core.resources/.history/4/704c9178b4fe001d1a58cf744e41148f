@@ -1,5 +1,0 @@
-package com.example.standard.controller;
-
-public interface StandardController {
-
-}

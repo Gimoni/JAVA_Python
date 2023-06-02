@@ -1,0 +1,36 @@
+package com.example.imple.language;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.imple.language.mapper.LanguageMapper;
+import com.example.standard.controller.StandardController;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Controller
+@RequestMapping("/language")
+public class LanguageController implements StandardController{
+	@Autowired
+	LanguageMapper languageMapper;
+
+	@Autowired
+	ObjectMapper objectMapper;
+	
+	@Override
+	public void list(Model model) {
+		var list = languageMapper.selectAll();
+		model.addAttribute("list", list);
+	}
+
+	@Override
+	public String page(int pageNum, int pageSize, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+}

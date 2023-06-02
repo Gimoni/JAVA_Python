@@ -1,5 +1,0 @@
-package com.example.imple.country.mapper;
-
-public interface CountryMapper {
-
-}

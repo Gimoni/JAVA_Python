@@ -18,8 +18,8 @@ delete dept where deptno=10;
 select * from dept;
 
 update dept 
-   set dname = 'xxx',
-         loc = 'null'
+   set dname = '경리부',
+         loc = '서울'
 where deptno = 10;
 
 select * from dept;
@@ -104,3 +104,27 @@ select * from country;
 select *  from country_language;
 
 select count(*) from country_language;
+
+select *
+  from country_language
+ where country_language.country_code = upper('jpn');
+ 
+select count(country_code) 
+  from country_language;
+  
+
+select * from country_language
+ where country_code = upper('jpn');
+
+	select * 
+	  from country_language
+	  order by country_language.country_code;
+ 
+ select * from country
+ where code = upper('jpn');
+
+select * from country_language ORDER by country_language.country_code;
+
+select * from salgrade;
+
+select count(*) from salgrade;

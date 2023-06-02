@@ -1,0 +1,6 @@
+package com.example.imple.salgrade;
+
+@Controller
+public class SalgradeController {
+
+}
