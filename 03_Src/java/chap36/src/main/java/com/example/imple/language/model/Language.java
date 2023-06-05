@@ -1,7 +1,5 @@
 package com.example.imple.language.model;
 
-import com.example.imple.country.model.Country;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,7 +13,7 @@ import lombok.NonNull;
 public class Language {
 	@NonNull String countryCode;
 	@NonNull String	language;
-			 Character is_official;
+			 Character isOfficial;
 			 Double	percentage;
 //			 Country country;
 }

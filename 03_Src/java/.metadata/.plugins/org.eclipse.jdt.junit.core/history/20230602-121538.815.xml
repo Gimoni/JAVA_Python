@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="SalgradeMapperTest.countsalgradeAll" project="chap36" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.imple.salgrade.mapper.SalgradeMapperTest" time="2.202" displayname="SalgradeMapperTest" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.salgrade.mapper.SalgradeMapperTest]">
-    <testcase name="countsalgradeAll" classname="com.example.imple.salgrade.mapper.SalgradeMapperTest" time="2.202" displayname="countsalgradeAll()" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.salgrade.mapper.SalgradeMapperTest]/[method:countsalgradeAll()]"/>
-  </testsuite>
-</testrun>

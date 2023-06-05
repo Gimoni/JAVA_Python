@@ -22,6 +22,9 @@
 <hr>
 <a href="/">Home</a>
 <hr>
+<hr>
+<a href="/city/list">city/list</a>
+<hr>
 <section class="container">
 	<table class="table table-striped table-bordered table-hover">
 		<thead>
@@ -37,7 +40,7 @@
 		<c:forEach var="e" items="${list}">
 			<tr>
 				<td>${e.id}</td>
-				<td>${e.name}</td>
+				<td><a href="/city/detail/${e.id}">${e.name}</a></td>
 				<td>${e.countryCode}</td>
 				<td>${e.district}</td>
 				<td>

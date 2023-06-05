@@ -1,0 +1,13 @@
+package com.example.imple.dept;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.standard.controller.DetailController;
+
+@Controller
+@RequestMapping("/dept")
+public class DeptDetailController implements DetailController<Integer> {
+
+	
+}

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="section"/>
+		<item key="selection" value="country."/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="e."/>
+			<item value="e"/>
+			<item value="country"/>
+			<item value="&lt;/td&gt;"/>
+			<item value="&lt;/td&gt;&lt;/tr&gt;"/>
+			<item value="&lt;th&gt;"/>
+			<item value="&lt;tr&gt;&lt;th&gt;"/>
+			<item value="&#x09;&#x09;&#x09;&#x09;&lt;tr&gt;&lt;th&gt;code&lt;/th&gt; &#x09;&#x09;&#x09;&lt;td&gt;${country.code}&lt;/td&gt;&lt;/tr&gt;"/>
 			<item value="div"/>
 			<item value="col-sm-1"/>
 			<item value="col-lg-4"/>
@@ -15,11 +23,14 @@
 			<item value="td"/>
 			<item value="&#x09;&#x09;&#x09;&#x09;&lt;tr&gt;"/>
 			<item value="&#x09;&lt;main&gt;"/>
-			<item value="int"/>
-			<item value="&#x09;&#x09;int line = r.nextInt(1, 21);"/>
-			<item value="printf"/>
 		</list>
 		<list key="replacehistory">
+			<item value="country."/>
+			<item value="e"/>
+			<item value="&lt;/td&gt;&lt;/tr&gt;"/>
+			<item value="&lt;/td&gt;"/>
+			<item value="&lt;tr&gt;&lt;th&gt;"/>
+			<item value="&lt;th&gt;"/>
 			<item value="section"/>
 			<item value="col-md-1 col-lg-4"/>
 			<item value="lg-4"/>
@@ -29,7 +40,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-18"/>
+		<item key="DIALOG_X_ORIGIN" value="8"/>
 		<item key="DIALOG_Y_ORIGIN" value="214"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>

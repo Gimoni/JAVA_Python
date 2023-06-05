@@ -1,0 +1,53 @@
+0605  프로젝트 시안 
+
+상세페이지 작성.. 
+detail page // 
+
+
+create 
+detail controller 
+
+dept controller - >> DeptListController change file name
+
+Standard Controller --->>> ListController  // change name 
+
+
+-import 방법 
+1. eclipse close 상태에서 프로젝트 압축파일 
+2. 그대로 java/src 에 복사..
+3. 압출풀기. 
+4. webapp symbol link connect needed 
+cmd 관리자 권한//  mklink /d webapp resources \jsp
+
+ 
+
+list controller HttpServletRequest 추가 후 
+에러 수정하고 모든 컨트롤러 확인. 
+
+detatil controller mapping and controller change to " String "  return "dept/detail"
+
+import 사용하지 않는 것을 지우는 것  scroll all import + ctrl + shift + o 
+ 
+
+
+key 행모드 복사를 열보드 복사 
+alt+shft+a
+
+
+ctrl + F 
+단어 찾고 수정. 
+
+
+default 사용 httpstatus.bad_request  
+---->>> 새로 작성하는 컨트롤러 적용. 기존의 컨트롤러는 수정하지 않아도 가능한 settings.. 
+
+create 
+post mapping ㅅㅣ 테스트 gradle security 잠시 꺼두고 서버 재시작
+
+get 방식으로 
+post 전달 post 성공
+get으로 redirect 
+
+
+
+

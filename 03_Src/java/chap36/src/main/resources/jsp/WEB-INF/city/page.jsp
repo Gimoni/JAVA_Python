@@ -24,7 +24,6 @@
 <h1>City Page<span>pageNum =${paging.pageNum}</span></h1>
 <hr>
 <a href="/">Home</a>
-<hr>
 <section class="container">
 	<ul class="list-group list-group-horizontal">
 		<li><a href="/city/page/${paging.navigateFirstPage-1}/${paging.pageSize}" class="list-group-item">Previous</a></li>
@@ -57,7 +56,7 @@
 		<c:forEach var="e" items="${list}">
 			<tr>
 				<td>${e.id}</td>
-				<td>${e.name}</td>
+				<td><a href="/city/detail/${e.id}?pageNum=${paging.pageNum}&pageSize=${paging.pageSize}">${e.name}</a></td>
 				<td>${e.countryCode}</td>
 				<td>${e.district}</td>
 				<td align="right">
@@ -99,7 +98,7 @@
 		<c:forEach var="e" items="${list}">
 			<tr>
 				<td>${e.id}</td>
-				<td>${e.name}</td>
+				<td><a href="/city/detail/${e.id}">${e.name}</a></td>
 				<td>${e.countryCode}</td>
 				<td>${e.district}</td>
 				<td align="right">

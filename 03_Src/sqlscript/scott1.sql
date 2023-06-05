@@ -48,6 +48,9 @@ insert into emp
 values
 (9000, '홍길동');
 
+
+select * from salgrade ;
+
 rollback;
 
 select * from country;
@@ -97,7 +100,11 @@ select *
  
 select * 
   from country
- where code = upper('kor');
+ where code = upper('ARG');
+
+
+select * from country where country.code = 'ARG';
+select * from city where city.country_code = 'ARG';
 
 select * from country;
 
@@ -111,7 +118,8 @@ select *
  
 select count(country_code) 
   from country_language;
-  
+
+
 
 select * from country_language
  where country_code = upper('jpn');
@@ -128,3 +136,4 @@ select * from country_language ORDER by country_language.country_code;
 select * from salgrade;
 
 select count(*) from salgrade;
+

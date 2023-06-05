@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="IsOfficialTest.stringToEnum" project="chap37" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.imple.standard.util.IsOfficialTest" time="0.019" displayname="IsOfficialTest" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.standard.util.IsOfficialTest]">
-    <testcase name="stringToEnum" classname="com.example.imple.standard.util.IsOfficialTest" time="0.019" displayname="stringToEnum()" uniqueid="[engine:junit-jupiter]/[class:com.example.imple.standard.util.IsOfficialTest]/[method:stringToEnum()]"/>
-  </testsuite>
-</testrun>

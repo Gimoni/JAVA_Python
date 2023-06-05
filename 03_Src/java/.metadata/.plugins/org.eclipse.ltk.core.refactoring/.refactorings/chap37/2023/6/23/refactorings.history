@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;language&apos;&#x0D;&#x0A;- Original project: &apos;chap37&apos;&#x0D;&#x0A;- Destination element: &apos;language&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     page.jsp&#x0D;&#x0A;     list.jsp" description="Copy files" element1="src/main/resources/jsp/WEB-INF/language/page.jsp" element2="src/main/resources/jsp/WEB-INF/language/list.jsp" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1685949270170" target="/chap36/src/main/resources/jsp/WEB-INF/language" units="0" version="1.0"/>
+</session>

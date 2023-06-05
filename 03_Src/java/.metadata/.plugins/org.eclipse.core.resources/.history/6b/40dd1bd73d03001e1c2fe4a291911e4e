@@ -1,0 +1,12 @@
+package com.example.standard.controller;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+public interface ListController {
+	
+	@GetMapping("/list")
+	void list(Model model);
+
+	String page(int pageNum, int pageSize, Model model);
+}

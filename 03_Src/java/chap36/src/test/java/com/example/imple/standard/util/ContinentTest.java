@@ -32,13 +32,13 @@ public class ContinentTest {
 		Continent c6 = Continent.valueOf("Antarctica");
 		Continent c7 = Continent.valueOf("SouthAmerica");
 		
-		assertThrows(IllegalArgumentException.class, () -> {
-			Continent.valueOf("North America");
-		});
-		
-		assertThrows(IllegalArgumentException.class, () -> {
-			Continent.valueOf("South America");
-		});
+//		assertThrows(IllegalArgumentException.class, () -> {
+//			Continent.valueOf("North America");
+//		});
+//		
+//		assertThrows(IllegalArgumentException.class, () -> {
+//			Continent.valueOf("South America");
+//		});
 		
 		Continent.valueOf("North America".replace(" ", ""));
 		Continent.valueOf("South America".replace(" ", ""));

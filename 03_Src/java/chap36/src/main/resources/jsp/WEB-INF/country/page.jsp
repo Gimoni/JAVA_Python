@@ -65,7 +65,7 @@
 		<c:forEach var="e" items="${list}">
 			<tr>
 				<td>${e.code}</td>
-				<td>${e.name}</td>
+				<td><a href="/country/detail/${e.code}?pageNum=${paging.pageNum}&pageSize=${paging.pageSize}">${e.name}</a></td>
 				<td>${e.continent.symbol}</td>
 				<td>${e.region}</td>
 				<td>${e.surfaceArea}</td>
