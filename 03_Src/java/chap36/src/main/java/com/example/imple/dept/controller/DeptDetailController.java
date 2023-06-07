@@ -21,7 +21,7 @@ public class DeptDetailController implements DetailController<Integer> {
 	
 	@Override
 	public String detail(Integer key, Model model, HttpServletRequest request) {
-		log.debug("key = {}", key );
+		log.debug("key = {}", key);
 		
 		var dept = mapper.selectByDeptno(key);
 		model.addAttribute("dept", dept);

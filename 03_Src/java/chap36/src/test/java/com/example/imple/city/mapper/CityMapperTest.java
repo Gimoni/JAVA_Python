@@ -15,7 +15,6 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.imple.city.mapper.CityMapper;
-import com.example.imple.city.model.City;
 import com.example.imple.dept.model.Dept;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageHelper;

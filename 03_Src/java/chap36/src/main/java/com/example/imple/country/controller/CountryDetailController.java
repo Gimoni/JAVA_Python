@@ -9,36 +9,26 @@ import com.example.imple.country.mapper.CountryMapper;
 import com.example.standard.controller.PageableController;
 import com.example.standard.controller.DetailController;
 import com.example.standard.controller.ListController;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Controller
+@Slf4j
 @RequestMapping("/country")
-public class CountryDetailController implements DetailController<String>{
-
-	@Autowired
-	CountryMapper countryMapper;
+public class CountryDetailController implements DetailController<String> {
 	
 	@Autowired
-	ObjectMapper objectMapper;
+	CountryMapper mapper;
 
 	@Override
 	public String detail(String key, Model model, HttpServletRequest request) {
-		log.debug("key :{}", key);
-		var country = countryMapper.selectByCode(key);
+		log.debug("key : {}", key);
+		var country = mapper.selectByCode(key);
 		model.addAttribute("country", country);
-		
 		return "country/detail";
 	}
 	
-
-	
-
 }

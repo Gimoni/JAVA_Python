@@ -12,24 +12,24 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Data
-@AllArgsConstructor(staticName="of")
+@AllArgsConstructor(staticName = "of")
 @NoArgsConstructor
 @Builder
 public class Country {
-	@NonNull String 	code; 						
-	@NonNull String 	name; 
-	         Continent 	continent;					
-			 String 	region;									
-			 Double 	surfaceArea;			
-			 Integer 	indepYear;								
-			 Long		population;					
-			 Double		lifeExpectancy;								
-			 Double 	gnp;					
-			 Double 	gnpOld;				
-			 String 	localName;									
-			 String 	governmentForm;		
-			 String 	headOfState;		
-			 Long 		capital;			
-			 String 	code2;		
-			 List<City>	citys;
+	@NonNull String 	code;						
+	@NonNull String 	name;						
+			 Continent 	continent;		
+			 String 	region;						
+			 Double 	surfaceArea;		
+			 Integer 	indepYear;							
+			 Long 		population;			
+			 Double 	lifeExpectancy;						
+			 Double 	gnp;
+			 Double 	gnpOld;
+			 String 	localName;						
+			 String 	governmentForm;
+			 String 	headOfState;
+			 Long 		capital;
+			 String 	code2;
+			 List<City> citys;
 }

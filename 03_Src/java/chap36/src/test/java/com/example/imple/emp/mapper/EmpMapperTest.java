@@ -1,13 +1,14 @@
 package com.example.imple.emp.mapper;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,18 +28,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @SpringBootTest
 public class EmpMapperTest {
 	
-	
 	@Autowired
 	EmpMapper empMapper;
 	
 	@Autowired
 	ObjectMapper objectMapper;
 	
-
 	@Test
 	void countAll() {
 		int cnt = empMapper.countAll();
-		System.out.println("cnt = "+cnt);
+		System.out.println("cnt=" + cnt);
 		assertThat(cnt).isSameAs(14);
 	}
 	
@@ -46,7 +45,7 @@ public class EmpMapperTest {
 	void selectAll() throws IOException {
 		var list = empMapper.selectAll();
 		assertThat(list.size()).isSameAs(14);
-		assertThat(list).allSatisfy(e ->{
+		assertThat(list).allSatisfy(e -> {
 			assertThat(e.getDept()).isNull();
 		});
 		
@@ -58,12 +57,12 @@ public class EmpMapperTest {
 	void selectAllWithDept() throws IOException {
 		var list = empMapper.selectAllWithDept();
 		assertThat(list.size()).isSameAs(14);
-		assertThat(list).allSatisfy(e ->{
+		assertThat(list).allSatisfy(e -> {
 			assertThat(e.getDept()).isNotNull();
 		});
 		
 		objectMapper.createGenerator(System.out)
-		.writeObject(list);
+					.writeObject(list);
 	}
 	
 	@Test
@@ -89,35 +88,30 @@ public class EmpMapperTest {
 		emp = empMapper.selectByEmpnoWithDept(9000);
 		System.out.println(emp);
 		assertNull(emp);
-		assertThat(emp).isNull();		
+		assertThat(emp).isNull();
 	}
 	
 	@Test
 	@Transactional
 //	@Rollback(false)
 	void insertByEmpnoWithEname() {
-		empMapper.insertByEmpnoWithEname(9000, "홍길동");
-		System.out.println(empMapper.selectByEmpno(9000));
-		
-		int cnt = empMapper.insertByEmpnoWithEname(9001, "홍길동");
-		System.out.println("cnt = "+ cnt);
+		int cnt = empMapper.insertByEmpnoWithEname(9000, "홍길동");
+		System.out.println("cnt=" + cnt);
 		assertEquals(1, cnt);
 		
-		assertThrows(DataIntegrityViolationException.class, () ->{
+		assertThrows(DataIntegrityViolationException.class, () -> {
 			empMapper.insertByEmpnoWithEname(9001, null);
 		});
-
+		
 		assertThatThrownBy(()-> {
 			empMapper.insertByEmpnoWithEname(9001, null);
 		}).isInstanceOf(DataIntegrityViolationException.class);
 		
-		assertThrows(DuplicateKeyException.class,()-> {
+		assertThrows(DuplicateKeyException.class, () -> {
 			empMapper.insertByEmpnoWithEname(1001, "홍길동");
 		});
+		
 	}
-	
-	
-	
 	
 	@Test
 	@Transactional
@@ -144,14 +138,7 @@ public class EmpMapperTest {
 		System.out.println(emp2);
 		assertThat(emp).isEqualTo(emp2);
 		
-		emp = new Emp();
-		emp.setEmpno(9200);
-		emp.setEname("홍순이");
-		emp.setGender(Gender.F);
-		emp.setDeptno(10);
-		empMapper.insertEmp(emp);
-		
-		assertThrows(DataIntegrityViolationException.class, ()->{
+		assertThrows(DataIntegrityViolationException.class, () -> {
 			var e = new Emp();
 			e.setEmpno(9200);
 			e.setEname("홍순이");
@@ -160,21 +147,15 @@ public class EmpMapperTest {
 			empMapper.insertEmp(e);
 		});
 		
-		// 입력한 데이터 출력해보기. 
 		objectMapper.createGenerator(System.out)
-		.useDefaultPrettyPrinter()
-		.writeObject(empMapper.selectByEmpno(9000));
-		
-		objectMapper.createGenerator(System.out)
-		.useDefaultPrettyPrinter()
-		.writeObject(empMapper.selectByEmpno(9100));
+					.useDefaultPrettyPrinter()
+					.writeObject(empMapper.selectByEmpno(9000));
 		
 		objectMapper.createGenerator(System.out)
-		.useDefaultPrettyPrinter()
-		.writeObject(empMapper.selectByEmpno(9200));
-		
-		
-	}	
+					.useDefaultPrettyPrinter()
+					.writeObject(empMapper.selectByEmpno(9100));
+					
+	}
 	
 	@Test
 	@Transactional
@@ -185,7 +166,6 @@ public class EmpMapperTest {
 		var emp = empMapper.selectByEmpno(1001);
 		assertThat(emp.getSal()).isEqualTo(500.45);
 		
-		//
 		cnt = empMapper.updateByEmpnoWithSal(1000, 1000);
 		assertThat(cnt).isEqualTo(0);
 		
@@ -206,7 +186,7 @@ public class EmpMapperTest {
 		cnt = empMapper.updateByEmpnoWithDeptno(1002, null);
 		assertThat(cnt).isEqualTo(1);
 		
-		assertThrows(DataIntegrityViolationException.class, ()-> {
+		assertThrows(DataIntegrityViolationException.class, () -> {
 			empMapper.updateByEmpnoWithDeptno(1002, 90);
 		});
 		
@@ -218,8 +198,6 @@ public class EmpMapperTest {
 					.useDefaultPrettyPrinter()
 					.writeObject(empMapper.selectByEmpno(1002));
 	}
-	
-	
 	
 	@Test
 	@Transactional
@@ -237,16 +215,24 @@ public class EmpMapperTest {
 					.writeObject(empMapper.selectByEmpno(1001));
 	}
 	
-	
 	@Test
 	@Transactional
 	void delete() throws IOException {
 		int cnt = empMapper.delete(1001);
 		assertThat(cnt).isEqualTo(1);
 		
+		cnt = empMapper.delete(9000);
+		assertThat(cnt).isEqualTo(0);
+//		
+//		assertThrows(DataIntegrityViolationException.class, ()->{
+//			deptMapper.delete(10);
+//		});
+		
 		objectMapper.createGenerator(System.out)
 					.useDefaultPrettyPrinter()
 					.writeObject(empMapper.selectByEmpno(1001));
 	}
+	
+	
 
 }

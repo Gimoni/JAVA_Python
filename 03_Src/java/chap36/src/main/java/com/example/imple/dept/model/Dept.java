@@ -11,13 +11,12 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Data
-@AllArgsConstructor(staticName ="of")
+@AllArgsConstructor(staticName = "of")
 @NoArgsConstructor
 @Builder
 public class Dept {
 	@NonNull Integer deptno;
 	@NonNull String dname;
 			 String loc;
-			 List<Emp> emps; // 1:N 관계 ..
-
+			 List<Emp> emps;	// 1:N
 }

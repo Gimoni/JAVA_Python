@@ -1,6 +1,5 @@
 package com.example.imple.emp.mapper;
 
-import java.sql.Date;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
@@ -15,28 +14,26 @@ import org.apache.ibatis.annotations.Update;
 
 import com.example.imple.dept.model.Dept;
 import com.example.imple.emp.model.Emp;
-import com.example.standard.util.Gender;
 
 @Mapper
 public interface EmpMapper {
 	
 	@Select("select count(*) from emp")
 	int countAll();
-	
+
 	@Select("""
 			select * 
 			  from dept 
-			 where deptno =${deptno}
+			 where deptno = #{deptno} 
 			""")
 	Dept selectDept(int deptno);
 	
 	@Select("select * from emp")
 	List<Emp> selectAll();
 	
-	
 	@Select("select * from emp")
 	@Results({
-		@Result(property = "deptno", column="deptno"),
+		@Result(property = "deptno", column = "deptno"),
 		@Result(property = "dept", 
 				column = "deptno",
 				one = @One(select = "selectDept"))
@@ -50,20 +47,18 @@ public interface EmpMapper {
 			""")
 	Emp selectByEmpno(int empno);
 	
-	
 	@Select("""
 			select *
 			  from emp
 			 where empno = #{empno} 
 			""")
 	@Results({
-		@Result(property = "deptno", column="deptno"),
+		@Result(property = "deptno", column = "deptno"),
 		@Result(property = "dept", 
 				column = "deptno",
 				one = @One(select = "selectDept"))
 	})
 	Emp selectByEmpnoWithDept(int empno);
-	
 	
 	@Insert("""
 			insert into emp
@@ -89,40 +84,37 @@ public interface EmpMapper {
 			""")
 	int insertEmp(@Param("e") Emp emp);
 	
-
 	@Update("""
-			update emp 
-			   set sal = #{sal, jdbcType=DOUBLE}
+			update emp
+			   set sal 	 = #{sal, jdbcType=DOUBLE}
 			 where empno = #{empno}
 			""")
-	int updateByEmpnoWithSal(@Param("empno") int empno,
-						   @Param("sal")   double sal);
+	int updateByEmpnoWithSal(@Param("empno") int empno, 
+						   	 @Param("sal")	double sal);
 	
 	@Update("""
 			update emp
-			   set deptno = #{deptno, 	jdbcType=INTEGER}
-			  where empno = #{empno}
+			   set deptno = #{deptno, jdbcType=INTEGER}
+			 where empno  = #{empno}
 			""")
-	int updateByEmpnoWithDeptno(@Param("empno") int empno,
-								@Param("deptno") Integer deptno); 
+	int updateByEmpnoWithDeptno(@Param("empno")  int empno, 
+						   	    @Param("deptno") Integer deptno);
 	
 	@Update("""
 			update emp
-			   set ename    = #{e.ename,  		jdbcType=VARCHAR}, 
-			 	   gender   = #{e.gender, 		jdbcType=VARCHAR},
-			 	   job      = #{e.job, 			jdbcType=VARCHAR},
-			 	   mgr      = #{e.mgr, 			jdbcType=INTEGER},
-			 	   hiredate = #{e.hiredate, 	jdbcType=DATE},
-			 	   sal		= #{e.sal, 			jdbcType=DOUBLE},
-			 	   comm     = #{e.comm, 		jdbcType=DOUBLE},
-			 	   deptno   = #{e.deptno, 		jdbcType=INTEGER}
-			 where empno    =#{e.empno} 
+			   set ename 	= #{e.ename,  	jdbcType=VARCHAR}, 
+				   gender 	= #{e.gender, 	jdbcType=VARCHAR},
+				   job 		= #{e.job, 		jdbcType=VARCHAR},
+				   mgr 		= #{e.mgr, 		jdbcType=INTEGER},
+				   hiredate = #{e.hiredate,	jdbcType=DATE},
+				   sal 		= #{e.sal, 		jdbcType=DOUBLE},
+				   comm 	= #{e.comm, 	jdbcType=DOUBLE},
+				   deptno 	= #{e.deptno, 	jdbcType=INTEGER}
+			 where empno	= #{e.empno}     
 			""")
 	int updateEmp(@Param("e") Emp emp);
 	
-	@Delete("delete from emp where empno= #{empno}")
+	@Delete("delete from emp where empno=#{empno}")
 	int delete(int empno);
-
-
 
 }

@@ -14,20 +14,17 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @RequestMapping("/emp")
 @Slf4j
-public class EmpDetailController implements DetailController<Integer>  {
+public class EmpDetailController implements DetailController<Integer> {
 
 	@Autowired
 	EmpMapper mapper;
 
 	@Override
 	public String detail(Integer key, Model model, HttpServletRequest request) {
-		log.debug("key ={}", key);
-		
+		log.debug("key : {}", key);
 		var emp = mapper.selectByEmpno(key);
 		model.addAttribute("emp", emp);
-		
 		return "emp/detail";
 	}
-
 	
 }

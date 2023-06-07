@@ -2,8 +2,6 @@ package com.example.imple.country.mapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -17,21 +15,20 @@ import com.github.pagehelper.PageInfo;
 
 @SpringBootTest
 public class CountryMapperTest {
-	
+
 	@Autowired
 	CountryMapper countryMapper;
 	
 	@Autowired
 	ObjectMapper objectMapper;
 	
-	@Test 
+	@Test
 	void countAll() {
 		var cnt = countryMapper.countAll();
-//		System.out.println(cnt);
 		assertThat(cnt).isEqualTo(239);
 	}
 	
-	@Test 
+	@Test
 	void selectCitys() {
 		var list = countryMapper.selectCitys("KOR");
 		assertThat(list).isNotNull();
@@ -62,15 +59,16 @@ public class CountryMapperTest {
 			if (e.getCitys().size()==0) {
 				System.out.println(e);
 			}
+//			assertThat(e.getCitys()).isNotEmpty();
 		});
 	}
-
+	
 	@Test
-	void selectPage( ) throws IOException {
-		PageHelper.startPage(1, 5);
+	void selectPage() throws IOException {
+		PageHelper.startPage(1, 10);
 		PageHelper.orderBy("code desc");
 		var list = countryMapper.selectPage();
-		var paging = PageInfo.of(list); 
+		var paging = PageInfo.of(list, 20);
 		paging.setList(null);
 		objectMapper.createGenerator(System.out)
 					.writeObject(paging);
@@ -81,36 +79,37 @@ public class CountryMapperTest {
 		PageHelper.startPage(1, 10);
 		PageHelper.orderBy("code desc");
 		var list = countryMapper.selectPageWithCitys();
-		var paging = PageInfo.of(list);
-		paging.setList(null);
+		var paging = PageInfo.of(list, 20);
 		objectMapper.createGenerator(System.out)
 					.writeObject(paging);
 	}
 	
-	@Test 
+	@Test
 	void selectByCode() {
-		var country = countryMapper.selectByCode("aus");
+		var country = countryMapper.selectByCode("kor");
 		assertThat(country).isNotNull();
 		
 		country = countryMapper.selectByCode("koR");
 		assertThat(country).isNotNull();
 		
-		country = countryMapper.selectByCode("Jpn");
+		country = countryMapper.selectByCode("kOR");
 		assertThat(country).isNotNull();
 	}
 	
-	@Test 
+	@Test
 	void selectByCodeWithCitys() {
 		var country = countryMapper.selectByCodeWithCitys("kor");
 		assertThat(country).isNotNull();
 		assertThat(country.getCitys()).isNotEmpty();
 		
-		country = countryMapper.selectByCodeWithCitys("auS");
+		country = countryMapper.selectByCodeWithCitys("koR");
 		assertThat(country).isNotNull();
 		assertThat(country.getCitys()).isNotEmpty();
 		
-		country = countryMapper.selectByCodeWithCitys("jpN");
+		country = countryMapper.selectByCodeWithCitys("kOR");
 		assertThat(country).isNotNull();
 		assertThat(country.getCitys()).isNotEmpty();
 	}
+	
+	
 }

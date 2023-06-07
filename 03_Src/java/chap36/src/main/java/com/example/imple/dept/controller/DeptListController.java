@@ -13,21 +13,15 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("/dept")
-public class DeptListController implements ListController{
+public class DeptListController implements ListController {
 	
 	@Autowired
 	DeptMapper mapper;
-	
 
 	@Override
 	public void list(Model model, HttpServletRequest request) {
 		var list = mapper.selectAllWithEmps();
 		model.addAttribute("list", list);
-		
 	}
 	
-//	@GetMapping("/list")
-//	void list(Model model) {
-//		model.addAttribute("list", mapper.selectAllWithEmps());	
-//	}    /// StandardController interface create at StandardController..  
 }

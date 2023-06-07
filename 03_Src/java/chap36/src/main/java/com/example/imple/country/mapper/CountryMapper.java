@@ -10,21 +10,12 @@ import com.github.pagehelper.Page;
 
 @Mapper
 public interface CountryMapper {
-	
-	int countAll();
-	
-	List<City> 	  selectCitys(String code);
-	
+	int 		  countAll();
+	List<City>	  selectCitys(String code);
 	List<Country> selectAll();
 	List<Country> selectAllWithCitys();
-
 	Page<Country> selectPage();
 	Page<Country> selectPageWithCitys();
-	
-	Country selectByCode(String code);
-	Country selectByCodeWithCitys(String code);
-	
-	
-	
-
+	Country 	  selectByCode(String code);
+	Country 	  selectByCodeWithCitys(String code);
 }

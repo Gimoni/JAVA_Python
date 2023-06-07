@@ -20,11 +20,10 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @RequestMapping("/city")
 @Slf4j
-public class CityDetailController implements DetailController<Integer>{
+public class CityDetailController implements DetailController<Integer> {
 
 	@Autowired
 	CityMapper mapper;
-
 
 	@Override
 	public String detail(Integer key, Model model, HttpServletRequest request) {
@@ -33,7 +32,5 @@ public class CityDetailController implements DetailController<Integer>{
 		model.addAttribute("city", city);
 		return "city/detail";
 	}
-
-
 
 }

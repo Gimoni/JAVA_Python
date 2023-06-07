@@ -20,55 +20,13 @@ import com.github.pagehelper.Page;
 public interface CityMapper {
 	
 	int countAll();
-
-	Country selectCountry();
+	Country	   selectCountry();
 	List<City> selectAll();
 	List<City> selectAllWithCountry();
-	
 	Page<City> selectPage();
 	Page<City> selectPageWithCountry();
+	City 	   selectById(int id);
+	City 	   selectByIdWithCountry(int id);
+	List<City> selectByCountryCode(String countryCode);
 	
-	City selectById(int id);
-	City selectByIdWithCountry(int id);
-	
-	List<City> selectByCountryCode(String CountryCode);
-	
-
-	
-//	@Select("select count(*) from city")
-//	int countAll();
-//	
-//	@Results({
-//		@Result(property = "countryCode", column= "country_code")
-//	})
-//	@Select("select * from city")
-//	List<City> selectAll();
-//	
-//	@Results({
-//		@Result(property="countryCode", column= "country_code")
-//	})
-//	@Select("select * from city")
-//	Page<City> selectPage();
-//	
-//	@Results({
-//		@Result(property = "countryCode", column = "country_code")
-//	})
-//	@Select("""
-//			select * 
-//			  from city
-//			 where id = #{id}
-//			""")
-//	City selectById(@Param("id") int id);
-//	
-//	
-//	@Results({
-//		@Result(property = "countryCode", column = "country_code")
-//	})	
-//	@Select("""
-//			select *
-//			  from city
-//			 where country_code =#{countryCode}
-//			""")
-//
-//	List<City> selectByCountryCode(@Param("countryCode") String CountryCode);
 }

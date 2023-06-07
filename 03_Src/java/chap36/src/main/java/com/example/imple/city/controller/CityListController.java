@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @RequestMapping("/city")
 @Slf4j
-public class CityListController implements ListController{
+public class CityListController implements ListController, PageableController {
 
 	@Autowired
 	CityMapper mapper;
@@ -33,5 +33,25 @@ public class CityListController implements ListController{
 		model.addAttribute("list", list);
 	}
 
+	@Override
+	public String page(int pageNum, int pageSize, Model model) {
+		log.info(String.format("[%s, %s]", pageNum, pageSize));
+		
+		PageHelper.startPage(pageNum, pageSize);
+		var list = mapper.selectPageWithCountry();
+		var paging = PageInfo.of(list, 10);
+		model.addAttribute("list", list);
+		model.addAttribute("paging", paging);
+		
+		try {
+			paging.setList(null);
+			var str = json.writeValueAsString(paging);
+			model.addAttribute("json", str);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+		
+		return "city/page";
+	}
 
 }

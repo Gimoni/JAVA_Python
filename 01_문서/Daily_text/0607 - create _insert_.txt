@@ -1,0 +1,12 @@
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+
+@NotNull
+
+
+@NotBlank
+
+
+@Valid 어노테이션을 주어야 spring이 체크해서 에러정보를 표현한다. 

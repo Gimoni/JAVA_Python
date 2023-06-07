@@ -1,0 +1,41 @@
+package com.example.imple.emp.model;
+
+import java.time.LocalDate;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
+
+import com.example.imple.dept.model.Dept;
+import com.example.standard.util.Gender;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+
+@Data
+@AllArgsConstructor(staticName = "of")
+@NoArgsConstructor
+@Builder
+public class EmpDTO {
+	@NotNull
+	@Range(min =1000, max = 9999)
+	Integer		empno;
+	
+	@NotBlank
+	@Length(max =10)
+	String 		ename;
+	
+	@Pattern(regexp = "M|F")
+	Gender 		gender;
+	String 		job;
+	Integer 	mgr;
+	LocalDate 	hiredate;
+	Double 		sal;
+	Double 		comm;
+	Integer		deptno;
+}

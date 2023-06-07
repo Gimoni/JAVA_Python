@@ -9,10 +9,7 @@ import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedTypes;
 import org.apache.ibatis.type.TypeHandler;
 
-import com.fasterxml.jackson.annotation.JacksonInject.Value;
-
 import lombok.extern.slf4j.Slf4j;
-
 
 @Slf4j
 @MappedTypes(Continent.class)
@@ -46,18 +43,21 @@ public class ContinentTypeHandler implements TypeHandler<Continent> {
 			log.trace(String.format("[%s <= %s]", continent, value));
 			return continent;
 		}
+		
 		return null;
 	}
 
 	@Override
 	public Continent getResult(CallableStatement cs, int columnIndex) throws SQLException {
 		String value = cs.getString(columnIndex);
-
+		
 		if (value != null) {
 			Continent continent = Continent.valueOf(value.replace(" ", ""));
+			log.trace(String.format("[%s <= %s]", continent, value));
 			return continent;
 		}
+		
 		return null;
 	}
-	
+
 }

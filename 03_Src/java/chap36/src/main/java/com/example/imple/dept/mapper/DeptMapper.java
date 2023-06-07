@@ -17,28 +17,25 @@ import com.example.imple.emp.model.Emp;
 
 @Mapper
 public interface DeptMapper {
-	
+
 	@Select("""
-			select  *
+			select * 
 			  from emp
-			 where deptno = #{deptno}
+			 where deptno = #{deptno} 
 			""")
 	List<Emp> selectEmps(int deptno);
 	
-	
 	@Select("select * from dept")
-	List<Dept> selectAll(); 
+	List<Dept> selectAll();
 	
 	@Select("select * from dept")
 	@Results({
-		@Result(property = "deptno", 
-				column = "deptno"),
+		@Result(property = "deptno", column = "deptno"),
 		@Result(property = "emps", 
 				column = "deptno", 
-				many = @Many(select="selectEmps"))
+				many = @Many(select = "selectEmps"))
 	})
-	List<Dept> selectAllWithEmps(); 
-	
+	List<Dept> selectAllWithEmps();
 	
 	@Select("""
 			select *
@@ -46,8 +43,6 @@ public interface DeptMapper {
 			 where deptno = #{deptno} 
 			""")
 	Dept selectByDeptno(int deptno);
-//	매개변수가 하나일 때 param 생략이 가능하다
-//	Dept selectByDeptno(@Param("deptno") int deptno);
 	
 	@Select("""
 			select *
@@ -55,11 +50,10 @@ public interface DeptMapper {
 			 where deptno = #{deptno} 
 			""")
 	@Results({
-		@Result(property = "deptno", 
-				column = "deptno"),
+		@Result(property = "deptno", column = "deptno"),
 		@Result(property = "emps", 
 				column = "deptno", 
-				many = @Many(select="selectEmps"))
+				many = @Many(select = "selectEmps"))
 	})
 	Dept selectByDeptnoWithEmps(int deptno);
 	
@@ -71,40 +65,36 @@ public interface DeptMapper {
 	int insert(@Param("deptno") int deptno, 
 			   @Param("dname")  String dname, 
 			   @Param("loc")	String loc);
-
+	
 	@Insert("""
-			insert into dept 
-			values(
-				#{d.deptno},
-				#{d.dname,  jdbcType=VARCHAR},
-				#{d.loc,  	jdbcType=VARCHAR}
+			insert into dept
+			values (
+				#{d.deptno}, 
+			 	#{d.dname,  jdbcType=VARCHAR}, 
+			 	#{d.loc, 	jdbcType=VARCHAR}
 			)
 			""")
 	int insertDept(@Param("d") Dept dept);
 	
-	
-	@Update ("""
+	@Update("""
 			update dept
-			   set dname  = #{dname, jdbcType=VARCHAR},
-			   		 loc  = #{loc,	jdbcType=VARCHAR}
-			 where deptno = #{deptno}
+			   set dname = #{dname, jdbcType=VARCHAR},
+			       loc   = #{loc,   jdbcType=VARCHAR}
+			 where deptno= ${deptno}     
 			""")
-	
-	int update(@Param("deptno")   int deptno,
-			  @Param("dname") String dname, 
-			  @Param("loc")   String loc);
+	int update(@Param("deptno") int deptno, 
+			   @Param("dname")  String dname, 
+			   @Param("loc")	String loc);
 	
 	@Update("""
 			update dept
-			   set dname  = #{d.dname, jdbcType=VARCHAR},
-			   		 loc  = #{d.loc,	jdbcType=VARCHAR}
-			 where deptno = #{d.deptno}			
-			
+			   set dname = #{d.dname, jdbcType=VARCHAR},
+			       loc   = #{d.loc,   jdbcType=VARCHAR}
+			 where deptno= ${d.deptno}     
 			""")
 	int updateDept(@Param("d") Dept dept);
 	
-	
-	@Delete ("delete from dept where deptno=#{deptno}")
+	@Delete("delete from dept where deptno=#{deptno}")
 	int delete(int deptno);
-	
+
 }
