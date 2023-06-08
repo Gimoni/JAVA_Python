@@ -38,6 +38,18 @@
 			<tr><th>deptno</th> 	<td>${emp.deptno}	</td></tr>
 		</tbody>
 	</table>
+		<hr>
+	<menu class="btn-group">
+		<a href="/emp/create" class="btn btn-primary">추가</a>
+		<a href="/emp/update?empno=${emp.empno}" class="btn btn-secondary">수정</a>
+		<a href="/emp/delete?empno=${emp.empno}" class="btn btn-danger">삭제</a>
+	</menu>
+	<hr>
+	<ul>
+		<li><a href="/emp/create">/emp/create</a></li>
+		<li><a href="/emp/update?empno=${emp.empno}">/emp/update?empno=${emp.empno}</a></li>
+		<li><a href="/emp/delete?empno=${emp.empno}">/emp/delete?empno=${emp.empno}</a></li>
+	</ul>
 </section>
 </body>
 </html>

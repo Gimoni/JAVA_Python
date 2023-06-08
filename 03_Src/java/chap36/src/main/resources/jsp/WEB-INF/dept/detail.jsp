@@ -35,14 +35,14 @@
 	<hr>
 	<menu class="btn-group">
 		<a href="/dept/create" class="btn btn-primary">추가</a>
-		<a href="/dept/update" class="btn btn-secondary">수정</a>
-		<a href="/dept/delete" class="btn btn-danger">삭제</a>
+		<a href="/dept/update?deptno=${dept.deptno}" class="btn btn-secondary">수정</a>
+		<a href="/dept/delete?deptno=${dept.deptno}" class="btn btn-danger">삭제</a>
 	</menu>
 	<hr>
 	<ul>
 		<li><a href="/dept/create">/dept/create</a></li>
-		<li><a href="/dept/update">/dept/update</a></li>
-		<li><a href="/dept/delete">/dept/delete</a></li>
+		<li><a href="/dept/update?deptno=${dept.deptno}">/dept/update?deptno=${dept.deptno}</a></li>
+		<li><a href="/dept/delete?deptno=${dept.deptno}">/dept/delete?deptno=${dept.deptno}</a></li>
 	</ul>
 </section>
 </body>

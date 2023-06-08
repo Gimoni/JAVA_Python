@@ -1,0 +1,5 @@
+package com.example.imple.dept.controller;
+
+public class DeptDeleteController {
+
+}

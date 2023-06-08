@@ -34,6 +34,17 @@ name = <sec:authentication property="name"/>
 </ul>
 <hr>
 <ul>
+	<li><a href="/dept/update?deptno=10    ">/dept/update?deptno=10</a></li>
+	<li><a href="/emp/update?empno=9003   ">/emp/update?empno=9003</a></li>
+	<li><a href="/salgrade/update?grade=1  ">/salgrade/update?grade=1</a></li>
+</ul>
+<hr>
+<ul>
+	<li><a href="/dept/delete?deptno=10    ">/dept/delete?deptno=10</a></li>
+	<li><a href="/emp/delete?empno=9003    ">/emp/delete?empno=9003</a></li>
+	<li><a href="/salgrade/delete?grade=1  ">/salgrade/delete?grade=1</a></li>
+</ul>
+<ul>
 	<li><a href="/city/list">/city/list</a></li>
 	<li><a href="/city/page/1/10">/city/page</a></li>
 	<li><a href="/country/list">/country/list</a></li>

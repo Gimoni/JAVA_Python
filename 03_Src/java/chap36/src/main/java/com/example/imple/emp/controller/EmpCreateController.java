@@ -3,6 +3,8 @@ package com.example.imple.emp.controller;
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -40,13 +42,27 @@ public class EmpCreateController implements CreateController<EmpDTO> {
 	@Override
 	public String create(@Valid EmpDTO dto, BindingResult binding, Model model, HttpServletRequest request,
 			RedirectAttributes attr) {
+		log.info("POST create()...");
+		System.out.println(dto);
 		
 		var session = request.getSession();
 		session.setAttribute("emp", dto);
 		session.setAttribute("binding", binding);
 		
 		if (binding.hasErrors()) {
-			return "redirect:/emp/success?error";
+			return "redirect:/emp/create?error";
+		}
+		
+		var emp = dto.getModel();
+		
+		try {
+			mapper.insertEmp(emp);
+		} catch (DuplicateKeyException e) {
+			binding.reject("duplicate", "직원번호가 중복됩니다.");
+			return "redirect:/emp/create?error";
+		} catch (DataIntegrityViolationException e) {
+			binding.reject("foreign", "부서번호가 존재하지 않습니다.");
+			return "redirect:/emp/create?error";
 		}
 		
 		return "redirect:/emp/success?create";

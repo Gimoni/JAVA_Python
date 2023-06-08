@@ -1,0 +1,25 @@
+package com.example.imple.salgrade.model;
+
+import org.hibernate.validator.constraints.Range;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+
+@Data
+@AllArgsConstructor(staticName="of")
+@NoArgsConstructor
+@Builder
+public class SalgradeDTO {
+	@NonNull 
+	@Range(min =1, max=5)
+	Integer grade;
+	
+	@Range(min =100, max=800)
+	Integer losal;
+	
+	@Range(min =100, max=9999)
+	Integer hisal;
+}
