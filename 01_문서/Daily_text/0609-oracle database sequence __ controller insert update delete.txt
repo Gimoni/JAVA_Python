@@ -1,0 +1,44 @@
+
+DATABASE
+
+Insert 사용 
+===================================
+oracle sequence 
+
+중복 발급이 아닌 새로운 번호 생성. 
+
+drop sequence ---_seq;/ create sequence ---_seq; / select -----.nextval from dual; /
+select-----.curral from dual; / create sequence ---_seq start with (start number);
+
+drop sequence xxx_seq;
+
+create sequence xxx_seq;
+
+select xxx_seq.nextval from dual;
+
+select xxx_seq.currval from dual;
+
+create sequence xxx_seq start with 4078;
+
+
+insert into city
+(id, name)
+values
+(xxx_seq.nextval, 'xxx');
+
+select *
+  from city
+ where id > 4079;
+
+===================================
+
+DB 차원에서 생성된 순번을 관리하는 것을 시퀀스라 한다. 
+
+insert 수행.
+insert에는 select key 가 오는데 key를 확인하는 수단으로 사용. 
+
+
+
+
+
+

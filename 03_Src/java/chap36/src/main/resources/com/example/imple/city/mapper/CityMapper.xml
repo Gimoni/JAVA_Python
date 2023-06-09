@@ -56,4 +56,46 @@
 	 where country_code = #{countryCode} 
 </select>
 
+<!-- <insert id="insertCity"> -->
+<!-- 	<selectKey keyProperty="id" resultType="long" order="BEFORE"> -->
+<!-- 		select city_id_seq.nextval from dual -->
+<!-- 	</selectKey> -->
+<!-- 	insert into city -->
+<!-- 	values ( -->
+<!-- 		#{id},	 -->
+<!-- 		#{name, 		jdbcType=VARCHAR}, -->
+<!-- 		#{countryCode,	jdbcType=VARCHAR}, -->
+<!-- 		#{district, 	jdbcType=VARCHAR}, -->
+<!-- 		#{population,	jdbcType=BIGINT} -->
+<!-- 	) -->
+<!-- </insert> -->
+
+<insert id="insertCity">
+	insert into city
+	values (
+		city_id_seq.nextval,
+		#{name, 		jdbcType=VARCHAR},
+		#{countryCode,	jdbcType=VARCHAR},
+		#{district, 	jdbcType=VARCHAR},
+		#{population,	jdbcType=BIGINT}
+	)
+	<selectKey keyProperty="id" resultType="long" order="AFTER">
+		select city_id_seq.currval from dual
+	</selectKey>
+</insert>
+
+<update id="updateCity">
+	update city 
+	   set name         = #{name, 		jdbcType=VARCHAR},
+		   country_code = #{countryCode,jdbcType=VARCHAR},
+		   district     = #{district, 	jdbcType=VARCHAR},
+		   population   = #{population,	jdbcType=BIGINT}
+     where id 		    = #{id}
+</update>
+
+<delete id="delete">
+	delete from city
+	 where id = #{id}
+</delete>
+
 </mapper>

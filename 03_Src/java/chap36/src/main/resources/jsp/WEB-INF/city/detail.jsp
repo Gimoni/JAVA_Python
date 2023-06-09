@@ -43,6 +43,18 @@
 			<tr><th>population</th>	<td>${city.population}	</td></tr>
 		</tbody>
 	</table>
+	<hr>
+	<menu class="btn-group">
+		<a href="/city/create" class="btn btn-primary">추가</a>
+		<a href="/city/update?id=${city.id}" class="btn btn-secondary">수정</a>
+		<a href="/city/delete?id=${city.id}" class="btn btn-danger">삭제</a>
+	</menu>
+	<hr>
+	<ul>
+		<li><a href="/city/create			   ">/city/create</a></li>
+		<li><a href="/city/update?id=${city.id}">/city/update?id=${city.id}</a></li>
+		<li><a href="/city/delete?id=${city.id}">/city/delete?id=${city.id}</a></li>
+	</ul>
 </section>
 </body>
 </html>

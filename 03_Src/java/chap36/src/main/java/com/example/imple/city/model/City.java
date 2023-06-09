@@ -13,7 +13,7 @@ import lombok.NonNull;
 @NoArgsConstructor
 @Builder
 public class City {
-	@NonNull Long 	 id;
+			 Long 	 id;
 	@NonNull String  name;
 			 String  countryCode;
 			 String  district;

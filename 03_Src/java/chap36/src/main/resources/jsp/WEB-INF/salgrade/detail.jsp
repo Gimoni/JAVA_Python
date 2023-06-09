@@ -29,9 +29,11 @@
 <section class="container table-responsive" style="border: 10px solid gray">
 	<table class="table table-striped table-dark table-bordered table-hover">
 		<tbody>
+			<tr>
 				<tr><th>grade</th> <td>${salgrade.grade}</td></tr>
 				<tr><th>losal</th> <td>${salgrade.losal}</td></tr>
 				<tr><th>hisal</th> <td>${salgrade.hisal}</td></tr>
+			</tr>	
 		</tbody>
 	</table>
 	<hr>

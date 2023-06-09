@@ -34,6 +34,12 @@ name = <sec:authentication property="name"/>
 </ul>
 <hr>
 <ul>
+	<li><a href="/dept/detail/10    ">/dept/detail/10</a></li>
+	<li><a href="/emp/detail/1001     ">/emp/detail/1001</a></li>
+	<li><a href="/salgrade/detail/1">/salgrade/detail/1</a></li>
+</ul>
+<hr>
+<ul>
 	<li><a href="/dept/update?deptno=10    ">/dept/update?deptno=10</a></li>
 	<li><a href="/emp/update?empno=9003   ">/emp/update?empno=9003</a></li>
 	<li><a href="/salgrade/update?grade=1  ">/salgrade/update?grade=1</a></li>
@@ -41,9 +47,10 @@ name = <sec:authentication property="name"/>
 <hr>
 <ul>
 	<li><a href="/dept/delete?deptno=10    ">/dept/delete?deptno=10</a></li>
-	<li><a href="/emp/delete?empno=9003    ">/emp/delete?empno=9003</a></li>
+	<li><a href="/emp/delete?empno=1001    ">/emp/delete?empno=1001</a></li>
 	<li><a href="/salgrade/delete?grade=1  ">/salgrade/delete?grade=1</a></li>
 </ul>
+<hr>
 <ul>
 	<li><a href="/city/list">/city/list</a></li>
 	<li><a href="/city/page/1/10">/city/page</a></li>
@@ -51,6 +58,12 @@ name = <sec:authentication property="name"/>
 	<li><a href="/country/page/1/10">/country/page</a></li>
 	<li><a href="/language/list">/language/list</a></li>
 	<li><a href="/language/page/1/10">/language/page</a></li>
+</ul>
+<hr>
+<ul>
+	<li><a href="/city/create">/city/create</a></li>
+	<li><a href="/city/update?id=2331">/city/update</a></li>
+	<li><a href="/city/delete?id=2331">/city/delete</a></li>
 </ul>
 
 

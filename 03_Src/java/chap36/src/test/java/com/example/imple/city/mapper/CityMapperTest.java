@@ -15,6 +15,7 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.imple.city.mapper.CityMapper;
+import com.example.imple.city.model.City;
 import com.example.imple.dept.model.Dept;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageHelper;
@@ -130,115 +131,61 @@ public class CityMapperTest {
 					.useDefaultPrettyPrinter()
 					.writeObject(list);
 	}
-//	
-//	@Test
-//	@Transactional
-////	@Rollback(false)
-//	void insert() {
-//		deptMapper.insert(50, "개발부", "부산");
-//		System.out.println(deptMapper.selectByDeptno(50));
-//		
-//		deptMapper.insert(60, "개발2부", null);
-//		System.out.println(deptMapper.selectByDeptno(60));
-//		
-//		try {
-//			deptMapper.insert(50, "개발3부", "서울");
-//		} catch (DuplicateKeyException e) {
-//			System.out.println("50번 부서는 사용할 수 없습니다.");
-//		}
-//		
-//		try {
-//			deptMapper.insert(70, null, null);
-//		} catch (DataIntegrityViolationException e) {
-//			System.out.println(e.getMessage());
-//		}
-//		
-//		assertThrows(DataIntegrityViolationException.class, () -> {
-//			deptMapper.insert(100, "총무부", null);
-//		});
-//		
-//	}
-//	
-//	@Test
-//	@Transactional
-//	void insertDept() throws IOException {
-//		var dept = new Dept(50, "개발1부", "서울");
-//		int cnt = deptMapper.insertDept(dept);
-//		assertThat(cnt).isEqualTo(1);
-//		
-//		dept = new Dept(60, "개발2부", null);
-//		cnt = deptMapper.insertDept(dept);
-//		assertThat(cnt).isEqualTo(1);
-//		
-//		assertThrows(DuplicateKeyException.class, () -> {
-//			deptMapper.insertDept(new Dept(60, "개발3부", null));
-//		});
-//		
-//		assertThrows(DataIntegrityViolationException.class, () -> {
-//			deptMapper.insertDept(new Dept(60, null, null));
-//		});
-//		
-//		assertThrows(DataIntegrityViolationException.class, () -> {
-//			deptMapper.insertDept(new Dept(200, "개발4부", null));
-//		});
-//		
-//		objectMapper.createGenerator(System.out)
-//					.useDefaultPrettyPrinter()
-//					.writeObject(deptMapper.selectAll());
-//	}
-//	
-//	@Test
-//	@Transactional
-//	void update() throws IOException {
-//		int cnt = deptMapper.update(10, "xxx", "yyy");
-//		assertThat(cnt).isEqualTo(1);
-//		
-//		cnt = deptMapper.update(50, "xxx", "yyy");
-//		assertThat(cnt).isEqualTo(0);
-//		
-//		assertThrows(DataIntegrityViolationException.class, () -> {
-//			try {
-//				deptMapper.update(20, null, "서울");
-//			} catch (UncategorizedSQLException e) {
-//				throw new DataIntegrityViolationException(e.getMessage());
-//			}
-//		});
-//		
-//		cnt = deptMapper.update(100, "개발4부", "부산");
-//		assertThat(cnt).isEqualTo(0);
-//		
-//		cnt = deptMapper.update(30, "개발4부", null);
-//		assertThat(cnt).isEqualTo(1);
-//		
-//		objectMapper.createGenerator(System.out)
-//					.useDefaultPrettyPrinter()
-//					.writeObject(deptMapper.selectAll());
-//	}
-//	
-//	@Test
-//	@Transactional
-//	void updateDept() {
-//		
-//	}
-//	
-//	@Test
-//	@Transactional
-//	void delete() throws IOException {
-//		int cnt = deptMapper.delete(90);
-//		assertThat(cnt).isEqualTo(0);
-//		
-//		cnt = deptMapper.delete(40);
-//		assertThat(cnt).isEqualTo(1);
-//		
-//		assertThrows(DataIntegrityViolationException.class, ()->{
-//			deptMapper.delete(10);
-//		});
-//		
-//		objectMapper.createGenerator(System.out)
-//					.useDefaultPrettyPrinter()
-//					.writeObject(deptMapper.selectAll());
-//	}
-//	
-//	
 
+	@Test 
+	@Transactional
+	void insertCity() {
+		var city = City.builder()
+					   .name("xxx")
+					   .build();
+		cityMapper.insertCity(city);
+		System.out.println(city);
+		assertThat(city.getId()).isNotNull();
+		
+		assertThrows(DataIntegrityViolationException.class, ()-> {
+			var c = City.builder()
+					.name("서울")
+					.countryCode("XXX")
+					.build();
+			cityMapper.insertCity(c);
+			
+		}); 
+		
+		var c = City.builder()
+					.name("서울")
+					.countryCode("KOR")
+					.build();
+		cityMapper.insertCity(c);
+		System.out.println(c);
+	}
+	
+	@Test
+	void updateCity() {
+		var seoul = cityMapper.selectById(2331);
+		System.out.println(seoul);
+		
+		seoul.setName("서울");
+		cityMapper.updateCity(seoul);
+		System.out.println(seoul);
+		
+		assertThrows(DataIntegrityViolationException.class, ()-> {
+			seoul.setCountryCode("kor");
+			cityMapper.updateCity(seoul);
+		});
+	}
+	
+	
+	@Test
+	@Transactional
+	void delete() {
+		var cnt = cityMapper.delete(2331);
+		assertThat(cnt).isEqualTo(1);
+		
+		var city = cityMapper.selectById(2331);
+		assertThat(city).isNull();
+		
+		cnt = cityMapper.delete(90000);
+		assertThat(cnt).isEqualTo(0);
+	}
+	
 }

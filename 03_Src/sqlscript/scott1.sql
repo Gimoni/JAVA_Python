@@ -137,3 +137,7 @@ select * from salgrade;
 
 select count(*) from salgrade;
 
+
+
+create sequence xxx_seq;
+

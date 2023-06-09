@@ -53,6 +53,18 @@
 				<tr><th>code2</th>             <td>${country.code2}</td></tr>             
 		</tbody>
 	</table>
+		<hr>
+	<menu class="btn-group">
+		<a href="/country/create" class="btn btn-primary">추가</a>
+		<a href="/country/update?code=${country.code}" class="btn btn-secondary">수정</a>
+		<a href="/country/delete?code=${country.code}" class="btn btn-danger">삭제</a>
+	</menu>
+	<hr>
+	<ul>
+		<li><a href="/country/create			   ">/city/create</a></li>
+		<li><a href="/country/update?code=${country.code}">/country/update?code=${country.code}</a></li>
+		<li><a href="/country/delete?code=${country.code}">/country/delete?code=${country.code}</a></li>
+	</ul>
 </section>
 </body>
 </html>

@@ -2,9 +2,12 @@ package com.example.imple.country.model;
 
 import java.util.List;
 
+import org.hibernate.validator.constraints.Length;
+
 import com.example.imple.city.model.City;
 import com.example.standard.util.Continent;
 
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

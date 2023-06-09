@@ -29,4 +29,8 @@ public interface CityMapper {
 	City 	   selectByIdWithCountry(int id);
 	List<City> selectByCountryCode(String countryCode);
 	
+	int insertCity (City city);
+	int updateCity (City city);
+	int delete(long id);
+	
 }

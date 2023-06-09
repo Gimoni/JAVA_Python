@@ -6,3 +6,12 @@
 5월 23, 2023 16:34:24.105 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
 5월 23, 2023 16:36:47.08 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
 5월 23, 2023 17:46:48.456 [3228:11340:0523/174648.455:ERROR:interface_endpoint_client.cc(696)] Message 5 rejected by interface blink.mojom.WidgetHost
+
+6월 09, 2023 13:35:40.883 NEW SESSION
+6월 09, 2023 13:35:40.883 [15620:13464:0609/133540.847:ERROR:interface_endpoint_client.cc(697)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 09, 2023 13:42:40.29 [0609/134239.998:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\python\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\2143ecfa-62df-413e-95a9-e523ab04d9a0: 지정된 파일을 찾을 수 없습니다. (0x2)
+6월 09, 2023 13:42:40.31 [0609/134240.005:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\python\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\2143ecfa-62df-413e-95a9-e523ab04d9a0: 지정된 파일을 찾을 수 없습니다. (0x2)
+6월 09, 2023 13:42:40.31 [0609/134240.009:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\python\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\2143ecfa-62df-413e-95a9-e523ab04d9a0: 지정된 파일을 찾을 수 없습니다. (0x2)
+6월 09, 2023 13:42:40.31 [0609/134240.011:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\python\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\2143ecfa-62df-413e-95a9-e523ab04d9a0: 지정된 파일을 찾을 수 없습니다. (0x2)
+6월 09, 2023 13:49:30.177 [15620:13464:0609/134930.177:ERROR:interface_endpoint_client.cc(697)] Message 5 rejected by interface blink.mojom.WidgetHost
+6월 09, 2023 17:43:51.968 [15620:13464:0609/174351.967:ERROR:interface_endpoint_client.cc(697)] Message 5 rejected by interface blink.mojom.WidgetHost
