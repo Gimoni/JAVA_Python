@@ -1,0 +1,16 @@
+package com.example.imple.user.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor(staticName="of")
+@NoArgsConstructor
+@Builder
+public class UserDTO {
+	String username;
+	String password;
+	String name;
+}
