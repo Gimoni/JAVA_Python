@@ -1,0 +1,73 @@
+package com.example.imple.user.service;
+
+import java.util.Objects;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.example.imple.user.mapper.UserMapper;
+import com.example.imple.user.model.User;
+import com.example.imple.user.model.UserDTO;
+
+import ch.qos.logback.core.model.Model;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.Valid;
+
+@Service
+public class UserCreateService  {
+
+	@Autowired
+	UserMapper mapper;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
+	@Autowired
+	private UserCreateService userCreateService;
+	
+	public void UserCreate (UserDTO userDTO) {
+		String encodedpassword = passwordEncoder.encode(userDTO.getPassword());
+		    userDTO.setPassword(encodedpassword);
+		
+	
+
+
+		
+		User users =  User.builder()
+						  .id(userDTO.getId())
+						  .password(encodedpassword)
+						  .name(userDTO.getName())
+						  .mobile(userDTO.getMobile())
+						  .build();
+		
+		mapper.insertUser(users);
+		
+	}
+
+	@Transactional
+	public String create(@Valid UserDTO dto, BindingResult binding, Model model, HttpServletRequest request,
+	                     RedirectAttributes attr) {
+	    // ...
+
+	    var user = dto.getModel();
+	    
+	    try {
+	        userCreateService.UserCreate(dto);
+	        return "User created successfully";
+	    } catch (DuplicateKeyException e) {
+	        // ...
+	    	return "Failed to create user";
+	    }
+	    
+		
+	}
+
+}

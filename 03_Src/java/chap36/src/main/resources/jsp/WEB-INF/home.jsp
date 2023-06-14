@@ -19,7 +19,17 @@
 <body>
 <h1>Home 화면</h1>
 <hr>
+<sec:authorize access="isAuthenticated()">
 name = <sec:authentication property="name"/>
+</sec:authorize>
+<hr>
+	<sec:authorize access="isAnonymous()">
+	<a href="/user/login">Login</a>
+	</sec:authorize>
+	
+	<sec:authorize access="isAuthenticated()">
+	<a href="/user/logout">Logout</a>
+	</sec:authorize>
 <hr>
 <ul>
 	<li><a href="/dept/list    ">/dept/list</a></li>

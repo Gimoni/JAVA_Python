@@ -1,0 +1,42 @@
+package com.example.imple.user.mapper;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class UserMapperTest {
+
+	@Autowired
+	UserMapper usermapper;
+	
+	@Test
+	void selectById() {
+		var user = usermapper.selectById("python");
+		System.out.println(user);
+		assertThat(user).isNotNull();
+		assertThat(user.getId()).isEqualTo("python");
+		
+		user = usermapper.selectById("xxx");
+		System.out.println(user);
+		assertThat(user).isNull();
+	}
+	
+	@Test
+	void selectByRole() {
+		var role = usermapper.selectByRole("ADMIN");
+		System.out.println(role);
+		assertThat(role).isNotNull();
+		
+		role = usermapper.selectByRole("USER");
+		System.out.println(role);
+	}
+	
+	@Test
+	void selectByPassword() {
+		var password = usermapper.selectByPassword("$2a$10$ayg93l/BuyOQ0b/1huGiJuBXm71M9fELCMt4OZ0da1bEX2mweIbcm");
+		System.out.println(password);
+	}
+}

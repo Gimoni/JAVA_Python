@@ -18,7 +18,7 @@ public class UserLoginController {
 	String loginFail() {
 		System.out.println("loginFail()...");
 		
-		return "user/login-fail"; 
+		return "user/login"; 
 	}
 	
 }

@@ -33,11 +33,13 @@
 		</tbody>
 	</table>
 	<hr>
+	<sec:authorize access="hasRole('ADMIN')">
 	<menu class="btn-group">
 		<a href="/dept/create" class="btn btn-primary">추가</a>
 		<a href="/dept/update?deptno=${dept.deptno}" class="btn btn-secondary">수정</a>
 		<a href="/dept/delete?deptno=${dept.deptno}" class="btn btn-danger">삭제</a>
 	</menu>
+	</sec:authorize>
 	<hr>
 	<ul>
 		<li><a href="/dept/create">/dept/create</a></li>

@@ -1,0 +1,68 @@
+package com.example.imple.user.service;
+
+import java.util.Objects;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.imple.user.mapper.UserMapper;
+import com.example.imple.user.model.User;
+import com.example.imple.user.model.UserDTO;
+import com.example.standard.controller.CreateController;
+
+import jakarta.validation.Valid;
+
+@Service
+public class UserCreateService implements CreateController<UserDTO> {
+
+	@Autowired
+	UserMapper mapper;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
+	@Autowired
+	private UserCreateService userCreateService;
+	
+	public void UserCreate (UserDTO userDTO) {
+		String encodedpassword = passwordEncoder.encode(userDTO.getPassword());
+		    userDTO.setPassword(encodedpassword);
+		
+	
+
+
+		
+		User users =  User.builder()
+						  .id(userDTO.getId())
+						  .password(encodedpassword)
+						  .name(userDTO.getName())
+						  .mobile(userDTO.getMobile())
+						  .build();
+		
+		mapper.insertUser(users);
+		
+	}
+
+	@Override
+	@Transactional
+	public String create(@Valid UserDTO dto, BindingResult binding, Model model, HttpServletRequest request,
+	                     RedirectAttributes attr) {
+	    // ...
+
+	    var user = dto.getModel();
+	    try {
+	        userCreateService.createUser(user); // UserCreateService에서 유저 생성 처리 (비밀번호 인코딩 포함)
+	    } catch (DuplicateKeyException e) {
+	        // ...
+	    }
+
+	    // ...
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.example.imple.user.model;
+
+public class User {
+
+}

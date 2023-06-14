@@ -1,0 +1,16 @@
+package com.example.imple.user.service;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+public class BCryptPasswordEncoderTest {
+
+	BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+	
+	@Test
+	void encoder() {
+		var encodeStr = encoder.encode("1234");
+		System.out.println(encodeStr);
+	}
+	//$2a$10$ayg93l/BuyOQ0b/1huGiJuBXm71M9fELCMt4OZ0da1bEX2mweIbcm
+}

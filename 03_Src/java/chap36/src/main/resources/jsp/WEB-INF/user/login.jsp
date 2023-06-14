@@ -23,12 +23,15 @@
 <a href="/">HOME</a>
 <hr>
 <section class="container">
-	<form action="user/login" method="post">
+	<form action="/user/login" method="post">
 		<input class="form-control" name="username" placeholder="USERNAME" value="${param.username}"/>
 		<hr>
 		<input class="form-control" name="password" type="password" placeholder="PASSWORD" value="${param.password}"/>
 		<hr>
-		<input class="btn btn-primary" type="submit"/>
+		<input name="remember-me" type="checkbox" checked="checked"> Remember me
+		<hr>
+		<input class="btn btn-primary" type="submit" value="submit"/>
+		<a href="/user/create" >create</a>
 	</form>
 </section>
 <span style="color: red;"> ${param.message}</span>
