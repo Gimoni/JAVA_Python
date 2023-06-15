@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-store">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/favicon.png">
+<link rel="icon" href="/heart_like_love_icon.png"> 
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <script src="/webjars/jquery/jquery.min.js"></script>
@@ -44,17 +44,19 @@
 		</tbody>
 	</table>
 	<hr>
+	<sec:authorize access="hasRole('ADMIN')">
 	<menu class="btn-group">
 		<a href="/city/create" class="btn btn-primary">추가</a>
 		<a href="/city/update?id=${city.id}" class="btn btn-secondary">수정</a>
 		<a href="/city/delete?id=${city.id}" class="btn btn-danger">삭제</a>
 	</menu>
+	</sec:authorize>
 	<hr>
-	<ul>
-		<li><a href="/city/create			   ">/city/create</a></li>
-		<li><a href="/city/update?id=${city.id}">/city/update?id=${city.id}</a></li>
-		<li><a href="/city/delete?id=${city.id}">/city/delete?id=${city.id}</a></li>
-	</ul>
+<!-- 	<ul> -->
+<!-- 		<li><a href="/city/create			   ">/city/create</a></li> -->
+<%-- 		<li><a href="/city/update?id=${city.id}">/city/update?id=${city.id}</a></li> --%>
+<%-- 		<li><a href="/city/delete?id=${city.id}">/city/delete?id=${city.id}</a></li> --%>
+<!-- 	</ul> -->
 </section>
 </body>
 </html>

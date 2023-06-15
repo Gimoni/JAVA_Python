@@ -9,18 +9,58 @@
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-store">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/favicon.png">
+<link rel="icon" href="/heart_like_love_icon.png"> 
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <script src="/webjars/jquery/jquery.min.js"></script>
 
 <title>home.jsp</title>
 </head>
+<style type="text/css">
+/* div#box { */
+/* 	background-image: url("resources/static/img/face_grin_tongue_icon.png"); */
+/* } */
+</style>
+
 <body>
-<h1>Home 화면</h1>
+<div id="box">
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>Home page</h1>
+  <p><sec:authorize access="isAuthenticated()">
+&nbsp; Login user &nbsp; <sec:authentication property="name"/>
+</sec:authorize></p> 
+</div>
+<nav class="navbar navbar-expand-md bg-light navbar-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/dept/list">Dept</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/emp/list">Emp</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/salgrade/list">Salgrade</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/country/list">Country</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/city/list">City</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/language/list">Language</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <hr>
 <sec:authorize access="isAuthenticated()">
-name = <sec:authentication property="name"/>
+&nbsp; Login user &nbsp; <sec:authentication property="name"/>
 </sec:authorize>
 <hr>
 	<sec:authorize access="isAnonymous()">
@@ -31,6 +71,17 @@ name = <sec:authentication property="name"/>
 	<a href="/user/logout">Logout</a>
 	</sec:authorize>
 <hr>
+<!-- <h2></h2> -->
+<!-- <button onclick="this.innerHTML=Date()">CurrentTime</button> -->
+<!-- <hr> -->
+
+<%-- <sec:authorize access="isAuthenticated()"> --%>
+<!-- <h3>로그인해서 인증을 받은 사람이면 보임</h3> -->
+<%-- name = <sec:authentication property="name"/><br> --%>
+<%-- 권한 = <sec:authentication property="principal.authorities"/> --%>
+<%-- </sec:authorize> --%>
+
+
 <ul>
 	<li><a href="/dept/list    ">/dept/list</a></li>
 	<li><a href="/emp/list     ">/emp/list</a></li>
@@ -40,25 +91,21 @@ name = <sec:authentication property="name"/>
 <ul>
 	<li><a href="/dept/create    ">/dept/create</a></li>
 	<li><a href="/emp/create     ">/emp/create</a></li>
-	<li><a href="/salgrade/create">/salgrade/create</a></li>
 </ul>
 <hr>
 <ul>
 	<li><a href="/dept/detail/10    ">/dept/detail/10</a></li>
 	<li><a href="/emp/detail/1001     ">/emp/detail/1001</a></li>
-	<li><a href="/salgrade/detail/1">/salgrade/detail/1</a></li>
 </ul>
 <hr>
 <ul>
 	<li><a href="/dept/update?deptno=10    ">/dept/update?deptno=10</a></li>
 	<li><a href="/emp/update?empno=9003   ">/emp/update?empno=9003</a></li>
-	<li><a href="/salgrade/update?grade=1  ">/salgrade/update?grade=1</a></li>
 </ul>
 <hr>
 <ul>
 	<li><a href="/dept/delete?deptno=10    ">/dept/delete?deptno=10</a></li>
 	<li><a href="/emp/delete?empno=1001    ">/emp/delete?empno=1001</a></li>
-	<li><a href="/salgrade/delete?grade=1  ">/salgrade/delete?grade=1</a></li>
 </ul>
 <hr>
 <ul>
@@ -74,8 +121,10 @@ name = <sec:authentication property="name"/>
 	<li><a href="/city/create">/city/create</a></li>
 	<li><a href="/city/update?id=2331">/city/update</a></li>
 	<li><a href="/city/delete?id=2331">/city/delete</a></li>
+	<li><a href="/dept/create">/dept/create</a></li>
 </ul>
 
 
+</div>
 </body>
 </html>

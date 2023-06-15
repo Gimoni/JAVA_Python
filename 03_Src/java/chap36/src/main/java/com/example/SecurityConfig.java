@@ -37,18 +37,20 @@ public class SecurityConfig {
 			request.dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll();
 			request.requestMatchers("/", "/error").permitAll();
 			request.requestMatchers("/webjars/**").permitAll();
-			
+//			
 			request.requestMatchers("/dept/list", 	  "/dept/detail/{key}").permitAll();
 			request.requestMatchers("/emp/list", 	  "/emp/detail/{key}").permitAll();
 			request.requestMatchers("/salgrade/list", "/salgrade/detail/{key}").permitAll();
+			request.requestMatchers("/city/list", "/city/detail/{key}").permitAll();
+			request.requestMatchers("/country/list", "/country/detail/{key}").permitAll();
+			request.requestMatchers("/language/list", "/language/detail/{key}").permitAll();
+			request.requestMatchers("/country/page/1/10", "/country/page/{key1}/{key2}").permitAll();
+			request.requestMatchers("/language/page/1/10", "/language/page/{key1}/{key2}").permitAll();
 			request.requestMatchers("/user/create").permitAll();
-			
-			request.requestMatchers("/dept/create",
+//			
+			request.requestMatchers("/dept/create", 
 									"/dept/update",
-									"/dept/delete", 
-									"/emp/create",
-									"/emp/update",
-									"/emp/delete").hasAnyRole("ADMIN");
+									"/dept/delete").hasAnyRole("ADMIN");
 			
 			
 			request.anyRequest().authenticated();
@@ -68,6 +70,7 @@ public class SecurityConfig {
 		
 		http.logout(logout -> {
 			logout.logoutUrl("/user/logout");
+			logout.permitAll();
 		});
 		 
 		// remember 

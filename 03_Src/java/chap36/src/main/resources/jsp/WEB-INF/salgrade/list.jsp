@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Coche-Control" content="no-store">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/faviconAlpha.png"> 
+<link rel="icon" href="/heart_like_love_icon.png"> 
 <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.css">
 <script src="/webjars/bootstrap/5.2.3/js/bootstrap.js"></script>
 <script src="/webjars/jquery/jqurey.min.js"></script>
@@ -36,7 +36,7 @@
 		<tbody>
 		<c:forEach var="e" items="${list}">
 			<tr>
-				<td><a href="/salgrade/detail/${e.grade}">${e.grade}</a></td>
+				<td>${e.grade}</td>
 				<td>${e.losal}</td>
 				<td>${e.hisal}</td>
 			</tr>

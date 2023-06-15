@@ -3,6 +3,7 @@ package com.example.imple.language.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import com.example.imple.language.model.Language;
 import com.github.pagehelper.Page;

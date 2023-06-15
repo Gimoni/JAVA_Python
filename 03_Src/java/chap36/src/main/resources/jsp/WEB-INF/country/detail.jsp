@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-store">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/favicon.png">
+<link rel="icon" href="/heart_like_love_icon.png"> 
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <script src="/webjars/jquery/jquery.min.js"></script>
@@ -54,17 +54,19 @@
 		</tbody>
 	</table>
 		<hr>
+	<sec:authorize access="hasRole('ADMIN')">
 	<menu class="btn-group">
 		<a href="/country/create" class="btn btn-primary">추가</a>
 		<a href="/country/update?code=${country.code}" class="btn btn-secondary">수정</a>
 		<a href="/country/delete?code=${country.code}" class="btn btn-danger">삭제</a>
 	</menu>
+	</sec:authorize>
 	<hr>
-	<ul>
-		<li><a href="/country/create			   ">/city/create</a></li>
-		<li><a href="/country/update?code=${country.code}">/country/update?code=${country.code}</a></li>
-		<li><a href="/country/delete?code=${country.code}">/country/delete?code=${country.code}</a></li>
-	</ul>
+<!-- 	<ul> -->
+<!-- 		<li><a href="/country/create			   ">/city/create</a></li> -->
+<%-- 		<li><a href="/country/update?code=${country.code}">/country/update?code=${country.code}</a></li> --%>
+<%-- 		<li><a href="/country/delete?code=${country.code}">/country/delete?code=${country.code}</a></li> --%>
+<!-- 	</ul> -->
 </section>
 </body>
 </html>

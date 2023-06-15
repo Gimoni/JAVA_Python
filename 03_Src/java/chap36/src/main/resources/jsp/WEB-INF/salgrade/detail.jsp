@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Coche-Control" content="no-store">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/faviconAlpha.png"> 
+<link rel="icon" href="/heart_like_love_icon.png">  
 <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.css">
 <script src="/webjars/bootstrap/5.2.3/js/bootstrap.js"></script>
 <script src="/webjars/jquery/jqurey.min.js"></script>
@@ -37,11 +37,12 @@
 		</tbody>
 	</table>
 	<hr>
+	<sec:authorize access="hasRole('ADMIN')">
 	<menu class="btn-group">
 		<a href="/salgrade/create" class="btn btn-primary">추가</a>
 		<a href="/salgrade/update?grade=${salgrade.grade}" class="btn btn-secondary">수정</a>
-		<a href="/salgrade/delete?grade=${salgrade.grade}" class="btn btn-warning">삭제</a>
-	
+		<a href="/salgrade/delete?grade=${salgrade.grade}" class="btn btn-warning">삭제</a>	
+	</sec:authorize>
 	</menu>
 </section>
 </body>
