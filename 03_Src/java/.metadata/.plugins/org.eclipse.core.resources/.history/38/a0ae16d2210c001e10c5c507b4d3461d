@@ -1,0 +1,30 @@
+@charset "UTF-8";
+	
+h1 {
+	text-align: center;
+	
+}
+
+.bigdiv {
+	margin: 40px;
+	padding: 40px;
+	border: solid black;
+}
+hr#nonhr {
+	clear: both;
+    visibility: hidden;
+}
+
+.navFirstline {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	
+/* 	dropdown */
+	position: relative;
+  	display: inline-block;
+
+}
+.navFirstlineli {
+	display: inline;
+}

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+	
+h1 {
+	text-align: center;
+	
+}
+
+div#bigdiv {
+	margin: 30px;
+	padding: 20px;
+}

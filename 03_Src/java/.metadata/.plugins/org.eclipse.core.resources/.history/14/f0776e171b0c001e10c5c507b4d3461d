@@ -1,0 +1,10 @@
+@charset "UTF-8";
+	
+h1 {
+	text-align: center;
+	
+}
+
+div#bigdiv {
+	margin: 20px;
+}

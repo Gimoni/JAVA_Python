@@ -1,0 +1,21 @@
+@charset "UTF-8";
+	
+h1 {
+	text-align: center;
+	
+}
+
+.bigdiv {
+	margin: 40px;
+	padding: 40px;
+	border: solid black;
+}
+hr#nonhr {
+	clear: both;
+    visibility: hidden;
+}
+
+a.hi {
+	text-decoration: none;
+	padding: 0;
+}

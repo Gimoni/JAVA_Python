@@ -18,8 +18,8 @@
 	 where code = upper(#{code})
 </select>
 <resultMap type="com.example.imple.language.model.Language" id="withCountryResultMap">
-	<result property="contryCode" column="code"/>
-	<collection property="contryCode" column="code" select="selectCountry"/>
+<!-- 	<result property="contryCode" column="code"/> -->
+<!-- 	<collection property="contryCode" column="code" select="selectCountry"/> -->
 </resultMap>
 
 <select id="selectAll">

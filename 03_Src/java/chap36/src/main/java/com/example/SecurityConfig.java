@@ -37,6 +37,8 @@ public class SecurityConfig {
 			request.dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll();
 			request.requestMatchers("/", "/error").permitAll();
 			request.requestMatchers("/webjars/**").permitAll();
+			request.requestMatchers("/img/**").permitAll();
+			request.requestMatchers("/css/**").permitAll();
 //			
 			request.requestMatchers("/dept/list", 	  "/dept/detail/{key}").permitAll();
 			request.requestMatchers("/emp/list", 	  "/emp/detail/{key}").permitAll();

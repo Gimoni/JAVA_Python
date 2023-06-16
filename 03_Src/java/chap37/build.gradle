@@ -51,6 +51,7 @@ dependencies {
     implementation group: 'jakarta.servlet.jsp.jstl', name: 'jakarta.servlet.jsp.jstl-api', version: '3.0.0'
     implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '3.0.1'
     implementation group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '11.0.0-M4'
+    
 	
 	// spring-security-taglibs
 	implementation 'org.springframework.security:spring-security-taglibs:6.1.0'

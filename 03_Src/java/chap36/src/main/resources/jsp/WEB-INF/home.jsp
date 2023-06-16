@@ -10,26 +10,35 @@
 <meta http-equiv="Cache-Control" content="no-store">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/heart_like_love_icon.png"> 
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <script src="/webjars/jquery/jquery.min.js"></script>
 
 <title>home.jsp</title>
+
 </head>
-<style type="text/css">
-/* div#box { */
-/* 	background-image: url("resources/static/img/face_grin_tongue_icon.png"); */
-/* } */
-</style>
 
 <body>
 <div id="box">
-<div class="container-fluid p-5 bg-primary text-white text-center">
-  <h1>Home page</h1>
+<div class="container-fluid p-5 bg-danger text-white text-center">
+  <div class="d-flex justify-content-front">
+  	<sec:authorize access="isAnonymous()">
+	<a class="hi" href="/user/login">Login</a>
+	</sec:authorize>
+	
+	<sec:authorize access="isAuthenticated()">
+	<a  class="hi" href="/user/logout">Logout</a>
+	</sec:authorize>
+  </div>
+  <h1>World Company Office Web</h1>
+  <div class="d-flex justify-content-end">
   <p><sec:authorize access="isAuthenticated()">
-&nbsp; Login user &nbsp; <sec:authentication property="name"/>
+&nbsp; Hello ! Login User : &nbsp; <sec:authentication property="name"/> <br>How are you today?!
 </sec:authorize></p> 
+  </div>
 </div>
 <nav class="navbar navbar-expand-md bg-light navbar-light">
   <div class="container-fluid">
@@ -58,28 +67,6 @@
     </ul>
   </div>
 </nav>
-<hr>
-<sec:authorize access="isAuthenticated()">
-&nbsp; Login user &nbsp; <sec:authentication property="name"/>
-</sec:authorize>
-<hr>
-	<sec:authorize access="isAnonymous()">
-	<a href="/user/login">Login</a>
-	</sec:authorize>
-	
-	<sec:authorize access="isAuthenticated()">
-	<a href="/user/logout">Logout</a>
-	</sec:authorize>
-<hr>
-<!-- <h2></h2> -->
-<!-- <button onclick="this.innerHTML=Date()">CurrentTime</button> -->
-<!-- <hr> -->
-
-<%-- <sec:authorize access="isAuthenticated()"> --%>
-<!-- <h3>로그인해서 인증을 받은 사람이면 보임</h3> -->
-<%-- name = <sec:authentication property="name"/><br> --%>
-<%-- 권한 = <sec:authentication property="principal.authorities"/> --%>
-<%-- </sec:authorize> --%>
 
 
 <ul>
