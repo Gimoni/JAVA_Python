@@ -49,6 +49,10 @@ public class SecurityConfig {
 			request.requestMatchers("/country/page/1/10", "/country/page/{key1}/{key2}").permitAll();
 			request.requestMatchers("/language/page/1/10", "/language/page/{key1}/{key2}").permitAll();
 			request.requestMatchers("/user/create").permitAll();
+			request.requestMatchers("/board/create").permitAll();
+			request.requestMatchers("/board/list", "/board/detail/{key}").permitAll();
+			request.requestMatchers("/board/update").permitAll();
+			request.requestMatchers("/board/delete").permitAll();
 //			
 			request.requestMatchers("/dept/create", 
 									"/dept/update",

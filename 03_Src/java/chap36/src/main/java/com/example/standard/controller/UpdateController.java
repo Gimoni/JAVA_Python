@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.imple.dept.model.DeptDTO;
+import com.example.imple.user.model.UserDTO;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
@@ -18,5 +19,7 @@ public interface UpdateController<DTO> {
 	
 	@PostMapping("/update")
 	String update(@Valid DTO dto, BindingResult binding, Model model, HttpServletRequest request, RedirectAttributes attr);
+
+	
 	
 }

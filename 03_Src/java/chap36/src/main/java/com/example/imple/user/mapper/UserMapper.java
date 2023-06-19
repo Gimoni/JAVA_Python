@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.example.imple.user.model.User;
 
@@ -78,6 +79,17 @@ public interface UserMapper {
 
 	
 //	public void insertUser (User user);
+	
+//	@Update("""
+//			update users
+//			   set password	 = #{password, jdbcType=VARCHAR2},
+//			       name		 = #{name, jdbcType=VARCHAR2},
+//			       mobile	 = #{mobile, jdbcType=VARCHAR2},
+//			       role      = #{role, jdbcType=VARCHAR2},
+//			 where id        = #{id, jdbcType=VARCHAR2}
+//			""")
+//	public void updateUser(User user);
+
 	
 	
 }

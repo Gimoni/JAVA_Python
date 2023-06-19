@@ -3,8 +3,6 @@ package com.example.imple.user.controller;
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,10 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.imple.user.mapper.UserMapper;
-import com.example.imple.user.model.User;
-import com.example.imple.user.model.User.UserBuilder;
 import com.example.imple.user.model.UserDTO;
-import com.example.imple.user.service.UserCreateService;
 import com.example.standard.controller.CreateController;
 
 import jakarta.servlet.http.HttpServletRequest;

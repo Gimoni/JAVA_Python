@@ -30,4 +30,25 @@ select *
   where country_code = 'KOR';
  
  
+ select * from users;
  
+ 
+ 
+User user = new User();
+user.setId("user123");
+user.setPassword("newpassword");
+user.setName("John Doe");
+user.setMobile("1234567890");
+user.setRole("admin");
+
+updateUser(user);
+
+update users
+  set password='1234',
+      name= 'potato',
+      mobile='+98743211',
+      role='USER',
+  where id = 'gimon44';
+
+     
+    

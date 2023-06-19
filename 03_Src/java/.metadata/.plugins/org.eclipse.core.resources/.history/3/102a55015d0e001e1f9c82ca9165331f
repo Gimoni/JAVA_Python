@@ -1,0 +1,67 @@
+package com.example.imple.board.controller;
+
+import java.util.Objects;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.imple.board.mapper.BoardMapper;
+import com.example.imple.board.reply.mapper.BoardReplyMapper;
+import com.example.standard.controller.DetailController;
+
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@RequestMapping("/board")
+@Slf4j
+public class BoardDetailController implements DetailController<Integer> {
+
+	@Autowired
+	BoardMapper mapper;
+	
+	@Autowired
+	BoardReplyMapper replymapper;
+	
+	
+	@Override
+	@Transactional
+	public String detail(Integer key, Model model, HttpServletRequest request) {
+		log.debug("key : {},", key);
+		var post = mapper.selectPostById(key);
+		model.addAttribute("post", post);
+		var reply = replymapper.selectAll(post.getId());
+		model.addAttribute("reply", reply);
+		var session = request.getSession();
+
+		var error = request.getParameter("error");
+		if (Objects.isNull(error)) {
+			session.removeAttribute("post");
+			session.removeAttribute("binding");
+		}
+		String getDeleteId = request.getParameter("deleteId");
+		if (getDeleteId != null && !getDeleteId.isEmpty()) {
+			int deleteId = Integer.parseInt(getDeleteId);
+			replymapper.deletePost(deleteId);
+			int replies = replymapper.countById(deleteId);
+			System.out.println(replies);
+			if (replies==0) {
+				mapper.deletePost(deleteId);
+			}
+			return "redirect:/freeboard/page/1/10";
+		}
+		String getDeleteReplyId = request.getParameter("deleteReplyId");
+		String pageNum = request.getParameter("page");
+		if (getDeleteReplyId != null && !getDeleteReplyId.isEmpty()) {
+			int deleteReplyId = Integer.parseInt(getDeleteReplyId);
+			replymapper.deleteReplyId(deleteReplyId);
+			return "redirect:/freeboard/detail/{key}?page=" + pageNum;
+		}
+		
+		return "board/detail";
+	}
+
+}

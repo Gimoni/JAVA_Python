@@ -141,3 +141,18 @@ select count(*) from salgrade;
 
 create sequence xxx_seq;
 
+
+select * from users;
+ALTER USER scott 
+     IDENTIFIED BY tiger 
+     ACCOUNT UNLOCK;
+     
+     
+			update users
+			   set password	 = '12345',
+			       name		 = 'Alpha3',
+			       mobile	 = +87654321,
+			       role      = 'USER',
+			 where id     = 'gimon44';
+             
+             select * from emp;

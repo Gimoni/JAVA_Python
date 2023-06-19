@@ -9,6 +9,7 @@ import org.mybatis.spring.MyBatisSystemException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.example.imple.user.model.User;
 import com.example.imple.user.model.UserDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -81,10 +82,17 @@ public class UserMapperTest {
 	}
 	
 	@Test
-	void insertUser() {
-		//var users = usermapper.insertUser(UserDTO);
+	public void insertUser() {
+//		var users = usermapper.insertUser(UserDTO);
 		
 	}
+	
+	@Test
+	public void updateUser() {
+		
+	}
+	
+	
 	
 
 }

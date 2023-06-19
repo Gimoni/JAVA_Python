@@ -1,0 +1,17 @@
+package com.example.imple.user.controller;
+
+import org.springframework.stereotype.Controller;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+
+@Data
+@Controller
+@AllArgsConstructor(staticName="of")
+@Slf4j
+public class UserDelectController {
+
+	
+	
+}

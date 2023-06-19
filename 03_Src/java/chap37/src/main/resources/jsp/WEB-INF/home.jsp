@@ -83,6 +83,7 @@ Home page
 <li class = "col"><a href="/country/list">Country List</a></li>
 <li class = "col"><a href="/language/list">Language List</a></li>
 </ul>
+
 </div>
 </div>
 

@@ -1,5 +1,0 @@
-package com.example.imple.user.mapper;
-
-public interface UserMapper {
-
-}

@@ -44,6 +44,9 @@
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
+        <a class="nav-link" href="/board/list">Board</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="/dept/list">Dept</a>
       </li>
       <li class="nav-item">
@@ -68,7 +71,14 @@
   </div>
 </nav>
 
-
+<hr>
+<ul>
+	<li><a href="/board/list">/board/list</a></li>
+	<li><a href="/board/create">/board/create</a></li>
+	<li><a href="/board/update?id=1">/board/update</a></li>
+	<li><a href="/board/delete?id=1">/board/delete</a></li>
+</ul>
+<hr>
 <ul>
 	<li><a href="/dept/list    ">/dept/list</a></li>
 	<li><a href="/emp/list     ">/emp/list</a></li>
@@ -110,6 +120,8 @@
 	<li><a href="/city/delete?id=2331">/city/delete</a></li>
 	<li><a href="/dept/create">/dept/create</a></li>
 </ul>
+<hr>
+
 
 
 </div>
