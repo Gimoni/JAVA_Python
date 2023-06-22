@@ -83,7 +83,6 @@ public class UserMapperTest {
 	
 	@Test
 	public void insertUser() {
-//		var users = usermapper.insertUser(UserDTO);
 		
 	}
 	
@@ -92,7 +91,13 @@ public class UserMapperTest {
 		
 	}
 	
+	@Test
+	void deleteUserbyid() {
+		
+		String potato = usermapper.deleteUserbyId("감자돌이");
 	
+		
+	}
 	
 
 }

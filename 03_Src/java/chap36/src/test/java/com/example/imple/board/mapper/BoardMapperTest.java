@@ -2,6 +2,7 @@ package com.example.imple.board.mapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.Date;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -24,53 +25,49 @@ public class BoardMapperTest {
 	ObjectMapper objectMapper;
 
 	@Test
-	void selectAll() {
-		var select = mapper.selectAll();
-		System.out.println("selectAll = " + select);
-		List<Board> boards = mapper.selectAll();
-		System.out.println(boards);
-		
-//		assertThat(boards).isNotNull();
-//		assertThat(boards).isNotSameAs(null);
-	}
-	
-	@Test
 	void countAll() {
 		var cnt = mapper.countAll();
-		System.out.println("countAll from board = " + cnt);
+		System.out.println(cnt);
 	}
-
+	
+	@Test 
+	void selectAll() {
+		var list = mapper.selectAll();
+		System.out.println(list);
+	}
 	
 	@Test
-	void insertPost() {
-	    var post = Board.builder()
-	                    .id(5)
-	                    .title("하이")
-	                    .content("하이")
-	                    .reply(4)
-	                    .writer("hihi")
-	                    .build();
-	    var count = mapper.insertPost(post);
-	    System.out.println(count);
+	void insertBoard() {
+		var day = new Date(); 
+		int maxId = mapper.getMaxBoardId();
+        int newId = maxId + 1;
+		var boardadd = Board.builder()
+							.id(newId)
+							.title("감자월드")
+							.content("감자로 시작해서 감자로 끝나는 세상")
+							.day(day)
+							.writer("감자돌이")
+							.build();
+		mapper.insertBoard(boardadd);
+		System.out.println(boardadd);
 	}
 	
 	@Test
 	@Transactional
-	void updatPostById() {
-		var post = Board.builder()
-								.title("반갑습니다")
-								.content("안녕")
-								.writer("somebody")
-								.build();
-		var update = mapper.updatePostById(post, 4);
-		System.out.println(update);
+	void updateBoardById() {
 		
 	}
+   
+
+    @Test
+    void UpdateBoard() {
+      
+    }
+
+    @Test
+    void DeleteBoard() {
+       
+    }
 	
-	@Test
-	void selectAllWithReplyCount() {
-		var count = mapper.selectAllWithReplyCount();
-		System.out.println("replycount= "+ count);
-	}
 
 }

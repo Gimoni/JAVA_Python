@@ -17,7 +17,7 @@ public class UserLoginController {
 	@PostMapping("/login-fail")
 	String loginFail() {
 		System.out.println("loginFail()...");
-		
+		System.out.println("login실패");
 		return "user/login"; 
 	}
 	

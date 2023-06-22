@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/Rumble.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+    font-family: sans-serif, serif, Arial;
+}
+
+.container{
+    width: 370px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    color: #fff;
+    padding: 40px 20px;
+}

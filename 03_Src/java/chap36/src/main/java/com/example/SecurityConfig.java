@@ -22,6 +22,7 @@ public class SecurityConfig {
 		return new BCryptPasswordEncoder();
 	}
 	
+
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception  {
 		http.csrf(csrf -> {
@@ -51,6 +52,7 @@ public class SecurityConfig {
 			request.requestMatchers("/user/create").permitAll();
 			request.requestMatchers("/board/create").permitAll();
 			request.requestMatchers("/board/list", "/board/detail/{key}").permitAll();
+			request.requestMatchers("/board/page/1/10", "/board/detail/{key}/{key2}").permitAll();
 			request.requestMatchers("/board/update").permitAll();
 			request.requestMatchers("/board/delete").permitAll();
 //			

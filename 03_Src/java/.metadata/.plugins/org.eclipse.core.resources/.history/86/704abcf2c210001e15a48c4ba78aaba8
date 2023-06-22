@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.hi {
+	border: sold pink;
+	background-image: linear-gradient(to right,#35384F,#010103);
+	left: calc(22% - 78px);
+	border-radius: 15%;
+	text-decoration: none;
+	text-color: white;
+	opacity: 30%;
+}
+.hi:hover {	
+	background-color: rgb(128, 128, 128);
+	opacity: 100%;
+}

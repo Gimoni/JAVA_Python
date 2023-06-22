@@ -11,6 +11,7 @@
 <meta http-equiv="Cache-Control" content="no-store">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/heart_like_love_icon.png"> 
+<link rel="icon" href="/heart_like_love_icon.png"> 
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <script src="/webjars/jquery/jquery.min.js"></script>
@@ -18,19 +19,44 @@
 <title>success.jsp</title>
 </head>
 <body>
-<h1>Dept Successful 성공</h1>
-<hr>
-<a href="/">Home</a>
-<hr>
-<a href="/dept/list">/dept/list</a>
-<hr>
-<br>
-<br>
-<br>
+<div class= "box">
+<header>
+<div class="container-fluid p-3 bg-dark text-white text-center">
+  <div class="d-flex justify-content-front">
+  	<sec:authorize access="isAnonymous()">
+	<a class="hi" href="/user/login">Login</a>
+	</sec:authorize>
+	
+	<sec:authorize access="isAuthenticated()">
+	<a  class="hi" href="/user/logout">Logout</a>
+	</sec:authorize>
+  </div>
+  <h1>Wakey Techno Wakey House</h1>
+  <div class="d-flex justify-content-end">
+  <p><sec:authorize access="isAuthenticated()">
+&nbsp; Hello ! Login User : &nbsp; <sec:authentication property="name"/> <br>How are you today?!
+</sec:authorize></p> 
+  </div>
+</div>
+     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+         <div class="container">
+             <h2><a class="navbar-brand" href="#!"></a></h2>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                     <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+                     <li class="nav-item"><a class="nav-link" href="/#wakeytech">Wakey Tech</a></li>
+                     <li class="nav-item"><a class="nav-link" href="/dept/list">Detp List</a></li>
+                 </ul>
+             </div>
+         </div>
+     </nav>
+</header>
+<h2>Dep</h2>
 <c:choose>
-	<c:when test="${param.create ne null}"><h1>부서 추가 성공</h1></c:when>
-	<c:when test="${param.update ne null}"><h1>부서 수정 성공</h1></c:when>
-	<c:when test="${param.delete ne null}"><h1>부서 삭제 성공</h1></c:when>
+	<c:when test="${param.create ne null}"><h2>Created</h2></c:when>
+	<c:when test="${param.update ne null}"><h2>Updated</h2></c:when>
+	<c:when test="${param.delete ne null}"><h2>Deleted</h2></c:when>
 	<c:otherwise></c:otherwise>
 </c:choose>
 
@@ -45,5 +71,6 @@
 	</table>
 	<hr>
 </section>
+</div>
 </body>
 </html>

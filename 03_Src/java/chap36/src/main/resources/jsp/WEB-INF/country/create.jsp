@@ -11,6 +11,7 @@
 <meta http-equiv="Cache-Control" content="no-store">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/heart_like_love_icon.png"> 
+<link rel="stylesheet" type="text/css" href="/css/list.css">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <script src="/webjars/jquery/jquery.min.js"></script>
@@ -18,12 +19,40 @@
 <title>create.jsp</title>
 </head>
 <body>
-<h1>Country Create 나라 추가</h1>
-<hr>
-<a href="/">Home</a>
-<hr>
-<a href="/country/list">/country/list</a>
-<hr>
+<div class= "box">
+<header>
+<div class="container-fluid p-3 bg-dark text-white text-center">
+  <div class="d-flex justify-content-front">
+  	<sec:authorize access="isAnonymous()">
+	<a class="hi" href="/user/login">Login</a>
+	</sec:authorize>
+	
+	<sec:authorize access="isAuthenticated()">
+	<a  class="hi" href="/user/logout">Logout</a>
+	</sec:authorize>
+  </div>
+  <h1>Wakey Techno Wakey House</h1>
+  <div class="d-flex justify-content-end">
+  <p><sec:authorize access="isAuthenticated()">
+&nbsp; Hello ! Login User : &nbsp; <sec:authentication property="name"/> <br>How are you today?!
+</sec:authorize></p> 
+  </div>
+</div>
+     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+         <div class="container">
+             <h2><a class="navbar-brand" href="#!"></a></h2>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                     <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+                     <li class="nav-item"><a class="nav-link" href="/#wakeytech">Wakey Tech</a></li>
+                     <li class="nav-item"><a class="nav-link" href="/country/list">Country List</a></li>
+                 </ul>
+             </div>
+         </div>
+     </nav>
+</header>
+<h2>Country create</h2>
 <section class="container">
 	<form action="/country/create" method="post">
 		<div class="mb-3">
@@ -86,7 +115,7 @@
 			<label class="form-lable mb-2" for="code2">code2<span></span></label>
 			<input class="form-control"    id="code2"  name="code2"  placeholder="code2" value="${country.code2 }"/>
 		</div>
-		<button type="submit" class="btn btn-primary">Submit</button>
+		<button type="submit" class="btn btn-dark">Submit</button>
 	</form>	
 </section>
 <hr>
@@ -102,6 +131,6 @@
 </c:forEach>
 
 </c:if>
-
+</div>
 </body>
 </html>
